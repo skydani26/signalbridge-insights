@@ -1,0 +1,864 @@
+/* Hero Section */
+.hero {
+    padding: 180px 0 160px;
+    /* Slightly more top for sticky header */
+    background-color: var(--color-primary);
+    /* Deep Navy */
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.heroTitle {
+    font-size: 5rem;
+    font-weight: 600;
+    /* Reduced from 800 */
+    color: var(--color-text-white);
+    margin-bottom: 32px;
+    line-height: 1.1;
+    letter-spacing: -0.04em;
+}
+
+.highlightBlue {
+    color: var(--color-secondary);
+    /* Bright Blue highlight */
+}
+
+.heroSubtitle {
+    font-size: 1.35rem;
+    color: #F1F5F9;
+    /* High-contrast off-white for hero subtitle */
+    max-width: 900px;
+    margin: 0 auto 56px;
+    line-height: 1.6;
+}
+
+.heroButtons {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+}
+
+.btnHeroPrimary {
+    background-color: #f8fafc;
+    color: var(--color-primary);
+    padding: 18px 40px;
+    border-radius: 8px;
+    font-weight: 700;
+    font-size: 1.1rem;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    transition: all 0.2s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.btnHeroPrimary:hover {
+    background-color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+}
+
+.btnHeroSecondary {
+    background-color: rgba(255, 255, 255, 0.05);
+    color: var(--color-text-white);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 18px 40px;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 1.1rem;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    transition: all 0.2s;
+}
+
+.btnHeroSecondary:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-color: rgba(255, 255, 255, 0.4);
+    transform: translateY(-2px);
+}
+
+/* Client Success Overhaul - Aligned with Why Us Style */
+.testimonialSection {
+    background-color: #FAFBFB;
+    /* Sage background to match Why Us */
+    padding: 80px 0;
+    /* Compact vertical footprint */
+    text-align: center;
+}
+
+/* Credibility Section */
+.credibilitySection {
+    background-color: white;
+    padding: 160px 0;
+    text-align: center;
+    border-bottom: 1px solid var(--color-gray-200);
+}
+
+.credibilityTitle {
+    color: #94a3b8;
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 48px;
+    text-transform: uppercase;
+}
+
+.logoGrid {
+    display: flex;
+    justify-content: center;
+    gap: 72px;
+    flex-wrap: wrap;
+    align-items: center;
+    opacity: 0.6;
+}
+
+.logoPlaceholder {
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: var(--color-primary);
+    font-family: var(--font-heading);
+}
+
+/* Stats Section */
+.statsSection {
+    background-color: var(--color-primary);
+    padding: 160px 0;
+    color: white;
+}
+
+.statsGrid {
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+.statNumber {
+    font-family: var(--font-heading);
+    font-size: 3.2rem;
+    /* Reduced by ~30% from 4.5rem */
+    font-weight: 600;
+    /* Reduced weight */
+    color: var(--color-secondary);
+    margin-bottom: 8px;
+    line-height: 1;
+    letter-spacing: -0.03em;
+}
+
+.statLabel {
+    color: var(--color-text-light);
+    font-size: 0.85rem;
+    /* Reduced by ~30% from 1.1rem */
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+}
+
+/* Our Services Section */
+.servicesSection {
+    background-color: white;
+    padding: 160px 0 100px;
+    /* Reduced bottom padding from 160px */
+}
+
+.exploreBtnContainer {
+    display: flex;
+    justify-content: center;
+    margin-top: 64px;
+}
+
+.exploreBtn {
+    background-color: var(--color-primary) !important;
+    color: white !important;
+    padding: 14px 44px !important;
+    border-radius: 8px !important;
+    font-weight: 600 !important;
+    font-size: 1.1rem !important;
+    display: inline-flex;
+    align-items: center;
+    gap: 16px;
+    transition: all 0.2s ease;
+}
+
+.exploreBtn:hover {
+    background-color: #1a3055 !important;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.sectionHeader {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 80px;
+}
+
+.sectionTitle {
+    font-family: var(--font-heading);
+    font-size: 3.5rem;
+    font-weight: 800;
+    color: #000000;
+    /* Standardized to Black */
+    margin-bottom: 24px;
+    line-height: 1.2;
+    letter-spacing: -0.04em;
+}
+
+.sectionSubtitle {
+    font-size: 1.25rem;
+    color: var(--color-text-light);
+    line-height: 1.6;
+}
+
+.servicesGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+}
+
+.serviceCard {
+    background: white;
+    padding: 32px 28px;
+    /* Reduced by 30-50% from 48px 40px */
+    border-radius: 12px;
+    transition: all 0.3s ease;
+    border: 1px solid var(--color-gray-200);
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.serviceCard:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+    border-color: var(--color-secondary);
+}
+
+.serviceCard.active {
+    border: 2px solid var(--color-secondary);
+    box-shadow: 0 10px 30px rgba(74, 144, 226, 0.15);
+}
+
+.badge {
+    position: absolute;
+    top: 24px;
+    right: 24px;
+    background: rgba(74, 144, 226, 0.1);
+    color: var(--color-secondary);
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.iconBox {
+    width: 48px;
+    /* Slightly smaller icon box */
+    height: 48px;
+    background: #e6f0ff;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-secondary);
+    margin-bottom: 24px;
+}
+
+.serviceTitle {
+    font-size: 1.35rem;
+    /* Reduced for more compact look */
+    font-weight: 600;
+    color: var(--color-primary);
+    margin-bottom: 12px;
+}
+
+.serviceDescription {
+    color: var(--color-text-light);
+    line-height: 1.6;
+    font-size: 0.95rem;
+    /* Slightly smaller for text fit */
+}
+
+/* Why Us Overhaul */
+.whyUsSection {
+    background-color: #FAFBFB;
+    /* Even subtler sage green/tint */
+    padding: 160px 0 110px;
+    /* Reduced bottom padding from 160px */
+    text-align: center;
+}
+
+.whyUsTag {
+    color: var(--color-secondary);
+    font-weight: 500;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    letter-spacing: 2.5px;
+    margin-bottom: 20px;
+}
+
+.whyUsTitle {
+    color: #000000;
+    /* Bold Black as requested */
+    font-size: 3.5rem;
+    /* Slightly bigger */
+    font-weight: 800;
+    /* Black/Extra Bold */
+    margin-bottom: 24px;
+    letter-spacing: -0.04em;
+}
+
+.whyUsSubtitle {
+    color: var(--color-text-light);
+    max-width: 700px;
+    margin: 0 auto 80px;
+    font-size: 1.2rem;
+    line-height: 1.6;
+}
+
+.whyUsGrid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+}
+
+.whyCard {
+    background: white;
+    padding: 40px 32px;
+    border-radius: 12px;
+    text-align: left;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(0, 0, 0, 0.03);
+}
+
+.whyCard:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+.whyIconBox {
+    width: 56px;
+    height: 56px;
+    background: #f0f4ff;
+    /* Very light blue tint */
+    border-radius: 50%;
+    /* Circular as per screenshot */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-secondary);
+    margin-bottom: 28px;
+}
+
+.whyCardTitle {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--color-primary);
+    margin-bottom: 16px;
+}
+
+.whyCardText {
+    color: var(--color-text-light);
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+/* CTA Section */
+.ctaSection {
+    background-color: var(--color-primary);
+    text-align: center;
+    padding: 160px 0;
+    color: white;
+}
+
+.ctaTitle {
+    color: white;
+    font-size: 3.5rem;
+    font-weight: 800;
+    margin-bottom: 24px;
+    letter-spacing: -0.04em;
+}
+
+.ctaSubtitle {
+    color: rgba(255, 255, 255, 0.8);
+    max-width: 800px;
+    margin: 0 auto 56px;
+    font-size: 1.25rem;
+    line-height: 1.6;
+}
+
+.ctaButtonsContainer {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+}
+
+.btnCtaPrimary {
+    background-color: #ffffff !important;
+    color: var(--color-primary) !important;
+    padding: 16px 40px !important;
+    border-radius: 8px !important;
+    font-weight: 700 !important;
+    font-size: 1.1rem !important;
+    transition: all 0.2s ease;
+}
+
+.btnCtaPrimary:hover {
+    background-color: #f8fafc !important;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+}
+
+.btnCtaSecondary {
+    background-color: rgba(255, 255, 255, 0.05) !important;
+    color: white !important;
+    border: 1px solid rgba(255, 255, 255, 0.2) !important;
+    padding: 16px 40px !important;
+    border-radius: 8px !important;
+    font-weight: 600 !important;
+    font-size: 1.1rem !important;
+    transition: all 0.2s;
+}
+
+.btnCtaSecondary:hover {
+    background-color: rgba(255, 255, 255, 0.1) !important;
+    border-color: rgba(255, 255, 255, 0.4) !important;
+    transform: translateY(-2px);
+}
+
+/* How It Works Overhaul */
+.processSection {
+    background-color: #ffffff;
+    padding: 110px 0 110px;
+    /* Reduced bottom padding from 160px */
+    text-align: center;
+}
+
+.testimonialTag {
+    color: var(--color-secondary);
+    font-weight: 500;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    letter-spacing: 2.5px;
+    margin-bottom: 20px;
+}
+
+.processTag {
+    color: var(--color-secondary);
+    font-weight: 500;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    letter-spacing: 2.5px;
+    margin-bottom: 20px;
+}
+
+.servicesTag {
+    color: var(--color-secondary);
+    font-weight: 500;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    letter-spacing: 2.5px;
+    margin-bottom: 20px;
+}
+
+.testimonialTitle {
+    color: #000000;
+    font-size: 3.5rem;
+    font-weight: 800;
+    margin-bottom: 24px;
+    letter-spacing: -0.04em;
+    line-height: 1.2;
+}
+
+.processTitle {
+    color: #000000;
+    font-size: 3.5rem;
+    font-weight: 800;
+    margin-bottom: 24px;
+    letter-spacing: -0.04em;
+    line-height: 1.2;
+}
+
+.testimonialSubtitle {
+    color: var(--color-text-light);
+    max-width: 800px;
+    margin: 0 auto 80px;
+    font-size: 1.25rem;
+    line-height: 1.6;
+}
+
+/* Industries / Coverage Overhaul - Dual Column Layout */
+.coverageSection {
+    background-color: white;
+    padding: 160px 0;
+}
+
+.coverageContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: center;
+}
+
+.coverageTag {
+    color: var(--color-secondary);
+    font-weight: 500;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    letter-spacing: 2.5px;
+    margin-bottom: 20px;
+}
+
+.coverageTitle {
+    font-size: 3.5rem;
+    font-weight: 800;
+    color: #000000;
+    /* Standardized to Black */
+    margin-bottom: 24px;
+    line-height: 1.15;
+    letter-spacing: -0.04em;
+}
+
+.coverageSubtitle {
+    font-size: 1.25rem;
+    color: var(--color-text-light);
+    line-height: 1.6;
+    margin-bottom: 40px;
+    max-width: 550px;
+}
+
+.checklistGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px 32px;
+    margin-bottom: 48px;
+}
+
+.checkItem {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: var(--color-primary);
+}
+
+.checkIcon {
+    color: var(--color-secondary);
+}
+
+.coverageStatsGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.coverageStatCard {
+    background: white;
+    padding: 32px;
+    border-radius: 12px;
+    border: 1px solid rgba(0, 0, 0, 0.04);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.02);
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.coverageStatCard:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.06);
+}
+
+.coverageStatIcon {
+    color: var(--color-secondary);
+    margin-bottom: 20px;
+}
+
+.coverageStatValue {
+    font-size: 1.75rem;
+    font-weight: 800;
+    color: #000000;
+    margin-bottom: 4px;
+    display: block;
+}
+
+.coverageStatLabel {
+    font-size: 0.9rem;
+    color: #64748b;
+    font-weight: 500;
+}
+
+.coverageBtn {
+    background-color: var(--color-primary) !important;
+    color: white !important;
+    padding: 12px 32px !important;
+    border-radius: 6px !important;
+    font-weight: 600 !important;
+    font-size: 1rem !important;
+}
+
+.processSubtitle {
+    color: var(--color-text-light);
+    max-width: 800px;
+    margin: 0 auto 80px;
+    font-size: 1.25rem;
+    line-height: 1.6;
+}
+
+.processGrid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 32px;
+}
+
+.processCard {
+    background: #ffffff;
+    padding: 56px 32px 40px;
+    /* Extra top padding for number */
+    border-radius: 12px;
+    text-align: left;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(0, 0, 0, 0.03);
+    position: relative;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.02);
+}
+
+.processCard:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.06);
+}
+
+.cardNumber {
+    position: absolute;
+    top: 24px;
+    left: 32px;
+    font-size: 3.5rem;
+    font-weight: 800;
+    color: #edf2f7;
+    /* Very faint blue-grey */
+    line-height: 1;
+    z-index: 1;
+    letter-spacing: -0.05em;
+    font-family: var(--font-heading);
+}
+
+.processIconBox {
+    width: 48px;
+    height: 48px;
+    background: #f0f4ff;
+    /* Consistent with screenshot blue tint */
+    border-radius: 8px;
+    /* Square as per request */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-secondary);
+    margin-bottom: 28px;
+    position: relative;
+    z-index: 2;
+}
+
+.processCardTitle {
+    font-size: 1.35rem;
+    font-weight: 700;
+    color: #000000;
+    margin-bottom: 16px;
+    position: relative;
+    z-index: 2;
+}
+
+.processCardText {
+    color: var(--color-text-light);
+    font-size: 1rem;
+    line-height: 1.6;
+    position: relative;
+    z-index: 2;
+}
+
+.testCard {
+    background: #ffffff;
+    padding: 24px;
+    /* More compact */
+    border-radius: 12px;
+    border: 1px solid rgba(0, 0, 0, 0.03);
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    transition: all 0.3s ease;
+}
+
+.testCard:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+.testIconBox {
+    width: 44px;
+    /* Scaled down */
+    height: 44px;
+    background: #f0f4ff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-secondary);
+    margin-bottom: 16px;
+    /* Reduced gap */
+}
+
+.testText {
+    font-size: 0.95rem;
+    /* Compact text */
+    line-height: 1.6;
+    /* Reduced line-height */
+    color: #4b5563;
+    margin-bottom: 16px;
+    flex-grow: 1;
+}
+
+.testSeparator {
+    display: none;
+    /* Removed for cleaner look matching whyCard */
+}
+
+.testAuthor {
+    font-weight: 800;
+    color: #000000;
+    font-size: 0.95rem;
+    /* Scaled down */
+    margin-bottom: 2px;
+    letter-spacing: -0.01em;
+}
+
+.testRole {
+    color: #64748b;
+    font-size: 0.85rem;
+    /* Scaled down */
+    font-weight: 400;
+}
+
+/* Responsive Updates */
+@media (max-width: 1024px) {
+    .heroTitle {
+        font-size: 3.5rem;
+    }
+
+    .coverageContainer {
+        grid-template-columns: 1fr;
+        gap: 64px;
+    }
+
+    .coverageInfo {
+        text-align: center;
+    }
+
+    .coverageSubtitle {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .checklistGrid {
+        justify-content: center;
+    }
+
+    .servicesGrid,
+    .processGrid,
+    .whyUsGrid,
+    .testimonialsGrid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.checkItem {
+    animation: fadeInUp 0.6s ease-out forwards;
+    opacity: 0;
+}
+
+.coverageStatCard {
+    animation: fadeInUp 0.6s ease-out forwards;
+    opacity: 0;
+}
+
+/* Staggered animation delays */
+.checkItem:nth-child(1) {
+    animation-delay: 0.1s;
+}
+
+.checkItem:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.checkItem:nth-child(3) {
+    animation-delay: 0.3s;
+}
+
+.checkItem:nth-child(4) {
+    animation-delay: 0.4s;
+}
+
+.checkItem:nth-child(5) {
+    animation-delay: 0.5s;
+}
+
+.checkItem:nth-child(6) {
+    animation-delay: 0.6s;
+}
+
+.coverageStatCard:nth-child(1) {
+    animation-delay: 0.2s;
+}
+
+.coverageStatCard:nth-child(2) {
+    animation-delay: 0.4s;
+}
+
+.coverageStatCard:nth-child(3) {
+    animation-delay: 0.6s;
+}
+
+.coverageStatCard:nth-child(4) {
+    animation-delay: 0.8s;
+}
+
+@media (max-width: 768px) {
+    .heroTitle {
+        font-size: 2.75rem;
+    }
+
+    .heroButtons,
+    .ctaButtonsContainer {
+        flex-direction: column;
+    }
+
+    .logoGrid {
+        gap: 32px;
+    }
+
+    .hero,
+    .credibilitySection,
+    .statsSection,
+    .servicesSection,
+    .ctaSection {
+        padding: 100px 0;
+        /* More compact on mobile but still generous */
+    }
+}

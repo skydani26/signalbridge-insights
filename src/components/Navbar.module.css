@@ -1,0 +1,112 @@
+.header {
+    height: 64px;
+    background-color: rgba(10, 25, 47, 0.85);
+    /* Deep Navy Translucent */
+    backdrop-filter: blur(12px);
+    display: flex;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    transition: background-color 0.3s ease;
+}
+
+.container {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 0 40px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logoContainer {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    text-decoration: none;
+}
+
+.logoIcon {
+    width: 32px;
+    height: auto;
+}
+
+.logoText {
+    font-family: var(--font-heading);
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--color-white);
+    letter-spacing: -0.02em;
+}
+
+.logoText span {
+    font-weight: 500;
+    color: var(--color-white);
+}
+
+.nav {
+    display: flex;
+    gap: 32px;
+    align-items: center;
+}
+
+.link {
+    font-family: var(--font-sans);
+    color: var(--color-text-light);
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.95rem;
+    transition: all 0.2s ease;
+    padding-bottom: 4px;
+    border-bottom: 2px solid transparent;
+}
+
+.link:hover {
+    color: var(--color-white);
+    border-bottom: 2px solid var(--color-secondary);
+}
+
+.linkActive {
+    font-family: var(--font-sans);
+    color: var(--color-white);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.95rem;
+    padding-bottom: 4px;
+    border-bottom: 2px solid var(--color-secondary);
+}
+
+.actions {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.getStartedBtn {
+    background-color: #112240 !important;
+    /* Darker navy from SS */
+    color: white !important;
+    padding: 10px 24px !important;
+    font-weight: 700 !important;
+    font-size: 0.95rem !important;
+    border-radius: 6px !important;
+    transition: transform 0.1s ease, background-color 0.2s;
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+}
+
+.getStartedBtn:hover {
+    transform: translateY(-1px);
+    background-color: #1a3055 !important;
+    border-color: rgba(255, 255, 255, 0.2) !important;
+}
+
+@media (max-width: 900px) {
+    .nav {
+        display: none;
+    }
+}

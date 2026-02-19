@@ -1,0 +1,36 @@
+.section {
+    padding: 160px 0;
+    width: 100%;
+}
+
+.container {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+.white {
+    background-color: var(--color-background);
+}
+
+.gray {
+    background-color: var(--color-gray-100);
+}
+
+.dark {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+}
+
+.dark h1,
+.dark h2,
+.dark h3,
+.dark h4 {
+    color: var(--color-white);
+}
+
+@media (max-width: 768px) {
+    .section {
+        padding: 100px 0;
+    }
+}
