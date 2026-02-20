@@ -3,7 +3,7 @@ import React from 'react';
 import SectionWrapper from "@/components/SectionWrapper";
 import Button from "@/components/Button";
 import styles from "./how-it-works.module.css";
-import { MessageSquare, Phone, Users, FileText, Library, ShieldCheck, CheckCircle2 } from "lucide-react";
+import { Star, FileText, Phone, Zap, Network, Database, ShieldCheck, CheckCircle2 } from "lucide-react";
 
 export const metadata = {
     title: "How It Works | SignalBridge Insights",
@@ -24,38 +24,71 @@ export default function HowItWorks() {
             </section>
 
             <SectionWrapper>
-                <span className={styles.sectionTag}>CAPABILITIES</span>
-                <h2 className={styles.sectionTitle}>Engagement Formats</h2>
+                <span className={styles.sectionTag}>ENGAGEMENT FORMATS</span>
+                <div className={styles.sectionHeader}>
+                    <h2 className={styles.sectionTitle}>Choose Your Engagement Type</h2>
+                    <p className={styles.sectionDescription}>
+                        Every research need is different. We offer multiple ways to access expert knowledge.
+                    </p>
+                </div>
+
                 <div className={styles.formatGrid}>
-                    <div className={styles.formatCard}>
-                        <div className={styles.formatIcon}><MessageSquare size={24} /></div>
+                    {/* Signature Card */}
+                    <div className={`${styles.formatCard} ${styles.active}`} style={{ border: '2px solid var(--color-secondary)', position: 'relative' }}>
+                        <div className={styles.badge}>
+                            <Star size={12} fill="#5390ff" /> Signature
+                        </div>
+                        <div className={styles.formatIcon}><FileText size={20} /></div>
                         <h3>Expert Surveys</h3>
-                        <p>Quantitative data from thousands of vetted professionals globally.</p>
+                        <p>
+                            Our signature offering. Deploy targeted surveys to vetted industry professionals
+                            and get quantitative + qualitative insights at scale.
+                        </p>
                     </div>
+
                     <div className={styles.formatCard}>
-                        <div className={styles.formatIcon}><Phone size={24} /></div>
+                        <div className={styles.formatIcon}><Phone size={20} /></div>
                         <h3>1-on-1 Expert Calls</h3>
-                        <p>Direct consultations for deep strategic and industry-specific insights.</p>
+                        <p>
+                            Schedule confidential consultations with hand-picked experts for deep-dive
+                            discussions on specific topics.
+                        </p>
                     </div>
+
+                    {/* NEW: Programming Card */}
                     <div className={styles.formatCard}>
-                        <div className={styles.formatIcon}><Users size={24} /></div>
-                        <h3>Focus Groups & Panels</h3>
-                        <p>Interactive discussions with multiple experts for rounded perspectives.</p>
+                        <div className={styles.formatIcon}><Zap size={20} /></div>
+                        <h3>Programming</h3>
+                        <p>
+                            Our technical edge. Execute complex surveys and workflows with precision using Qualtrics, Decipher, and internal tools for seamless data capture.
+                        </p>
                     </div>
+
+                    {/* NEW: Custom Research Projects */}
                     <div className={styles.formatCard}>
-                        <div className={styles.formatIcon}><FileText size={24} /></div>
+                        <div className={styles.formatIcon}><Network size={20} /></div>
                         <h3>Custom Research Projects</h3>
-                        <p>Tailored research programming, deep-dive analysis, and execution.</p>
+                        <p>
+                            End-to-end research support: we scope, recruit experts, collect data, and deliver synthesized insights tailored to your needs.
+                        </p>
                     </div>
+
+                    {/* NEW: Knowledge Library */}
                     <div className={styles.formatCard}>
-                        <div className={styles.formatIcon}><Library size={24} /></div>
-                        <h3>Content Library</h3>
-                        <p>Instant access to thousands of pre-vetted transcripts and reports.</p>
+                        <div className={styles.formatIcon}><Database size={20} /></div>
+                        <h3>Knowledge Library</h3>
+                        <p>
+                            Access curated transcripts, whitepapers, and recorded expert sessions from our growing, searchable content library.
+                        </p>
                     </div>
+
+                    {/* NEW: Compliance & Vetting */}
                     <div className={styles.formatCard}>
-                        <div className={styles.formatIcon}><ShieldCheck size={24} /></div>
-                        <h3>Compliance Advisory</h3>
-                        <p>Assuring MNPI and conflict-of-interest screening for every call.</p>
+                        <div className={styles.formatIcon}><ShieldCheck size={20} /></div>
+                        <h3>Compliance & Vetting</h3>
+                        <p>
+                            Rigorous expert screening, NDA management, conflict-of-interest checks, and full audit trails on every single engagement.
+                        </p>
                     </div>
                 </div>
             </SectionWrapper>
