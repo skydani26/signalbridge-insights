@@ -171,7 +171,7 @@
 }
 
 .complianceSection {
-    background-color: #ffffff;
+    background-color: var(--color-gray-100);
     padding: 120px 0;
 }
 
@@ -224,8 +224,8 @@
 .lockWrapper {
     width: 200px;
     height: 200px;
-    background: #f1f5f9;
-    border-radius: 24px;
+    background: #e2e8f0;
+    border-radius: 40px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -234,18 +234,19 @@
 
 .shieldOverlap {
     position: absolute;
-    bottom: -10px;
-    right: 30px;
+    bottom: 20px;
+    right: 40px;
     width: 80px;
     height: 80px;
-    background: white;
+    background: #dbeafe;
+    /* Light blue tint */
     border-radius: 12px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
     display: flex;
     align-items: center;
     justify-content: center;
     color: var(--color-secondary);
-    border: 1px solid rgba(0, 0, 0, 0.03);
+    border: none;
 }
 
 @media (max-width: 1024px) {

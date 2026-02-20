@@ -210,8 +210,8 @@ export default function HowItWorks() {
                 <div className="container">
                     <div style={{ display: 'grid', gridTemplateColumns: '1.2fr 0.8fr', gap: '80px', alignItems: 'center' }}>
                         <div>
-                            <div className={styles.iconBoxSmall} style={{ marginBottom: '32px' }}>
-                                <Shield size={20} />
+                            <div className={styles.iconBoxSmall} style={{ marginBottom: '32px', backgroundColor: '#e2e8f0', color: 'var(--color-primary)' }}>
+                                <Shield size={20} strokeWidth={2.5} />
                             </div>
                             <h2 className={styles.securityTitle}>Compliance & Security</h2>
                             <p className={styles.securitySubtitle}>
