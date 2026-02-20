@@ -249,6 +249,43 @@
     border: none;
 }
 
+.finalCta {
+    background-color: var(--color-primary);
+    padding: 120px 0;
+    text-align: center;
+    color: white;
+}
+
+.finalCta h2 {
+    color: white;
+    font-size: 3.5rem;
+    font-weight: 800;
+    margin-bottom: 24px;
+    letter-spacing: -0.04em;
+}
+
+.finalCta p {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 1.35rem;
+    max-width: 800px;
+    margin: 0 auto 48px;
+}
+
+.finalCtaBtn {
+    background-color: transparent !important;
+    border: 1px solid rgba(255, 255, 255, 0.3) !important;
+    color: white !important;
+    padding: 16px 48px !important;
+    font-weight: 600 !important;
+    transition: all 0.2s ease !important;
+}
+
+.finalCtaBtn:hover {
+    background-color: rgba(255, 255, 255, 0.05) !important;
+    border-color: white !important;
+    transform: translateY(-2px);
+}
+
 @media (max-width: 1024px) {
     .hero h1 {
         font-size: 2.75rem;

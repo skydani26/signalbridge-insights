@@ -241,6 +241,18 @@ export default function HowItWorks() {
                     </div>
                 </div>
             </section>
+
+            <section className={styles.finalCta}>
+                <div className="container">
+                    <h2>Ready to Get Started?</h2>
+                    <p>Join the SignalBridge network today — as a client or an expert</p>
+                    <div className={styles.ctaContainer}>
+                        <Button href="/contact" className={styles.finalCtaBtn}>
+                            Contact Us
+                        </Button>
+                    </div>
+                </div>
+            </section>
         </main>
     );
 }
