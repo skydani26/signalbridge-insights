@@ -1,7 +1,7 @@
 import React from 'react';
 import SectionWrapper from "@/components/SectionWrapper";
 import Button from "@/components/Button";
-import { FileText, Phone, Users, Zap, CheckCircle2 } from "lucide-react";
+import { FileText, Phone, Users, Zap, CheckCircle2, DollarSign, Clock, Globe, Shield } from "lucide-react";
 import styles from "./for-experts.module.css";
 
 export const metadata = {
@@ -69,29 +69,36 @@ export default function ForExperts() {
             </SectionWrapper>
 
             <SectionWrapper background="gray">
-                <div style={{ display: 'grid', gridTemplateColumns: '1.2fr 0.8fr', gap: '100px', alignItems: 'center' }}>
-                    <div>
-                        <span style={{ color: 'var(--color-secondary)', fontWeight: '600', textTransform: 'uppercase', letterSpacing: '2px', fontSize: '0.9rem' }}>BENEFITS</span>
-                        <h2 style={{ fontSize: '2.5rem', marginTop: '16px', marginBottom: '32px' }}>Why Join SignalBridge?</h2>
-                        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '32px' }}>
-                            <div>
-                                <h4 style={{ fontSize: '1.1rem', marginBottom: '12px' }}>Competitive Earnings</h4>
-                                <p style={{ fontSize: '0.95rem', color: 'var(--color-text-light)' }}>We pay top-tier market rates that reflect the value of your specialized knowledge and years of experience.</p>
-                            </div>
-                            <div>
-                                <h4 style={{ fontSize: '1.1rem', marginBottom: '12px' }}>Total Flexibility</h4>
-                                <p style={{ fontSize: '0.95rem', color: 'var(--color-text-light)' }}>You have full control. Accept only the projects that interest you and work entirely on your own terms.</p>
-                            </div>
-                            <div>
-                                <h4 style={{ fontSize: '1.1rem', marginBottom: '12px' }}>Elite Connections</h4>
-                                <p style={{ fontSize: '0.95rem', color: 'var(--color-text-light)' }}>Interact with decision-makers at the world's leading investment funds, private equity firms, and corporations.</p>
-                            </div>
-                            <div>
-                                <h4 style={{ fontSize: '1.1rem', marginBottom: '12px' }}>Strict Compliance</h4>
-                                <p style={{ fontSize: '0.95rem', color: 'var(--color-text-light)' }}>Our dedicated compliance framework protects you and your current obligations, allowing for secure knowledge sharing.</p>
-                            </div>
-                        </div>
+                <div style={{ textAlign: 'center', marginBottom: '64px' }}>
+                    <h2 style={{ fontSize: '3rem', fontWeight: '800', marginBottom: '16px' }}>Why Join Our Network?</h2>
+                    <p style={{ color: 'var(--color-text-light)', fontSize: '1.25rem' }}>Turn your knowledge into income while helping others make better decisions</p>
+                </div>
+                <div className={styles.benefitGrid}>
+                    <div className={styles.benefitCard}>
+                        <div className={styles.benefitIconWrapper}><DollarSign size={24} /></div>
+                        <h3 className={styles.benefitTitle}>Competitive Earnings</h3>
+                        <p className={styles.benefitDescription}>Earn $50–$500+ per survey, set your hourly rate for calls, and get project-based fees for longer engagements.</p>
                     </div>
+                    <div className={styles.benefitCard}>
+                        <div className={styles.benefitIconWrapper}><Clock size={24} /></div>
+                        <h3 className={styles.benefitTitle}>Flexible Schedule</h3>
+                        <p className={styles.benefitDescription}>Complete surveys on your time. Accept only the calls, focus groups, and projects that fit your schedule.</p>
+                    </div>
+                    <div className={styles.benefitCard}>
+                        <div className={styles.benefitIconWrapper}><Globe size={24} /></div>
+                        <h3 className={styles.benefitTitle}>Global Clients</h3>
+                        <p className={styles.benefitDescription}>Connect with leading hedge funds, consulting firms, private equity, and corporations worldwide.</p>
+                    </div>
+                    <div className={styles.benefitCard}>
+                        <div className={styles.benefitIconWrapper}><Shield size={24} /></div>
+                        <h3 className={styles.benefitTitle}>Compliance Support</h3>
+                        <p className={styles.benefitDescription}>We handle compliance complexities. Clear guidelines, NDA management, and conflict screening for every engagement.</p>
+                    </div>
+                </div>
+            </SectionWrapper>
+
+            <SectionWrapper>
+                <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '64px', alignItems: 'center' }}>
                     <div style={{ background: 'white', padding: '48px', borderRadius: '16px', boxShadow: '0 20px 40px rgba(0,0,0,0.03)', border: '1px solid rgba(0,0,0,0.03)' }}>
                         <h2 style={{ fontSize: '1.75rem', marginBottom: '32px' }}>Who We're Looking For</h2>
                         <ul className={styles.requirementsList}>
@@ -101,6 +108,13 @@ export default function ForExperts() {
                             <li><CheckCircle2 size={18} className={styles.checkIcon} /> High standard of professionalism</li>
                             <li><CheckCircle2 size={18} className={styles.checkIcon} /> Commitment to compliance</li>
                         </ul>
+                    </div>
+                    <div>
+                        <h2 style={{ fontSize: '2.5rem', marginBottom: '24px' }}>Expert Onboarding</h2>
+                        <p style={{ fontSize: '1.1rem', color: 'var(--color-text-light)', marginBottom: '24px', lineHeight: '1.7' }}>
+                            Our vetting process ensures the highest quality of insights for our clients. Once you apply, our team will review your profile to match you with upcoming opportunities.
+                        </p>
+                        <Button href="/contact" variant="outline">Learn More About Vetting</Button>
                     </div>
                 </div>
             </SectionWrapper>
