@@ -262,11 +262,23 @@
 .ctaBox {
     text-align: center;
     padding: 120px 0;
+    background-color: var(--color-primary);
+    color: var(--color-white);
 }
 
 .ctaBox h2 {
-    font-size: 3rem;
+    font-size: 3.5rem;
+    font-weight: 800;
     margin-bottom: 24px;
+    letter-spacing: -0.02em;
+}
+
+.ctaBox p {
+    font-size: 1.25rem;
+    color: #F1F5F9;
+    max-width: 700px;
+    margin: 0 auto 48px;
+    line-height: 1.6;
 }
 
 @media (max-width: 1024px) {
