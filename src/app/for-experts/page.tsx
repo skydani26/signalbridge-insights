@@ -27,34 +27,43 @@ export default function ForExperts() {
             </section>
 
             <SectionWrapper>
-                <div style={{ textAlign: 'center', marginBottom: '80px' }}>
-                    <span style={{ color: 'var(--color-secondary)', fontWeight: '600', textTransform: 'uppercase', letterSpacing: '2px', fontSize: '0.9rem' }}>OPPORTUNITIES</span>
-                    <h2 style={{ fontSize: '3rem', marginTop: '16px' }}>Ways to Earn</h2>
+                <div style={{ textAlign: 'center', marginBottom: '64px' }}>
+                    <span style={{ color: 'var(--color-secondary)', fontWeight: '600', textTransform: 'uppercase', letterSpacing: '2px', fontSize: '0.85rem' }}>WAYS TO EARN</span>
+                    <h2 style={{ fontSize: '3rem', marginTop: '16px', fontWeight: '800' }}>Multiple Ways to Monetize Your Knowledge</h2>
+                    <p style={{ color: 'var(--color-text-light)', marginTop: '16px', fontSize: '1.2rem' }}>Choose the engagement types that work best for you</p>
                 </div>
                 <div className={styles.earnGrid}>
                     <div className={styles.earnCard}>
-                        <div className={styles.iconBox}><FileText size={20} /></div>
-                        <h3 className={styles.earnTitle}>Paid Surveys</h3>
-                        <span className={styles.earnPrice}>$50 – $500+ per survey</span>
-                        <p>Targeted questionnaires delivered to your inbox. Share your perspective on market trends and industry developments on your own schedule.</p>
+                        <div className={styles.earnIconWrapper}><FileText size={24} /></div>
+                        <div className={styles.earnContent}>
+                            <h3 className={styles.earnTitle}>Paid Surveys</h3>
+                            <p className={styles.earnDescription}>Complete targeted industry surveys from your desktop or mobile. Quick, flexible, and well-compensated.</p>
+                            <span className={styles.earnBadge}>$50–$500+ per survey</span>
+                        </div>
                     </div>
                     <div className={styles.earnCard}>
-                        <div className={styles.iconBox}><Phone size={20} /></div>
-                        <h3 className={styles.earnTitle}>1-on-1 Consultation Calls</h3>
-                        <span className={styles.earnPrice}>$200 – $1,500/hr</span>
-                        <p>High-value consultations with institutional investors and strategy consultants seeking deep, specialized industry expertise.</p>
+                        <div className={styles.earnIconWrapper}><Phone size={24} /></div>
+                        <div className={styles.earnContent}>
+                            <h3 className={styles.earnTitle}>1-on-1 Consultation Calls</h3>
+                            <p className={styles.earnDescription}>Share your expertise in 30–60 minute phone or video calls with clients seeking deep industry knowledge.</p>
+                            <span className={styles.earnBadge}>$200–$1,500/hr</span>
+                        </div>
                     </div>
                     <div className={styles.earnCard}>
-                        <div className={styles.iconBox}><Users size={20} /></div>
-                        <h3 className={styles.earnTitle}>Focus Groups & Panels</h3>
-                        <span className={styles.earnPrice}>Project-based compensation</span>
-                        <p>Participate in moderated discussions and interactive panels with other high-level industry leaders and professionals.</p>
+                        <div className={styles.earnIconWrapper}><Users size={24} /></div>
+                        <div className={styles.earnContent}>
+                            <h3 className={styles.earnTitle}>Focus Groups & Panels</h3>
+                            <p className={styles.earnDescription}>Join moderated group discussions with other experts to explore topics from multiple perspectives.</p>
+                            <span className={styles.earnBadge}>$300–$800 per session</span>
+                        </div>
                     </div>
                     <div className={styles.earnCard}>
-                        <div className={styles.iconBox}><Zap size={20} /></div>
-                        <h3 className={styles.earnTitle}>Advisory & Project Work</h3>
-                        <span className={styles.earnPrice}>Custom engagement fees</span>
-                        <p>Engage in longer-term strategic projects, specialized workshops, or board-level advisory roles tailored to your background.</p>
+                        <div className={styles.earnIconWrapper}><Zap size={24} /></div>
+                        <div className={styles.earnContent}>
+                            <h3 className={styles.earnTitle}>Advisory & Project Work</h3>
+                            <p className={styles.earnDescription}>Provide ongoing advisory support or contribute to longer-term research and strategy projects.</p>
+                            <span className={styles.earnBadge}>Custom project rates</span>
+                        </div>
                     </div>
                 </div>
             </SectionWrapper>
