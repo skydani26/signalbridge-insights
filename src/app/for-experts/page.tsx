@@ -1,7 +1,7 @@
-
 import React from 'react';
 import SectionWrapper from "@/components/SectionWrapper";
 import Button from "@/components/Button";
+import { FileText, Phone, Users, Zap, CheckCircle2 } from "lucide-react";
 import styles from "./for-experts.module.css";
 
 export const metadata = {
@@ -13,76 +13,98 @@ export default function ForExperts() {
     return (
         <main>
             <section className={styles.hero}>
-                <div className="container">
-                    <h1>Monetize Your Industry Expertise</h1>
+                <div className="container" style={{ maxWidth: '900px' }}>
+                    <h1>Monetize Your <span className={styles.heroHighlight}>Industry Expertise</span></h1>
                     <p className={styles.heroSubtitle}>
-                        Join 10,000+ professionals earning through surveys, calls, focus groups, and advisory projects.
+                        Join 10,000+ professionals earning money through paid surveys, consultation calls, focus groups, and advisory projects. Share your knowledge on your own terms.
                     </p>
-                    <Button href="/contact" variant="primary" style={{ backgroundColor: 'white', color: 'var(--color-primary)' }}>Apply Today</Button>
+                    <div style={{ display: 'flex', justifyContent: 'center' }}>
+                        <Button href="/contact" style={{ backgroundColor: 'white', color: 'var(--color-primary)', padding: '16px 40px', fontWeight: '700' }}>
+                            Apply to Join <span style={{ marginLeft: '12px' }}>→</span>
+                        </Button>
+                    </div>
                 </div>
             </section>
 
             <SectionWrapper>
-                <h2 className="text-center mb-8">Ways to Earn</h2>
+                <div style={{ textAlign: 'center', marginBottom: '80px' }}>
+                    <span style={{ color: 'var(--color-secondary)', fontWeight: '600', textTransform: 'uppercase', letterSpacing: '2px', fontSize: '0.9rem' }}>OPPORTUNITIES</span>
+                    <h2 style={{ fontSize: '3rem', marginTop: '16px' }}>Ways to Earn</h2>
+                </div>
                 <div className={styles.earnGrid}>
                     <div className={styles.earnCard}>
-                        <h3>Paid Surveys</h3>
-                        <span className={styles.earnPrice}>$50 – $500+</span>
-                        <p>Short, targeted questionnaires that you can complete on your own schedule.</p>
+                        <div className={styles.iconBox}><FileText size={20} /></div>
+                        <h3 className={styles.earnTitle}>Paid Surveys</h3>
+                        <span className={styles.earnPrice}>$50 – $500+ per survey</span>
+                        <p>Targeted questionnaires delivered to your inbox. Share your perspective on market trends and industry developments on your own schedule.</p>
                     </div>
                     <div className={styles.earnCard}>
-                        <h3>1-on-1 Consultation Calls</h3>
+                        <div className={styles.iconBox}><Phone size={20} /></div>
+                        <h3 className={styles.earnTitle}>1-on-1 Consultation Calls</h3>
                         <span className={styles.earnPrice}>$200 – $1,500/hr</span>
-                        <p>High-value phone consultations with investors and strategy consultants seeking deep expertise.</p>
+                        <p>High-value consultations with institutional investors and strategy consultants seeking deep, specialized industry expertise.</p>
                     </div>
                     <div className={styles.earnCard}>
-                        <h3>Focus Groups & Panels</h3>
-                        <p>Participate in moderated discussions with other industry leaders.</p>
+                        <div className={styles.iconBox}><Users size={20} /></div>
+                        <h3 className={styles.earnTitle}>Focus Groups & Panels</h3>
+                        <span className={styles.earnPrice}>Project-based compensation</span>
+                        <p>Participate in moderated discussions and interactive panels with other high-level industry leaders and professionals.</p>
                     </div>
                     <div className={styles.earnCard}>
-                        <h3>Advisory & Project Work</h3>
-                        <p>Longer-term engagements and board advisory roles.</p>
+                        <div className={styles.iconBox}><Zap size={20} /></div>
+                        <h3 className={styles.earnTitle}>Advisory & Project Work</h3>
+                        <span className={styles.earnPrice}>Custom engagement fees</span>
+                        <p>Engage in longer-term strategic projects, specialized workshops, or board-level advisory roles tailored to your background.</p>
                     </div>
                 </div>
             </SectionWrapper>
 
             <SectionWrapper background="gray">
-                <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '64px' }}>
+                <div style={{ display: 'grid', gridTemplateColumns: '1.2fr 0.8fr', gap: '100px', alignItems: 'center' }}>
                     <div>
-                        <h2>Why Join SignalBridge?</h2>
-                        <ul style={{ listStyle: 'none', padding: 0 }}>
-                            <li className="mb-4">
-                                <strong>Competitive Earnings:</strong> We pay top market rates for your time and knowledge.
-                            </li>
-                            <li className="mb-4">
-                                <strong>Flexible Schedule:</strong> You choose which projects to accept. Zero commitment required.
-                            </li>
-                            <li className="mb-4">
-                                <strong>Global Clients:</strong> Connect with the world&apos;s leading investment funds and corporations.
-                            </li>
-                            <li className="mb-4">
-                                <strong>Compliance Support:</strong> We handle the training and framework so you can focus on insights.
-                            </li>
-                        </ul>
+                        <span style={{ color: 'var(--color-secondary)', fontWeight: '600', textTransform: 'uppercase', letterSpacing: '2px', fontSize: '0.9rem' }}>BENEFITS</span>
+                        <h2 style={{ fontSize: '2.5rem', marginTop: '16px', marginBottom: '32px' }}>Why Join SignalBridge?</h2>
+                        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '32px' }}>
+                            <div>
+                                <h4 style={{ fontSize: '1.1rem', marginBottom: '12px' }}>Competitive Earnings</h4>
+                                <p style={{ fontSize: '0.95rem', color: 'var(--color-text-light)' }}>We pay top-tier market rates that reflect the value of your specialized knowledge and years of experience.</p>
+                            </div>
+                            <div>
+                                <h4 style={{ fontSize: '1.1rem', marginBottom: '12px' }}>Total Flexibility</h4>
+                                <p style={{ fontSize: '0.95rem', color: 'var(--color-text-light)' }}>You have full control. Accept only the projects that interest you and work entirely on your own terms.</p>
+                            </div>
+                            <div>
+                                <h4 style={{ fontSize: '1.1rem', marginBottom: '12px' }}>Elite Connections</h4>
+                                <p style={{ fontSize: '0.95rem', color: 'var(--color-text-light)' }}>Interact with decision-makers at the world's leading investment funds, private equity firms, and corporations.</p>
+                            </div>
+                            <div>
+                                <h4 style={{ fontSize: '1.1rem', marginBottom: '12px' }}>Strict Compliance</h4>
+                                <p style={{ fontSize: '0.95rem', color: 'var(--color-text-light)' }}>Our dedicated compliance framework protects you and your current obligations, allowing for secure knowledge sharing.</p>
+                            </div>
+                        </div>
                     </div>
-                    <div>
-                        <h2>Who We&apos;re Looking For</h2>
+                    <div style={{ background: 'white', padding: '48px', borderRadius: '16px', boxShadow: '0 20px 40px rgba(0,0,0,0.03)', border: '1px solid rgba(0,0,0,0.03)' }}>
+                        <h2 style={{ fontSize: '1.75rem', marginBottom: '32px' }}>Who We're Looking For</h2>
                         <ul className={styles.requirementsList}>
-                            <li>5+ years of professional experience in your field</li>
-                            <li>Current or recent role in a relevant industry</li>
-                            <li>Strong communication skills</li>
-                            <li>Commitment to compliance and confidentiality</li>
-                            <li>Availability for 2–4 hours per month</li>
+                            <li><CheckCircle2 size={18} className={styles.checkIcon} /> 5+ years of senior experience</li>
+                            <li><CheckCircle2 size={18} className={styles.checkIcon} /> Current or recent industry role</li>
+                            <li><CheckCircle2 size={18} className={styles.checkIcon} /> Specific technical or strategic niche</li>
+                            <li><CheckCircle2 size={18} className={styles.checkIcon} /> High standard of professionalism</li>
+                            <li><CheckCircle2 size={18} className={styles.checkIcon} /> Commitment to compliance</li>
                         </ul>
                     </div>
                 </div>
             </SectionWrapper>
 
-            <SectionWrapper className={styles.ctaBox}>
-                <h2>Ready to share your knowledge?</h2>
-                <p className="mb-8">Join the network of top tier experts.</p>
-                <Button href="/contact">Apply Now</Button>
-            </SectionWrapper>
+            <section className={styles.ctaBox}>
+                <div className="container">
+                    <h2>Ready to share your knowledge?</h2>
+                    <p style={{ fontSize: '1.25rem', color: 'var(--color-text-light)', marginBottom: '48px' }}>Join the network of top-tier experts and monetize your industry expertise.</p>
+                    <Button href="/contact" style={{ backgroundColor: 'var(--color-primary)', color: 'white', padding: '16px 40px', fontWeight: '600' }}>
+                        Apply Now <span style={{ marginLeft: '12px' }}>→</span>
+                    </Button>
+                </div>
+            </section>
         </main>
     );
 }

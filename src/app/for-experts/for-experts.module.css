@@ -7,12 +7,16 @@
 
 .hero h1 {
     font-family: var(--font-heading);
-    font-size: 3.5rem;
-    font-weight: 600;
-    /* Reduced from 800 */
-    margin-bottom: 32px;
+    font-size: 4rem;
+    font-weight: 800;
+    margin-bottom: 24px;
     color: var(--color-white);
-    letter-spacing: -0.03em;
+    letter-spacing: -0.04em;
+    line-height: 1.1;
+}
+
+.heroHighlight {
+    color: var(--color-secondary);
 }
 
 .heroSubtitle {
@@ -30,17 +34,43 @@
 }
 
 .earnCard {
-    background: var(--color-gray-100);
-    padding: 32px;
-    border-radius: 8px;
+    background: white;
+    padding: 40px;
+    border-radius: 12px;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+}
+
+.earnCard:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+.earnTitle {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 8px;
+    color: var(--color-primary);
 }
 
 .earnPrice {
-    font-size: 1.5rem;
+    font-size: 1.15rem;
     font-weight: 700;
-    color: var(--color-primary);
-    margin-bottom: 16px;
+    color: var(--color-secondary);
+    margin-bottom: 24px;
     display: block;
+}
+
+.iconBox {
+    width: 44px;
+    height: 44px;
+    background-color: var(--color-gray-100);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 24px;
+    color: var(--color-primary);
 }
 
 .requirementsList {
@@ -49,22 +79,28 @@
 }
 
 .requirementsList li {
-    margin-bottom: 16px;
-    padding-left: 24px;
+    margin-bottom: 20px;
+    padding-left: 32px;
     position: relative;
+    font-size: 1.1rem;
+    color: var(--color-text-main);
 }
 
-.requirementsList li::before {
-    content: '✓';
+.checkIcon {
     position: absolute;
     left: 0;
-    color: var(--color-primary);
-    font-weight: bold;
+    top: 4px;
+    color: var(--color-secondary);
 }
 
 .ctaBox {
     text-align: center;
-    margin-top: 48px;
+    padding: 120px 0;
+}
+
+.ctaBox h2 {
+    font-size: 3rem;
+    margin-bottom: 24px;
 }
 
 @media (max-width: 1024px) {
