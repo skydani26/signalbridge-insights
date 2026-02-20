@@ -1,19 +1,17 @@
 .hero {
     padding: 180px 0 160px;
     background-color: var(--color-primary);
-    /* Deep Navy */
     text-align: center;
 }
 
 .hero h1 {
     font-family: var(--font-heading);
     color: var(--color-white);
-    /* White instead of primary navy */
-    font-size: 3.5rem;
+    font-size: 5rem;
     font-weight: 600;
-    /* Reduced from 800 */
     margin-bottom: 32px;
-    letter-spacing: -0.03em;
+    letter-spacing: -0.04em;
+    line-height: 1.1;
 }
 
 .heroSubtitle {
@@ -25,32 +23,67 @@
     line-height: 1.6;
 }
 
-.formatList {
+.formatGrid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 24px;
-    margin-top: 48px;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+    margin-top: 64px;
 }
 
 .formatCard {
-    background: var(--color-white);
-    padding: 24px;
-    border-left: 4px solid var(--color-primary);
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    background: white;
+    padding: 40px 32px;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    text-align: left;
 }
 
-.processContainer {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 64px;
-    margin-top: 48px;
+.formatCard:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.06);
+    border-color: var(--color-secondary);
+}
+
+.formatIcon {
+    width: 48px;
+    height: 48px;
+    background: #f0f4ff;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-secondary);
+    margin-bottom: 24px;
+}
+
+.sectionTag {
+    color: var(--color-secondary);
+    font-weight: 500;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    letter-spacing: 2.5px;
+    margin-bottom: 20px;
+    display: block;
+    text-align: center;
+}
+
+.sectionTitle {
+    color: #000000;
+    font-size: 3.5rem;
+    font-weight: 800;
+    text-align: center;
+    margin-bottom: 64px;
+    letter-spacing: -0.04em;
+    line-height: 1.2;
 }
 
 .processColumn h3 {
-    color: var(--color-primary);
-    border-bottom: 2px solid var(--color-gray-200);
-    padding-bottom: 16px;
-    margin-bottom: 32px;
+    color: #000000;
+    font-size: 1.75rem;
+    font-weight: 700;
+    margin-bottom: 40px;
+    text-align: center;
 }
 
 .timeline {
@@ -96,21 +129,29 @@
     color: var(--color-text-main);
 }
 
+.complianceSection {
+    background-color: #ffffff;
+    padding: 100px 0;
+}
+
 .complianceGrid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 32px;
+    gap: 20px 48px;
+    margin-top: 40px;
 }
 
 .complianceItem {
     display: flex;
-    align-items: flex-start;
-    gap: 16px;
+    align-items: center;
+    gap: 12px;
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: var(--color-primary);
 }
 
 .checkIcon {
-    color: var(--color-primary);
-    font-weight: bold;
+    color: var(--color-secondary);
 }
 
 @media (max-width: 1024px) {
