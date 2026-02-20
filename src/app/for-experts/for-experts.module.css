@@ -197,9 +197,51 @@
     color: #94A3B8;
 }
 
+.lookingGrid {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 80px;
+    align-items: center;
+}
+
+.infoCardGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.infoCard {
+    background: white;
+    padding: 24px;
+    border-radius: 8px;
+    border: 1px solid rgba(0, 0, 0, 0.03);
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.02);
+}
+
+.infoIconBox {
+    width: 40px;
+    height: 40px;
+    background-color: var(--color-gray-100);
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-primary);
+}
+
+.infoCard span {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--color-primary);
+}
+
 .requirementsList {
     list-style: none;
     padding: 0;
+    margin-top: 32px;
 }
 
 .requirementsList li {

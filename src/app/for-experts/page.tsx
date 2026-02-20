@@ -1,7 +1,7 @@
 import React from 'react';
 import SectionWrapper from "@/components/SectionWrapper";
 import Button from "@/components/Button";
-import { FileText, Phone, Users, Zap, CheckCircle2, DollarSign, Clock, Globe, Shield } from "lucide-react";
+import { FileText, Phone, Users, Zap, CheckCircle2, DollarSign, Clock, Globe, Shield, Briefcase, TrendingUp } from "lucide-react";
 import styles from "./for-experts.module.css";
 
 export const metadata = {
@@ -136,23 +136,37 @@ export default function ForExperts() {
                 </div>
             </SectionWrapper>
             <SectionWrapper>
-                <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '64px', alignItems: 'center' }}>
-                    <div style={{ background: 'white', padding: '48px', borderRadius: '16px', boxShadow: '0 20px 40px rgba(0,0,0,0.03)', border: '1px solid rgba(0,0,0,0.03)' }}>
-                        <h2 style={{ fontSize: '1.75rem', marginBottom: '32px' }}>Who We're Looking For</h2>
-                        <ul className={styles.requirementsList}>
-                            <li><CheckCircle2 size={18} className={styles.checkIcon} /> 5+ years of senior experience</li>
-                            <li><CheckCircle2 size={18} className={styles.checkIcon} /> Current or recent industry role</li>
-                            <li><CheckCircle2 size={18} className={styles.checkIcon} /> Specific technical or strategic niche</li>
-                            <li><CheckCircle2 size={18} className={styles.checkIcon} /> High standard of professionalism</li>
-                            <li><CheckCircle2 size={18} className={styles.checkIcon} /> Commitment to compliance</li>
-                        </ul>
+                <div className={styles.lookingGrid}>
+                    <div className={styles.infoCardGrid}>
+                        <div className={styles.infoCard}>
+                            <div className={styles.infoIconBox}><Briefcase size={20} /></div>
+                            <span>Professional Background</span>
+                        </div>
+                        <div className={styles.infoCard}>
+                            <div className={styles.infoIconBox}><TrendingUp size={20} /></div>
+                            <span>Industry Expertise</span>
+                        </div>
+                        <div className={styles.infoCard}>
+                            <div className={styles.infoIconBox}><Users size={20} /></div>
+                            <span>Strong Network</span>
+                        </div>
+                        <div className={styles.infoCard}>
+                            <div className={styles.infoIconBox}><Shield size={20} /></div>
+                            <span>Compliance Focus</span>
+                        </div>
                     </div>
                     <div>
-                        <h2 style={{ fontSize: '2.5rem', marginBottom: '24px' }}>Expert Onboarding</h2>
-                        <p style={{ fontSize: '1.1rem', color: 'var(--color-text-light)', marginBottom: '24px', lineHeight: '1.7' }}>
-                            Our vetting process ensures the highest quality of insights for our clients. Once you apply, our team will review your profile to match you with upcoming opportunities.
+                        <h2 style={{ fontSize: '3rem', fontWeight: '800', marginBottom: '24px' }}>Who We're Looking For</h2>
+                        <p style={{ color: 'var(--color-text-light)', fontSize: '1.15rem', lineHeight: '1.6' }}>
+                            We're building a network of exceptional professionals who can provide valuable insights through surveys, calls, and advisory work.
                         </p>
-                        <Button href="/contact" variant="outline">Learn More About Vetting</Button>
+                        <ul className={styles.requirementsList}>
+                            <li><CheckCircle2 size={18} className={styles.checkIcon} /> Deep professional experience in your field</li>
+                            <li><CheckCircle2 size={18} className={styles.checkIcon} /> Current or recent industry position</li>
+                            <li><CheckCircle2 size={18} className={styles.checkIcon} /> Strong communication skills</li>
+                            <li><CheckCircle2 size={18} className={styles.checkIcon} /> Commitment to compliance and confidentiality</li>
+                            <li><CheckCircle2 size={18} className={styles.checkIcon} /> Availability for at least 2–4 hours per month</li>
+                        </ul>
                     </div>
                 </div>
             </SectionWrapper>
