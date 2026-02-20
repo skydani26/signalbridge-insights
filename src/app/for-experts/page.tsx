@@ -98,6 +98,44 @@ export default function ForExperts() {
             </SectionWrapper>
 
             <SectionWrapper>
+                <div className={styles.pricingSection}>
+                    <div>
+                        <h2 style={{ fontSize: '2.5rem', fontWeight: '800', marginBottom: '24px' }}>Earn What You're Worth</h2>
+                        <p style={{ color: 'var(--color-text-light)', fontSize: '1.1rem', marginBottom: '40px', maxWidth: '500px' }}>
+                            Your rates are based on your experience level, industry expertise, and current position. You set your rate — we help you find clients.
+                        </p>
+                        <div className={styles.tierList}>
+                            <div className={styles.tierItem}>
+                                <div className={styles.tierInfo}>
+                                    <h4>Entry Expert</h4>
+                                    <p>5–10 years experience</p>
+                                </div>
+                                <div className={styles.tierPrice}>$200–$400/hr</div>
+                            </div>
+                            <div className={styles.tierItem}>
+                                <div className={styles.tierInfo}>
+                                    <h4>Senior Expert</h4>
+                                    <p>10–15 years experience</p>
+                                </div>
+                                <div className={styles.tierPrice}>$400–$800/hr</div>
+                            </div>
+                            <div className={styles.tierItem}>
+                                <div className={styles.tierInfo}>
+                                    <h4>Executive Expert</h4>
+                                    <p>C-suite or equivalent</p>
+                                </div>
+                                <div className={styles.tierPrice}>$800–$1,500+/hr</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div className={styles.earningsHighlight}>
+                        <div className={styles.earningsValue}>$2,500+</div>
+                        <div className={styles.earningsLabel}>Average monthly earnings</div>
+                        <div className={styles.earningsSublabel}>(for active experts)</div>
+                    </div>
+                </div>
+            </SectionWrapper>
+            <SectionWrapper>
                 <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '64px', alignItems: 'center' }}>
                     <div style={{ background: 'white', padding: '48px', borderRadius: '16px', boxShadow: '0 20px 40px rgba(0,0,0,0.03)', border: '1px solid rgba(0,0,0,0.03)' }}>
                         <h2 style={{ fontSize: '1.75rem', marginBottom: '32px' }}>Who We're Looking For</h2>
@@ -128,6 +166,6 @@ export default function ForExperts() {
                     </Button>
                 </div>
             </section>
-        </main>
+        </main >
     );
 }

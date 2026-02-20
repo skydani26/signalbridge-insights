@@ -133,6 +133,70 @@
     line-height: 1.6;
 }
 
+.pricingSection {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: center;
+}
+
+.tierList {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.tierItem {
+    background: #FAFAFA;
+    padding: 24px 32px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid transparent;
+}
+
+.tierInfo h4 {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--color-primary);
+    margin-bottom: 4px;
+}
+
+.tierInfo p {
+    font-size: 0.85rem;
+    color: var(--color-text-light);
+}
+
+.tierPrice {
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: var(--color-secondary);
+}
+
+.earningsHighlight {
+    text-align: center;
+}
+
+.earningsValue {
+    font-size: 5rem;
+    font-weight: 800;
+    color: var(--color-primary);
+    line-height: 1;
+    margin-bottom: 12px;
+}
+
+.earningsLabel {
+    font-size: 1.25rem;
+    color: var(--color-text-light);
+    margin-bottom: 4px;
+}
+
+.earningsSublabel {
+    font-size: 0.9rem;
+    color: #94A3B8;
+}
+
 .requirementsList {
     list-style: none;
     padding: 0;
