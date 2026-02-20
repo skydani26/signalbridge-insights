@@ -3,7 +3,7 @@ import React from 'react';
 import SectionWrapper from "@/components/SectionWrapper";
 import Button from "@/components/Button";
 import styles from "./how-it-works.module.css";
-import { Star, FileText, Phone, Zap, Network, Database, ShieldCheck, CheckCircle2, MessageSquare, Search, UserCheck, Calendar, BarChart3, FileCheck, UserPlus, DollarSign } from "lucide-react";
+import { Star, FileText, Phone, Zap, Network, Database, ShieldCheck, CheckCircle2, MessageSquare, Search, UserCheck, Calendar, BarChart3, FileCheck, UserPlus, DollarSign, Shield, Lock } from "lucide-react";
 
 export const metadata = {
     title: "How It Works | SignalBridge Insights",
@@ -208,29 +208,35 @@ export default function HowItWorks() {
 
             <section className={styles.complianceSection}>
                 <div className="container">
-                    <div style={{ display: 'grid', gridTemplateColumns: '1.2fr 1fr', gap: '80px', alignItems: 'center' }}>
+                    <div style={{ display: 'grid', gridTemplateColumns: '1.2fr 0.8fr', gap: '80px', alignItems: 'center' }}>
                         <div>
-                            <span className={styles.sectionTag} style={{ textAlign: 'left' }}>SECURITY</span>
-                            <h2 className={styles.sectionTitle} style={{ textAlign: 'left', marginBottom: '24px' }}>Compliance & Safety</h2>
-                            <p style={{ fontSize: '1.25rem', color: 'var(--color-text-light)', lineHeight: '1.6', marginBottom: '32px' }}>
-                                Our industry-leading compliance framework protects both clients and experts,
-                                ensuring every interaction is safe, professional, and audit-ready.
+                            <div className={styles.iconBoxSmall} style={{ marginBottom: '32px' }}>
+                                <Shield size={20} />
+                            </div>
+                            <h2 className={styles.securityTitle}>Compliance & Security</h2>
+                            <p className={styles.securitySubtitle}>
+                                We take compliance seriously. Our platform is designed to meet
+                                the stringent requirements of institutional investors, regulated
+                                industries, and global compliance standards.
                             </p>
-                            <div className={styles.complianceGrid}>
-                                <div className={styles.complianceItem}><CheckCircle2 className={styles.checkIcon} size={20} /> MNPI Protocols</div>
-                                <div className={styles.complianceItem}><CheckCircle2 className={styles.checkIcon} size={20} /> Conflict Screening</div>
-                                <div className={styles.complianceItem}><CheckCircle2 className={styles.checkIcon} size={20} /> NDA Enforcement</div>
-                                <div className={styles.complianceItem}><CheckCircle2 className={styles.checkIcon} size={20} /> Full Audit Trails</div>
-                                <div className={styles.complianceItem}><CheckCircle2 className={styles.checkIcon} size={20} /> GDPR Compliance</div>
-                                <div className={styles.complianceItem}><CheckCircle2 className={styles.checkIcon} size={20} /> Identity Verification</div>
+                            <div className={styles.complianceList}>
+                                <div className={styles.complianceItem}><CheckCircle2 className={styles.checkIcon} size={20} /> All experts sign confidentiality agreements (NDAs)</div>
+                                <div className={styles.complianceItem}><CheckCircle2 className={styles.checkIcon} size={20} /> Conflict of interest screening on every engagement</div>
+                                <div className={styles.complianceItem}><CheckCircle2 className={styles.checkIcon} size={20} /> Material Non-Public Information (MNPI) protocols</div>
+                                <div className={styles.complianceItem}><CheckCircle2 className={styles.checkIcon} size={20} /> Compliance training for all network members</div>
+                                <div className={styles.complianceItem}><CheckCircle2 className={styles.checkIcon} size={20} /> Call monitoring and quality assurance available</div>
+                                <div className={styles.complianceItem}><CheckCircle2 className={styles.checkIcon} size={20} /> Full audit trails for all platform activities</div>
+                                <div className={styles.complianceItem}><CheckCircle2 className={styles.checkIcon} size={20} /> GDPR and data privacy compliant</div>
+                                <div className={styles.complianceItem}><CheckCircle2 className={styles.checkIcon} size={20} /> Background checks for sensitive engagements</div>
                             </div>
                         </div>
-                        <div style={{ backgroundColor: 'var(--color-primary)', borderRadius: '16px', padding: '56px', color: 'white', textAlign: 'center' }}>
-                            <h3 style={{ color: 'white', fontSize: '2rem', fontWeight: '800', marginBottom: '16px' }}>Ready to Scale?</h3>
-                            <p style={{ color: 'rgba(255,255,255,0.8)', fontSize: '1.1rem', marginBottom: '32px', lineHeight: '1.6' }}>
-                                Connect with the world&apos;s leading network of verified experts today.
-                            </p>
-                            <Button href="/contact" className="btn" style={{ backgroundColor: 'white', color: 'var(--color-primary)', fontWeight: '700' }}>Contact Us Now</Button>
+                        <div className={styles.securityVisual}>
+                            <div className={styles.lockWrapper}>
+                                <Lock size={80} strokeWidth={1.5} />
+                            </div>
+                            <div className={styles.shieldOverlap}>
+                                <Shield size={32} strokeWidth={2} />
+                            </div>
                         </div>
                     </div>
                 </div>

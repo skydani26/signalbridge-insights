@@ -172,27 +172,80 @@
 
 .complianceSection {
     background-color: #ffffff;
-    padding: 100px 0;
+    padding: 120px 0;
 }
 
-.complianceGrid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px 48px;
-    margin-top: 40px;
+.securityHeader {
+    max-width: 600px;
+    margin-bottom: 48px;
+}
+
+.securityTitle {
+    color: #000000;
+    font-size: 3rem;
+    font-weight: 800;
+    margin-bottom: 24px;
+    letter-spacing: -0.04em;
+}
+
+.securitySubtitle {
+    color: var(--color-text-light);
+    font-size: 1.25rem;
+    line-height: 1.6;
+    margin-bottom: 40px;
+}
+
+.complianceList {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
 }
 
 .complianceItem {
     display: flex;
     align-items: center;
-    gap: 12px;
-    font-size: 1.05rem;
-    font-weight: 600;
-    color: var(--color-primary);
+    gap: 14px;
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: var(--color-text-main);
 }
 
 .checkIcon {
     color: var(--color-secondary);
+}
+
+.securityVisual {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.lockWrapper {
+    width: 200px;
+    height: 200px;
+    background: #f1f5f9;
+    border-radius: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-primary);
+}
+
+.shieldOverlap {
+    position: absolute;
+    bottom: -10px;
+    right: 30px;
+    width: 80px;
+    height: 80px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-secondary);
+    border: 1px solid rgba(0, 0, 0, 0.03);
 }
 
 @media (max-width: 1024px) {
