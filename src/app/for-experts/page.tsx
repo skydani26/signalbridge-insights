@@ -171,17 +171,17 @@ export default function ForExperts() {
                 </div>
             </SectionWrapper>
 
-            <section className={styles.ctaBox}>
-                <div className="container" style={{ maxWidth: '900px' }}>
-                    <h2>Ready to Start Earning?</h2>
-                    <p>
+            <SectionWrapper background="dark">
+                <div style={{ textAlign: 'center', maxWidth: '900px', margin: '0 auto' }}>
+                    <h2 style={{ fontSize: '3.5rem', fontWeight: '800', marginBottom: '24px', letterSpacing: '-0.02em', color: 'white' }}>Ready to Start Earning?</h2>
+                    <p style={{ fontSize: '1.25rem', color: '#F1F5F9', marginBottom: '40px', lineHeight: '1.6' }}>
                         Apply today and join 10,000+ experts earning through surveys, calls, and projects with SignalBridge
                     </p>
                     <Button href="/contact" style={{ backgroundColor: 'white', color: 'var(--color-primary)', padding: '16px 40px', fontWeight: '700' }}>
                         Start Your Application
                     </Button>
                 </div>
-            </section>
+            </SectionWrapper>
         </main >
     );
 }
