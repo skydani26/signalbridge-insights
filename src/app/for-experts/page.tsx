@@ -1,7 +1,7 @@
 import React from 'react';
 import SectionWrapper from "@/components/SectionWrapper";
 import Button from "@/components/Button";
-import { FileText, Phone, Users, Zap, CheckCircle2, DollarSign, Clock, Globe, Shield, Briefcase, TrendingUp } from "lucide-react";
+import { FileText, Phone, Users, Zap, CheckCircle2, DollarSign, Clock, Globe, Shield, Briefcase, TrendingUp, Star, Lock, ArrowRight } from "lucide-react";
 import styles from "./for-experts.module.css";
 
 export const metadata = {
@@ -30,7 +30,7 @@ export default function ForExperts() {
                 <div style={{ textAlign: 'center', marginBottom: '64px' }}>
                     <span style={{ color: 'var(--color-secondary)', fontWeight: '600', textTransform: 'uppercase', letterSpacing: '2px', fontSize: '0.85rem' }}>WAYS TO EARN</span>
                     <h2 style={{ fontSize: '3rem', marginTop: '16px', fontWeight: '800' }}>Multiple Ways to Monetize Your Knowledge</h2>
-                    <p style={{ color: 'var(--color-text-light)', marginTop: '16px', fontSize: '1.2rem' }}>Choose the engagement types that work best for you</p>
+                    <p style={{ color: 'var(--color-text-light)', marginTop: '16px', fontSize: '1.2rem' }}>Choose the engagement types that fit your expertise</p>
                 </div>
                 <div className={styles.earnGrid}>
                     <div className={styles.earnCard}>
@@ -66,12 +66,39 @@ export default function ForExperts() {
                         </div>
                     </div>
                 </div>
+                <div style={{ display: 'flex', justifyContent: 'center', marginTop: '48px' }}>
+                    <Button href="/contact" variant="outline">View All Engagement Types <ArrowRight size={18} style={{ marginLeft: '8px' }} /></Button>
+                </div>
+            </SectionWrapper>
+
+            <SectionWrapper>
+                <div style={{ textAlign: 'center', marginBottom: '64px' }}>
+                    <span style={{ color: 'var(--color-secondary)', fontWeight: '600', textTransform: 'uppercase', letterSpacing: '2px', fontSize: '0.85rem' }}>APPLICATION PROCESS</span>
+                    <h2 style={{ fontSize: '3rem', marginTop: '16px', fontWeight: '800' }}>Your Path to Earning</h2>
+                </div>
+                <div className={styles.journeyGrid}>
+                    <div className={styles.journeyStep}>
+                        <div className={styles.stepIconBox}>1</div>
+                        <h3 className={styles.journeyTitle}>Apply Online</h3>
+                        <p className={styles.journeyDescription}>Submit your professional profile and industry expertise in less than 5 minutes.</p>
+                    </div>
+                    <div className={styles.journeyStep}>
+                        <div className={styles.stepIconBox}>2</div>
+                        <h3 className={styles.journeyTitle}>Vetting & Verification</h3>
+                        <p className={styles.journeyDescription}>Our team reviews your credentials and matches you with relevant opportunities.</p>
+                    </div>
+                    <div className={styles.journeyStep}>
+                        <div className={styles.stepIconBox}>3</div>
+                        <h3 className={styles.journeyTitle}>Start Earning</h3>
+                        <p className={styles.journeyDescription}>Accept projects that interest you and get paid quickly for your time and insights.</p>
+                    </div>
+                </div>
             </SectionWrapper>
 
             <SectionWrapper background="gray">
                 <div style={{ textAlign: 'center', marginBottom: '64px' }}>
                     <h2 style={{ fontSize: '3rem', fontWeight: '800', marginBottom: '16px' }}>Why Join Our Network?</h2>
-                    <p style={{ color: 'var(--color-text-light)', fontSize: '1.25rem' }}>Turn your knowledge into income while helping others make better decisions</p>
+                    <p style={{ color: 'var(--color-text-light)', fontSize: '1.25rem' }}>Monetize your expertise while helping global leaders make better decisions</p>
                 </div>
                 <div className={styles.benefitGrid}>
                     <div className={styles.benefitCard}>
@@ -134,7 +161,57 @@ export default function ForExperts() {
                         <div className={styles.earningsSublabel}>(for active experts)</div>
                     </div>
                 </div>
+                <div style={{ display: 'flex', justifyContent: 'center', gap: '20px', marginTop: '48px' }}>
+                    <Button href="/contact">Apply to Join Network</Button>
+                    <Button href="/contact" variant="outline">Calculate Your Estimated Rate</Button>
+                </div>
             </SectionWrapper>
+
+            <SectionWrapper background="gray">
+                <div style={{ textAlign: 'center', marginBottom: '64px' }}>
+                    <span style={{ color: 'var(--color-secondary)', fontWeight: '600', textTransform: 'uppercase', letterSpacing: '2px', fontSize: '0.85rem' }}>TESTIMONIALS</span>
+                    <h2 style={{ fontSize: '3rem', marginTop: '16px', fontWeight: '800' }}>Hear From Our Experts</h2>
+                </div>
+                <div className={styles.testimonialGrid}>
+                    <div className={styles.testimonialCard}>
+                        <div style={{ color: 'var(--color-secondary)', marginBottom: '16px', display: 'flex', gap: '4px' }}>
+                            <Star size={16} fill="currentColor" /><Star size={16} fill="currentColor" /><Star size={16} fill="currentColor" /><Star size={16} fill="currentColor" /><Star size={16} fill="currentColor" />
+                        </div>
+                        <p className={styles.quote}>"SignalBridge has allowed me to monetize my 20 years in telecom without leaving my current role. The process is incredibly smooth."</p>
+                        <div className={styles.expertProfile}>
+                            <div className={styles.expertInfo}>
+                                <h5>Senior Tech Executive</h5>
+                                <p>Telecom Industry</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div className={styles.testimonialCard}>
+                        <div style={{ color: 'var(--color-secondary)', marginBottom: '16px', display: 'flex', gap: '4px' }}>
+                            <Star size={16} fill="currentColor" /><Star size={16} fill="currentColor" /><Star size={16} fill="currentColor" /><Star size={16} fill="currentColor" /><Star size={16} fill="currentColor" />
+                        </div>
+                        <p className={styles.quote}>"The compliance team is top-notch. I always feel secure sharing my general industry insights while respecting my employer NDAs."</p>
+                        <div className={styles.expertProfile}>
+                            <div className={styles.expertInfo}>
+                                <h5>Former CFO</h5>
+                                <p>Fortune 500 Manufacturing</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div className={styles.testimonialCard}>
+                        <div style={{ color: 'var(--color-secondary)', marginBottom: '16px', display: 'flex', gap: '4px' }}>
+                            <Star size={16} fill="currentColor" /><Star size={16} fill="currentColor" /><Star size={16} fill="currentColor" /><Star size={16} fill="currentColor" /><Star size={16} fill="currentColor" />
+                        </div>
+                        <p className={styles.quote}>"The variety of projects is fascinating. I've worked on everything from short surveys to deep-dive advisory panels."</p>
+                        <div className={styles.expertProfile}>
+                            <div className={styles.expertInfo}>
+                                <h5>Industry Consultant</h5>
+                                <p>Renewable Energy Sector</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </SectionWrapper>
+
             <SectionWrapper>
                 <div className={styles.lookingGrid}>
                     <div className={styles.infoCardGrid}>
@@ -167,6 +244,48 @@ export default function ForExperts() {
                             <li><CheckCircle2 size={18} className={styles.checkIcon} /> Commitment to compliance and confidentiality</li>
                             <li><CheckCircle2 size={18} className={styles.checkIcon} /> Availability for at least 2–4 hours per month</li>
                         </ul>
+                    </div>
+                </div>
+            </SectionWrapper>
+
+            <SectionWrapper background="gray">
+                <div className={styles.complianceBox}>
+                    <div className={styles.complianceHeader}>
+                        <div className={styles.benefitIconWrapper} style={{ marginBottom: 0 }}><Shield size={32} /></div>
+                        <div>
+                            <h2 style={{ fontSize: '2rem', fontWeight: '800', marginBottom: '4px' }}>Your Privacy & Career are Protected</h2>
+                            <p style={{ color: 'var(--color-text-light)', margin: 0 }}>We maintain the highest standards of data security and professional compliance</p>
+                        </div>
+                    </div>
+                    <div className={styles.complianceGrid}>
+                        <div className={styles.complianceItem}>
+                            <Lock className={styles.complianceIcon} size={24} />
+                            <div>
+                                <h4>NDA Management</h4>
+                                <p>We facilitate all necessary non-disclosure agreements to ensure your conversations remain confidential.</p>
+                            </div>
+                        </div>
+                        <div className={styles.complianceItem}>
+                            <Shield className={styles.complianceIcon} size={24} />
+                            <div>
+                                <h4>Conflict Screening</h4>
+                                <p>Our automated systems and expert team screen every project for potential conflicts of interest.</p>
+                            </div>
+                        </div>
+                        <div className={styles.complianceItem}>
+                            <Users className={styles.complianceIcon} size={24} />
+                            <div>
+                                <h4>Anonymized Participation</h4>
+                                <p>Choose to keep your participation anonymous where appropriate to protect your professional standing.</p>
+                            </div>
+                        </div>
+                        <div className={styles.complianceItem}>
+                            <CheckCircle2 className={styles.complianceIcon} size={24} />
+                            <div>
+                                <h4>Clear Guidelines</h4>
+                                <p>We provide explicit training and guidelines on what can and cannot be shared during projects.</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </SectionWrapper>
