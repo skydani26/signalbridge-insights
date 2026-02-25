@@ -4,7 +4,7 @@ import React, { useEffect } from 'react';
 import SectionWrapper from "@/components/SectionWrapper";
 import Button from "@/components/Button";
 import styles from "./compliance.module.css";
-import { ShieldAlert, Lock, Scale, FileCheck, Download, Gavel, ShieldCheck, AlertCircle } from "lucide-react";
+import { ShieldAlert, Lock, Scale, FileCheck, Gavel, ShieldCheck, AlertCircle } from "lucide-react";
 
 export default function Compliance() {
     useEffect(() => {
@@ -22,6 +22,8 @@ export default function Compliance() {
 
         return () => observer.disconnect();
     }, []);
+
+
 
     const clauses = [
         {
@@ -71,14 +73,14 @@ export default function Compliance() {
             <SectionWrapper id="philosophy">
                 <div style={{ textAlign: 'center' }} className={styles.reveal}>
                     <h2 className={styles.sectionTitle}>The SignalBridge Standard</h2>
-                    <p className={styles.sectionSubtitle}>We maintain the world's most rigorous vetting and audit infrastructure for institutional research.</p>
+                    <p className={styles.sectionSubtitle}>We maintain the world&apos;s most rigorous vetting and audit infrastructure for institutional research.</p>
                 </div>
 
                 <div className={`${styles.pillarGrid} ${styles.reveal}`}>
                     <div className={styles.pillarCard}>
                         <div className={styles.pillarIconBox}><ShieldAlert size={24} /></div>
                         <h3 className={styles.pillarTitle}>MNPI Protocol</h3>
-                        <p className={styles.pillarText}>Strict 'Double-Blind' screening ensures no Material Non-Public Information is ever shared during consultations.</p>
+                        <p className={styles.pillarText}>Strict &apos;Double-Blind&apos; screening ensures no Material Non-Public Information is ever shared during consultations.</p>
                     </div>
                     <div className={styles.pillarCard}>
                         <div className={styles.pillarIconBox}><Lock size={24} /></div>
@@ -111,7 +113,7 @@ export default function Compliance() {
 
                         <div className={styles.agreementBody}>
                             <p style={{ fontStyle: 'italic', color: '#64748B', marginBottom: '32px' }}>
-                                This Agreement governs your relationship as a "SignalBridge Expert" and defines the parameters of your engagement with our global institutional client base.
+                                This Agreement governs your relationship as a &quot;SignalBridge Expert&quot; and defines the parameters of your engagement with our global institutional client base.
                             </p>
 
                             {clauses.map((clause, index) => (
@@ -139,14 +141,7 @@ export default function Compliance() {
                         </div>
                     </div>
 
-                    <div className={`${styles.downloadSection} ${styles.reveal}`}>
-                        <Button variant="outline" style={{ padding: '14px 32px' }}>
-                            <Download size={18} style={{ marginRight: '10px' }} /> Download PDF Counterpart
-                        </Button>
-                        <p style={{ marginTop: '16px', fontSize: '0.875rem', color: 'var(--color-text-light)' }}>
-                            Archival version for your internal compliance records.
-                        </p>
-                    </div>
+
                 </div>
             </section>
 

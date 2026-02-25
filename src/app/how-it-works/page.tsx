@@ -189,20 +189,20 @@ export default function HowItWorks() {
                         <div className={styles.processCard}>
                             <div className={styles.stepNumberBg}>1</div>
                             <div className={styles.iconBoxSmall}><MessageSquare size={18} strokeWidth={1.5} /></div>
-                            <h3 className={styles.cardTitle}>Research Brief</h3>
-                            <p className={styles.cardDescription}>Define research objectives and target industries for surveys, calls, or custom projects.</p>
+                            <h3 className={styles.cardTitle}>Strategic Briefing</h3>
+                            <p className={styles.cardDescription}>Define institutional research objectives and target parameters. Our PMs assist in refining the scope for maximum impact.</p>
                         </div>
                         <div className={styles.processCard}>
                             <div className={styles.stepNumberBg}>2</div>
                             <div className={styles.iconBoxSmall}><Search size={18} strokeWidth={1.5} /></div>
-                            <h3 className={styles.cardTitle}>AI Matching</h3>
-                            <p className={styles.cardDescription}>Intelligent identification of qualified specialists from our 10,000+ member network.</p>
+                            <h3 className={styles.cardTitle}>Recursive AI Matching</h3>
+                            <p className={styles.cardDescription}>Proprietary algorithms identify and rank specialists from our 10,000+ member network based on granular expertise mapping.</p>
                         </div>
                         <div className={styles.processCard}>
                             <div className={styles.stepNumberBg}>3</div>
                             <div className={styles.iconBoxSmall}><UserCheck size={18} strokeWidth={1.5} /></div>
-                            <h3 className={styles.cardTitle}>Compliance</h3>
-                            <p className={styles.cardDescription}>Rigorous screening for conflicts of interest, NDA compliance, and MNPI restrictions.</p>
+                            <h3 className={styles.cardTitle}>Compliance Engineering</h3>
+                            <p className={styles.cardDescription}>Rigorous multi-layer screening for conflicts of interest, NDA compliance, and strict MNPI restrictions.</p>
                         </div>
                         <div className={styles.processCard}>
                             <div className={styles.stepNumberBg}>4</div>
@@ -213,8 +213,8 @@ export default function HowItWorks() {
                         <div className={styles.processCard}>
                             <div className={styles.stepNumberBg}>5</div>
                             <div className={styles.iconBoxSmall}><BarChart3 size={18} strokeWidth={1.5} /></div>
-                            <h3 className={styles.cardTitle}>Deliverables</h3>
-                            <p className={styles.cardDescription}>Receive raw data, transcripts, or synthesized insights ready for strategic decision-making.</p>
+                            <h3 className={styles.cardTitle}>Synthesized Deliverables</h3>
+                            <p className={styles.cardDescription}>Receive clean data exports, professional transcripts, or board-ready synthesized insights for strategic decisioning.</p>
                         </div>
                         <div className={styles.processCard}>
                             <div className={styles.stepNumberBg}>6</div>
@@ -250,12 +250,14 @@ export default function HowItWorks() {
 
             <section className={styles.finalCta}>
                 <div className="container">
-                    <h2>Ready to Get Started?</h2>
-                    <p>Join the SignalBridge network today — as a client or an expert</p>
-                    <div className={styles.ctaContainer}>
-                        <Button href="/contact" className={styles.finalCtaBtn}>
-                            Contact Us
-                        </Button>
+                    <div className={styles.ctaContent}>
+                        <h2>Ready to Get Started?</h2>
+                        <p>Join the SignalBridge network today — as a client or an expert</p>
+                        <div className={styles.ctaContainer}>
+                            <Button href="/contact" className={styles.finalCtaBtn}>
+                                Contact Us
+                            </Button>
+                        </div>
                     </div>
                 </div>
             </section>

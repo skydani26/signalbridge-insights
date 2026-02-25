@@ -270,12 +270,12 @@
 /* Support Overhaul */
 .supportSection {
     background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
-    padding: 64px 0;
-    /* Reduced from 80px */
+    padding: 80px 0;
     position: relative;
     overflow: hidden;
     color: white;
     z-index: 1;
+    text-align: center;
 }
 
 .supportSection::before {
@@ -294,14 +294,12 @@
 .supportContent {
     position: relative;
     z-index: 2;
-    text-align: center;
     max-width: 800px;
     margin: 0 auto;
 }
 
 .supportTitle {
     font-size: 2.75rem;
-    /* Reduced from 3.5rem */
     font-weight: 600;
     margin-bottom: 24px;
     color: white;
@@ -310,24 +308,25 @@
 
 .supportDescription {
     font-size: 1.25rem;
-    color: rgba(255, 255, 255, 0.8);
-    margin-bottom: 48px;
+    color: rgba(255, 255, 255, 0.7);
+    margin-bottom: 40px;
     line-height: 1.6;
 }
 
 .supportBtn {
-    background-color: transparent !important;
-    border: 1px solid rgba(255, 255, 255, 0.3) !important;
-    color: white !important;
+    background-color: #ffffff !important;
+    color: var(--color-primary) !important;
     padding: 16px 48px !important;
-    font-weight: 600 !important;
+    border-radius: 8px !important;
+    font-weight: 700 !important;
+    font-size: 1.1rem !important;
     transition: all 0.2s ease !important;
 }
 
 .supportBtn:hover {
-    background-color: rgba(255, 255, 255, 0.05) !important;
-    border-color: white !important;
+    background-color: #f8fafc !important;
     transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
 }
 
 @media (max-width: 1024px) {

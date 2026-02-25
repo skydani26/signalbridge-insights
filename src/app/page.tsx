@@ -38,10 +38,10 @@ export default function Home() {
           </p>
           <div className={`${styles.heroButtons} ${styles.reveal} ${styles.delay3}`}>
             <Button href="/contact" className={styles.btnHeroPrimary}>
-              Request Experts <span style={{ marginLeft: '12px', fontSize: '1.2rem' }}>→</span>
+              Consult Our Strategy Desk <span style={{ marginLeft: '12px', fontSize: '1.2rem' }}>→</span>
             </Button>
             <Button href="/for-experts" className={styles.btnHeroSecondary}>
-              Join as an Expert
+              Apply to the Network
             </Button>
           </div>
         </div>
@@ -92,82 +92,45 @@ export default function Home() {
               OUR SERVICES
             </div>
             <h2 className={styles.sectionTitle}>
-              Everything You Need from an Expert Network
+              Institutional Insight Pillars
             </h2>
             <p className={styles.sectionSubtitle}>
-              From rapid-fire surveys to deep-dive consulting projects, we provide the full range
-              of expert engagement formats.
+              SignalBridge is engineered for high-stakes research, providing the compliance, speed, and precision required by the world's most demanding investors.
             </p>
           </div>
 
           <div className={`${styles.servicesGrid} ${styles.reveal}`}>
-            {/* Signature Card */}
+            {/* Signature Pillar */}
             <div className={`${styles.serviceCard} ${styles.active}`}>
               <div className={styles.badge}>
-                <Star size={12} fill="#5390ff" /> Signature
+                <Star size={12} fill="#5390ff" /> Signature Offering
               </div>
               <div className={styles.iconBox}>
                 <FileText size={20} strokeWidth={1.5} />
               </div>
               <h3 className={styles.serviceTitle}>Expert Surveys</h3>
               <p className={styles.serviceDescription}>
-                Our signature offering. Deploy targeted surveys to vetted industry professionals
-                and get quantitative + qualitative insights at scale.
+                Deploy targeted surveys to vetted industry professionals and get quantitative + qualitative insights at scale. Our proprietary logic ensures 0% respondent overlap.
               </p>
             </div>
 
-            <div className={styles.serviceCard}>
-              <div className={styles.iconBox}>
-                <Phone size={20} strokeWidth={1.5} />
-              </div>
-              <h3 className={styles.serviceTitle}>1-on-1 Expert Calls</h3>
-              <p className={styles.serviceDescription}>
-                Schedule confidential consultations with hand-picked experts for deep-dive
-                discussions on specific topics.
-              </p>
-            </div>
-
-            {/* NEW: Programming Card (In place of Focus Groups) */}
             <div className={styles.serviceCard}>
               <div className={styles.iconBox}>
                 <Zap size={20} strokeWidth={1.5} />
               </div>
-              <h3 className={styles.serviceTitle}>Programming</h3>
+              <h3 className={styles.serviceTitle}>Institutional Speed</h3>
               <p className={styles.serviceDescription}>
-                Our technical edge. Execute complex surveys and workflows with precision using Qualtrics, Decipher, and internal tools for seamless data capture.
+                Profiles delivered in <span style={{ color: 'var(--color-secondary)', fontWeight: 700 }}>under 12 hours</span>. We integrate directly with your workflow to meet the tightest diligence windows.
               </p>
             </div>
 
-            {/* NEW: Custom Research Projects */}
-            <div className={styles.serviceCard}>
-              <div className={styles.iconBox}>
-                <Network size={20} strokeWidth={1.5} />
-              </div>
-              <h3 className={styles.serviceTitle}>Custom Research Projects</h3>
-              <p className={styles.serviceDescription}>
-                End-to-end research support: we scope, recruit experts, collect data, and deliver synthesized insights tailored to your needs.
-              </p>
-            </div>
-
-            {/* NEW: Transcripts & Knowledge Library */}
-            <div className={styles.serviceCard}>
-              <div className={styles.iconBox}>
-                <Database size={20} strokeWidth={1.5} />
-              </div>
-              <h3 className={styles.serviceTitle}>Transcripts & Knowledge Library</h3>
-              <p className={styles.serviceDescription}>
-                Access curated transcripts, whitepapers, and recorded expert sessions from our growing, searchable content library.
-              </p>
-            </div>
-
-            {/* NEW: Compliance & Vetting */}
             <div className={styles.serviceCard}>
               <div className={styles.iconBox}>
                 <ShieldCheck size={20} strokeWidth={1.5} />
               </div>
-              <h3 className={styles.serviceTitle}>Compliance & Vetting</h3>
+              <h3 className={styles.serviceTitle}>Rigorous Compliance</h3>
               <p className={styles.serviceDescription}>
-                Rigorous expert screening, NDA management, conflict-of-interest checks, and full audit trails on every single engagement.
+                MNPI protocols and double-blind screening are built into every engagement. We protect the integrity of your capital and your reputation.
               </p>
             </div>
           </div>
@@ -243,18 +206,18 @@ export default function Home() {
           <div className={styles.processTag}>PROCESS</div>
           <h2 className={styles.processTitle}>How It Works</h2>
           <p className={styles.processSubtitle}>
-            From defining your research needs to receiving expert insights — in as little as 24 hours
+            A surgical workflow designed for rapid institutional clarity.
           </p>
 
-          <div className={styles.processGrid}>
+          <div className={styles.processGrid} style={{ gridTemplateColumns: 'repeat(3, 1fr)' }}>
             <div className={styles.processCard}>
               <div className={styles.cardNumber}>01</div>
               <div className={styles.processIconBox}>
                 <MessageSquare size={24} strokeWidth={1.5} />
               </div>
-              <h3 className={styles.processCardTitle}>Brief Us</h3>
+              <h3 className={styles.processCardTitle}>Strategic Briefing</h3>
               <p className={styles.processCardText}>
-                Tell us your research objectives, target industries, and preferred engagement type — survey, call, focus group, or project.
+                Define your research objectives and compliance parameters. Our team handles the scoping and specialist identification.
               </p>
             </div>
 
@@ -263,31 +226,20 @@ export default function Home() {
               <div className={styles.processIconBox}>
                 <Search size={24} strokeWidth={1.5} />
               </div>
-              <h3 className={styles.processCardTitle}>We Match Experts</h3>
+              <h3 className={styles.processCardTitle}>Rigorous Vetting</h3>
               <p className={styles.processCardText}>
-                Our AI-powered matching engine identifies the best-fit experts from our vetted network of 10,000+ professionals.
+                We screen specialists against our 10,000+ member network, ensuring zero conflicts and high-fidelity expertise.
               </p>
             </div>
 
             <div className={styles.processCard}>
               <div className={styles.cardNumber}>03</div>
               <div className={styles.processIconBox}>
-                <User size={24} strokeWidth={1.5} />
-              </div>
-              <h3 className={styles.processCardTitle}>Experts Engage</h3>
-              <p className={styles.processCardText}>
-                Experts complete surveys, join calls, participate in focus groups, or deliver project outputs based on your needs.
-              </p>
-            </div>
-
-            <div className={styles.processCard}>
-              <div className={styles.cardNumber}>04</div>
-              <div className={styles.processIconBox}>
                 <BarChart3 size={24} strokeWidth={1.5} />
               </div>
-              <h3 className={styles.processCardTitle}>Get Insights</h3>
+              <h3 className={styles.processCardTitle}>Engagement & Insights</h3>
               <p className={styles.processCardText}>
-                Receive high-quality, compliance-screened insights. Access transcripts, data exports, and synthesized reports.
+                Receive compliance-screened data, transcripts, or synthesized reports within your critical diligence window.
               </p>
             </div>
           </div>
@@ -428,14 +380,16 @@ export default function Home() {
       {/* Final CTA */}
       <section className={styles.ctaSection}>
         <div className="container">
-          <h2 className={styles.ctaTitle}>Ready to Get Started?</h2>
-          <p className={styles.ctaSubtitle}>
-            Whether you need expert insights through surveys, calls, or custom projects — or
-            want to monetize your expertise — we&apos;re here to help.
-          </p>
-          <div className={styles.ctaButtonsContainer}>
-            <Button href="/contact" className={styles.btnCtaPrimary}>I Need Experts</Button>
-            <Button href="/contact" className={styles.btnCtaSecondary}>I'm an Expert</Button>
+          <div className={styles.ctaContent}>
+            <h2 className={styles.ctaTitle}>Ready to Get Started?</h2>
+            <p className={styles.ctaSubtitle}>
+              Whether you need expert insights through surveys, calls, or custom projects — or
+              want to monetize your expertise — we&apos;re here to help.
+            </p>
+            <div className={styles.ctaButtonsContainer}>
+              <Button href="/contact" className={styles.btnCtaPrimary}>Consult Our Strategy Desk</Button>
+              <Button href="/contact" className={styles.btnCtaSecondary}>Apply to Become an Expert</Button>
+            </div>
           </div>
         </div>
       </section>

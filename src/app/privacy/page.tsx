@@ -30,7 +30,7 @@ export default function PrivacyPolicy() {
                         <ShieldCheck size={48} className={styles.sectionIcon} style={{ margin: '0 auto 24px' }} />
                         <h1>Privacy <span style={{ color: 'var(--color-secondary)' }}>Protocol</span></h1>
                         <p className={styles.heroSubtitle}>
-                            Institutional data protection standards for the world's leading investors and industry experts.
+                            Institutional data protection standards for the world&apos;s leading investors and industry experts.
                         </p>
                     </div>
                 </div>
@@ -38,13 +38,13 @@ export default function PrivacyPolicy() {
 
             <div className={styles.contentContainer}>
                 <div className={`${styles.privacySection} ${styles.reveal}`}>
-                    <h2><Eye size={24} className={styles.sectionIcon} /> Transparency & Scope</h2>
+                    <h2><Eye size={24} className={styles.sectionIcon} /> Transparency &amp; Scope</h2>
                     <div className={styles.privacyText}>
                         <p>
-                            At SignalBridge Insights, privacy is not just a policy—it is a core component of our technical architecture. This protocol outlines how we collect, safeguard, and utilize data across our global expert network and client base.
+                            At SignalBridge Insights, privacy is not just a policy&mdash;it is a core component of our technical architecture. This protocol outlines how we collect, safeguard, and utilize data across our global expert network and client base.
                         </p>
                         <p>
-                            We operate under a "Privacy by Design" philosophy, ensuring that data minimization and encryption are integrated into every stage of the expert-client matching lifecycle.
+                            We operate under a &quot;Privacy by Design&quot; philosophy, ensuring that data minimization and encryption are integrated into every stage of the expert-client matching lifecycle.
                         </p>
                     </div>
                 </div>
@@ -97,7 +97,7 @@ export default function PrivacyPolicy() {
                         <p>Experts and clients retain full control over their data footprint:</p>
                         <ul className={styles.privacyList}>
                             <li>Right to access and export your professional profile data.</li>
-                            <li>Right to request immediate "Account Deletion" and data erasure.</li>
+                            <li>Right to request immediate &quot;Account Deletion&quot; and data erasure.</li>
                             <li>Right to anonymize participation on specific high-stakes projects.</li>
                         </ul>
                     </div>

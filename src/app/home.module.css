@@ -543,7 +543,7 @@
 
 /* CTA Section */
 .ctaSection {
-    background-color: var(--color-primary);
+    background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
     text-align: center;
     padding: 80px 0;
     color: white;
@@ -551,7 +551,6 @@
     overflow: hidden;
     z-index: 1;
 }
-
 
 .ctaSection::before {
     content: '';
@@ -566,27 +565,23 @@
     z-index: 1;
 }
 
-
-.ctaSection>div {
+.ctaContent {
     position: relative;
     z-index: 2;
+    max-width: 800px;
+    margin: 0 auto;
 }
-
-
-
 
 .ctaTitle {
     color: white;
     font-size: 2.75rem;
-    /* Reduced from 3.5rem */
     font-weight: 600;
-    /* Reduced weight */
     margin-bottom: 24px;
     letter-spacing: -0.04em;
 }
 
 .ctaSubtitle {
-    color: rgba(255, 255, 255, 0.8);
+    color: rgba(255, 255, 255, 0.7);
     max-width: 800px;
     margin: 0 auto 56px;
     font-size: 1.25rem;

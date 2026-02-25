@@ -89,9 +89,9 @@ export default function ForClients() {
 
             <SectionWrapper id="services">
                 <div className={styles.reveal} style={{ textAlign: 'center', marginBottom: '64px' }}>
-                    <span className={styles.serviceTag}>OUR SERVICES</span>
-                    <h2 style={{ fontSize: '3rem', marginTop: '16px', fontWeight: '800', color: 'var(--color-primary)' }}>Full Suite of Expert Engagement</h2>
-                    <p style={{ color: 'var(--color-text-light)', marginTop: '16px', fontSize: '1.2rem' }}>Choose the engagement format that best fits your research needs</p>
+                    <span className={styles.serviceTag}>STRATEGIC SOLUTIONS</span>
+                    <h2 style={{ fontSize: '3rem', marginTop: '16px', fontWeight: '800', color: 'var(--color-primary)' }}>Strategic Research Solutions</h2>
+                    <p style={{ color: 'var(--color-text-light)', marginTop: '16px', fontSize: '1.2rem' }}>Precision-engineered engagement formats for institutional decision makers</p>
                 </div>
 
                 <div className={`${styles.servicesGrid} ${styles.reveal}`}>
@@ -132,7 +132,7 @@ export default function ForClients() {
                             <Calendar size={20} />
                         </div>
                         <h4 className={styles.trustTitle}>24-Hour Turnaround</h4>
-                        <p className={styles.trustDescription}>Profiles delivered in hours. Most projects launch within 24 hours of brief submission with same-day scheduling.</p>
+                        <p className={styles.trustDescription}>Profiles delivered in hours. Validated a $500M market thesis in under 48 hours for a leading NYC asset manager.</p>
                     </div>
 
                     <div className={styles.trustCard}>
@@ -153,35 +153,32 @@ export default function ForClients() {
                 </div>
             </SectionWrapper>
 
-            <SectionWrapper id="who-we-serve">
+            <SectionWrapper id="geographic-reach" background="gray">
                 <div className={styles.reveal} style={{ textAlign: 'center', marginBottom: '64px' }}>
-                    <h2 style={{ fontSize: '3rem', fontWeight: '800', color: 'var(--color-primary)', marginBottom: '16px' }}>Trusted by Leading Firms Worldwide</h2>
-                    <p style={{ fontSize: '1.25rem', color: 'var(--color-text-light)' }}>Expert insights for Consulting, Private Equity, and Corporate Strategy teams.</p>
+                    <h2 style={{ fontSize: '2.5rem', fontWeight: '800', color: 'var(--color-primary)', marginBottom: '16px' }}>Global Reach, Local Depth</h2>
+                    <p style={{ fontSize: '1.1rem', color: 'var(--color-text-light)' }}>Connecting global capital with localized expertise across 100+ countries.</p>
                 </div>
-
                 <div className={`${styles.serveGrid} ${styles.reveal}`}>
                     <div className={styles.serveCard}>
                         <div className={styles.serveIconCircle}>
-                            <TrendingUp size={28} />
+                            <Globe size={28} />
                         </div>
-                        <h4 className={styles.serveTitle}>Hedge Funds & Asset Managers</h4>
-                        <p className={styles.serveDescription}>Inform investment decisions with expert insights on companies, industries, and market trends.</p>
+                        <h4 className={styles.serveTitle}>AMER</h4>
+                        <p className={styles.serveDescription}>Dominant presence in NYC, San Francisco, and Toronto. High-fidelity coverage of North American markets.</p>
                     </div>
-
                     <div className={styles.serveCard}>
                         <div className={styles.serveIconCircle}>
-                            <Building2 size={28} />
+                            <Globe size={28} />
                         </div>
-                        <h4 className={styles.serveTitle}>Consulting Firms</h4>
-                        <p className={styles.serveDescription}>Enhance client deliverables with deep industry expertise and real-world perspectives.</p>
+                        <h4 className={styles.serveTitle}>EMEA</h4>
+                        <p className={styles.serveDescription}>Hubs in London, Berlin, and Dubai. Deep regulatory and industrial insights across the European theater.</p>
                     </div>
-
                     <div className={styles.serveCard}>
                         <div className={styles.serveIconCircle}>
-                            <Briefcase size={28} />
+                            <Globe size={28} />
                         </div>
-                        <h4 className={styles.serveTitle}>Corporations & Strategy Teams</h4>
-                        <p className={styles.serveDescription}>Support strategic initiatives, M&A diligence, and transformation programs with expert knowledge.</p>
+                        <h4 className={styles.serveTitle}>APAC</h4>
+                        <p className={styles.serveDescription}>Active networks in Singapore, Tokyo, and Sydney. Critical intelligence for high-growth Asian economies.</p>
                     </div>
                 </div>
             </SectionWrapper>
@@ -284,15 +281,17 @@ export default function ForClients() {
 
             <VettingProtocol />
 
-            <SectionWrapper background="dark" className={styles.compactCTA}>
-                <div style={{ textAlign: 'center', maxWidth: '800px', margin: '0 auto' }}>
-                    <h2>Ready to Connect with Experts?</h2>
-                    <p>Start with a survey, book a call, or tell us about your research project</p>
-                    <Button href="/contact" style={{ backgroundColor: 'white', color: 'var(--color-primary)', padding: '16px 48px', fontWeight: '700' }}>
-                        Connect with Experts
-                    </Button>
+            <section className={styles.finalCta}>
+                <div className="container">
+                    <div className={`${styles.ctaContent} ${styles.revealVisible}`}>
+                        <h2>Ready to Connect with Experts?</h2>
+                        <p>Start with a survey, book a call, or tell us about your research project</p>
+                        <Button href="/contact" style={{ backgroundColor: 'white', color: 'var(--color-primary)', padding: '16px 48px', fontWeight: '700' }}>
+                            Connect with Experts
+                        </Button>
+                    </div>
                 </div>
-            </SectionWrapper>
+            </section>
         </main>
     );
 }

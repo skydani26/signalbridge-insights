@@ -41,7 +41,7 @@ export default function ForExperts() {
     const faqs = [
         {
             q: "Is my participation kept confidential from my employer?",
-            a: "Yes. We take privacy extremely seriously. You can chose to be anonymized on projects, and we never share your participation with your current employer. We also screen every project to ensure there are no direct conflicts with your current role."
+            a: "Yes. We take privacy extremely seriously. You can choose to be anonymized on projects, and we never share your participation with your current employer. We also screen every project to ensure there are no direct conflicts with your current role."
         },
         {
             q: "How and when do I get paid?",
@@ -53,10 +53,10 @@ export default function ForExperts() {
         },
         {
             q: "Do I need to prepare for consultation calls?",
-            a: "Generally, no preparation is required. Clients are paying for your existing knowledge and 'top of mind' expertise. If a specific project requires review of materials, this will be disclosed upfront and you will be compensated for that time."
+            a: "Generally, no preparation is required. Clients are paying for your existing knowledge and &apos;top of mind&apos; expertise. If a specific project requires review of materials, this will be disclosed upfront and you will be compensated for that time."
         },
         {
-            q: "What if I can't answer a specific question due to an NDA?",
+            q: "What if I can&apos;t answer a specific question due to an NDA?",
             a: "We explicitly instruct our experts never to share non-public, material information or breach any existing NDAs. If a client asks something you cannot answer, simply state that you are unable to discuss that topic for compliance reasons. Our clients respect this boundary."
         }
     ];
@@ -105,7 +105,7 @@ export default function ForExperts() {
                     <div className={styles.earnCard}>
                         <div className={styles.earnIconWrapper}><Users size={24} strokeWidth={1.5} /></div>
                         <div className={styles.earnContent}>
-                            <h3 className={styles.earnTitle}>Focus Groups & Panels</h3>
+                            <h3 className={styles.earnTitle}>Focus Groups &amp; Panels</h3>
                             <p className={styles.earnDescription}>Join moderated group discussions with other experts to explore topics from multiple perspectives.</p>
                             <span className={styles.earnBadge}>$300–$800 per session</span>
                         </div>
@@ -113,7 +113,7 @@ export default function ForExperts() {
                     <div className={styles.earnCard}>
                         <div className={styles.earnIconWrapper}><Zap size={24} strokeWidth={1.5} /></div>
                         <div className={styles.earnContent}>
-                            <h3 className={styles.earnTitle}>Advisory & Project Work</h3>
+                            <h3 className={styles.earnTitle}>Advisory &amp; Project Work</h3>
                             <p className={styles.earnDescription}>Provide ongoing advisory support or contribute to longer-term research and strategy projects.</p>
                             <span className={styles.earnBadge}>Custom project rates</span>
                         </div>
@@ -137,7 +137,7 @@ export default function ForExperts() {
                     </div>
                     <div className={styles.journeyStep}>
                         <div className={styles.stepIconBox}>2</div>
-                        <h3 className={styles.journeyTitle}>Vetting & Verification</h3>
+                        <h3 className={styles.journeyTitle}>Vetting &amp; Verification</h3>
                         <p className={styles.journeyDescription}>Our team reviews your credentials and matches you with relevant opportunities.</p>
                     </div>
                     <div className={styles.journeyStep}>
@@ -157,7 +157,7 @@ export default function ForExperts() {
                 <div className={`${styles.industryGrid} ${styles.reveal}`}>
                     <div className={styles.industryItem}>
                         <div className={styles.industryIconBox}><Stethoscope size={32} /></div>
-                        <span>Healthcare & Life Sciences</span>
+                        <span>Healthcare &amp; Life Sciences</span>
                     </div>
                     <div className={styles.industryItem}>
                         <div className={styles.industryIconBox}><Landmark size={32} /></div>
@@ -165,19 +165,19 @@ export default function ForExperts() {
                     </div>
                     <div className={styles.industryItem}>
                         <div className={styles.industryIconBox}><Cpu size={32} /></div>
-                        <span>Technology & Software</span>
+                        <span>Technology &amp; Software</span>
                     </div>
                     <div className={styles.industryItem}>
                         <div className={styles.industryIconBox}><Factory size={32} /></div>
-                        <span>Industrial & Manufacturing</span>
+                        <span>Industrial &amp; Manufacturing</span>
                     </div>
                     <div className={styles.industryItem}>
                         <div className={styles.industryIconBox}><Leaf size={32} /></div>
-                        <span>Energy & Renewables</span>
+                        <span>Energy &amp; Renewables</span>
                     </div>
                     <div className={styles.industryItem}>
                         <div className={styles.industryIconBox}><ShoppingCart size={32} /></div>
-                        <span>Consumer & Retail</span>
+                        <span>Consumer &amp; Retail</span>
                     </div>
                 </div>
             </SectionWrapper>
@@ -214,31 +214,31 @@ export default function ForExperts() {
             <SectionWrapper id="compensation">
                 <div className={`${styles.pricingSection} ${styles.reveal}`}>
                     <div>
-                        <h2 style={{ fontSize: '2.5rem', fontWeight: '800', marginBottom: '24px' }}>Earn What You're Worth</h2>
+                        <h2 style={{ fontSize: '2.5rem', fontWeight: '800', marginBottom: '24px' }}>Earn What You&apos;re Worth</h2>
                         <p style={{ color: 'var(--color-text-light)', fontSize: '1.1rem', marginBottom: '40px', maxWidth: '500px' }}>
-                            Your rates are based on your experience level, industry expertise, and current position. You set your rate — we help you find clients.
+                            Your rates are based on your experience level, industry expertise, and current position. You set your rate &mdash; we help you find clients.
                         </p>
                         <div className={styles.tierList}>
                             <div className={styles.tierItem}>
                                 <div className={styles.tierInfo}>
-                                    <h4>Entry Expert</h4>
-                                    <p>5–10 years experience</p>
+                                    <h4>Associate Specialist</h4>
+                                    <p>5&ndash;10 years experience</p>
                                 </div>
-                                <div className={styles.tierPrice}>$200–$400/hr</div>
+                                <div className={styles.tierPrice}>$200&ndash;$400/hr</div>
                             </div>
                             <div className={styles.tierItem}>
                                 <div className={styles.tierInfo}>
                                     <h4>Senior Expert</h4>
-                                    <p>10–15 years experience</p>
+                                    <p>10&ndash;15 years experience</p>
                                 </div>
-                                <div className={styles.tierPrice}>$400–$800/hr</div>
+                                <div className={styles.tierPrice}>$400&ndash;$800/hr</div>
                             </div>
                             <div className={styles.tierItem}>
                                 <div className={styles.tierInfo}>
                                     <h4>Executive Expert</h4>
                                     <p>C-suite or equivalent</p>
                                 </div>
-                                <div className={styles.tierPrice}>$800–$1,500+/hr</div>
+                                <div className={styles.tierPrice}>$800&ndash;$1,500+/hr</div>
                             </div>
                         </div>
                     </div>
@@ -254,6 +254,8 @@ export default function ForExperts() {
                 </div>
             </SectionWrapper>
 
+            <VettingProtocol />
+
             <SectionWrapper id="expert-testimonials" background="gray">
                 <div className={styles.reveal} style={{ textAlign: 'center', marginBottom: '64px' }}>
                     <span style={{ color: 'var(--color-secondary)', fontWeight: '600', textTransform: 'uppercase', letterSpacing: '2px', fontSize: '0.85rem' }}>TESTIMONIALS</span>
@@ -264,7 +266,7 @@ export default function ForExperts() {
                         <div style={{ color: 'var(--color-secondary)', marginBottom: '16px', display: 'flex', gap: '4px' }}>
                             <Star size={16} fill="currentColor" /><Star size={16} fill="currentColor" /><Star size={16} fill="currentColor" /><Star size={16} fill="currentColor" /><Star size={16} fill="currentColor" />
                         </div>
-                        <p className={styles.quote}>"SignalBridge has allowed me to monetize my 20 years in telecom without leaving my current role. The process is incredibly smooth."</p>
+                        <p className={styles.quote}>&quot;SignalBridge has allowed me to monetize my 20 years in telecom without leaving my current role. The process is incredibly smooth.&quot;</p>
                         <div className={styles.expertProfile}>
                             <div className={styles.expertInfo}>
                                 <h5>Senior Tech Executive</h5>
@@ -276,7 +278,7 @@ export default function ForExperts() {
                         <div style={{ color: 'var(--color-secondary)', marginBottom: '16px', display: 'flex', gap: '4px' }}>
                             <Star size={16} fill="currentColor" /><Star size={16} fill="currentColor" /><Star size={16} fill="currentColor" /><Star size={16} fill="currentColor" /><Star size={16} fill="currentColor" />
                         </div>
-                        <p className={styles.quote}>"The compliance team is top-notch. I always feel secure sharing my general industry insights while respecting my employer NDAs."</p>
+                        <p className={styles.quote}>&quot;The compliance team is top-notch. I always feel secure sharing my general industry insights while respecting my employer NDAs.&quot;</p>
                         <div className={styles.expertProfile}>
                             <div className={styles.expertInfo}>
                                 <h5>Former CFO</h5>
@@ -288,7 +290,7 @@ export default function ForExperts() {
                         <div style={{ color: 'var(--color-secondary)', marginBottom: '16px', display: 'flex', gap: '4px' }}>
                             <Star size={16} fill="currentColor" /><Star size={16} fill="currentColor" /><Star size={16} fill="currentColor" /><Star size={16} fill="currentColor" /><Star size={16} fill="currentColor" />
                         </div>
-                        <p className={styles.quote}>"The variety of projects is fascinating. I've worked on everything from short surveys to deep-dive advisory panels."</p>
+                        <p className={styles.quote}>&quot;The variety of projects is fascinating. I&apos;ve worked on everything from short surveys to deep-dive advisory panels.&quot;</p>
                         <div className={styles.expertProfile}>
                             <div className={styles.expertInfo}>
                                 <h5>Industry Consultant</h5>
@@ -299,48 +301,12 @@ export default function ForExperts() {
                 </div>
             </SectionWrapper>
 
-            <SectionWrapper id="ideal-profile">
-                <div className={`${styles.lookingGrid} ${styles.reveal}`}>
-                    <div className={styles.infoCardGrid}>
-                        <div className={styles.infoCard}>
-                            <div className={styles.infoIconBox}><Briefcase size={20} /></div>
-                            <span>Professional Background</span>
-                        </div>
-                        <div className={styles.infoCard}>
-                            <div className={styles.infoIconBox}><TrendingUp size={20} /></div>
-                            <span>Industry Expertise</span>
-                        </div>
-                        <div className={styles.infoCard}>
-                            <div className={styles.infoIconBox}><Users size={20} /></div>
-                            <span>Strong Network</span>
-                        </div>
-                        <div className={styles.infoCard}>
-                            <div className={styles.infoIconBox}><Shield size={20} /></div>
-                            <span>Compliance Focus</span>
-                        </div>
-                    </div>
-                    <div>
-                        <h2 style={{ fontSize: '3rem', fontWeight: '800', marginBottom: '24px' }}>Who We're Looking For</h2>
-                        <p style={{ color: 'var(--color-text-light)', fontSize: '1.15rem', lineHeight: '1.6' }}>
-                            We're building a network of exceptional professionals who can provide valuable insights through surveys, calls, and advisory work.
-                        </p>
-                        <ul className={styles.requirementsList}>
-                            <li><CheckCircle2 size={18} className={styles.checkIcon} /> Deep professional experience in your field</li>
-                            <li><CheckCircle2 size={18} className={styles.checkIcon} /> Current or recent industry position</li>
-                            <li><CheckCircle2 size={18} className={styles.checkIcon} /> Strong communication skills</li>
-                            <li><CheckCircle2 size={18} className={styles.checkIcon} /> Commitment to compliance and confidentiality</li>
-                            <li><CheckCircle2 size={18} className={styles.checkIcon} /> Availability for at least 2–4 hours per month</li>
-                        </ul>
-                    </div>
-                </div>
-            </SectionWrapper>
-
             <SectionWrapper id="expert-compliance" background="gray">
                 <div className={`${styles.complianceBox} ${styles.reveal}`}>
                     <div className={styles.complianceHeader}>
                         <div className={styles.benefitIconWrapper} style={{ marginBottom: 0 }}><Shield size={32} /></div>
                         <div>
-                            <h2 style={{ fontSize: '2rem', fontWeight: '800', marginBottom: '4px' }}>Your Privacy & Career are Protected</h2>
+                            <h2 style={{ fontSize: '2rem', fontWeight: '800', marginBottom: '4px' }}>Your Privacy &amp; Career are Protected</h2>
                             <p style={{ color: 'var(--color-text-light)', margin: 0 }}>We maintain the highest standards of data security and professional compliance</p>
                         </div>
                     </div>
@@ -348,70 +314,42 @@ export default function ForExperts() {
                         <div className={styles.complianceItem}>
                             <Lock className={styles.complianceIcon} size={24} />
                             <div>
-                                <h4>NDA Management</h4>
-                                <p>We facilitate all necessary non-disclosure agreements to ensure your conversations remain confidential.</p>
+                                <h4>Data Anonymity</h4>
+                                <p>Choose to provide insights anonymously or under a professional pseudonym for select institutional clients.</p>
                             </div>
                         </div>
                         <div className={styles.complianceItem}>
-                            <Shield className={styles.complianceIcon} size={24} />
+                            <ShieldCheck className={styles.complianceIcon} size={24} />
+                            <div>
+                                <h4>NDA Management</h4>
+                                <p>We facilitate all non-disclosure agreements and ensure your current professional obligations are respected.</p>
+                            </div>
+                        </div>
+                        <div className={styles.complianceItem}>
+                            <Award className={styles.complianceIcon} size={24} />
                             <div>
                                 <h4>Conflict Screening</h4>
-                                <p>Our automated systems and expert team screen every project for potential conflicts of interest.</p>
+                                <p>Automated screening prevents you from ever being matched with projects that conflict with your current role.</p>
                             </div>
                         </div>
-                        <div className={styles.complianceItem}>
-                            <Users className={styles.complianceIcon} size={24} />
-                            <div>
-                                <h4>Anonymized Participation</h4>
-                                <p>Choose to keep your participation anonymous where appropriate to protect your professional standing.</p>
-                            </div>
-                        </div>
-                        <div className={styles.complianceItem}>
-                            <CheckCircle2 className={styles.complianceIcon} size={24} />
-                            <div>
-                                <h4>Clear Guidelines</h4>
-                                <p>We provide explicit training and guidelines on what can and cannot be shared during projects.</p>
-                            </div>
-                        </div>
+                    </div>
+                    <div style={{ marginTop: '32px', textAlign: 'center' }}>
+                        <Button href="/compliance" variant="outline">Review Our Compliance Framework</Button>
                     </div>
                 </div>
             </SectionWrapper>
 
-            <SectionWrapper id="faqs">
-                <div className={styles.reveal} style={{ textAlign: 'center', marginBottom: '64px' }}>
-                    <span style={{ color: 'var(--color-secondary)', fontWeight: '600', textTransform: 'uppercase', letterSpacing: '2px', fontSize: '0.85rem' }}>EXPERT FAQ</span>
-                    <h2 style={{ fontSize: '3rem', marginTop: '16px', fontWeight: '800' }}>Common Questions</h2>
+            <section className={styles.finalCta}>
+                <div className="container">
+                    <div className={`${styles.ctaContent} ${styles.reveal}`}>
+                        <h2>Ready to Share Your Expertise?</h2>
+                        <p>Join the SignalBridge network and start earning for your professional insights.</p>
+                        <Button href="/contact" style={{ backgroundColor: 'white', color: 'var(--color-primary)', padding: '16px 40px', fontWeight: '700' }}>
+                            Apply to Become an Expert <ArrowRight size={18} style={{ marginLeft: '12px' }} />
+                        </Button>
+                    </div>
                 </div>
-                <div className={`${styles.faqGrid} ${styles.reveal}`}>
-                    {faqs.map((faq, index) => (
-                        <div key={index} className={styles.faqItem}>
-                            <button className={styles.faqQuestion} onClick={() => toggleFaq(index)}>
-                                {faq.q}
-                                {openFaq === index ? <ChevronUp size={20} /> : <ChevronDown size={20} />}
-                            </button>
-                            {openFaq === index && (
-                                <div className={styles.faqAnswer}>
-                                    {faq.a}
-                                </div>
-                            )}
-                        </div>
-                    ))}
-                </div>
-            </SectionWrapper>
-
-            <VettingProtocol />
-
-            <SectionWrapper id="join-now" background="dark">
-                <div className={styles.reveal} style={{ textAlign: 'center', maxWidth: '900px', margin: '0 auto' }}>
-                    <h2 style={{ fontSize: '3.5rem', fontWeight: '800', marginBottom: '24px', letterSpacing: '-0.02em', color: 'white' }}>Ready to Start Earning?</h2>
-                    <p style={{ fontSize: '1.25rem', color: '#F1F5F9', marginBottom: '40px', lineHeight: '1.6' }}>
-                        Apply today and join 10,000+ experts earning through surveys, calls, and projects with SignalBridge
-                    </p>
-                    <Button href="/contact" style={{ backgroundColor: 'white', color: 'var(--color-primary)', padding: '16px 40px', fontWeight: '700' }}>
-                        Start Your Application
-                    </Button>
-                </div>
-            </SectionWrapper>
-        </main >
+            </section>
+        </main>
     );
 }

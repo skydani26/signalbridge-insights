@@ -4,7 +4,7 @@ import React, { useEffect } from 'react';
 import SectionWrapper from "@/components/SectionWrapper";
 import Button from "@/components/Button";
 import styles from "./about.module.css";
-import { Globe, Users, Target, ShieldCheck, Award, TrendingUp, Handshake, Network, Zap, Building2 } from "lucide-react";
+import { Globe, Users, Target, ShieldCheck, Award, TrendingUp, Handshake, Network, Zap, Building2, Lock } from "lucide-react";
 
 export default function About() {
     useEffect(() => {
@@ -129,6 +129,34 @@ export default function About() {
                             <div className={styles.presenceItem}>
                                 <h4>APAC</h4>
                                 <p>Tokyo, Singapore, Sydney</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </SectionWrapper>
+
+            <SectionWrapper id="security" background="dark">
+                <div className={`${styles.securityGrid} ${styles.reveal}`}>
+                    <div className={styles.securityText}>
+                        <span className={styles.sectionTag} style={{ color: 'var(--color-secondary)' }}>TRUST INFRASTRUCTURE</span>
+                        <h2 className={styles.sectionTitle} style={{ color: 'white' }}>Security & Compliance Architecture</h2>
+                        <p style={{ color: 'rgba(255,255,255,0.7)', fontSize: '1.1rem', lineHeight: '1.8' }}>
+                            Institutional trust is built on technical transparency. SignalBridge manages expert data and client briefings within a zero-trust network environment, ensuring that your research remains proprietary and secure.
+                        </p>
+                        <div className={styles.securityFeatures}>
+                            <div className={styles.securityFeature}>
+                                <div className={styles.securityIcon}><Lock size={20} strokeWidth={1.5} /></div>
+                                <div>
+                                    <h4 style={{ color: 'white', marginBottom: '4px' }}>SOC2 & GDPR Readiness</h4>
+                                    <p style={{ color: 'rgba(255,255,255,0.5)', fontSize: '0.9rem' }}>Adhering to global data residency and security auditing standards.</p>
+                                </div>
+                            </div>
+                            <div className={styles.securityFeature}>
+                                <div className={styles.securityIcon}><ShieldCheck size={20} strokeWidth={1.5} /></div>
+                                <div>
+                                    <h4 style={{ color: 'white', marginBottom: '4px' }}>Immutable Audit Trails</h4>
+                                    <p style={{ color: 'rgba(255,255,255,0.5)', fontSize: '0.9rem' }}>Every interaction is timestamped and logged for internal compliance reviews.</p>
+                                </div>
                             </div>
                         </div>
                     </div>
