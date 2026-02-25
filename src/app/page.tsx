@@ -49,22 +49,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Credibility Section - White Background */}
-      <div id="trust" className={`${styles.credibilitySection} ${styles.reveal}`}>
-        <div className="container">
-          <p className={styles.credibilityTitle}>
-            TRUSTED BY LEADING INVESTMENT FUNDS, CONSULTANCIES, AND CORPORATIONS
-          </p>
-          <div className={styles.logoGrid}>
-            <span className={styles.logoPlaceholder}>McKinsey</span>
-            <span className={styles.logoPlaceholder}>Bain</span>
-            <span className={styles.logoPlaceholder}>BCG</span>
-            <span className={styles.logoPlaceholder}>Goldman Sachs</span>
-            <span className={styles.logoPlaceholder}>Blackstone</span>
-            <span className={styles.logoPlaceholder}>KKR</span>
-          </div>
-        </div>
-      </div>
 
       {/* Stats Section - Blue Strip */}
       <section className={`${styles.statsSection} ${styles.reveal}`}>

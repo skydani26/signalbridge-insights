@@ -10,18 +10,28 @@
 }
 
 .heroTitle {
-    font-size: 5rem;
-    font-weight: 600;
-    /* Reduced from 800 */
+    font-size: 3.25rem;
+    font-weight: 700;
     color: var(--color-text-white);
     margin-bottom: 32px;
-    line-height: 1.1;
-    letter-spacing: -0.04em;
+    line-height: 1.2;
+    letter-spacing: -0.02em;
 }
 
 .highlightBlue {
-    color: var(--color-secondary);
-    /* Bright Blue highlight */
+    background: linear-gradient(120deg, #60a5fa, #3b82f6, #60a5fa);
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: shine 3s linear infinite;
+    font-weight: 800;
+}
+
+@keyframes shine {
+    to {
+        background-position: 200% center;
+    }
 }
 
 .heroSubtitle {
@@ -494,28 +504,28 @@
 
 .testimonialTag {
     color: var(--color-secondary);
-    font-weight: 500;
+    font-weight: 700;
     text-transform: uppercase;
-    font-size: 0.85rem;
-    letter-spacing: 2.5px;
+    font-size: 0.8rem;
+    letter-spacing: 0.25em;
     margin-bottom: 20px;
 }
 
 .processTag {
     color: var(--color-secondary);
-    font-weight: 500;
+    font-weight: 700;
     text-transform: uppercase;
-    font-size: 0.85rem;
-    letter-spacing: 2.5px;
+    font-size: 0.8rem;
+    letter-spacing: 0.25em;
     margin-bottom: 20px;
 }
 
 .servicesTag {
     color: var(--color-secondary);
-    font-weight: 500;
+    font-weight: 700;
     text-transform: uppercase;
-    font-size: 0.85rem;
-    letter-spacing: 2.5px;
+    font-size: 0.8rem;
+    letter-spacing: 0.25em;
     margin-bottom: 20px;
 }
 

@@ -1,6 +1,7 @@
 .footer {
     background-color: #ffffff;
-    padding: 100px 0 40px;
+    padding: 60px 0 40px;
+    /* Reduced by 40% from 100px */
     border-top: 1px solid #f1f5f9;
     color: #64748b;
 }
@@ -13,14 +14,19 @@
 
 .top {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
+    /* Changed from space-between to align columns left */
     flex-wrap: wrap;
-    gap: 64px;
-    margin-bottom: 64px;
+    gap: 120px;
+    /* Increased gap slightly for breathing room */
+    margin-bottom: 48px;
+    padding-left: 0;
 }
 
 .brand {
     max-width: 320px;
+    margin-right: 40px;
+    /* Shifted branding slightly but keeping structural integrity */
 }
 
 .logoContainer {
@@ -28,7 +34,7 @@
     align-items: center;
     gap: 12px;
     text-decoration: none;
-    margin-bottom: 24px;
+    margin-bottom: 20px;
 }
 
 .logoIcon {
@@ -57,8 +63,10 @@
 
 .links {
     display: flex;
-    gap: 100px;
+    gap: 80px;
+    /* Adjusted from 100px */
     flex-wrap: wrap;
+    flex: 1;
 }
 
 .column h4 {

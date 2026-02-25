@@ -152,8 +152,8 @@ export default function ForClients() {
 
             <SectionWrapper id="who-we-serve">
                 <div className={styles.reveal} style={{ textAlign: 'center', marginBottom: '64px' }}>
-                    <h2 style={{ fontSize: '3rem', fontWeight: '800', color: 'var(--color-primary)', marginBottom: '16px' }}>Who We Serve</h2>
-                    <p style={{ fontSize: '1.25rem', color: 'var(--color-text-light)' }}>Trusted by leading organizations across industries</p>
+                    <h2 style={{ fontSize: '3rem', fontWeight: '800', color: 'var(--color-primary)', marginBottom: '16px' }}>Trusted by Leading Firms Worldwide</h2>
+                    <p style={{ fontSize: '1.25rem', color: 'var(--color-text-light)' }}>Expert insights for Consulting, Private Equity, and Corporate Strategy teams.</p>
                 </div>
 
                 <div className={`${styles.serveGrid} ${styles.reveal}`}>

@@ -42,16 +42,28 @@
 
 .hero h1 {
     font-family: var(--font-heading);
-    font-size: 4rem;
-    font-weight: 800;
+    font-size: 3.25rem;
+    font-weight: 700;
     margin-bottom: 24px;
     color: var(--color-white);
-    letter-spacing: -0.04em;
-    line-height: 1.1;
+    letter-spacing: -0.02em;
+    line-height: 1.2;
 }
 
 .heroHighlight {
-    color: var(--color-secondary);
+    background: linear-gradient(120deg, #60a5fa, #3b82f6, #60a5fa);
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: shine 3s linear infinite;
+    font-weight: 800;
+}
+
+@keyframes shine {
+    to {
+        background-position: 200% center;
+    }
 }
 
 .heroSubtitle {
