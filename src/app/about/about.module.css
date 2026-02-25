@@ -133,25 +133,33 @@
 
 /* Stats Grid for About Page */
 .statsGrid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 40px;
+    display: flex;
+    justify-content: space-around;
     text-align: center;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+.statBox {
+    flex: 1;
+    min-width: 200px;
 }
 
 .statBox h3 {
-    font-size: 3rem;
+    font-size: 1.8rem;
     color: var(--color-secondary);
-    margin-bottom: 8px;
-    font-weight: 800;
+    margin-bottom: 4px;
+    font-weight: 600;
+    letter-spacing: -0.02em;
 }
 
 .statBox p {
-    color: rgba(255, 255, 255, 0.7);
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    font-size: 0.85rem;
+    color: var(--color-text-light);
+    font-size: 0.7rem;
     font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+    opacity: 0.8;
 }
 
 /* Values Grid */
@@ -236,8 +244,106 @@
 }
 
 .presenceContent {
-    max-width: 900px;
+    max-width: 1000px;
     margin: 0 auto;
+}
+
+.presenceCard {
+    background: white;
+    padding: 64px;
+    border-radius: 24px;
+    border: 1px solid var(--color-gray-200);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.03);
+    text-align: center;
+}
+
+.globeIcon {
+    width: 80px;
+    height: 80px;
+    color: var(--color-primary);
+    margin-bottom: 40px;
+    opacity: 0.9;
+}
+
+.presenceGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+}
+
+.presenceItem h4 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--color-primary);
+    margin-bottom: 8px;
+    letter-spacing: -0.02em;
+}
+
+.presenceItem p {
+    font-size: 0.9rem;
+    color: var(--color-text-light);
+    margin-bottom: 0;
+}
+
+/* Career CTA Overhaul (Rotating Mesh) */
+.careerSection {
+    background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+    padding: 120px 0;
+    position: relative;
+    overflow: hidden;
+    color: white;
+    z-index: 1;
+}
+
+.careerSection::before {
+    content: '';
+    position: absolute;
+    top: -25%;
+    left: -25%;
+    width: 150%;
+    height: 150%;
+    background: radial-gradient(circle at 40% 40%, rgba(59, 130, 246, 0.18) 0%, transparent 70%);
+    animation: meshRotate 25s linear infinite;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.careerContent {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.careerSection h2 {
+    font-size: 3.5rem;
+    font-weight: 800;
+    margin-bottom: 24px;
+    color: white;
+    letter-spacing: -0.04em;
+}
+
+.careerSection p {
+    font-size: 1.25rem;
+    color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 48px;
+    line-height: 1.6;
+}
+
+.careerBtn {
+    background-color: transparent !important;
+    border: 1px solid rgba(255, 255, 255, 0.3) !important;
+    color: white !important;
+    padding: 16px 48px !important;
+    font-weight: 600 !important;
+    transition: all 0.2s ease !important;
+}
+
+.careerBtn:hover {
+    background-color: rgba(255, 255, 255, 0.05) !important;
+    border-color: white !important;
+    transform: translateY(-2px);
 }
 
 @media (max-width: 1024px) {

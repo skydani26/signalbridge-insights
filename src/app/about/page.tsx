@@ -100,44 +100,44 @@ export default function About() {
 
             <SectionWrapper id="partners" background="gray">
                 <div className={styles.reveal} style={{ textAlign: 'center', marginBottom: '64px' }}>
-                    <span className={styles.sectionTag}>GLOBAL PRESENCE</span>
+                    <span className={styles.sectionTag}>GLOBAL NETWORK</span>
                     <h2 className={styles.sectionTitle}>A Borderless Insight Engine</h2>
-                    <p className={styles.sectionDescription}>
+                    <p className={styles.sectionSubtitle}>
                         Connecting global capital with localized expertise across every major market.
                     </p>
                 </div>
                 <div className={`${styles.presenceContent} ${styles.reveal}`}>
-                    <div style={{ background: 'white', padding: '48px', borderRadius: '24px', boxShadow: '0 4px 20px rgba(0,0,0,0.05)', textAlign: 'center' }}>
-                        <Globe size={120} color="var(--color-primary)" strokeWidth={1} style={{ marginBottom: '32px' }} />
-                        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '24px' }}>
-                            <div>
-                                <h4 style={{ fontSize: '1.5rem', fontWeight: 700 }}>EMEA</h4>
-                                <p style={{ fontSize: '0.9rem', color: '#64748b' }}>London, Berlin, Dubai</p>
+                    <div className={styles.presenceCard}>
+                        <Globe className={styles.globeIcon} strokeWidth={1} />
+                        <div className={styles.presenceGrid}>
+                            <div className={styles.presenceItem}>
+                                <h4>EMEA</h4>
+                                <p>London, Berlin, Dubai</p>
                             </div>
-                            <div>
-                                <h4 style={{ fontSize: '1.5rem', fontWeight: 700 }}>AMER</h4>
-                                <p style={{ fontSize: '0.9rem', color: '#64748b' }}>NYC, Toronto, São Paulo</p>
+                            <div className={styles.presenceItem}>
+                                <h4>AMER</h4>
+                                <p>NYC, Toronto, São Paulo</p>
                             </div>
-                            <div>
-                                <h4 style={{ fontSize: '1.5rem', fontWeight: 700 }}>APAC</h4>
-                                <p style={{ fontSize: '0.9rem', color: '#64748b' }}>Tokyo, Singapore, Sydney</p>
+                            <div className={styles.presenceItem}>
+                                <h4>APAC</h4>
+                                <p>Tokyo, Singapore, Sydney</p>
                             </div>
                         </div>
                     </div>
                 </div>
             </SectionWrapper>
 
-            <SectionWrapper id="career" background="dark">
-                <div className={styles.reveal} style={{ textAlign: 'center', maxWidth: '800px', margin: '0 auto' }}>
-                    <h2 style={{ fontSize: '3rem', fontWeight: '800', marginBottom: '24px', color: 'white' }}>Join Our Global Team</h2>
-                    <p style={{ fontSize: '1.25rem', color: 'rgba(255,255,255,0.8)', marginBottom: '40px' }}>
+            <section id="career" className={styles.careerSection}>
+                <div className={`${styles.careerContent} ${styles.reveal}`}>
+                    <h2>Join Our Global Team</h2>
+                    <p>
                         We are always looking for passionate people to join our mission of bridging the gap between complexity and clarity.
                     </p>
-                    <Button href="/contact" style={{ backgroundColor: 'white', color: 'var(--color-primary)', fontWeight: 700 }}>
+                    <Button href="/contact" className={styles.careerBtn}>
                         View Openings
                     </Button>
                 </div>
-            </SectionWrapper>
+            </section>
         </main >
     );
 }
