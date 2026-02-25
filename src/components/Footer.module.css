@@ -1,7 +1,7 @@
 .footer {
     background-color: #ffffff;
-    padding: 60px 0 40px;
-    /* Reduced by 40% from 100px */
+    padding: 48px 0 32px;
+    /* Reduced by another 20% */
     border-top: 1px solid #f1f5f9;
     color: #64748b;
 }
@@ -15,36 +15,38 @@
 .top {
     display: flex;
     justify-content: flex-start;
-    /* Changed from space-between to align columns left */
     flex-wrap: wrap;
-    gap: 120px;
-    /* Increased gap slightly for breathing room */
-    margin-bottom: 48px;
+    gap: 96px;
+    /* Reduced by 20% from 120px */
+    margin-bottom: 32px;
+    /* Reduced from 48px */
     padding-left: 0;
 }
 
 .brand {
-    max-width: 320px;
+    max-width: 280px;
+    /* Slightly more compact */
     margin-right: 40px;
-    /* Shifted branding slightly but keeping structural integrity */
 }
 
 .logoContainer {
     display: flex;
     align-items: center;
-    gap: 12px;
+    gap: 10px;
     text-decoration: none;
-    margin-bottom: 20px;
+    margin-bottom: 16px;
 }
 
 .logoIcon {
-    width: 32px;
+    width: 28px;
+    /* Smaller logo */
     height: auto;
 }
 
 .logoText {
     font-family: var(--font-heading);
-    font-size: 1.25rem;
+    font-size: 1.1rem;
+    /* Reduced from 1.25rem */
     font-weight: 700;
     color: #000000;
     letter-spacing: -0.02em;
@@ -58,21 +60,24 @@
 .tagline {
     color: var(--color-text-light);
     line-height: 1.6;
-    font-size: 0.95rem;
+    font-size: 0.85rem;
+    /* Reduced from 0.95rem */
 }
 
 .links {
     display: flex;
-    gap: 80px;
-    /* Adjusted from 100px */
+    gap: 64px;
+    /* Reduced by 20% from 80px */
     flex-wrap: wrap;
     flex: 1;
 }
 
 .column h4 {
     color: #000000;
-    margin-bottom: 24px;
-    font-size: 1.05rem;
+    margin-bottom: 16px;
+    /* Reduced from 24px */
+    font-size: 0.9rem;
+    /* Reduced from 1.05rem */
     font-weight: 700;
 }
 
@@ -80,9 +85,11 @@
     display: block;
     color: #64748b;
     text-decoration: none;
-    margin-bottom: 16px;
+    margin-bottom: 12px;
+    /* Reduced from 16px */
     transition: all 0.2s ease;
-    font-size: 1rem;
+    font-size: 0.85rem;
+    /* Reduced from 1rem */
     font-weight: 400;
 }
 
@@ -93,14 +100,16 @@
 
 .bottom {
     border-top: 1px solid #f1f5f9;
-    padding-top: 40px;
+    padding-top: 32px;
+    /* Reduced from 40px */
     display: flex;
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
     gap: 24px;
     color: #94a3b8;
-    font-size: 0.95rem;
+    font-size: 0.8rem;
+    /* Reduced from 0.95rem */
 }
 
 .legalLinks {
