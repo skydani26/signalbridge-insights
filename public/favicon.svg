@@ -1,7 +1,10 @@
 <svg width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <!-- Elite Navy Base -->
-  <rect width="512" height="512" rx="112" fill="#0F172A"/>
+  <!-- Institutional Navy Background -->
+  <rect width="512" height="512" rx="140" fill="#0F172A"/>
   
-  <!-- Institutional White 'S' - Matches Navbar Logo -->
-  <path d="M350 190C350 151.34 318.66 120 280 120H232C193.34 120 162 151.34 162 190V215C162 253.66 193.34 285 232 285H280C318.66 285 350 316.34 350 355V380C350 418.66 318.66 450 280 450H232C193.34 450 162 418.66 162 380" stroke="white" stroke-width="64" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- Modern Sans-Serif 'S' - Elite Style -->
+  <path d="M256 120C180.89 120 120 180.89 120 256C120 331.11 180.89 392 256 392H296V440C296 462.09 313.91 480 336 480C358.09 480 376 462.09 376 440V336C376 313.91 358.09 296 336 296H256C233.91 296 216 278.09 216 256C216 233.91 233.91 216 256 216H336V168C336 145.91 318.09 128 296 128H256Z" fill="white" style="display:none"/>
+  
+  <!-- Clean Bold Helvetica-Style S -->
+  <text x="50%" y="50%" dominant-baseline="central" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-weight="900" font-size="320" fill="white">S</text>
 </svg>
