@@ -76,8 +76,8 @@
 
 .links {
     display: flex;
-    gap: 94px;
-    /* Increased by another 20% from 78px */
+    gap: 113px;
+    /* Increased by another 20% from 94px */
     flex-wrap: wrap;
     flex: 1;
 }
