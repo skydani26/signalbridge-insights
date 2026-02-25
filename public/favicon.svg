@@ -2,6 +2,6 @@
   <!-- Elite Navy Base -->
   <rect width="512" height="512" rx="112" fill="#0F172A"/>
   
-  <!-- Precise SignalBridge 'S' - Streamlined -->
-  <path d="M360 180C360 146.863 333.137 120 300 120H212C178.863 120 152 146.863 152 180V220C152 253.137 178.863 280 212 280H300C333.137 280 360 306.863 360 340V380C360 413.137 333.137 440 300 440H212C178.863 440 152 413.137 152 380" stroke="#3B82F6" stroke-width="60" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- Institutional White 'S' - Matches Navbar Logo -->
+  <path d="M350 190C350 151.34 318.66 120 280 120H232C193.34 120 162 151.34 162 190V215C162 253.66 193.34 285 232 285H280C318.66 285 350 316.34 350 355V380C350 418.66 318.66 450 280 450H232C193.34 450 162 418.66 162 380" stroke="white" stroke-width="64" stroke-linecap="round" stroke-linejoin="round"/>
 </svg>
