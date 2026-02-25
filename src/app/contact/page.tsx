@@ -4,7 +4,7 @@ import React, { useState, useEffect } from 'react';
 import SectionWrapper from "@/components/SectionWrapper";
 import Button from "@/components/Button";
 import styles from "./contact.module.css";
-import { Mail, Phone, MapPin, MessageSquare, Clock, Globe, ShieldCheck, Send } from "lucide-react";
+import { Mail, Phone, MapPin, MessageSquare, Clock, Globe, ShieldCheck, Send, Users } from "lucide-react";
 
 export default function Contact() {
     useEffect(() => {
@@ -58,127 +58,162 @@ export default function Contact() {
                 </div>
             </section>
 
+            <SectionWrapper id="protocol" background="gray">
+                <div style={{ textAlign: 'center', marginBottom: '48px' }} className={styles.reveal}>
+                    <span className={styles.officeTag} style={{ marginBottom: '16px' }}>RESPONSE PROTOCOL</span>
+                    <h2 style={{ fontSize: '2.5rem', fontWeight: 800 }}>Institutional Service Standard</h2>
+                </div>
+                <div className={`${styles.protocolGrid} ${styles.reveal}`}>
+                    <div className={styles.protocolCard}>
+                        <div className={styles.protocolIcon}><MessageSquare size={24} /></div>
+                        <h3>1. Strategic Briefing</h3>
+                        <p>Discuss your research objectives with an industry-specialized project manager.</p>
+                    </div>
+                    <div className={styles.protocolCard}>
+                        <div className={styles.protocolIcon}><Users size={24} /></div>
+                        <h3>2. Precision Matching</h3>
+                        <p>Our team identifies and vets the specific experts required for your inquiry.</p>
+                    </div>
+                    <div className={styles.protocolCard}>
+                        <div className={styles.protocolIcon}><Clock size={24} /></div>
+                        <h3>3. Rapid Execution</h3>
+                        <p>Engage with verified expertise within 24-48 hours of initial briefing.</p>
+                    </div>
+                </div>
+            </SectionWrapper>
+
             <SectionWrapper id="contact-form">
                 <div className={`${styles.contactGrid} ${styles.reveal}`}>
-                    <div className={styles.formContainer}>
-                        <div className={styles.infoItem}>
-                            <span className={styles.infoLabel}>Email</span>
-                            <div className={styles.infoValue}>contact@signalbridgeinsights.com</div>
+                    <div className={styles.officeGrid}>
+                        <div className={styles.officeCard}>
+                            <span className={styles.officeTag}>AMER</span>
+                            <h4>New York</h4>
+                            <p>Global Headquarters<br />Manhattan, NY 10017</p>
                         </div>
-                        <div className={styles.infoItem}>
-                            <span className={styles.infoLabel}>Phone</span>
-                            <div className={styles.infoValue}>+1 (555) 123-4567</div>
+                        <div className={styles.officeCard}>
+                            <span className={styles.officeTag}>EMEA</span>
+                            <h4>London</h4>
+                            <p>European Hub<br />Mayfair, London W1</p>
                         </div>
-                        <div className={styles.infoItem}>
-                            <span className={styles.infoLabel}>Office</span>
-                            <div className={styles.infoValue}>
-                                New York, NY<br />
-                                10017, USA
-                            </div>
-                        </div>
-                        <div className={styles.infoItem}>
-                            <span className={styles.infoLabel}>Business Hours</span>
-                            <div className={styles.infoValue}>
-                                Mon–Fri: 9am – 6pm EST
-                            </div>
+                        <div className={styles.officeCard}>
+                            <span className={styles.officeTag}>APAC</span>
+                            <h4>Singapore</h4>
+                            <p>Asia-Pacific Lead<br />Marina Bay, 018981</p>
                         </div>
                     </div>
 
-                    <form className={styles.form} onSubmit={handleSubmit}>
-                        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '24px' }}>
+                    <div className={styles.formCard}>
+                        <div className={styles.formHeader}>
+                            <h2>Message the Desk</h2>
+                            <p>Direct priority channel to our research specialized team.</p>
+                        </div>
+                        <form className={styles.form} onSubmit={handleSubmit}>
+                            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '24px' }}>
+                                <div className={styles.formGroup}>
+                                    <label htmlFor="firstName" className={styles.label}>First Name</label>
+                                    <input
+                                        type="text"
+                                        id="firstName"
+                                        name="firstName"
+                                        className={styles.input}
+                                        placeholder="Enter your first name"
+                                        required
+                                        value={formData.firstName}
+                                        onChange={handleChange}
+                                    />
+                                </div>
+                                <div className={styles.formGroup}>
+                                    <label htmlFor="lastName" className={styles.label}>Last Name</label>
+                                    <input
+                                        type="text"
+                                        id="lastName"
+                                        name="lastName"
+                                        className={styles.input}
+                                        placeholder="Enter your last name"
+                                        required
+                                        value={formData.lastName}
+                                        onChange={handleChange}
+                                    />
+                                </div>
+                            </div>
+
                             <div className={styles.formGroup}>
-                                <label htmlFor="firstName" className={styles.label}>First Name</label>
+                                <label htmlFor="email" className={styles.label}>Work Email Address</label>
                                 <input
-                                    type="text"
-                                    id="firstName"
-                                    name="firstName"
+                                    type="email"
+                                    id="email"
+                                    name="email"
                                     className={styles.input}
+                                    placeholder="name@company.com"
                                     required
-                                    value={formData.firstName}
+                                    value={formData.email}
                                     onChange={handleChange}
                                 />
                             </div>
+
                             <div className={styles.formGroup}>
-                                <label htmlFor="lastName" className={styles.label}>Last Name</label>
+                                <label htmlFor="company" className={styles.label}>Organization</label>
                                 <input
                                     type="text"
-                                    id="lastName"
-                                    name="lastName"
+                                    id="company"
+                                    name="company"
                                     className={styles.input}
+                                    placeholder="Enter company name"
                                     required
-                                    value={formData.lastName}
+                                    value={formData.company}
                                     onChange={handleChange}
                                 />
                             </div>
-                        </div>
 
-                        <div className={styles.formGroup}>
-                            <label htmlFor="email" className={styles.label}>Email Address</label>
-                            <input
-                                type="email"
-                                id="email"
-                                name="email"
-                                className={styles.input}
-                                required
-                                value={formData.email}
-                                onChange={handleChange}
-                            />
-                        </div>
+                            <div className={styles.formGroup}>
+                                <label htmlFor="subject" className={styles.label}>Inquiry Type</label>
+                                <input
+                                    type="text"
+                                    id="subject"
+                                    name="subject"
+                                    className={styles.input}
+                                    placeholder="How can we assist you today?"
+                                    required
+                                    value={formData.subject}
+                                    onChange={handleChange}
+                                />
+                            </div>
 
-                        <div className={styles.formGroup}>
-                            <label htmlFor="company" className={styles.label}>Company</label>
-                            <input
-                                type="text"
-                                id="company"
-                                name="company"
-                                className={styles.input}
-                                value={formData.company}
-                                onChange={handleChange}
-                            />
-                        </div>
+                            <div className={styles.formGroup}>
+                                <label htmlFor="message" className={styles.label}>Detailed Requirements</label>
+                                <textarea
+                                    id="message"
+                                    name="message"
+                                    className={styles.textarea}
+                                    placeholder="Please provide details about your project or inquiry..."
+                                    required
+                                    value={formData.message}
+                                    onChange={handleChange}
+                                ></textarea>
+                            </div>
 
-                        <div className={styles.formGroup}>
-                            <label htmlFor="subject" className={styles.label}>Subject</label>
-                            <input
-                                type="text"
-                                id="subject"
-                                name="subject"
-                                className={styles.input}
-                                required
-                                value={formData.subject}
-                                onChange={handleChange}
-                            />
-                        </div>
-
-                        <div className={styles.formGroup}>
-                            <label htmlFor="message" className={styles.label}>Message</label>
-                            <textarea
-                                id="message"
-                                name="message"
-                                className={styles.textarea}
-                                required
-                                value={formData.message}
-                                onChange={handleChange}
-                            ></textarea>
-                        </div>
-
-                        <Button type="submit" variant="primary">Send Message</Button>
-                        <p style={{ fontSize: '0.875rem', color: 'var(--color-text-light)', marginTop: '8px' }}>
-                            Submitting this form will open your default email client.
-                        </p>
-                    </form>
+                            <Button type="submit" variant="primary" style={{ width: '100%', padding: '18px' }}>
+                                <Send size={18} style={{ marginRight: '8px' }} /> Initialize Inquiry
+                            </Button>
+                            <p style={{ textAlign: 'center', fontSize: '0.875rem', color: 'var(--color-text-light)', marginTop: '24px' }}>
+                                This secure channel is monitored by our lead research partners. Response time &lt; 12 hours.
+                            </p>
+                        </form>
+                    </div>
                 </div>
             </SectionWrapper>
 
-            <SectionWrapper id="support" background="dark">
-                <div className={styles.reveal} style={{ textAlign: 'center', maxWidth: '800px', margin: '0 auto' }}>
-                    <h2 style={{ fontSize: '3rem', fontWeight: '800', marginBottom: '24px', color: 'white' }}>Enterprise Support</h2>
-                    <p style={{ fontSize: '1.125rem', lineHeight: '1.6', color: 'var(--color-text-light)', marginBottom: '32px' }}>
-                        For enterprise-level inquiries, custom research projects, or strategic partnerships, our dedicated support team is ready to assist. We offer tailored solutions to meet the unique demands of large organizations.
+            <section id="support" className={styles.supportSection}>
+                <div className={`${styles.supportContent} ${styles.reveal}`}>
+                    <h2 className={styles.supportTitle}>Enterprise Support</h2>
+                    <p className={styles.supportDescription}>
+                        For enterprise-level inquiries, custom research projects, or strategic partnerships, our dedicated support team is ready to assist.
                     </p>
-                    <Button variant="outline" href="mailto:enterprise@signalbridgeinsights.com" style={{ borderColor: 'rgba(255,255,255,0.2)', color: 'white' }}>Contact Enterprise Support</Button>
+                    <Button variant="outline" href="mailto:enterprise@signalbridgeinsights.com" className={styles.supportBtn}>
+                        Contact Enterprise Support
+                    </Button>
                 </div>
-            </SectionWrapper>
+            </section>
         </main>
     );
 }

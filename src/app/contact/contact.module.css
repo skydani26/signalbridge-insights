@@ -87,38 +87,121 @@
     line-height: 1.6;
 }
 
-.contactGrid {
+/* Response Protocol */
+.protocolGrid {
     display: grid;
-    grid-template-columns: 1fr 2fr;
-    gap: 64px;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
     margin-top: 48px;
 }
 
-.infoBox {
-    background: var(--color-gray-100);
-    padding: 40px;
-    border-radius: 8px;
-    height: fit-content;
+.protocolCard {
+    background: white;
+    padding: 32px;
+    border-radius: 12px;
+    border: 1px solid var(--color-gray-200);
+    text-align: center;
+    transition: all 0.3s ease;
 }
 
-.infoItem {
-    margin-bottom: 32px;
+.protocolIcon {
+    width: 48px;
+    height: 48px;
+    background: #f0f4ff;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-secondary);
+    margin: 0 auto 24px;
 }
 
-.infoLabel {
-    display: block;
-    font-size: 0.75rem;
+.protocolCard h3 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-bottom: 12px;
+    color: var(--color-primary);
+}
+
+.protocolCard p {
+    font-size: 0.95rem;
+    color: var(--color-text-light);
+    line-height: 1.5;
+    margin-bottom: 0;
+}
+
+.contactGrid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 80px;
+    max-width: 900px;
+    margin: 48px auto 0;
+}
+
+/* Office Grid */
+.officeGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+    margin-bottom: 80px;
+}
+
+.officeCard {
+    background: white;
+    padding: 32px;
+    border-radius: 16px;
+    border: 1px solid var(--color-gray-200);
+    text-align: center;
+}
+
+.officeTag {
+    background: #F1F5F9;
+    color: var(--color-primary);
+    padding: 4px 12px;
+    border-radius: 6px;
+    font-size: 0.7rem;
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 1px;
-    color: var(--color-text-light);
-    margin-bottom: 8px;
+    display: inline-block;
+    margin-bottom: 20px;
 }
 
-.infoValue {
+.officeCard h4 {
+    font-size: 1.35rem;
+    font-weight: 700;
+    margin-bottom: 12px;
+}
+
+.officeCard p {
+    font-size: 0.95rem;
+    color: var(--color-text-light);
+    line-height: 1.6;
+    margin-bottom: 0;
+}
+
+/* Form Styles */
+.formCard {
+    background: white;
+    padding: 64px;
+    border-radius: 24px;
+    border: 1px solid var(--color-gray-200);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.04);
+}
+
+.formHeader {
+    text-align: center;
+    margin-bottom: 48px;
+}
+
+.formHeader h2 {
+    font-size: 2.25rem;
+    margin-bottom: 12px;
+}
+
+.formHeader p {
+    color: var(--color-text-light);
     font-size: 1.1rem;
-    font-weight: 500;
-    color: var(--color-primary);
 }
 
 .form {
@@ -131,32 +214,100 @@
 
 .label {
     display: block;
-    font-size: 0.9rem;
-    font-weight: 600;
-    margin-bottom: 8px;
-    color: var(--color-text-main);
+    font-size: 0.85rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+    color: var(--color-primary);
+    opacity: 0.8;
 }
 
 .input,
 .textarea {
     width: 100%;
-    padding: 12px 16px;
+    padding: 16px;
+    background-color: #f8fafc;
     border: 1px solid var(--color-gray-200);
-    border-radius: 4px;
+    border-radius: 10px;
     font-family: inherit;
     font-size: 1rem;
-    transition: border-color 0.2s;
+    transition: all 0.2s ease;
+    color: var(--color-primary);
 }
 
 .input:focus,
 .textarea:focus {
     outline: none;
     border-color: var(--color-secondary);
+    background-color: white;
+    box-shadow: 0 0 0 4px rgba(74, 144, 226, 0.05);
 }
 
 .textarea {
-    min-height: 150px;
+    min-height: 180px;
     resize: vertical;
+}
+
+/* Support Overhaul */
+.supportSection {
+    background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+    padding: 120px 0;
+    position: relative;
+    overflow: hidden;
+    color: white;
+    z-index: 1;
+}
+
+.supportSection::before {
+    content: '';
+    position: absolute;
+    top: -25%;
+    left: -25%;
+    width: 150%;
+    height: 150%;
+    background: radial-gradient(circle at 40% 40%, rgba(59, 130, 246, 0.18) 0%, transparent 70%);
+    animation: meshRotate 25s linear infinite;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.supportContent {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.supportTitle {
+    font-size: 3.5rem;
+    font-weight: 800;
+    margin-bottom: 24px;
+    color: white;
+    letter-spacing: -0.04em;
+}
+
+.supportDescription {
+    font-size: 1.25rem;
+    color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 48px;
+    line-height: 1.6;
+}
+
+.supportBtn {
+    background-color: transparent !important;
+    border: 1px solid rgba(255, 255, 255, 0.3) !important;
+    color: white !important;
+    padding: 16px 48px !important;
+    font-weight: 600 !important;
+    transition: all 0.2s ease !important;
+}
+
+.supportBtn:hover {
+    background-color: rgba(255, 255, 255, 0.05) !important;
+    border-color: white !important;
+    transform: translateY(-2px);
 }
 
 @media (max-width: 1024px) {
