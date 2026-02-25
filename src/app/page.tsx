@@ -396,9 +396,6 @@ export default function Home() {
                 </div>
               </div>
 
-              <Button href="/industries" className={styles.coverageBtn}>
-                Explore All Industries
-              </Button>
             </div>
 
             {/* Right Column: Stats Grid */}
@@ -438,7 +435,7 @@ export default function Home() {
           </p>
           <div className={styles.ctaButtonsContainer}>
             <Button href="/contact" className={styles.btnCtaPrimary}>I Need Experts</Button>
-            <Button href="/for-experts" className={styles.btnCtaSecondary}>I&apos;m an Expert</Button>
+            <Button href="/contact" className={styles.btnCtaSecondary}>I'm an Expert</Button>
           </div>
         </div>
       </section>
