@@ -111,7 +111,7 @@ export default function HowItWorks() {
                             From surveys and calls to focus groups and custom projects — a streamlined process
                             designed to connect you with expert knowledge quickly, compliantly, and effectively.
                         </p>
-                        <div style={{ display: 'flex', justifyContent: 'center' }}>
+                        <div className={styles.heroButtons}>
                             <Button href="/contact" style={{ backgroundColor: 'white', color: 'var(--color-primary)', padding: '16px 40px', fontWeight: '700' }}>
                                 Get Started <span style={{ marginLeft: '12px' }}>→</span>
                             </Button>

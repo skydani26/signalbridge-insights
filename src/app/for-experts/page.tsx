@@ -70,7 +70,7 @@ export default function ForExperts() {
                         <p className={styles.heroSubtitle}>
                             Join 10,000+ professionals earning money through paid surveys, consultation calls, focus groups, and advisory projects. Share your knowledge on your own terms.
                         </p>
-                        <div style={{ display: 'flex', justifyContent: 'center' }}>
+                        <div className={styles.heroButtons}>
                             <Button href="/contact" style={{ backgroundColor: 'white', color: 'var(--color-primary)', padding: '16px 40px', fontWeight: '700' }}>
                                 Apply to Join <span style={{ marginLeft: '12px' }}>→</span>
                             </Button>

@@ -46,7 +46,13 @@
     color: #94A3B8;
     line-height: 1.6;
     max-width: 700px;
-    margin: 0 auto;
+    margin: 0 auto 48px;
+}
+
+.heroButtons {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
 }
 
 .sectionTitle {

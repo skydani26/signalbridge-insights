@@ -26,6 +26,13 @@
     font-size: 1.25rem;
     color: var(--color-text-light);
     line-height: 1.6;
+    margin-bottom: 48px;
+}
+
+.heroButtons {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
 }
 
 .contentContainer {

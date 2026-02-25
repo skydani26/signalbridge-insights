@@ -82,14 +82,14 @@
     font-size: 1.25rem;
     color: #CBD5E1;
     max-width: 800px;
-    margin: 0 auto 40px;
+    margin: 0 auto 48px;
     line-height: 1.6;
 }
 
 .heroButtons {
     display: flex;
     justify-content: center;
-    gap: 16px;
+    gap: 24px;
 }
 
 /* Services Section */

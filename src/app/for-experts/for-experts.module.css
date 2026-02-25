@@ -87,6 +87,12 @@
     font-weight: 400;
 }
 
+.heroButtons {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+}
+
 .earnGrid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);

@@ -89,6 +89,12 @@
     font-weight: 400;
 }
 
+.heroButtons {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+}
+
 .statsBanner {
     background: #ffffff;
     border-bottom: 1px solid rgba(0, 0, 0, 0.05);

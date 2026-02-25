@@ -32,7 +32,7 @@ export default function About() {
                             SignalBridge was engineered to solve the critical gaps in traditional expert networks:
                             slow fulfillment, inconsistent quality, and complex compliance risk.
                         </p>
-                        <div style={{ display: 'flex', justifyContent: 'center' }}>
+                        <div className={styles.heroButtons}>
                             <Button href="/contact" style={{ backgroundColor: 'white', color: 'var(--color-primary)', padding: '16px 40px', fontWeight: '700' }}>
                                 Get Started <span style={{ marginLeft: '12px' }}>→</span>
                             </Button>
