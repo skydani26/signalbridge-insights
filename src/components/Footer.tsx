@@ -28,12 +28,12 @@ const Footer = () => {
                         <div className={styles.column}>
                             <h4>For Experts</h4>
                             <Link href="/contact">Join as Expert</Link>
-                            <Link href="/for-experts">Expert Login</Link>
+                            <Link href="/for-experts">How It Works</Link>
                         </div>
                         <div className={styles.column}>
                             <h4>For Clients</h4>
                             <Link href="/contact">Find Experts</Link>
-                            <Link href="/for-clients">Client Login</Link>
+                            <Link href="/for-clients">How It Works</Link>
                         </div>
                     </div>
                 </div>
