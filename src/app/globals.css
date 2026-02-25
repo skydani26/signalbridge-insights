@@ -3,17 +3,20 @@
 
 :root {
   /* Deep Enterprise Navy Palette */
-  --color-primary: #0A192F;
-  --color-secondary: #4A90E2;
+  --color-primary: #0F172A;
+  --color-secondary: #3b82f6;
+  /* Calibrated Signal Blue */
   /* Bright Professional Blue */
   --color-accent: #5390ff;
 
   --color-background: #ffffff;
-  --color-background-dark: #0A192F;
+  --color-background-soft: #FAFBFB;
+  --color-background-dark: #0F172A;
   --color-background-card: #112240;
 
-  --color-text-main: #0A192F;
-  --color-text-light: #8892B0;
+  --color-text-main: #0F172A;
+  --color-text-light: #64748b;
+  /* Calibrated for readability */
   --color-text-white: #FFFFFF;
 
   --color-gray-100: #F4F7F9;
@@ -22,7 +25,15 @@
 
   --font-heading: 'Cabinet Grotesk', sans-serif;
   --font-sans: 'Inter', sans-serif;
-  --max-width: 1200px;
+  --max-width: 1240px;
+  /* Slightly wider for elite feel */
+
+  /* Elite UI Tokens */
+  --shadow-premium: 0 10px 30px -10px rgba(2, 12, 27, 0.15);
+  --shadow-hover: 0 20px 40px -15px rgba(2, 12, 27, 0.25);
+  --border-radius-sm: 6px;
+  --border-radius-md: 12px;
+  --transition-base: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 * {
@@ -39,6 +50,8 @@ body {
   color: var(--color-text-main);
   background-color: var(--color-background);
   line-height: 1.6;
+  font-size: 15px;
+  /* Reduced base font size */
   -webkit-font-smoothing: antialiased;
 }
 
@@ -56,8 +69,8 @@ h6 {
   font-family: var(--font-heading);
   color: var(--color-primary);
   font-weight: 600;
-  /* Reduced from 700 */
-  line-height: 1.25;
+  /* Reduced from 700 for a more modern, cleaner feel */
+  line-height: 1.15;
   letter-spacing: -0.02em;
 }
 
@@ -72,7 +85,7 @@ p {
 }
 
 .section {
-  padding: 80px 0;
+  padding: 64px 0;
 }
 
 /* Utility classes */

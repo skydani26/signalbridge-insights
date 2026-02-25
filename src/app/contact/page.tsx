@@ -50,11 +50,13 @@ export default function Contact() {
     return (
         <main>
             <section className={styles.hero}>
-                <div className={`container ${styles.reveal}`}>
-                    <h1>Contact Our <span className={styles.heroHighlight}>Global Team</span></h1>
-                    <p className={styles.heroSubtitle}>
-                        Whether you&apos;re looking to find an expert, join our network, or explore partnership opportunities, we&apos;re ready to help you reach strategic clarity.
-                    </p>
+                <div className="container" style={{ maxWidth: '900px' }}>
+                    <div className={styles.reveal}>
+                        <h1>Contact Our <span className={styles.heroHighlight}>Global Team</span></h1>
+                        <p className={styles.heroSubtitle}>
+                            Whether you&apos;re looking to find an expert, join our network, or explore partnership opportunities, we&apos;re ready to help you reach strategic clarity.
+                        </p>
+                    </div>
                 </div>
             </section>
 

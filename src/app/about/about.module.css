@@ -2,6 +2,7 @@
     background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
     color: white;
     padding: 120px 0 80px;
+    /* Matched to How It Works for high-impact hero scale */
     position: relative;
     overflow: hidden;
     text-align: center;
@@ -54,12 +55,13 @@
 
 .hero h1 {
     font-family: var(--font-heading);
-    font-size: 3.25rem;
-    font-weight: 700;
-    /* Reduced from 800 */
+    font-size: 2.75rem;
+    /* Reduced from 3.25rem */
+    font-weight: 600;
+    /* Reduced from 700 */
     margin-bottom: 32px;
     color: var(--color-white);
-    letter-spacing: -0.03em;
+    letter-spacing: -0.02em;
     line-height: 1.2;
 }
 
@@ -80,27 +82,28 @@
 }
 
 .heroSubtitle {
-    font-size: 1.35rem;
+    font-size: 1.25rem;
     color: #F1F5F9;
     max-width: 800px;
     margin: 0 auto;
     line-height: 1.6;
+    font-weight: 400;
 }
 
 /* Mission Section Overhaul */
 .missionGrid {
     display: grid;
     grid-template-columns: 1fr 1.1fr;
-    gap: 80px;
+    gap: 48px;
     align-items: center;
 }
 
 .missionContent h2 {
-    font-size: 3rem;
-    font-weight: 800;
+    font-size: 2.5rem;
+    font-weight: 600;
     color: var(--color-primary);
     margin-bottom: 24px;
-    letter-spacing: -0.04em;
+    letter-spacing: -0.03em;
 }
 
 .missionContent p {
@@ -111,7 +114,7 @@
 }
 
 .buildingBox {
-    background-color: #F1F5F9;
+    background-color: var(--color-gray-100);
     /* Very light institutional gray */
     aspect-ratio: 1 / 1;
     border-radius: 24px;
@@ -146,11 +149,13 @@
 }
 
 .statBox h3 {
-    font-size: 1.8rem;
+    font-size: 2rem;
+    /* Reduced from 2.25rem */
     color: var(--color-secondary);
-    margin-bottom: 4px;
+    margin-bottom: 8px;
     font-weight: 600;
-    letter-spacing: -0.02em;
+    line-height: 1;
+    letter-spacing: -0.03em;
 }
 
 .statBox p {
@@ -171,29 +176,33 @@
 
 .valueCard {
     background: white;
-    padding: 56px 40px;
-    border-radius: 12px;
+    padding: 24px 20px;
+    /* Reduced from 32px 24px */
+    border-radius: var(--border-radius-md);
     border: 1px solid var(--color-gray-200);
-    transition: all 0.3s ease;
+    transition: var(--transition-base);
     text-align: center;
+    box-shadow: var(--shadow-premium);
 }
 
 .valueCard:hover {
     transform: translateY(-8px);
-    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.05);
+    box-shadow: var(--shadow-hover);
     border-color: var(--color-secondary);
 }
 
 .valueIcon {
-    width: 64px;
-    height: 64px;
-    background: #F1F5F9;
-    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    background: #f0f4ff;
+    border: 1px solid rgba(59, 130, 246, 0.2);
+    border-radius: 8px;
+    /* Standardized square-round */
     display: flex;
     align-items: center;
     justify-content: center;
     color: var(--color-primary);
-    margin: 0 auto 32px;
+    margin: 0 auto 16px;
 }
 
 .valueCard h3 {
@@ -222,10 +231,11 @@
 
 .sectionTitle {
     color: var(--color-primary);
-    font-size: 3rem;
-    font-weight: 800;
+    font-size: 2.5rem;
+    /* Reduced from 3rem */
+    font-weight: 600;
     margin-bottom: 16px;
-    letter-spacing: -0.04em;
+    letter-spacing: -0.03em;
     line-height: 1.2;
 }
 
@@ -250,10 +260,11 @@
 
 .presenceCard {
     background: white;
-    padding: 64px;
-    border-radius: 24px;
+    padding: 40px;
+    /* Reduced from 56px */
+    border-radius: var(--border-radius-md);
     border: 1px solid var(--color-gray-200);
-    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.03);
+    box-shadow: var(--shadow-premium);
     text-align: center;
 }
 
@@ -288,7 +299,8 @@
 /* Career CTA Overhaul (Rotating Mesh) */
 .careerSection {
     background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
-    padding: 120px 0;
+    padding: 80px 0;
+    /* Reduced from 120px */
     position: relative;
     overflow: hidden;
     color: white;
@@ -317,11 +329,12 @@
 }
 
 .careerSection h2 {
-    font-size: 3.5rem;
-    font-weight: 800;
+    font-size: 2.75rem;
+    /* Reduced from 3.5rem */
+    font-weight: 600;
     margin-bottom: 24px;
     color: white;
-    letter-spacing: -0.04em;
+    letter-spacing: -0.03em;
 }
 
 .careerSection p {
@@ -354,6 +367,6 @@
 
 @media (max-width: 768px) {
     .hero {
-        padding: 120px 0 100px;
+        padding: 100px 0 60px;
     }
 }

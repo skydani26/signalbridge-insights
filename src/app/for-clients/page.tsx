@@ -8,6 +8,7 @@ import {
     ArrowRight, Star, Shield, Globe, Users, Search, Calendar, BarChart3,
     TrendingUp, Building2, Briefcase, CheckCircle2
 } from "lucide-react";
+import VettingProtocol from "@/components/VettingProtocol";
 import styles from "./for-clients.module.css";
 
 export default function ForClients() {
@@ -30,37 +31,37 @@ export default function ForClients() {
         {
             title: "Expert Surveys",
             description: "Targeted surveys to vetted industry professionals for quantitative + qualitative insights at scale.",
-            icon: <FileText size={24} />,
+            icon: <FileText size={20} strokeWidth={1.5} />,
             popular: true
         },
         {
             title: "1-on-1 Expert Calls",
             description: "Confidential consultations with hand-picked experts for deep-dive discussions on specific topics.",
-            icon: <Phone size={24} />,
+            icon: <Phone size={20} strokeWidth={1.5} />,
             popular: false
         },
         {
             title: "Programming",
             description: "Technical edge for complex surveys and workflows using Qualtrics, Decipher, and internal tools.",
-            icon: <Zap size={24} />,
+            icon: <Zap size={20} strokeWidth={1.5} />,
             popular: false
         },
         {
             title: "Custom Research",
             description: "End-to-end research support: we scope, recruit, collect data, and deliver synthesized insights.",
-            icon: <Network size={24} />,
+            icon: <Network size={20} strokeWidth={1.5} />,
             popular: false
         },
         {
             title: "Transcripts & Library",
             description: "Access curated transcripts, whitepapers, and recorded expert sessions from our searchable library.",
-            icon: <Database size={24} />,
+            icon: <Database size={20} strokeWidth={1.5} />,
             popular: false
         },
         {
             title: "Compliance & Vetting",
             description: "Rigorous expert screening, NDA management, and full audit trails on every single engagement.",
-            icon: <ShieldCheck size={24} />,
+            icon: <ShieldCheck size={20} strokeWidth={1.5} />,
             popular: false
         }
     ];
@@ -68,18 +69,20 @@ export default function ForClients() {
     return (
         <main>
             <section className={styles.hero}>
-                <div className={`container ${styles.reveal}`} style={{ maxWidth: '1000px' }}>
-                    <h1>Expert Knowledge, <span className={styles.heroHighlight}>Any Format</span></h1>
-                    <p className={styles.heroSubtitle}>
-                        Surveys, 1-on-1 calls, focus groups, custom research, and more. Access 10,000+ vetted industry experts to get the insights you need — fast, compliant, and at scale.
-                    </p>
-                    <div className={styles.heroButtons}>
-                        <Button href="/contact" style={{ backgroundColor: 'white', color: 'var(--color-primary)', padding: '16px 40px', fontWeight: '700' }}>
-                            Get Started <ArrowRight size={18} style={{ marginLeft: '12px' }} />
-                        </Button>
-                        <Button href="/contact" variant="outline" style={{ borderColor: 'rgba(255,255,255,0.3)', color: 'white', padding: '16px 40px' }}>
-                            Request a Demo
-                        </Button>
+                <div className="container" style={{ maxWidth: '900px' }}>
+                    <div className={styles.reveal}>
+                        <h1>Expert Knowledge, <span className={styles.heroHighlight}>Any Format</span></h1>
+                        <p className={styles.heroSubtitle}>
+                            Surveys, 1-on-1 calls, focus groups, custom research, and more. Access 10,000+ vetted industry experts to get the insights you need — fast, compliant, and at scale.
+                        </p>
+                        <div className={styles.heroButtons}>
+                            <Button href="/contact" style={{ backgroundColor: 'white', color: 'var(--color-primary)', padding: '16px 40px', fontWeight: '700' }}>
+                                Get Started <ArrowRight size={18} style={{ marginLeft: '12px' }} />
+                            </Button>
+                            <Button href="/contact" variant="outline" style={{ borderColor: 'rgba(255,255,255,0.3)', color: 'white', padding: '16px 40px' }}>
+                                Request a Demo
+                            </Button>
+                        </div>
                     </div>
                 </div>
             </section>
@@ -278,6 +281,8 @@ export default function ForClients() {
                     </div>
                 </div>
             </SectionWrapper>
+
+            <VettingProtocol />
 
             <SectionWrapper background="dark" className={styles.compactCTA}>
                 <div style={{ textAlign: 'center', maxWidth: '800px', margin: '0 auto' }}>

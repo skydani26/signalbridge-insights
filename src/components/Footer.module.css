@@ -1,9 +1,9 @@
 .footer {
-    background-color: #ffffff;
+    background-color: var(--color-white);
     padding: 48px 0 32px;
     /* Reduced by another 20% */
-    border-top: 1px solid #f1f5f9;
-    color: #64748b;
+    border-top: 1px solid var(--color-gray-100);
+    color: var(--color-text-light);
 }
 
 .container {
@@ -16,10 +16,9 @@
     display: flex;
     justify-content: flex-start;
     flex-wrap: wrap;
-    gap: 116px;
-    /* Increased by 20% from 96px */
-    margin-bottom: 32px;
-    /* Reduced from 48px */
+    gap: 64px;
+    /* Reduced for 4-column fit */
+    margin-bottom: 48px;
     padding-left: 0;
 }
 
@@ -40,7 +39,7 @@
 .logoIcon {
     width: 28px;
     height: 28px;
-    background-color: #0F172A;
+    background-color: var(--color-primary);
     color: white;
     display: flex;
     align-items: center;
@@ -57,14 +56,14 @@
     font-size: 1.1rem;
     font-weight: 700;
     /* Bold weight */
-    color: #0F172A;
+    color: var(--color-primary);
     letter-spacing: -0.02em;
 }
 
 .logoInsights {
     font-weight: 400;
     /* Regular weight */
-    color: #475569;
+    color: var(--color-text-light);
 }
 
 .tagline {
@@ -76,14 +75,14 @@
 
 .links {
     display: flex;
-    gap: 113px;
-    /* Increased by another 20% from 94px */
+    gap: 48px;
+    /* Balanced for 4 columns */
     flex-wrap: wrap;
     flex: 1;
 }
 
 .column h4 {
-    color: #0F172A;
+    color: var(--color-primary);
     margin-bottom: 16px;
     font-size: 0.95rem;
     font-weight: 700;
@@ -93,7 +92,7 @@
 
 .column a {
     display: block;
-    color: #64748b;
+    color: var(--color-text-light);
     text-decoration: none;
     margin-bottom: 12px;
     transition: all 0.2s ease;
@@ -109,7 +108,7 @@
 }
 
 .bottom {
-    border-top: 1px solid #f1f5f9;
+    border-top: 1px solid var(--color-gray-100);
     padding-top: 32px;
     /* Reduced from 40px */
     display: flex;
@@ -124,17 +123,21 @@
 
 .legalLinks {
     display: flex;
-    gap: 32px;
+    gap: 24px;
 }
 
-.legalLinks a {
-    color: #64748b;
-    text-decoration: none;
-    transition: color 0.2s;
+.legalLinks span {
+    color: #94a3b8;
+    background: var(--color-gray-100);
+    padding: 4px 12px;
+    border-radius: 4px;
+    font-size: 0.75rem;
+    font-weight: 600;
 }
 
-.legalLinks a:hover {
-    color: var(--color-secondary);
+.institutionalTag {
+    color: var(--color-primary);
+    font-weight: 600;
 }
 
 @media (max-width: 768px) {

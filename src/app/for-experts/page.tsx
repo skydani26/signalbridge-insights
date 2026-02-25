@@ -7,8 +7,9 @@ import {
     Star, ShieldCheck, Zap, DollarSign, Calendar, MessageSquare, Globe, Award,
     Shield, Users, ArrowRight, UserPlus, FileCheck, CheckCircle2, FileText,
     Phone, Stethoscope, Landmark, Cpu, Factory, Leaf, ShoppingCart,
-    Briefcase, TrendingUp, Lock, ChevronUp, ChevronDown
+    Briefcase, TrendingUp, Lock, ChevronUp, ChevronDown, Clock
 } from "lucide-react";
+import VettingProtocol from "@/components/VettingProtocol";
 import styles from "./for-experts.module.css";
 
 export default function ForExperts() {
@@ -86,7 +87,7 @@ export default function ForExperts() {
                 </div>
                 <div className={`${styles.earnGrid} ${styles.reveal}`}>
                     <div className={styles.earnCard}>
-                        <div className={styles.earnIconWrapper}><FileText size={24} /></div>
+                        <div className={styles.earnIconWrapper}><FileText size={24} strokeWidth={1.5} /></div>
                         <div className={styles.earnContent}>
                             <h3 className={styles.earnTitle}>Paid Surveys</h3>
                             <p className={styles.earnDescription}>Complete targeted industry surveys from your desktop or mobile. Quick, flexible, and well-compensated.</p>
@@ -94,7 +95,7 @@ export default function ForExperts() {
                         </div>
                     </div>
                     <div className={styles.earnCard}>
-                        <div className={styles.earnIconWrapper}><Phone size={24} /></div>
+                        <div className={styles.earnIconWrapper}><Phone size={24} strokeWidth={1.5} /></div>
                         <div className={styles.earnContent}>
                             <h3 className={styles.earnTitle}>1-on-1 Consultation Calls</h3>
                             <p className={styles.earnDescription}>Share your expertise in 30–60 minute phone or video calls with clients seeking deep industry knowledge.</p>
@@ -102,7 +103,7 @@ export default function ForExperts() {
                         </div>
                     </div>
                     <div className={styles.earnCard}>
-                        <div className={styles.earnIconWrapper}><Users size={24} /></div>
+                        <div className={styles.earnIconWrapper}><Users size={24} strokeWidth={1.5} /></div>
                         <div className={styles.earnContent}>
                             <h3 className={styles.earnTitle}>Focus Groups & Panels</h3>
                             <p className={styles.earnDescription}>Join moderated group discussions with other experts to explore topics from multiple perspectives.</p>
@@ -110,7 +111,7 @@ export default function ForExperts() {
                         </div>
                     </div>
                     <div className={styles.earnCard}>
-                        <div className={styles.earnIconWrapper}><Zap size={24} /></div>
+                        <div className={styles.earnIconWrapper}><Zap size={24} strokeWidth={1.5} /></div>
                         <div className={styles.earnContent}>
                             <h3 className={styles.earnTitle}>Advisory & Project Work</h3>
                             <p className={styles.earnDescription}>Provide ongoing advisory support or contribute to longer-term research and strategy projects.</p>
@@ -177,6 +178,35 @@ export default function ForExperts() {
                     <div className={styles.industryItem}>
                         <div className={styles.industryIconBox}><ShoppingCart size={32} /></div>
                         <span>Consumer & Retail</span>
+                    </div>
+                </div>
+            </SectionWrapper>
+
+            <SectionWrapper id="why-join" background="white">
+                <div className={styles.reveal} style={{ textAlign: 'center', marginBottom: '64px' }}>
+                    <h2 style={{ fontSize: '3rem', fontWeight: '800', color: 'var(--color-primary)' }}>Why Join Our Network?</h2>
+                    <p style={{ color: 'var(--color-text-light)', marginTop: '16px', fontSize: '1.2rem' }}>Turn your knowledge into income while helping others make better decisions</p>
+                </div>
+                <div className={`${styles.benefitGrid} ${styles.reveal}`}>
+                    <div className={styles.benefitCard}>
+                        <div className={styles.benefitIconWrapper}><DollarSign size={20} strokeWidth={1.5} /></div>
+                        <h3 className={styles.benefitTitle}>Competitive Earnings</h3>
+                        <p className={styles.benefitDescription}>Earn $50–$500+ per survey, set your hourly rate for calls, and get project-based fees for longer engagements.</p>
+                    </div>
+                    <div className={styles.benefitCard}>
+                        <div className={styles.benefitIconWrapper}><Clock size={20} strokeWidth={1.5} /></div>
+                        <h3 className={styles.benefitTitle}>Flexible Schedule</h3>
+                        <p className={styles.benefitDescription}>Complete surveys on your time. Accept only the calls, focus groups, and projects that fit your schedule.</p>
+                    </div>
+                    <div className={styles.benefitCard}>
+                        <div className={styles.benefitIconWrapper}><Globe size={20} strokeWidth={1.5} /></div>
+                        <h3 className={styles.benefitTitle}>Global Clients</h3>
+                        <p className={styles.benefitDescription}>Connect with leading hedge funds, consulting firms, private equity, and corporations worldwide.</p>
+                    </div>
+                    <div className={styles.benefitCard}>
+                        <div className={styles.benefitIconWrapper}><Shield size={20} strokeWidth={1.5} /></div>
+                        <h3 className={styles.benefitTitle}>Compliance Support</h3>
+                        <p className={styles.benefitDescription}>We handle compliance complexities. Clear guidelines, NDA management, and conflict screening for every engagement.</p>
                     </div>
                 </div>
             </SectionWrapper>
@@ -368,6 +398,8 @@ export default function ForExperts() {
                     ))}
                 </div>
             </SectionWrapper>
+
+            <VettingProtocol />
 
             <SectionWrapper id="join-now" background="dark">
                 <div className={styles.reveal} style={{ textAlign: 'center', maxWidth: '900px', margin: '0 auto' }}>

@@ -2,12 +2,20 @@
 .hero {
     background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
     color: white;
-    padding: 150px 0 120px;
-    /* Calibrated prominence */
+    min-height: 100dvh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     text-align: center;
     position: relative;
     overflow: hidden;
     z-index: 1;
+    padding: 80px 20px 140px;
+    /* Aggressive bottom buffer */
+    /* Increased bottom padding for indicator clearance */
+    /* Padding-top for fixed navbar */
+    width: 100%;
 }
 
 
@@ -26,7 +34,7 @@
 }
 
 
-.hero>div {
+.hero>.heroContent {
     position: relative;
     z-index: 2;
 }
@@ -46,10 +54,11 @@
 
 
 .heroTitle {
-    font-size: 3.25rem;
-    font-weight: 700;
+    font-size: 2.75rem;
+    font-weight: 600;
     color: var(--color-text-white);
-    margin-bottom: 32px;
+    margin-bottom: 24px;
+    /* Reduced to pull content up */
     line-height: 1.2;
     letter-spacing: -0.02em;
 }
@@ -71,12 +80,13 @@
 }
 
 .heroSubtitle {
-    font-size: 1.35rem;
+    font-size: 1.25rem;
     color: #F1F5F9;
-    /* High-contrast off-white for hero subtitle */
     max-width: 900px;
-    margin: 0 auto 56px;
+    margin: 0 auto 40px;
+    /* Reduced to pull buttons up */
     line-height: 1.6;
+    font-weight: 400;
 }
 
 .heroButtons {
@@ -125,19 +135,79 @@
     transform: translateY(-2px);
 }
 
+/* Scroll Indicator */
+.scrollIndicator {
+    position: absolute;
+    bottom: 40px;
+    right: 40px;
+    left: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    color: rgba(255, 255, 255, 0.4);
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.scrollIndicator:hover {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.mouse {
+    width: 24px;
+    height: 40px;
+    border: 2px solid currentColor;
+    border-radius: 12px;
+    position: relative;
+}
+
+.wheel {
+    width: 2px;
+    height: 6px;
+    background-color: currentColor;
+    position: absolute;
+    top: 6px;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: scrollWheel 2s ease-in-out infinite;
+    border-radius: 1px;
+}
+
+@keyframes scrollWheel {
+    0% {
+        transform: translate(-50%, 0);
+        opacity: 0;
+    }
+
+    30% {
+        opacity: 1;
+    }
+
+    100% {
+        transform: translate(-50%, 15px);
+        opacity: 0;
+    }
+}
+
 /* Client Success Overhaul - Aligned with Why Us Style */
 .testimonialSection {
-    background-color: #FAFBFB;
-    /* Sage background to match Why Us */
-    padding: 80px 0;
-    /* Compact vertical footprint */
+    background-color: var(--color-background-soft);
+    padding: 64px 0;
+    /* Reduced from 80px */
     text-align: center;
 }
 
 /* Credibility Section */
 .credibilitySection {
     background-color: white;
-    padding: 160px 0;
+    padding: 64px 0;
+    /* Reduced from 80px */
     text-align: center;
     border-bottom: 1px solid var(--color-gray-200);
 }
@@ -170,48 +240,67 @@
 /* Stats Section */
 .statsSection {
     background-color: var(--color-primary);
-    padding: 64px 0;
+    padding: 48px 0;
+    /* Reduced from 64px */
     color: white;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    scroll-margin-top: 80px;
+    /* Offset for fixed Navbar */
 }
 
 .statsGrid {
-    display: flex;
-    justify-content: space-around;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
     text-align: center;
-    flex-wrap: wrap;
-    gap: 16px;
+    gap: 32px;
+}
+
+.statItem {
+    position: relative;
+    padding: 0 16px;
+}
+
+.statItem:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    right: -16px;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 40px;
+    width: 1px;
+    background: rgba(255, 255, 255, 0.1);
 }
 
 .statNumber {
     font-family: var(--font-heading);
-    font-size: 1.8rem;
-    font-weight: 600;
+    font-size: 2.25rem;
+    font-weight: 700;
     color: var(--color-secondary);
-    margin-bottom: 4px;
+    margin-bottom: 8px;
     line-height: 1;
-    letter-spacing: -0.02em;
+    letter-spacing: -0.04em;
 }
 
 .statLabel {
     color: var(--color-text-light);
-    font-size: 0.7rem;
+    font-size: 0.75rem;
     font-weight: 600;
     text-transform: uppercase;
-    letter-spacing: 1.2px;
-    opacity: 0.8;
+    letter-spacing: 2px;
 }
 
 /* Our Services Section */
 .servicesSection {
     background-color: white;
-    padding: 160px 0 100px;
-    /* Reduced bottom padding from 160px */
+    padding: 64px 0;
+    /* Reduced from 100px 0 64px */
 }
 
 .exploreBtnContainer {
     display: flex;
     justify-content: center;
-    margin-top: 64px;
+    margin-top: 48px;
 }
 
 .exploreBtn {
@@ -236,15 +325,14 @@
 .sectionHeader {
     text-align: center;
     max-width: 800px;
-    margin: 0 auto 80px;
+    margin: 0 auto 48px;
 }
 
 .sectionTitle {
     font-family: var(--font-heading);
-    font-size: 3.5rem;
-    font-weight: 800;
+    font-size: 2.5rem;
+    font-weight: 600;
     color: #000000;
-    /* Standardized to Black */
     margin-bottom: 24px;
     line-height: 1.2;
     letter-spacing: -0.04em;
@@ -259,26 +347,27 @@
 .servicesGrid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 40px;
+    gap: 32px;
 }
 
 .serviceCard {
     background: white;
-    padding: 32px 28px;
-    /* Reduced by 30-50% from 48px 40px */
-    border-radius: 12px;
-    transition: all 0.3s ease;
+    padding: 24px 20px;
+    /* Aggressively reduced from 24px 20px */
+    border-radius: var(--border-radius-md);
+    transition: var(--transition-base);
     border: 1px solid var(--color-gray-200);
     position: relative;
     overflow: hidden;
     display: flex;
     flex-direction: column;
     height: 100%;
+    box-shadow: var(--shadow-premium);
 }
 
 .serviceCard:hover {
     transform: translateY(-8px);
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+    box-shadow: var(--shadow-hover);
     border-color: var(--color-secondary);
 }
 
@@ -304,24 +393,25 @@
 }
 
 .iconBox {
-    width: 48px;
-    /* Slightly smaller icon box */
-    height: 48px;
-    background: #e6f0ff;
-    border-radius: 10px;
+    width: 40px;
+    height: 40px;
+    background: #f0f4ff;
+    border: 1px solid rgba(59, 130, 246, 0.2);
+    /* Unified Blue Outline */
+    border-radius: 8px;
     display: flex;
     align-items: center;
     justify-content: center;
     color: var(--color-secondary);
-    margin-bottom: 24px;
+    margin-bottom: 14px;
 }
 
 .serviceTitle {
-    font-size: 1.35rem;
-    /* Reduced for more compact look */
+    font-size: 1.25rem;
     font-weight: 600;
     color: var(--color-primary);
-    margin-bottom: 12px;
+    margin-bottom: 8px;
+    /* Reduced from 12px */
 }
 
 .serviceDescription {
@@ -333,10 +423,9 @@
 
 /* Why Us Overhaul */
 .whyUsSection {
-    background-color: #FAFBFB;
-    /* Even subtler sage green/tint */
-    padding: 160px 0 110px;
-    /* Reduced bottom padding from 160px */
+    background-color: var(--color-background-soft);
+    padding: 64px 0;
+    /* Reduced from 100px 0 64px */
     text-align: center;
 }
 
@@ -362,6 +451,18 @@
     transform: translateY(0);
 }
 
+.delay1 {
+    transition-delay: 0.2s;
+}
+
+.delay2 {
+    transition-delay: 0.4s;
+}
+
+.delay3 {
+    transition-delay: 0.6s;
+}
+
 .whyUsTag {
     color: var(--color-secondary);
     font-weight: 500;
@@ -374,9 +475,9 @@
 .whyUsTitle {
     color: #000000;
     /* Bold Black as requested */
-    font-size: 3.5rem;
+    font-size: 2.75rem;
     /* Slightly bigger */
-    font-weight: 800;
+    font-weight: 600;
     /* Black/Extra Bold */
     margin-bottom: 24px;
     letter-spacing: -0.04em;
@@ -385,7 +486,7 @@
 .whyUsSubtitle {
     color: var(--color-text-light);
     max-width: 700px;
-    margin: 0 auto 80px;
+    margin: 0 auto 48px;
     font-size: 1.2rem;
     line-height: 1.6;
 }
@@ -398,7 +499,8 @@
 
 .whyCard {
     background: white;
-    padding: 40px 32px;
+    padding: 24px 20px;
+    /* Aggressively reduced from 32px 24px */
     border-radius: 12px;
     text-align: left;
     transition: all 0.3s ease;
@@ -411,24 +513,26 @@
 }
 
 .whyIconBox {
-    width: 56px;
-    height: 56px;
+    width: 40px;
+    height: 40px;
     background: #f0f4ff;
-    /* Very light blue tint */
-    border-radius: 50%;
-    /* Circular as per screenshot */
+    border: 1px solid rgba(59, 130, 246, 0.2);
+    /* Unified Blue Outline */
+    border-radius: 8px;
+    /* Standardized to Square-round */
     display: flex;
     align-items: center;
     justify-content: center;
     color: var(--color-secondary);
-    margin-bottom: 28px;
+    margin-bottom: 14px;
 }
 
 .whyCardTitle {
     font-size: 1.25rem;
     font-weight: 700;
     color: var(--color-primary);
-    margin-bottom: 16px;
+    margin-bottom: 8px;
+    /* Reduced from 16px */
 }
 
 .whyCardText {
@@ -441,7 +545,7 @@
 .ctaSection {
     background-color: var(--color-primary);
     text-align: center;
-    padding: 120px 0;
+    padding: 80px 0;
     color: white;
     position: relative;
     overflow: hidden;
@@ -473,8 +577,10 @@
 
 .ctaTitle {
     color: white;
-    font-size: 3.5rem;
-    font-weight: 800;
+    font-size: 2.75rem;
+    /* Reduced from 3.5rem */
+    font-weight: 600;
+    /* Reduced weight */
     margin-bottom: 24px;
     letter-spacing: -0.04em;
 }
@@ -529,8 +635,8 @@
 /* How It Works Overhaul */
 .processSection {
     background-color: #ffffff;
-    padding: 110px 0 110px;
-    /* Reduced bottom padding from 160px */
+    padding: 80px 0;
+    /* Reduced from 110px */
     text-align: center;
 }
 
@@ -563,8 +669,9 @@
 
 .testimonialTitle {
     color: #000000;
-    font-size: 3.5rem;
-    font-weight: 800;
+    font-size: 2.75rem;
+    /* Reduced from 3.5rem */
+    font-weight: 600;
     margin-bottom: 24px;
     letter-spacing: -0.04em;
     line-height: 1.2;
@@ -572,8 +679,9 @@
 
 .processTitle {
     color: #000000;
-    font-size: 3.5rem;
-    font-weight: 800;
+    font-size: 2.75rem;
+    /* Reduced from 3.5rem */
+    font-weight: 600;
     margin-bottom: 24px;
     letter-spacing: -0.04em;
     line-height: 1.2;
@@ -590,7 +698,8 @@
 /* Industries / Coverage Overhaul - Dual Column Layout */
 .coverageSection {
     background-color: white;
-    padding: 160px 0;
+    padding: 100px 0;
+    /* Reduced from 160px */
 }
 
 .coverageContainer {
@@ -610,8 +719,9 @@
 }
 
 .coverageTitle {
-    font-size: 3.5rem;
-    font-weight: 800;
+    font-size: 2.75rem;
+    /* Reduced from 3.5rem */
+    font-weight: 600;
     color: #000000;
     /* Standardized to Black */
     margin-bottom: 24px;
@@ -729,8 +839,8 @@
 
 .processCard {
     background: #ffffff;
-    padding: 56px 32px 40px;
-    /* Extra top padding for number */
+    padding: 80px 24px 32px;
+    /* Increased top padding to separate from number */
     border-radius: 12px;
     text-align: left;
     transition: all 0.3s ease;
@@ -746,12 +856,12 @@
 
 .cardNumber {
     position: absolute;
-    top: 24px;
-    left: 32px;
+    top: 16px;
+    left: 24px;
     font-size: 3.5rem;
     font-weight: 800;
-    color: #edf2f7;
-    /* Very faint blue-grey */
+    color: #f1f5f9;
+    /* Fainter number */
     line-height: 1;
     z-index: 1;
     letter-spacing: -0.05em;
@@ -759,17 +869,18 @@
 }
 
 .processIconBox {
-    width: 48px;
-    height: 48px;
+    width: 40px;
+    /* Reduced from 44px */
+    height: 40px;
     background: #f0f4ff;
-    /* Consistent with screenshot blue tint */
+    border: 1px solid rgba(59, 130, 246, 0.2);
     border-radius: 8px;
-    /* Square as per request */
     display: flex;
     align-items: center;
     justify-content: center;
     color: var(--color-secondary);
-    margin-bottom: 28px;
+    margin-bottom: 18px;
+    /* Reduced from 24px */
     position: relative;
     z-index: 2;
 }
@@ -778,7 +889,8 @@
     font-size: 1.35rem;
     font-weight: 700;
     color: #000000;
-    margin-bottom: 16px;
+    margin-bottom: 8px;
+    /* Reduced from 16px */
     position: relative;
     z-index: 2;
 }
@@ -791,65 +903,69 @@
     z-index: 2;
 }
 
+.testimonialsGrid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+}
+
 .testCard {
     background: #ffffff;
-    padding: 24px;
-    /* More compact */
+    padding: 24px 28px 28px;
+    /* Reduced from 24px 32px 32px */
     border-radius: 12px;
-    border: 1px solid rgba(0, 0, 0, 0.03);
+    border: 1px solid rgba(0, 0, 0, 0.05);
     display: flex;
     flex-direction: column;
     height: 100%;
-    transition: all 0.3s ease;
+    transition: var(--transition-base);
+    text-align: left;
 }
 
 .testCard:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-hover);
 }
 
 .testIconBox {
-    width: 44px;
-    /* Scaled down */
-    height: 44px;
-    background: #f0f4ff;
-    border-radius: 50%;
+    color: #e2e8f0;
+    margin-bottom: -10px;
+    margin-left: -4px;
     display: flex;
     align-items: center;
-    justify-content: center;
-    color: var(--color-secondary);
-    margin-bottom: 16px;
-    /* Reduced gap */
+    justify-content: flex-start;
 }
 
 .testText {
-    font-size: 0.95rem;
-    /* Compact text */
+    font-size: 1.05rem;
+    font-style: italic;
     line-height: 1.6;
-    /* Reduced line-height */
     color: #4b5563;
-    margin-bottom: 16px;
+    margin-bottom: 24px;
     flex-grow: 1;
 }
 
+.testAuthorGroup {
+    margin-top: auto;
+}
+
 .testSeparator {
-    display: none;
-    /* Removed for cleaner look matching whyCard */
+    height: 1px;
+    background: #f1f5f9;
+    width: 100%;
+    margin-bottom: 24px;
 }
 
 .testAuthor {
-    font-weight: 800;
+    font-weight: 700;
     color: #000000;
-    font-size: 0.95rem;
-    /* Scaled down */
+    font-size: 1rem;
     margin-bottom: 2px;
-    letter-spacing: -0.01em;
 }
 
 .testRole {
     color: #64748b;
     font-size: 0.85rem;
-    /* Scaled down */
     font-weight: 400;
 }
 

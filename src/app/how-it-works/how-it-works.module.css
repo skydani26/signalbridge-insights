@@ -2,6 +2,7 @@
     background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
     color: white;
     padding: 120px 0 80px;
+    /* Matched to For Experts for high-impact hero scale */
     position: relative;
     overflow: hidden;
     text-align: center;
@@ -55,9 +56,10 @@
 .hero h1 {
     font-family: var(--font-heading);
     color: var(--color-white);
-    font-size: 3.25rem;
-    font-weight: 700;
-    margin-bottom: 32px;
+    font-size: 2.75rem;
+    font-weight: 600;
+    margin-bottom: 24px;
+    /* Matched to Experts */
     letter-spacing: -0.02em;
     line-height: 1.2;
 }
@@ -79,19 +81,20 @@
 }
 
 .heroSubtitle {
-    font-size: 1.35rem;
+    font-size: 1.25rem;
     color: #F1F5F9;
     max-width: 900px;
-    margin: 0 auto;
+    margin: 0 auto 48px;
     line-height: 1.6;
+    font-weight: 400;
 }
 
 .statsBanner {
     background: #ffffff;
     border-bottom: 1px solid rgba(0, 0, 0, 0.05);
-    padding: 40px 0;
+    padding: 32px 0;
+    /* Reduced from 40px */
     margin-top: -1px;
-    /* Overlap border */
 }
 
 .statsGrid {
@@ -101,10 +104,10 @@
 }
 
 .statItem h3 {
-    font-size: 1.8rem;
+    font-size: 2.25rem;
     color: var(--color-primary);
     margin-bottom: 4px;
-    font-weight: 800;
+    font-weight: 700;
     letter-spacing: -0.02em;
 }
 
@@ -118,39 +121,99 @@
     opacity: 0.8;
 }
 
-.formatGrid {
+.servicesGrid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 32px;
     margin-top: 64px;
 }
 
-.formatCard {
+.serviceCard {
     background: white;
-    padding: 40px 32px;
-    border-radius: 12px;
-    transition: all 0.3s ease;
-    border: 1px solid rgba(0, 0, 0, 0.05);
-    text-align: left;
+    padding: 18px 16px;
+    /* Aggressively reduced from 24px 20px */
+    border-radius: var(--border-radius-md);
+    border: 1px solid var(--color-gray-200);
+    transition: var(--transition-base);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    box-shadow: var(--shadow-premium);
+    height: 100%;
 }
 
-.formatCard:hover {
+.serviceCard:hover {
     transform: translateY(-8px);
-    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.06);
+    box-shadow: var(--shadow-hover);
     border-color: var(--color-secondary);
 }
 
-.formatIcon {
-    width: 48px;
-    height: 48px;
+.serviceCardPopular {
+    border: 2px solid var(--color-secondary);
+    background: var(--color-background-soft);
+}
+
+.popularBadge {
+    position: absolute;
+    top: 24px;
+    right: 24px;
+    background: #DBEAFE;
+    color: var(--color-secondary);
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.serviceIconBox {
+    width: 40px;
+    height: 40px;
     background: #f0f4ff;
+    border: 1px solid rgba(59, 130, 246, 0.2);
     border-radius: 8px;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: var(--color-secondary);
-    margin-bottom: 24px;
+    color: var(--color-primary);
+    margin-bottom: 16px;
 }
+
+.serviceCardPopular .serviceIconBox {
+    background: #DBEAFE;
+    color: var(--color-secondary);
+}
+
+.serviceTitle {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--color-primary);
+    margin-bottom: 16px;
+}
+
+.serviceDescription {
+    color: var(--color-text-light);
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 24px;
+    flex-grow: 1;
+}
+
+.serviceProcess {
+    background: var(--color-background-soft);
+    border-radius: 6px;
+    padding: 10px 12px;
+    font-size: 0.8rem;
+    color: var(--color-secondary);
+    font-weight: 500;
+    margin-top: auto;
+    border: 1px solid rgba(59, 130, 246, 0.1);
+    letter-spacing: -0.01em;
+}
+
+
 
 .sectionTag {
     color: var(--color-secondary);
@@ -165,11 +228,12 @@
 
 .sectionTitle {
     color: #000000;
-    font-size: 3.5rem;
-    font-weight: 800;
+    font-size: 2.75rem;
+    /* Reduced from 3.5rem */
+    font-weight: 600;
     text-align: center;
     margin-bottom: 24px;
-    letter-spacing: -0.04em;
+    letter-spacing: -0.03em;
     line-height: 1.2;
 }
 
@@ -219,15 +283,17 @@
 
 .processCard {
     background: white;
-    padding: 40px 32px;
-    border-radius: 12px;
-    border: 1px solid rgba(0, 0, 0, 0.05);
-    transition: all 0.3s ease;
+    padding: 18px 16px;
+    /* Aggressively reduced from 24px 20px */
+    border-radius: var(--border-radius-md);
+    border: 1px solid var(--color-gray-200);
+    transition: var(--transition-base);
     text-align: left;
     display: flex;
     flex-direction: column;
     position: relative;
     overflow: hidden;
+    box-shadow: var(--shadow-premium);
 }
 
 .stepNumberBg {
@@ -248,16 +314,18 @@
 }
 
 .iconBoxSmall {
-    width: 40px;
-    height: 40px;
-    background: #f8fafc;
+    width: 36px;
+    /* Reduced from 40px */
+    height: 36px;
+    background: #f0f4ff;
+    border: 1px solid rgba(59, 130, 246, 0.2);
     border-radius: 8px;
     display: flex;
     align-items: center;
     justify-content: center;
     color: var(--color-primary);
-    margin-bottom: 24px;
-    border: 1px solid #e2e8f0;
+    margin-bottom: 14px;
+    /* Reduced from 20px */
 }
 
 .cardTitle {
@@ -290,10 +358,11 @@
 
 .securityTitle {
     color: #000000;
-    font-size: 3rem;
-    font-weight: 800;
+    font-size: 2.5rem;
+    /* Reduced from 3rem */
+    font-weight: 600;
     margin-bottom: 24px;
-    letter-spacing: -0.04em;
+    letter-spacing: -0.03em;
 }
 
 .securitySubtitle {
@@ -332,12 +401,13 @@
 .lockWrapper {
     width: 200px;
     height: 200px;
-    background: #e2e8f0;
+    background: var(--color-background-soft);
     border-radius: 40px;
     display: flex;
     align-items: center;
     justify-content: center;
     color: var(--color-primary);
+    border: 1px solid var(--color-gray-200);
 }
 
 .shieldOverlap {
@@ -347,19 +417,19 @@
     width: 80px;
     height: 80px;
     background: #dbeafe;
-    /* Light blue tint */
     border-radius: 12px;
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
     display: flex;
     align-items: center;
     justify-content: center;
     color: var(--color-secondary);
-    border: none;
+    border: 1px solid rgba(59, 130, 246, 0.2);
 }
 
 .finalCta {
     background-color: var(--color-primary);
-    padding: 120px 0;
+    padding: 80px 0;
+    /* Reduced from 120px */
     text-align: center;
     color: white;
     position: relative;
@@ -391,17 +461,20 @@
 
 .finalCta h2 {
     color: white;
-    font-size: 3.5rem;
-    font-weight: 800;
+    font-size: 2.75rem;
+    /* Reduced from 3.5rem */
+    font-weight: 600;
     margin-bottom: 24px;
-    letter-spacing: -0.04em;
+    letter-spacing: -0.03em;
 }
 
 .finalCta p {
     color: rgba(255, 255, 255, 0.7);
-    font-size: 1.35rem;
+    font-size: 1.25rem;
+    /* Reduced from 1.35rem */
     max-width: 800px;
-    margin: 0 auto 48px;
+    margin: 0 auto 40px;
+    /* Reduced from 48px */
 }
 
 .finalCtaBtn {
@@ -485,42 +558,87 @@
 }
 
 .faqGrid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 32px 64px;
-    margin-top: 64px;
+    max-width: 800px;
+    margin: 48px auto 0;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
 }
 
 .faqItem {
-    border-bottom: 1px solid #edf2f7;
-    padding-bottom: 24px;
+    background: white;
+    border-radius: 12px;
+    border: 1px solid rgba(0, 0, 0, 0.03);
+    overflow: hidden;
 }
 
 .faqQuestion {
-    font-size: 1.25rem;
+    width: 100%;
+    padding: 24px 32px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: none;
+    border: none;
+    cursor: pointer;
+    text-align: left;
+    font-size: 1.1rem;
     font-weight: 700;
     color: var(--color-primary);
-    margin-bottom: 12px;
+    transition: background 0.2s ease;
+}
+
+.faqQuestion:hover {
+    background: #FAFAFA;
 }
 
 .faqAnswer {
-    font-size: 1rem;
+    padding: 0 32px 24px;
     color: var(--color-text-light);
     line-height: 1.6;
+    font-size: 1rem;
 }
 
 @media (max-width: 1024px) {
     .hero h1 {
         font-size: 2.75rem;
     }
+
+    .detailedServiceItem {
+        gap: 40px;
+        margin-bottom: 80px;
+    }
 }
 
 @media (max-width: 768px) {
     .hero {
-        padding: 120px 0 100px;
+        padding: 100px 0 60px;
     }
 
     .processContainer {
+        grid-template-columns: 1fr;
+    }
+
+    .detailedServiceItem {
+        grid-template-columns: 1fr;
+        direction: ltr !important;
+        margin-bottom: 64px;
+        text-align: center;
+    }
+
+    .detailedServiceItem:nth-child(even) {
+        direction: ltr !important;
+    }
+
+    .detailedServiceItem:nth-child(even)>div {
+        direction: ltr !important;
+    }
+
+    .serviceContent h2 {
+        font-size: 2rem;
+    }
+
+    .serviceFeatures {
         grid-template-columns: 1fr;
     }
 }

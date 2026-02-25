@@ -1,5 +1,5 @@
 .hero {
-    background: linear-gradient(135deg, #0f172a 0%, #172554 100%);
+    background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
     color: white;
     padding: 120px 0 80px;
     position: relative;
@@ -42,8 +42,8 @@
 
 .hero h1 {
     font-family: var(--font-heading);
-    font-size: 3.25rem;
-    font-weight: 700;
+    font-size: 2.75rem;
+    font-weight: 600;
     margin-bottom: 24px;
     color: var(--color-white);
     letter-spacing: -0.02em;
@@ -112,23 +112,25 @@
 
 .serviceCard {
     background: white;
-    padding: 40px;
-    border-radius: 12px;
-    border: 1px solid rgba(0, 0, 0, 0.05);
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    padding: 24px 20px;
+    /* Aggressively reduced from 24px 20px */
+    border-radius: var(--border-radius-md);
+    border: 1px solid var(--color-gray-200);
+    transition: var(--transition-base);
     position: relative;
     display: flex;
     flex-direction: column;
+    box-shadow: var(--shadow-premium);
 }
 
 .serviceCard:hover {
     transform: translateY(-8px);
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.06);
-    border-color: rgba(59, 130, 246, 0.3);
+    box-shadow: var(--shadow-hover);
+    border-color: var(--color-secondary);
 }
 
 .serviceCardPopular {
-    border: 2px solid #3B82F6;
+    border: 2px solid var(--color-secondary);
     background: #F8FAFF;
 }
 
@@ -137,7 +139,7 @@
     top: 24px;
     right: 24px;
     background: #DBEAFE;
-    color: #3B82F6;
+    color: var(--color-secondary);
     padding: 4px 12px;
     border-radius: 20px;
     font-size: 0.75rem;
@@ -148,20 +150,23 @@
 }
 
 .serviceIconBox {
-    width: 48px;
-    height: 48px;
-    background: #F1F5F9;
-    border-radius: 10px;
+    width: 40px;
+    /* Reduced from 44px */
+    height: 40px;
+    background: #f0f4ff;
+    border: 1px solid rgba(59, 130, 246, 0.2);
+    border-radius: 8px;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #334155;
-    margin-bottom: 24px;
+    color: var(--color-primary);
+    margin-bottom: 16px;
+    /* Reduced from 24px */
 }
 
 .serviceCardPopular .serviceIconBox {
     background: #DBEAFE;
-    color: #3B82F6;
+    color: var(--color-secondary);
 }
 
 .serviceTitle {
@@ -172,7 +177,7 @@
 }
 
 .serviceDescription {
-    color: #64748B;
+    color: var(--color-text-light);
     font-size: 0.95rem;
     line-height: 1.6;
 }
@@ -187,9 +192,11 @@
 
 .trustCard {
     background: white;
-    padding: 24px;
+    padding: 20px;
+    /* Aggressively reduced from 20px */
     border-radius: 16px;
-    border: 1px solid rgba(0, 0, 0, 0.03);
+    border: 1px solid rgba(59, 130, 246, 0.1);
+    /* Subtle Blue Border */
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.02);
     transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     display: flex;
@@ -203,16 +210,18 @@
 }
 
 .trustIconBox {
-    width: 40px;
-    height: 40px;
-    background: #F1F5F9;
+    width: 36px;
+    /* Reduced from 40px */
+    height: 36px;
+    background: #f0f4ff;
+    border: 1px solid rgba(59, 130, 246, 0.2);
     color: var(--color-secondary);
-    /* Using secondary color for icons as requested/suggested */
     border-radius: 8px;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-bottom: 20px;
+    margin-bottom: 14px;
+    /* Reduced from 20px */
 }
 
 .trustTitle {
@@ -223,7 +232,7 @@
 }
 
 .trustDescription {
-    color: #64748B;
+    color: var(--color-text-light);
     font-size: 0.95rem;
     line-height: 1.6;
 }
@@ -238,7 +247,8 @@
 
 .serveCard {
     background: white;
-    padding: 48px 32px;
+    padding: 24px 20px;
+    /* Aggressively reduced from 32px 24px */
     border-radius: 16px;
     border: 1px solid rgba(0, 0, 0, 0.05);
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.02);
@@ -255,15 +265,19 @@
 }
 
 .serveIconCircle {
-    width: 64px;
-    height: 64px;
-    background: #EBF2FF;
-    color: #3B82F6;
-    border-radius: 50%;
+    width: 44px;
+    /* Reduced from 48px */
+    height: 44px;
+    background: #f0f4ff;
+    border: 1px solid rgba(59, 130, 246, 0.2);
+    color: var(--color-secondary);
+    border-radius: 8px;
+    /* Standardized to Square-round */
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-bottom: 24px;
+    margin-bottom: 18px;
+    /* Reduced from 24px */
 }
 
 .serveTitle {
@@ -297,10 +311,12 @@
 }
 
 .useCaseIconBox {
-    width: 48px;
-    height: 48px;
-    background: #F1F5F9;
-    color: #475569;
+    width: 40px;
+    /* Reduced from 44px */
+    height: 40px;
+    background: #f0f4ff;
+    border: 1px solid rgba(59, 130, 246, 0.2);
+    color: var(--color-secondary);
     border-radius: 8px;
     display: flex;
     align-items: center;
@@ -383,7 +399,8 @@
 }
 
 .compactCTA h2 {
-    font-size: 2.25rem !important;
+    font-size: 2rem !important;
+    /* Reduced from 2.25rem */
     margin-bottom: 16px !important;
 }
 
@@ -415,7 +432,7 @@
 
 @media (max-width: 768px) {
     .hero {
-        padding: 120px 0 100px;
+        padding: 100px 0 60px;
     }
 
     .servicesGrid {

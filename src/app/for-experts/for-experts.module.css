@@ -54,8 +54,8 @@
 
 .hero h1 {
     font-family: var(--font-heading);
-    font-size: 3.25rem;
-    font-weight: 700;
+    font-size: 2.75rem;
+    font-weight: 600;
     margin-bottom: 24px;
     color: var(--color-white);
     letter-spacing: -0.02em;
@@ -79,11 +79,12 @@
 }
 
 .heroSubtitle {
-    font-size: 1.35rem;
+    font-size: 1.25rem;
     color: #F1F5F9;
     max-width: 800px;
     margin: 0 auto 48px;
     line-height: 1.6;
+    font-weight: 400;
 }
 
 .earnGrid {
@@ -94,24 +95,30 @@
 
 .earnCard {
     background: white;
-    padding: 32px;
-    border-radius: 12px;
-    border: 1px solid rgba(0, 0, 0, 0.03);
+    padding: 18px 16px;
+    /* Aggressively reduced from 24px 20px */
+    border-radius: var(--border-radius-md);
+    border: 1px solid var(--color-gray-200);
     display: flex;
-    gap: 24px;
+    gap: 16px;
+    /* Reduced from 20px */
     align-items: flex-start;
-    transition: all 0.3s ease;
+    transition: var(--transition-base);
+    box-shadow: var(--shadow-premium);
 }
 
 .earnCard:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.05);
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-hover);
+    border-color: var(--color-secondary);
 }
 
 .earnIconWrapper {
-    width: 48px;
-    height: 48px;
-    background-color: #EBF5FF;
+    width: 40px;
+    /* Reduced from 44px */
+    height: 40px;
+    background-color: #f0f4ff;
+    border: 1px solid rgba(59, 130, 246, 0.2);
     border-radius: 8px;
     display: flex;
     align-items: center;
@@ -141,11 +148,12 @@
 .earnBadge {
     display: inline-block;
     padding: 6px 16px;
-    background-color: #EBF5FF;
+    background-color: var(--color-background-soft);
     color: var(--color-secondary);
     border-radius: 100px;
     font-size: 0.85rem;
-    font-weight: 600;
+    font-weight: 700;
+    margin-top: auto;
 }
 
 .benefitGrid {
@@ -156,9 +164,11 @@
 
 .benefitCard {
     background: white;
-    padding: 32px;
+    padding: 18px 16px;
+    /* Aggressively reduced from 24px 20px */
     border-radius: 12px;
-    border: 1px solid rgba(0, 0, 0, 0.03);
+    border: 1px solid rgba(59, 130, 246, 0.1);
+    /* Subtle Blue Border */
     transition: all 0.3s ease;
 }
 
@@ -168,15 +178,18 @@
 }
 
 .benefitIconWrapper {
-    width: 48px;
-    height: 48px;
-    background-color: #EBF5FF;
+    width: 40px;
+    /* Reduced from 44px */
+    height: 40px;
+    background-color: #f0f4ff;
+    border: 1px solid rgba(59, 130, 246, 0.2);
     border-radius: 8px;
     display: flex;
     align-items: center;
     justify-content: center;
     color: var(--color-secondary);
-    margin-bottom: 24px;
+    margin-bottom: 14px;
+    /* Reduced from 20px */
 }
 
 .benefitTitle {
@@ -195,7 +208,7 @@
 .pricingSection {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 80px;
+    gap: 48px;
     align-items: center;
 }
 
@@ -238,8 +251,10 @@
 }
 
 .earningsValue {
-    font-size: 5rem;
-    font-weight: 800;
+    font-size: 4rem;
+    /* Reduced from 5rem */
+    font-weight: 600;
+    /* Reduced weight */
     color: var(--color-primary);
     line-height: 1;
     margin-bottom: 12px;
@@ -253,7 +268,7 @@
 
 .earningsSublabel {
     font-size: 0.9rem;
-    color: #94A3B8;
+    color: var(--color-text-light);
 }
 
 .lookingGrid {
@@ -326,8 +341,9 @@
 }
 
 .ctaBox h2 {
-    font-size: 3.5rem;
-    font-weight: 800;
+    font-size: 2.75rem;
+    /* Reduced from 3.5rem */
+    font-weight: 600;
     margin-bottom: 24px;
     letter-spacing: -0.02em;
 }
@@ -364,8 +380,11 @@
 }
 
 .industryIconBox {
-    width: 48px;
-    height: 48px;
+    width: 44px;
+    height: 44px;
+    background-color: #f0f4ff;
+    border: 1px solid rgba(59, 130, 246, 0.2);
+    border-radius: 8px;
     margin: 0 auto 16px;
     color: var(--color-secondary);
     display: flex;
@@ -453,7 +472,7 @@
 
 @media (max-width: 768px) {
     .hero {
-        padding: 120px 0 100px;
+        padding: 100px 0 60px;
     }
 
     .earnGrid,
@@ -485,19 +504,19 @@
 }
 
 .stepIconBox {
-    width: 64px;
-    height: 64px;
-    background-color: var(--color-gray-100);
+    width: 56px;
+    height: 56px;
+    background-color: #f0f4ff;
+    border: 1px solid rgba(59, 130, 246, 0.2);
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: var(--color-secondary);
+    color: var(--color-primary);
     margin: 0 auto 24px;
-    font-size: 1.5rem;
+    font-size: 1.25rem;
     font-weight: 800;
-    border: 2px solid white;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    box-shadow: var(--shadow-premium);
 }
 
 .journeyTitle {

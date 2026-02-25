@@ -6,7 +6,7 @@ import SectionWrapper from "@/components/SectionWrapper";
 import Button from "@/components/Button";
 import Card from "@/components/Card";
 import styles from "./home.module.css";
-import { Star, FileText, Phone, Zap, Network, Database, ShieldCheck, Clock, Shield, Search, TrendingUp, MessageSquare, UserCheck, BarChart3, Quote, CheckCircle2, Globe, Briefcase, Building2 } from 'lucide-react';
+import { Star, FileText, Phone, Zap, Network, Database, ShieldCheck, Clock, Shield, Search, TrendingUp, MessageSquare, BarChart3, Quote, CheckCircle2, Globe, Briefcase, Building2, User } from 'lucide-react';
 
 export default function Home() {
   useEffect(() => {
@@ -28,17 +28,15 @@ export default function Home() {
     <main>
       {/* Hero Section */}
       <section className={styles.hero}>
-        <div className={`container ${styles.reveal}`}>
-          <h1 className={styles.heroTitle}>
+        <div className={`container ${styles.heroContent}`}>
+          <h1 className={`${styles.heroTitle} ${styles.reveal} ${styles.delay1}`}>
             Your Gateway to <br />
             <span className={styles.highlightBlue}>Expert Knowledge</span>
           </h1>
-          <p className={styles.heroSubtitle}>
-            Surveys, 1-on-1 calls, focus groups, custom research, and more.
-            Connect with 10,000+ vetted industry experts across 100+ countries.
-            Trusted by leading investors, consultants, and corporations worldwide.
+          <p className={`${styles.heroSubtitle} ${styles.reveal} ${styles.delay2}`}>
+            Surveys, 1-on-1 calls, focus groups, custom research, and more. Connect with 10,000+ vetted industry experts across 100+ countries. Trusted by leading investors, consultants, and corporations worldwide.
           </p>
-          <div className={styles.heroButtons}>
+          <div className={`${styles.heroButtons} ${styles.reveal} ${styles.delay3}`}>
             <Button href="/contact" className={styles.btnHeroPrimary}>
               Request Experts <span style={{ marginLeft: '12px', fontSize: '1.2rem' }}>→</span>
             </Button>
@@ -47,28 +45,40 @@ export default function Home() {
             </Button>
           </div>
         </div>
+
+        {/* Scroll Indicator */}
+        <div
+          className={styles.scrollIndicator}
+          onClick={() => {
+            document.getElementById('stats')?.scrollIntoView({ behavior: 'smooth' });
+          }}
+        >
+          <span>Explore</span>
+          <div className={styles.mouse}>
+            <div className={styles.wheel}></div>
+          </div>
+        </div>
       </section>
 
-
-      {/* Stats Section - Blue Strip */}
-      <section className={`${styles.statsSection} ${styles.reveal}`}>
+      {/* Stats Section - Blue Strip with Elite Border */}
+      <section id="stats" className={`${styles.statsSection} ${styles.reveal}`}>
         <div className="container">
           <div className={styles.statsGrid}>
-            <div>
+            <div className={styles.statItem}>
               <div className={styles.statNumber}>10,000+</div>
-              <div className={styles.statLabel}>Industry Experts</div>
+              <div className={styles.statLabel}>Specialized Experts</div>
             </div>
-            <div>
-              <div className={styles.statNumber}>100+</div>
-              <div className={styles.statLabel}>Countries</div>
+            <div className={styles.statItem}>
+              <div className={styles.statNumber}>150+</div>
+              <div className={styles.statLabel}>Domain Sectors</div>
             </div>
-            <div>
-              <div className={styles.statNumber}>60+</div>
-              <div className={styles.statLabel}>Languages</div>
+            <div className={styles.statItem}>
+              <div className={styles.statNumber}>24hrs</div>
+              <div className={styles.statLabel}>Average Turnaround</div>
             </div>
-            <div>
-              <div className={styles.statNumber}>50,000+</div>
-              <div className={styles.statLabel}>Surveys Completed</div>
+            <div className={styles.statItem}>
+              <div className={styles.statNumber}>100%</div>
+              <div className={styles.statLabel}>Compliance Assured</div>
             </div>
           </div>
         </div>
@@ -97,7 +107,7 @@ export default function Home() {
                 <Star size={12} fill="#5390ff" /> Signature
               </div>
               <div className={styles.iconBox}>
-                <FileText size={20} />
+                <FileText size={20} strokeWidth={1.5} />
               </div>
               <h3 className={styles.serviceTitle}>Expert Surveys</h3>
               <p className={styles.serviceDescription}>
@@ -108,7 +118,7 @@ export default function Home() {
 
             <div className={styles.serviceCard}>
               <div className={styles.iconBox}>
-                <Phone size={20} />
+                <Phone size={20} strokeWidth={1.5} />
               </div>
               <h3 className={styles.serviceTitle}>1-on-1 Expert Calls</h3>
               <p className={styles.serviceDescription}>
@@ -120,7 +130,7 @@ export default function Home() {
             {/* NEW: Programming Card (In place of Focus Groups) */}
             <div className={styles.serviceCard}>
               <div className={styles.iconBox}>
-                <Zap size={20} />
+                <Zap size={20} strokeWidth={1.5} />
               </div>
               <h3 className={styles.serviceTitle}>Programming</h3>
               <p className={styles.serviceDescription}>
@@ -131,7 +141,7 @@ export default function Home() {
             {/* NEW: Custom Research Projects */}
             <div className={styles.serviceCard}>
               <div className={styles.iconBox}>
-                <Network size={20} />
+                <Network size={20} strokeWidth={1.5} />
               </div>
               <h3 className={styles.serviceTitle}>Custom Research Projects</h3>
               <p className={styles.serviceDescription}>
@@ -142,7 +152,7 @@ export default function Home() {
             {/* NEW: Transcripts & Knowledge Library */}
             <div className={styles.serviceCard}>
               <div className={styles.iconBox}>
-                <Database size={20} />
+                <Database size={20} strokeWidth={1.5} />
               </div>
               <h3 className={styles.serviceTitle}>Transcripts & Knowledge Library</h3>
               <p className={styles.serviceDescription}>
@@ -153,7 +163,7 @@ export default function Home() {
             {/* NEW: Compliance & Vetting */}
             <div className={styles.serviceCard}>
               <div className={styles.iconBox}>
-                <ShieldCheck size={20} />
+                <ShieldCheck size={20} strokeWidth={1.5} />
               </div>
               <h3 className={styles.serviceTitle}>Compliance & Vetting</h3>
               <p className={styles.serviceDescription}>
@@ -240,7 +250,7 @@ export default function Home() {
             <div className={styles.processCard}>
               <div className={styles.cardNumber}>01</div>
               <div className={styles.processIconBox}>
-                <MessageSquare size={24} />
+                <MessageSquare size={24} strokeWidth={1.5} />
               </div>
               <h3 className={styles.processCardTitle}>Brief Us</h3>
               <p className={styles.processCardText}>
@@ -251,7 +261,7 @@ export default function Home() {
             <div className={styles.processCard}>
               <div className={styles.cardNumber}>02</div>
               <div className={styles.processIconBox}>
-                <Search size={24} />
+                <Search size={24} strokeWidth={1.5} />
               </div>
               <h3 className={styles.processCardTitle}>We Match Experts</h3>
               <p className={styles.processCardText}>
@@ -262,7 +272,7 @@ export default function Home() {
             <div className={styles.processCard}>
               <div className={styles.cardNumber}>03</div>
               <div className={styles.processIconBox}>
-                <UserCheck size={24} />
+                <User size={24} strokeWidth={1.5} />
               </div>
               <h3 className={styles.processCardTitle}>Experts Engage</h3>
               <p className={styles.processCardText}>
@@ -273,7 +283,7 @@ export default function Home() {
             <div className={styles.processCard}>
               <div className={styles.cardNumber}>04</div>
               <div className={styles.processIconBox}>
-                <BarChart3 size={24} />
+                <BarChart3 size={24} strokeWidth={1.5} />
               </div>
               <h3 className={styles.processCardTitle}>Get Insights</h3>
               <p className={styles.processCardText}>
@@ -296,46 +306,58 @@ export default function Home() {
           <div className={styles.testimonialsGrid}>
             <div className={styles.testCard}>
               <div className={styles.testIconBox}>
-                <Quote size={18} fill="currentColor" />
+                <Quote size={40} strokeWidth={1} fill="none" />
               </div>
               <p className={styles.testText}>
                 &quot;SignalBridge consistently delivers high-quality experts who understand our investment thesis. Their response time is unmatched.&quot;
               </p>
-              <div className={styles.testAuthor}>Managing Director</div>
-              <div className={styles.testRole}>Investment Fund</div>
+              <div className={styles.testSeparator} />
+              <div className={styles.testAuthorGroup}>
+                <div className={styles.testAuthor}>Managing Director</div>
+                <div className={styles.testRole}>Investment Fund</div>
+              </div>
             </div>
 
             <div className={styles.testCard}>
               <div className={styles.testIconBox}>
-                <Quote size={18} fill="currentColor" />
+                <Quote size={40} strokeWidth={1} fill="none" />
               </div>
               <p className={styles.testText}>
                 &quot;The survey platform is incredibly intuitive. We launched a 500-respondent study in under 24 hours.&quot;
               </p>
-              <div className={styles.testAuthor}>Partner</div>
-              <div className={styles.testRole}>Strategy Consulting</div>
+              <div className={styles.testSeparator} />
+              <div className={styles.testAuthorGroup}>
+                <div className={styles.testAuthor}>Partner</div>
+                <div className={styles.testRole}>Strategy Consulting</div>
+              </div>
             </div>
 
             <div className={styles.testCard}>
               <div className={styles.testIconBox}>
-                <Quote size={18} fill="currentColor" />
+                <Quote size={40} strokeWidth={1} fill="none" />
               </div>
               <p className={styles.testText}>
                 &quot;We rely on SignalBridge for all our primary research needs. The compliance framework gives us confidence in every engagement.&quot;
               </p>
-              <div className={styles.testAuthor}>VP Strategy</div>
-              <div className={styles.testRole}>Corporation</div>
+              <div className={styles.testSeparator} />
+              <div className={styles.testAuthorGroup}>
+                <div className={styles.testAuthor}>VP Strategy</div>
+                <div className={styles.testRole}>Corporation</div>
+              </div>
             </div>
 
             <div className={styles.testCard}>
               <div className={styles.testIconBox}>
-                <Quote size={18} fill="currentColor" />
+                <Quote size={40} strokeWidth={1} fill="none" />
               </div>
               <p className={styles.testText}>
                 &quot;Their expert matching algorithm saves us hours of vetting. Quality and speed combined.&quot;
               </p>
-              <div className={styles.testAuthor}>Research Director</div>
-              <div className={styles.testRole}>Strategy Consulting</div>
+              <div className={styles.testSeparator} />
+              <div className={styles.testAuthorGroup}>
+                <div className={styles.testAuthor}>Research Director</div>
+                <div className={styles.testRole}>Strategy Consulting</div>
+              </div>
             </div>
           </div>
         </div>

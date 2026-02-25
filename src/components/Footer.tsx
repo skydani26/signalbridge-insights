@@ -14,35 +14,45 @@ const Footer = () => {
                             <span className={styles.logoText}>SignalBridge <span className={styles.logoInsights}>Insights</span></span>
                         </Link>
                         <p className={styles.tagline}>
-                            Connecting industry experts with leading investors, consultants, and corporations for actionable insights.
+                            The premier global network connecting institutional capital with high-stakes industry expertise.
                         </p>
                     </div>
 
                     <div className={styles.links}>
                         <div className={styles.column}>
+                            <h4>Solutions</h4>
+                            <Link href="/how-it-works">Expert Surveys</Link>
+                            <Link href="/for-clients">Expert Consultations</Link>
+                            <Link href="/for-clients">Custom Research</Link>
+                        </div>
+                        <div className={styles.column}>
+                            <h4>Network</h4>
+                            <Link href="/for-experts">Apply as Expert</Link>
+                            <Link href="/for-experts">Compliance Standard</Link>
+                            <Link href="/for-experts">Expert Earnings</Link>
+                        </div>
+                        <div className={styles.column}>
                             <h4>Company</h4>
-                            <Link href="/about">About Us</Link>
-                            <Link href="/how-it-works">How It Works</Link>
-                            <Link href="/contact">Contact</Link>
+                            <Link href="/about">Our Mission</Link>
+                            <Link href="/about">Global Presence</Link>
+                            <Link href="/contact">Contact Support</Link>
                         </div>
                         <div className={styles.column}>
-                            <h4>For Experts</h4>
-                            <Link href="/contact">Join as Expert</Link>
-                            <Link href="/for-experts">How It Works</Link>
-                        </div>
-                        <div className={styles.column}>
-                            <h4>For Clients</h4>
-                            <Link href="/contact">Find Experts</Link>
-                            <Link href="/for-clients">How It Works</Link>
+                            <h4>Trust & Legal</h4>
+                            <Link href="#">Compliance Framework</Link>
+                            <Link href="#">Privacy Protocol</Link>
+                            <Link href="#">Terms of Service</Link>
                         </div>
                     </div>
                 </div>
 
                 <div className={styles.bottom}>
-                    <p>&copy; {new Date().getFullYear()} SignalBridge Insights. All rights reserved.</p>
+                    <div className={styles.copyright}>
+                        &copy; {new Date().getFullYear()} SignalBridge Insights. <span className={styles.institutionalTag}>Institutional Research Services.</span>
+                    </div>
                     <div className={styles.legalLinks}>
-                        <Link href="#">Privacy Policy</Link>
-                        <Link href="#">Terms of Service</Link>
+                        <span>SOC2 Type II Compliant</span>
+                        <span>GDPR Certified</span>
                     </div>
                 </div>
             </div>

@@ -9,6 +9,7 @@ import styles from './Navbar.module.css';
 
 const Navbar = () => {
     const pathname = usePathname();
+    const [isMenuOpen, setIsMenuOpen] = React.useState(false);
 
     const navLinks = [
         { name: 'Home', href: '/' },
@@ -22,13 +23,14 @@ const Navbar = () => {
     return (
         <header className={styles.header}>
             <div className={styles.container}>
-                <Link href="/" className={styles.logoContainer}>
+                <Link href="/" className={styles.logoContainer} onClick={() => setIsMenuOpen(false)}>
                     <div className={styles.logoIcon}>S</div>
                     <span className={styles.logoText}>
                         SignalBridge <span className={styles.logoInsights}>Insights</span>
                     </span>
                 </Link>
 
+                {/* Desktop Nav */}
                 <nav className={styles.nav}>
                     {navLinks.map((link) => (
                         <Link
@@ -43,7 +45,40 @@ const Navbar = () => {
 
                 <div className={styles.actions}>
                     <Button href="/contact" className={styles.getStartedBtn}>Get Started</Button>
+
+                    {/* Hamburger Button */}
+                    <button
+                        className={`${styles.mobileMenuBtn} ${isMenuOpen ? styles.btnActive : ''}`}
+                        onClick={() => setIsMenuOpen(!isMenuOpen)}
+                        aria-label="Toggle Menu"
+                    >
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
                 </div>
+            </div>
+
+            {/* Mobile Menu Overlay */}
+            <div className={`${styles.mobileMenu} ${isMenuOpen ? styles.menuOpen : ''}`}>
+                <nav className={styles.mobileNav}>
+                    {navLinks.map((link, index) => (
+                        <Link
+                            key={link.href}
+                            href={link.href}
+                            className={`${pathname === link.href ? styles.mobileLinkActive : styles.mobileLink} ${isMenuOpen ? styles.reveal : ''}`}
+                            style={{ transitionDelay: `${index * 0.1}s` }}
+                            onClick={() => setIsMenuOpen(false)}
+                        >
+                            {link.name}
+                        </Link>
+                    ))}
+                    <div className={`${styles.mobileCta} ${isMenuOpen ? styles.reveal : ''}`} style={{ transitionDelay: '0.6s' }}>
+                        <Button href="/contact" className={styles.getStartedBtn} onClick={() => setIsMenuOpen(false)}>
+                            Get Started
+                        </Button>
+                    </div>
+                </nav>
             </div>
         </header>
     );

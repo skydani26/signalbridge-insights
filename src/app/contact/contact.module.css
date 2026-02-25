@@ -2,6 +2,7 @@
     background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
     color: white;
     padding: 120px 0 80px;
+    /* Matched to How It Works for high-impact hero scale */
     position: relative;
     overflow: hidden;
     text-align: center;
@@ -54,12 +55,12 @@
 
 .hero h1 {
     font-family: var(--font-heading);
-    font-size: 3.25rem;
-    font-weight: 700;
-    /* Reduced from 800 */
+    font-size: 2.75rem;
+    /* Reduced from 3.25rem */
+    font-weight: 600;
     margin-bottom: 32px;
     color: var(--color-white);
-    letter-spacing: -0.03em;
+    letter-spacing: -0.02em;
     line-height: 1.2;
 }
 
@@ -97,28 +98,35 @@
 
 .protocolCard {
     background: white;
-    padding: 32px;
+    padding: 16px;
     border-radius: 12px;
     border: 1px solid var(--color-gray-200);
     text-align: center;
     transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .protocolIcon {
-    width: 48px;
-    height: 48px;
+    width: 40px;
+    /* Reduced from 44px */
+    height: 40px;
     background: #f0f4ff;
-    border-radius: 12px;
+    border: 1px solid rgba(59, 130, 246, 0.2);
+    border-radius: 8px;
     display: flex;
     align-items: center;
     justify-content: center;
     color: var(--color-secondary);
-    margin: 0 auto 24px;
+    margin: 0 auto 12px;
+    /* Reduced from 20px */
 }
 
 .protocolCard h3 {
-    font-size: 1.25rem;
-    font-weight: 700;
+    font-size: 1.15rem;
+    /* Reduced from 1.25rem */
+    font-weight: 600;
     margin-bottom: 12px;
     color: var(--color-primary);
 }
@@ -128,14 +136,15 @@
     color: var(--color-text-light);
     line-height: 1.5;
     margin-bottom: 0;
+    margin-top: auto;
 }
 
 .contactGrid {
     display: grid;
     grid-template-columns: 1fr;
-    gap: 80px;
+    gap: 48px;
     max-width: 900px;
-    margin: 48px auto 0;
+    margin: 40px auto 0;
 }
 
 /* Office Grid */
@@ -143,19 +152,19 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 32px;
-    margin-bottom: 80px;
+    margin-bottom: 48px;
 }
 
 .officeCard {
     background: white;
-    padding: 32px;
+    padding: 16px;
     border-radius: 16px;
     border: 1px solid var(--color-gray-200);
     text-align: center;
 }
 
 .officeTag {
-    background: #F1F5F9;
+    background: var(--color-gray-100);
     color: var(--color-primary);
     padding: 4px 12px;
     border-radius: 6px;
@@ -168,8 +177,9 @@
 }
 
 .officeCard h4 {
-    font-size: 1.35rem;
-    font-weight: 700;
+    font-size: 1.2rem;
+    /* Reduced from 1.35rem */
+    font-weight: 600;
     margin-bottom: 12px;
 }
 
@@ -183,7 +193,8 @@
 /* Form Styles */
 .formCard {
     background: white;
-    padding: 64px;
+    padding: 28px;
+    /* Reduced from 40px */
     border-radius: 24px;
     border: 1px solid var(--color-gray-200);
     box-shadow: 0 20px 50px rgba(0, 0, 0, 0.04);
@@ -191,11 +202,12 @@
 
 .formHeader {
     text-align: center;
-    margin-bottom: 48px;
+    margin-bottom: 32px;
 }
 
 .formHeader h2 {
-    font-size: 2.25rem;
+    font-size: 2rem;
+    font-weight: 600;
     margin-bottom: 12px;
 }
 
@@ -227,7 +239,7 @@
 .textarea {
     width: 100%;
     padding: 16px;
-    background-color: #f8fafc;
+    background-color: var(--color-background-soft);
     border: 1px solid var(--color-gray-200);
     border-radius: 10px;
     font-family: inherit;
@@ -252,7 +264,8 @@
 /* Support Overhaul */
 .supportSection {
     background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
-    padding: 120px 0;
+    padding: 64px 0;
+    /* Reduced from 80px */
     position: relative;
     overflow: hidden;
     color: white;
@@ -281,11 +294,12 @@
 }
 
 .supportTitle {
-    font-size: 3.5rem;
-    font-weight: 800;
+    font-size: 2.75rem;
+    /* Reduced from 3.5rem */
+    font-weight: 600;
     margin-bottom: 24px;
     color: white;
-    letter-spacing: -0.04em;
+    letter-spacing: -0.03em;
 }
 
 .supportDescription {
@@ -323,6 +337,6 @@
 
 @media (max-width: 768px) {
     .hero {
-        padding: 120px 0 100px;
+        padding: 100px 0 60px;
     }
 }

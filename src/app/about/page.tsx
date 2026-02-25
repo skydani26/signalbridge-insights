@@ -25,11 +25,19 @@ export default function About() {
     return (
         <main>
             <section className={styles.hero}>
-                <div className={`container ${styles.reveal}`}>
-                    <h1>About SignalBridge Insights</h1>
-                    <p className={styles.heroSubtitle}>
-                        We are built to fix slow matching, inconsistent quality, and compliance risk in traditional expert networks.
-                    </p>
+                <div className="container" style={{ maxWidth: '900px' }}>
+                    <div className={styles.reveal}>
+                        <h1>Institutional Intelligence, <span className={styles.heroHighlight}>Reimagined</span></h1>
+                        <p className={styles.heroSubtitle}>
+                            SignalBridge was engineered to solve the critical gaps in traditional expert networks:
+                            slow fulfillment, inconsistent quality, and complex compliance risk.
+                        </p>
+                        <div style={{ display: 'flex', justifyContent: 'center' }}>
+                            <Button href="/contact" style={{ backgroundColor: 'white', color: 'var(--color-primary)', padding: '16px 40px', fontWeight: '700' }}>
+                                Get Started <span style={{ marginLeft: '12px' }}>→</span>
+                            </Button>
+                        </div>
+                    </div>
                 </div>
             </section>
 
