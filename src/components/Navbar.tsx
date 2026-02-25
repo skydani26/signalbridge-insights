@@ -23,9 +23,9 @@ const Navbar = () => {
         <header className={styles.header}>
             <div className={styles.container}>
                 <Link href="/" className={styles.logoContainer}>
-                    <Image src="/logo.svg" alt="SignalBridge Logo" width={32} height={32} className={styles.logoIcon} />
+                    <div className={styles.logoIcon}>S</div>
                     <span className={styles.logoText}>
-                        SignalBridge <span>Insights</span>
+                        SignalBridge <span className={styles.logoInsights}>Insights</span>
                     </span>
                 </Link>
 

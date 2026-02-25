@@ -39,22 +39,32 @@
 
 .logoIcon {
     width: 28px;
-    /* Smaller logo */
-    height: auto;
+    height: 28px;
+    background-color: #0F172A;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 800;
+    font-size: 1.1rem;
+    border-radius: 5px;
+    font-family: var(--font-sans);
 }
 
 .logoText {
-    font-family: var(--font-heading);
+    font-family: var(--font-sans);
+    /* Switched to Inter */
     font-size: 1.1rem;
-    /* Reduced from 1.25rem */
     font-weight: 700;
-    color: #000000;
+    /* Bold weight */
+    color: #0F172A;
     letter-spacing: -0.02em;
 }
 
-.logoText span {
-    font-weight: 500;
-    color: #000000;
+.logoInsights {
+    font-weight: 400;
+    /* Regular weight */
+    color: #475569;
 }
 
 .tagline {
@@ -73,12 +83,12 @@
 }
 
 .column h4 {
-    color: #000000;
+    color: #0F172A;
     margin-bottom: 16px;
-    /* Reduced from 24px */
-    font-size: 0.9rem;
-    /* Reduced from 1.05rem */
+    font-size: 0.95rem;
     font-weight: 700;
+    /* Bold headers like image */
+    font-family: var(--font-sans);
 }
 
 .column a {
@@ -86,11 +96,11 @@
     color: #64748b;
     text-decoration: none;
     margin-bottom: 12px;
-    /* Reduced from 16px */
     transition: all 0.2s ease;
-    font-size: 0.85rem;
-    /* Reduced from 1rem */
+    font-size: 0.9rem;
     font-weight: 400;
+    /* Regular weight links */
+    font-family: var(--font-sans);
 }
 
 .column a:hover {

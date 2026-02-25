@@ -10,8 +10,8 @@ const Footer = () => {
                 <div className={styles.top}>
                     <div className={styles.brand}>
                         <Link href="/" className={styles.logoContainer}>
-                            <Image src="/logo.svg" alt="SignalBridge Logo" width={32} height={32} className={styles.logoIcon} />
-                            <span className={styles.logoText}>SignalBridge <span>Insights</span></span>
+                            <div className={styles.logoIcon}>S</div>
+                            <span className={styles.logoText}>SignalBridge <span className={styles.logoInsights}>Insights</span></span>
                         </Link>
                         <p className={styles.tagline}>
                             Connecting industry experts with leading investors, consultants, and corporations for actionable insights.
@@ -28,12 +28,12 @@ const Footer = () => {
                         <div className={styles.column}>
                             <h4>For Experts</h4>
                             <Link href="/contact">Join as Expert</Link>
-                            <Link href="/for-experts">How it Works</Link>
+                            <Link href="/for-experts">Expert Login</Link>
                         </div>
                         <div className={styles.column}>
                             <h4>For Clients</h4>
                             <Link href="/contact">Find Experts</Link>
-                            <Link href="/for-clients">How it Works</Link>
+                            <Link href="/for-clients">Client Login</Link>
                         </div>
                     </div>
                 </div>
