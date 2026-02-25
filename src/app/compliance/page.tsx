@@ -53,115 +53,112 @@ export default function Compliance() {
             title: "Confidentiality Tiering",
             text: "All project briefs, client identities, and inquiry details are strictly confidential. Experts are prohibited from disclosing their participation in specific client projects to third parties or on public professional platforms."
         },
-        {
-            title: "Dispute Resolution",
-            text: "This agreement is governed by the laws of England and Wales. Any disputes arising from engagements shall be settled through the London Court of International Arbitration (LCIA) under its institutional rules."
         }
     ];
 
-    return (
-        <main className={styles.page}>
-            <section className={styles.hero}>
-                <div className={styles.heroContent}>
-                    <div className={styles.reveal}>
-                        <h1>Institutional <span className={styles.heroHighlight}>Compliance</span></h1>
-                        <p className={styles.heroSubtitle}>
-                            Engineering transparency and security into every expert engagement. Our framework protects the integrity of capital and the careers of our experts.
-                        </p>
-                    </div>
+return (
+    <main className={styles.page}>
+        <section className={styles.hero}>
+            <div className={styles.heroContent}>
+                <div className={styles.reveal}>
+                    <h1>Institutional <span className={styles.heroHighlight}>Compliance</span></h1>
+                    <p className={styles.heroSubtitle}>
+                        Engineering transparency and security into every expert engagement. Our framework protects the integrity of capital and the careers of our experts.
+                    </p>
                 </div>
-            </section>
+            </div>
+        </section>
 
-            <SectionWrapper id="philosophy">
-                <div style={{ textAlign: 'center' }} className={styles.reveal}>
-                    <h2 className={styles.sectionTitle}>The SignalBridge Standard</h2>
-                    <p className={styles.sectionSubtitle}>We maintain the world's most rigorous vetting and audit infrastructure for institutional research.</p>
+        <SectionWrapper id="philosophy">
+            <div style={{ textAlign: 'center' }} className={styles.reveal}>
+                <h2 className={styles.sectionTitle}>The SignalBridge Standard</h2>
+                <p className={styles.sectionSubtitle}>We maintain the world's most rigorous vetting and audit infrastructure for institutional research.</p>
+            </div>
+
+            <div className={`${styles.pillarGrid} ${styles.reveal}`}>
+                <div className={styles.pillarCard}>
+                    <div className={styles.pillarIconBox}><ShieldAlert size={24} /></div>
+                    <h3 className={styles.pillarTitle}>MNPI Protocol</h3>
+                    <p className={styles.pillarText}>Strict 'Double-Blind' screening ensures no Material Non-Public Information is ever shared during consultations.</p>
+                </div>
+                <div className={styles.pillarCard}>
+                    <div className={styles.pillarIconBox}><Lock size={24} /></div>
+                    <h3 className={styles.pillarTitle}>Data Isolation</h3>
+                    <p className={styles.pillarText}>SOC2-compliant encryption for all expert identities and client research briefs.</p>
+                </div>
+                <div className={styles.pillarCard}>
+                    <div className={styles.pillarIconBox}><Scale size={24} /></div>
+                    <h3 className={styles.pillarTitle}>Audit Trails</h3>
+                    <p className={styles.pillarText}>Comprehensive logging and optional transcript archiving for every client-expert interaction.</p>
+                </div>
+            </div>
+        </SectionWrapper>
+
+        <section id="agreement" className={styles.agreementSection}>
+            <div className="container">
+                <div style={{ textAlign: 'center', marginBottom: '64px' }} className={styles.reveal}>
+                    <h2 className={styles.sectionTitle}>Standard Expert Agreement</h2>
+                    <p className={styles.sectionSubtitle}>The legal foundation of our relationship with the global expert network.</p>
                 </div>
 
-                <div className={`${styles.pillarGrid} ${styles.reveal}`}>
-                    <div className={styles.pillarCard}>
-                        <div className={styles.pillarIconBox}><ShieldAlert size={24} /></div>
-                        <h3 className={styles.pillarTitle}>MNPI Protocol</h3>
-                        <p className={styles.pillarText}>Strict 'Double-Blind' screening ensures no Material Non-Public Information is ever shared during consultations.</p>
-                    </div>
-                    <div className={styles.pillarCard}>
-                        <div className={styles.pillarIconBox}><Lock size={24} /></div>
-                        <h3 className={styles.pillarTitle}>Data Isolation</h3>
-                        <p className={styles.pillarText}>SOC2-compliant encryption for all expert identities and client research briefs.</p>
-                    </div>
-                    <div className={styles.pillarCard}>
-                        <div className={styles.pillarIconBox}><Scale size={24} /></div>
-                        <h3 className={styles.pillarTitle}>Audit Trails</h3>
-                        <p className={styles.pillarText}>Comprehensive logging and optional transcript archiving for every client-expert interaction.</p>
-                    </div>
-                </div>
-            </SectionWrapper>
-
-            <section id="agreement" className={styles.agreementSection}>
-                <div className="container">
-                    <div style={{ textAlign: 'center', marginBottom: '64px' }} className={styles.reveal}>
-                        <h2 className={styles.sectionTitle}>Standard Expert Agreement</h2>
-                        <p className={styles.sectionSubtitle}>The legal foundation of our relationship with the global expert network.</p>
-                    </div>
-
-                    <div className={`${styles.agreementContainer} ${styles.reveal}`}>
-                        <div className={styles.agreementHeader}>
-                            <div className={styles.agreementTitle}>
-                                <h2>SignalBridge Expert Agreement</h2>
-                                <p style={{ color: 'var(--color-secondary)', fontWeight: 700, margin: '8px 0 0' }}>Institutional Master Version</p>
-                            </div>
-                            <div className={styles.agreementVersion}>REF: SB-EXA-2026-V1.2</div>
+                <div className={`${styles.agreementContainer} ${styles.reveal}`}>
+                    <div className={styles.agreementHeader}>
+                        <div className={styles.agreementTitle}>
+                            <h2>SignalBridge Expert Agreement</h2>
+                            <p style={{ color: 'var(--color-secondary)', fontWeight: 700, margin: '8px 0 0' }}>Institutional Master Version</p>
                         </div>
+                        <div className={styles.agreementVersion}>REF: SB-EXA-2026-V1.2</div>
+                    </div>
 
-                        <div className={styles.agreementBody}>
-                            <p style={{ fontStyle: 'italic', color: '#64748B', marginBottom: '32px' }}>
-                                This Agreement governs your relationship as a "SignalBridge Expert" and defines the parameters of your engagement with our global institutional client base.
-                            </p>
+                    <div className={styles.agreementBody}>
+                        <p style={{ fontStyle: 'italic', color: '#64748B', marginBottom: '32px' }}>
+                            This Agreement governs your relationship as a "SignalBridge Expert" and defines the parameters of your engagement with our global institutional client base.
+                        </p>
 
-                            {clauses.map((clause, index) => (
-                                <div key={index} className={styles.clause}>
-                                    <h3>
-                                        <span className={styles.clauseNumber}>{index + 1}.</span> {clause.title}
-                                    </h3>
-                                    <div className={styles.clauseText}>
-                                        {clause.text}
-                                        {clause.list && (
-                                            <ul className={styles.clauseList}>
-                                                {clause.list.map((item, i) => (
-                                                    <li key={i}>{item}</li>
-                                                ))}
-                                            </ul>
-                                        )}
-                                    </div>
+                        {clauses.map((clause, index) => (
+                            <div key={index} className={styles.clause}>
+                                <h3>
+                                    <span className={styles.clauseNumber}>{index + 1}.</span> {clause.title}
+                                </h3>
+                                <div className={styles.clauseText}>
+                                    {clause.text}
+                                    {clause.list && (
+                                        <ul className={styles.clauseList}>
+                                            {clause.list.map((item, i) => (
+                                                <li key={i}>{item}</li>
+                                            ))}
+                                        </ul>
+                                    )}
                                 </div>
-                            ))}
-                        </div>
-
-                        <div className={styles.agreementFooter}>
-                            &copy; 2026 SignalBridge Insights Ltd. All rights reserved. <br />
-                            Updated: February 2026 | Approved by General Counsel
-                        </div>
+                            </div>
+                        ))}
                     </div>
 
-                    <div className={`${styles.downloadSection} ${styles.reveal}`}>
-                        <Button variant="outline" style={{ padding: '14px 32px' }}>
-                            <Download size={18} style={{ marginRight: '10px' }} /> Download PDF Counterpart
-                        </Button>
-                        <p style={{ marginTop: '16px', fontSize: '0.875rem', color: 'var(--color-text-light)' }}>
-                            Archival version for your internal compliance records.
-                        </p>
+                    <div className={styles.agreementFooter}>
+                        &copy; 2026 SignalBridge Insights Ltd. All rights reserved. <br />
+                        Updated: February 2026 | Approved by General Counsel
                     </div>
                 </div>
-            </section>
 
-            <SectionWrapper background="gray">
-                <div className={`${styles.reveal}`} style={{ textAlign: 'center', maxWidth: '800px', margin: '0 auto' }}>
-                    <AlertCircle size={32} style={{ color: 'var(--color-secondary)', marginBottom: '24px' }} />
-                    <h2 style={{ marginBottom: '16px' }}>Compliance Inquiries</h2>
-                    <p style={{ marginBottom: '32px' }}>For specific questions regarding our compliance framework or custom NDA requirements for your organization, please contact our Legal Desk directly.</p>
-                    <Button href="/contact">Contact Compliance Desk</Button>
+                <div className={`${styles.downloadSection} ${styles.reveal}`}>
+                    <Button variant="outline" style={{ padding: '14px 32px' }}>
+                        <Download size={18} style={{ marginRight: '10px' }} /> Download PDF Counterpart
+                    </Button>
+                    <p style={{ marginTop: '16px', fontSize: '0.875rem', color: 'var(--color-text-light)' }}>
+                        Archival version for your internal compliance records.
+                    </p>
                 </div>
-            </SectionWrapper>
-        </main >
-    );
+            </div>
+        </section>
+
+        <SectionWrapper background="gray">
+            <div className={`${styles.reveal}`} style={{ textAlign: 'center', maxWidth: '800px', margin: '0 auto' }}>
+                <AlertCircle size={32} style={{ color: 'var(--color-secondary)', marginBottom: '24px' }} />
+                <h2 style={{ marginBottom: '16px' }}>Compliance Inquiries</h2>
+                <p style={{ marginBottom: '32px' }}>For specific questions regarding our compliance framework or custom NDA requirements for your organization, please contact our Legal Desk directly.</p>
+                <Button href="/contact">Contact Compliance Desk</Button>
+            </div>
+        </SectionWrapper>
+    </main >
+);
 }
