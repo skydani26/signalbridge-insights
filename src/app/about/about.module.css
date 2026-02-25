@@ -163,10 +163,11 @@
 
 .valueCard {
     background: white;
-    padding: 40px;
+    padding: 56px 40px;
     border-radius: 12px;
     border: 1px solid var(--color-gray-200);
     transition: all 0.3s ease;
+    text-align: center;
 }
 
 .valueCard:hover {
@@ -176,15 +177,29 @@
 }
 
 .valueIcon {
-    width: 56px;
-    height: 56px;
-    background: #f0f4ff;
-    border-radius: 12px;
+    width: 64px;
+    height: 64px;
+    background: #F1F5F9;
+    border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: var(--color-secondary);
-    margin-bottom: 24px;
+    color: var(--color-primary);
+    margin: 0 auto 32px;
+}
+
+.valueCard h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 16px;
+    color: var(--color-primary);
+}
+
+.valueCard p {
+    font-size: 1.05rem;
+    line-height: 1.6;
+    color: var(--color-text-light);
+    margin-bottom: 0;
 }
 
 .sectionTag {
@@ -198,12 +213,20 @@
 }
 
 .sectionTitle {
-    color: #000000;
-    font-size: 3.5rem;
+    color: var(--color-primary);
+    font-size: 3rem;
     font-weight: 800;
-    margin-bottom: 24px;
+    margin-bottom: 16px;
     letter-spacing: -0.04em;
     line-height: 1.2;
+}
+
+.sectionSubtitle {
+    font-size: 1.25rem;
+    color: var(--color-text-light);
+    max-width: 600px;
+    margin: 0 auto;
+    font-weight: 400;
 }
 
 .sectionDescription {

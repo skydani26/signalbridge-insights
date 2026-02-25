@@ -76,24 +76,24 @@ export default function About() {
 
             <SectionWrapper id="values">
                 <div className={styles.reveal} style={{ textAlign: 'center', marginBottom: '64px' }}>
-                    <span className={styles.sectionTag}>OUR VALUES</span>
-                    <h2 className={styles.sectionTitle}>Built on Core Principles</h2>
+                    <h2 className={styles.sectionTitle}>Our Values</h2>
+                    <p className={styles.sectionSubtitle}>Everything we do is guided by these core principles</p>
                 </div>
                 <div className={`${styles.valuesGrid} ${styles.reveal}`}>
                     <div className={styles.valueCard}>
-                        <div className={styles.valueIcon}><Target size={24} /></div>
+                        <div className={styles.valueIcon}><Target size={28} strokeWidth={1.5} /></div>
                         <h3>Precision</h3>
-                        <p>We don&apos;t just find experts; we find the <em>right</em> experts. Every match is curated for relevance and depth.</p>
+                        <p>We match you with exactly the right expert for your specific needs, saving time and delivering quality.</p>
                     </div>
                     <div className={styles.valueCard}>
-                        <div className={styles.valueIcon}><ShieldCheck size={24} /></div>
+                        <div className={styles.valueIcon}><ShieldCheck size={28} strokeWidth={1.5} /></div>
                         <h3>Integrity</h3>
-                        <p>Compliance is our foundation. We operate with transparency and strict adherence to ethical standards.</p>
+                        <p>Every expert is thoroughly vetted, and every engagement follows strict compliance protocols.</p>
                     </div>
                     <div className={styles.valueCard}>
-                        <div className={styles.valueIcon}><Award size={24} /></div>
+                        <div className={styles.valueIcon}><Award size={28} strokeWidth={1.5} /></div>
                         <h3>Excellence</h3>
-                        <p>We are relentless in our pursuit of quality, from the speed of our service to the caliber of our network.</p>
+                        <p>We&apos;re committed to delivering exceptional experiences for both our clients and experts.</p>
                     </div>
                 </div>
             </SectionWrapper>
