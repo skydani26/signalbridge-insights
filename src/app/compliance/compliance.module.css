@@ -3,24 +3,35 @@
 }
 
 .hero {
-    background: linear-gradient(135deg, #0F172A 0%, #1E293B 100%);
-    padding: 100px 20px;
+    background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
     color: white;
-    text-align: center;
+    padding: 120px 0 80px;
     position: relative;
     overflow: hidden;
+    text-align: center;
+    z-index: 1;
 }
 
-.hero::after {
-    content: "";
+.hero::before {
+    content: '';
     position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-image: radial-gradient(circle at 2px 2px, rgba(255, 255, 255, 0.05) 1px, transparent 0);
-    background-size: 32px 32px;
-    pointer-events: none;
+    top: -25%;
+    left: -25%;
+    width: 150%;
+    height: 150%;
+    background: radial-gradient(circle at 40% 40%, rgba(59, 130, 246, 0.18) 0%, transparent 70%);
+    animation: meshRotate 20s linear infinite;
+    z-index: 1;
+}
+
+@keyframes meshRotate {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
 }
 
 .heroContent {
@@ -31,14 +42,29 @@
 }
 
 .heroContent h1 {
-    font-size: 3.5rem;
-    font-weight: 850;
-    letter-spacing: -0.03em;
+    font-family: var(--font-heading);
+    font-size: 2.75rem;
+    font-weight: 600;
     margin-bottom: 24px;
+    color: var(--color-white);
+    letter-spacing: -0.02em;
+    line-height: 1.2;
 }
 
 .heroHighlight {
-    color: var(--color-secondary);
+    background: linear-gradient(120deg, #60a5fa, #3b82f6, #60a5fa);
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: shine 3s linear infinite;
+    font-weight: 800;
+}
+
+@keyframes shine {
+    to {
+        background-position: 200% center;
+    }
 }
 
 .heroSubtitle {
