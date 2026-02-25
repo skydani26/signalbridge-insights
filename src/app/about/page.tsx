@@ -35,6 +35,9 @@ export default function About() {
 
             <SectionWrapper id="mission">
                 <div className={`${styles.missionGrid} ${styles.reveal}`}>
+                    <div className={styles.buildingBox}>
+                        <Building2 className={styles.buildingIcon} strokeWidth={1.5} />
+                    </div>
                     <div className={styles.missionContent}>
                         <h2>Our Mission</h2>
                         <p>
@@ -46,9 +49,6 @@ export default function About() {
                         <p>
                             Today, SignalBridge serves leading hedge funds, private equity firms, consulting companies, and corporations across the globe. Our platform combines cutting-edge technology with human expertise to deliver unmatched results.
                         </p>
-                    </div>
-                    <div className={styles.buildingBox}>
-                        <Building2 className={styles.buildingIcon} strokeWidth={1.5} />
                     </div>
                 </div>
             </SectionWrapper>

@@ -90,7 +90,7 @@
 /* Mission Section Overhaul */
 .missionGrid {
     display: grid;
-    grid-template-columns: 1.2fr 0.8fr;
+    grid-template-columns: 1fr 1.1fr;
     gap: 80px;
     align-items: center;
 }
@@ -120,14 +120,15 @@
     justify-content: center;
     box-shadow: 0 10px 40px rgba(0, 0, 0, 0.05);
     position: relative;
-    max-width: 400px;
-    margin-left: auto;
+    width: 100%;
+    max-width: 480px;
+    margin-right: auto;
 }
 
 .buildingIcon {
     color: var(--color-primary);
-    width: 120px;
-    height: 120px;
+    width: 160px;
+    height: 160px;
 }
 
 /* Stats Grid for About Page */
