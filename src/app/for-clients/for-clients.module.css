@@ -5,7 +5,9 @@
     position: relative;
     overflow: hidden;
     text-align: center;
+    z-index: 1;
 }
+
 
 .hero::before {
     content: '';
@@ -14,9 +16,11 @@
     left: -50%;
     width: 200%;
     height: 200%;
-    background: radial-gradient(circle at center, rgba(59, 130, 246, 0.08) 0%, transparent 70%);
+    background: radial-gradient(circle at center, rgba(59, 130, 246, 0.12) 0%, transparent 70%);
     animation: meshRotate 20s linear infinite;
+    z-index: -1;
 }
+
 
 @keyframes meshRotate {
     0% {
