@@ -1,19 +1,31 @@
+"use client";
 
-import React from 'react';
+import React, { useEffect } from 'react';
 import SectionWrapper from "@/components/SectionWrapper";
 import Button from "@/components/Button";
 import styles from "./about.module.css";
-
-export const metadata = {
-    title: "About Us | SignalBridge Insights",
-    description: "To connect decision-makers with expert knowledge that enables faster, smarter, and more informed decisions.",
-};
+import { Globe, Users, Target, ShieldCheck, Award, TrendingUp, Handshake, Network, Zap } from "lucide-react";
 
 export default function About() {
+    useEffect(() => {
+        const observerOptions = { threshold: 0.1 };
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add(styles.revealVisible);
+                }
+            });
+        }, observerOptions);
+
+        const revealElements = document.querySelectorAll(`.${styles.reveal}`);
+        revealElements.forEach(el => observer.observe(el));
+
+        return () => observer.disconnect();
+    }, []);
     return (
         <main>
             <section className={styles.hero}>
-                <div className="container">
+                <div className={`container ${styles.reveal}`}>
                     <h1>About SignalBridge Insights</h1>
                     <p className={styles.heroSubtitle}>
                         We are built to fix slow matching, inconsistent quality, and compliance risk in traditional expert networks.
@@ -21,8 +33,8 @@ export default function About() {
                 </div>
             </section>
 
-            <SectionWrapper>
-                <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '64px', alignItems: 'center' }}>
+            <SectionWrapper id="mission">
+                <div className={`${styles.missionGrid} ${styles.reveal}`}>
                     <div>
                         <h2 className="mb-4">Our Mission</h2>
                         <p className="mb-4">
@@ -32,35 +44,97 @@ export default function About() {
                             In a world overflowing with data, true expertise is rare. We cut through the noise to deliver the specific, verified human intelligence that drives competitive advantage.
                         </p>
                     </div>
-                    <div style={{ backgroundColor: 'var(--color-primary)', height: '300px', borderRadius: '8px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                        <span style={{ color: 'white', fontWeight: 500 }}>Mission Illustration</span>
+                    <div style={{ backgroundColor: 'var(--color-primary)', height: '400px', borderRadius: '16px', display: 'flex', alignItems: 'center', justifyContent: 'center', overflow: 'hidden' }}>
+                        <Users size={120} color="white" strokeWidth={1} style={{ opacity: 0.2 }} />
                     </div>
                 </div>
             </SectionWrapper>
 
-            <SectionWrapper background="gray">
-                <h2 className="text-center mb-8">Our Values</h2>
-                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '32px' }}>
-                    <div style={{ background: 'white', padding: '32px', borderRadius: '8px', textAlign: 'center' }}>
-                        <h3 style={{ color: 'var(--color-primary)', marginBottom: '16px' }}>Precision</h3>
+            <SectionWrapper id="stats" background="dark">
+                <div className={`${styles.statsGrid} ${styles.reveal}`}>
+                    <div className={styles.statBox}>
+                        <h3>100%</h3>
+                        <p>Success Rate</p>
+                    </div>
+                    <div className={styles.statBox}>
+                        <h3>10k+</h3>
+                        <p>Expert Network</p>
+                    </div>
+                    <div className={styles.statBox}>
+                        <h3>150+</h3>
+                        <p>Industries</p>
+                    </div>
+                    <div className={styles.statBox}>
+                        <h3>24Hr</h3>
+                        <p>Response Time</p>
+                    </div>
+                </div>
+            </SectionWrapper>
+
+            <SectionWrapper id="values">
+                <div className={styles.reveal} style={{ textAlign: 'center', marginBottom: '64px' }}>
+                    <span className={styles.sectionTag}>OUR VALUES</span>
+                    <h2 className={styles.sectionTitle}>Built on Core Principles</h2>
+                </div>
+                <div className={`${styles.valuesGrid} ${styles.reveal}`}>
+                    <div className={styles.valueCard}>
+                        <div className={styles.valueIcon}><Target size={24} /></div>
+                        <h3>Precision</h3>
                         <p>We don&apos;t just find experts; we find the <em>right</em> experts. Every match is curated for relevance and depth.</p>
                     </div>
-                    <div style={{ background: 'white', padding: '32px', borderRadius: '8px', textAlign: 'center' }}>
-                        <h3 style={{ color: 'var(--color-primary)', marginBottom: '16px' }}>Integrity</h3>
+                    <div className={styles.valueCard}>
+                        <div className={styles.valueIcon}><ShieldCheck size={24} /></div>
+                        <h3>Integrity</h3>
                         <p>Compliance is our foundation. We operate with transparency and strict adherence to ethical standards.</p>
                     </div>
-                    <div style={{ background: 'white', padding: '32px', borderRadius: '8px', textAlign: 'center' }}>
-                        <h3 style={{ color: 'var(--color-primary)', marginBottom: '16px' }}>Excellence</h3>
+                    <div className={styles.valueCard}>
+                        <div className={styles.valueIcon}><Award size={24} /></div>
+                        <h3>Excellence</h3>
                         <p>We are relentless in our pursuit of quality, from the speed of our service to the caliber of our network.</p>
                     </div>
                 </div>
             </SectionWrapper>
 
-            <SectionWrapper className="text-center">
-                <h2>Join Our Team</h2>
-                <p className="mb-8">Interested in shaping the future of knowledge sharing?</p>
-                <Button href="/contact">Contact Us</Button>
+            <SectionWrapper id="partners" background="gray">
+                <div className={styles.reveal} style={{ textAlign: 'center', marginBottom: '64px' }}>
+                    <span className={styles.sectionTag}>GLOBAL PRESENCE</span>
+                    <h2 className={styles.sectionTitle}>A Borderless Insight Engine</h2>
+                    <p className={styles.sectionDescription}>
+                        Connecting global capital with localized expertise across every major market.
+                    </p>
+                </div>
+                <div className={`${styles.presenceContent} ${styles.reveal}`}>
+                    <div style={{ background: 'white', padding: '48px', borderRadius: '24px', boxShadow: '0 4px 20px rgba(0,0,0,0.05)', textAlign: 'center' }}>
+                        <Globe size={120} color="var(--color-primary)" strokeWidth={1} style={{ marginBottom: '32px' }} />
+                        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '24px' }}>
+                            <div>
+                                <h4 style={{ fontSize: '1.5rem', fontWeight: 700 }}>EMEA</h4>
+                                <p style={{ fontSize: '0.9rem', color: '#64748b' }}>London, Berlin, Dubai</p>
+                            </div>
+                            <div>
+                                <h4 style={{ fontSize: '1.5rem', fontWeight: 700 }}>AMER</h4>
+                                <p style={{ fontSize: '0.9rem', color: '#64748b' }}>NYC, Toronto, São Paulo</p>
+                            </div>
+                            <div>
+                                <h4 style={{ fontSize: '1.5rem', fontWeight: 700 }}>APAC</h4>
+                                <p style={{ fontSize: '0.9rem', color: '#64748b' }}>Tokyo, Singapore, Sydney</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </SectionWrapper>
-        </main>
+
+            <SectionWrapper id="career" background="dark">
+                <div className={styles.reveal} style={{ textAlign: 'center', maxWidth: '800px', margin: '0 auto' }}>
+                    <h2 style={{ fontSize: '3rem', fontWeight: '800', marginBottom: '24px', color: 'white' }}>Join Our Global Team</h2>
+                    <p style={{ fontSize: '1.25rem', color: 'rgba(255,255,255,0.8)', marginBottom: '40px' }}>
+                        We are always looking for passionate people to join our mission of bridging the gap between complexity and clarity.
+                    </p>
+                    <Button href="/contact" style={{ backgroundColor: 'white', color: 'var(--color-primary)', fontWeight: 700 }}>
+                        View Openings
+                    </Button>
+                </div>
+            </SectionWrapper>
+        </main >
     );
 }

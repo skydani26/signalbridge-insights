@@ -1,20 +1,31 @@
+"use client";
 
-import React from 'react';
+import React, { useEffect } from 'react';
 import SectionWrapper from "@/components/SectionWrapper";
 import Button from "@/components/Button";
 import styles from "./how-it-works.module.css";
-import { Star, FileText, Phone, Zap, Network, Database, ShieldCheck, CheckCircle2, MessageSquare, Search, UserCheck, Calendar, BarChart3, FileCheck, UserPlus, DollarSign, Shield, Lock, Users } from "lucide-react";
-
-export const metadata = {
-    title: "How It Works | SignalBridge Insights",
-    description: "Streamlined process designed to connect you with expert knowledge quickly, compliantly, and effectively.",
-};
+import { Star, FileText, Phone, Zap, Network, Database, ShieldCheck, CheckCircle2, MessageSquare, Search, UserCheck, Calendar, BarChart3, FileCheck, UserPlus, DollarSign, Shield, Lock, Users, Globe } from "lucide-react";
 
 export default function HowItWorks() {
+    useEffect(() => {
+        const observerOptions = { threshold: 0.1 };
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add(styles.revealVisible);
+                }
+            });
+        }, observerOptions);
+
+        const revealElements = document.querySelectorAll(`.${styles.reveal}`);
+        revealElements.forEach(el => observer.observe(el));
+
+        return () => observer.disconnect();
+    }, []);
     return (
         <main>
             <section className={styles.hero}>
-                <div className="container">
+                <div className={`container ${styles.reveal}`}>
                     <h1>How SignalBridge Works</h1>
                     <p className={styles.heroSubtitle}>
                         From surveys and calls to focus groups and custom projects — a streamlined process
@@ -23,7 +34,7 @@ export default function HowItWorks() {
                 </div>
             </section>
 
-            <div className={styles.statsBanner}>
+            <div className={`${styles.statsBanner} ${styles.reveal}`}>
                 <div className="container">
                     <div className={styles.statsGrid}>
                         <div className={styles.statItem}>
@@ -46,228 +57,170 @@ export default function HowItWorks() {
                 </div>
             </div>
 
-            <SectionWrapper>
-                <span className={styles.sectionTag}>ENGAGEMENT FORMATS</span>
-                <div className={styles.sectionHeader}>
-                    <h2 className={styles.sectionTitle}>Choose Your Engagement Type</h2>
-                    <p className={styles.sectionDescription}>
-                        Every research need is different. We offer multiple ways to access expert knowledge.
-                    </p>
-                </div>
+            <SectionWrapper id="engagement-formats">
+                <div className={styles.reveal}>
+                    <div style={{ textAlign: 'center', marginBottom: '64px' }}>
+                        <span className={styles.sectionTag}>ENGAGEMENT FORMATS</span>
+                        <h2 className={styles.sectionTitle}>Choose Your Engagement Type</h2>
+                        <p className={styles.sectionDescription}>
+                            Every research need is different. We offer multiple ways to access expert knowledge.
+                        </p>
+                    </div>
 
-                <div className={styles.servicesGrid}>
-                    {/* Simplified list for engagement grid, keeping the same 6 items as homepage */}
-                    <div className={`${styles.serviceCard} ${styles.formatCard}`}>
-                        <div className={styles.iconBox}><FileText size={20} /></div>
-                        <h3 className={styles.serviceTitle}>Expert Surveys</h3>
-                        <p className={styles.serviceDescription}>Targeted surveys to vetted industry professionals for quantitative + qualitative insights at scale.</p>
-                    </div>
-                    <div className={`${styles.serviceCard} ${styles.formatCard}`}>
-                        <div className={styles.iconBox}><Phone size={20} /></div>
-                        <h3 className={styles.serviceTitle}>1-on-1 Expert Calls</h3>
-                        <p className={styles.serviceDescription}>Confidential consultations with hand-picked experts for deep-dive discussions on specific topics.</p>
-                    </div>
-                    <div className={`${styles.serviceCard} ${styles.formatCard}`}>
-                        <div className={styles.iconBox}><Zap size={20} /></div>
-                        <h3 className={styles.serviceTitle}>Programming</h3>
-                        <p className={styles.serviceDescription}>Technical edge for complex surveys and workflows using Qualtrics, Decipher, and internal tools.</p>
-                    </div>
-                    <div className={`${styles.serviceCard} ${styles.formatCard}`}>
-                        <div className={styles.iconBox}><Network size={20} /></div>
-                        <h3 className={styles.serviceTitle}>Custom Research</h3>
-                        <p className={styles.serviceDescription}>End-to-end research support: we scope, recruit, collect data, and deliver synthesized insights.</p>
-                    </div>
-                    <div className={`${styles.serviceCard} ${styles.formatCard}`}>
-                        <div className={styles.iconBox}><Database size={20} /></div>
-                        <h3 className={styles.serviceTitle}>Transcripts & Library</h3>
-                        <p className={styles.serviceDescription}>Access curated transcripts, whitepapers, and recorded expert sessions from our searchable library.</p>
-                    </div>
-                    <div className={`${styles.serviceCard} ${styles.formatCard}`}>
-                        <div className={styles.iconBox}><ShieldCheck size={20} /></div>
-                        <h3 className={styles.serviceTitle}>Compliance & Vetting</h3>
-                        <p className={styles.serviceDescription}>Rigorous expert screening, NDA management, and full audit trails on every single engagement.</p>
+                    <div className={styles.servicesGrid}>
+                        {/* Simplified list for engagement grid, keeping the same 6 items as homepage */}
+                        <div className={`${styles.serviceCard} ${styles.formatCard}`}>
+                            <div className={styles.iconBox}><FileText size={20} /></div>
+                            <h3 className={styles.serviceTitle}>Expert Surveys</h3>
+                            <p className={styles.serviceDescription}>Targeted surveys to vetted industry professionals for quantitative + qualitative insights at scale.</p>
+                        </div>
+                        <div className={`${styles.serviceCard} ${styles.formatCard}`}>
+                            <div className={styles.iconBox}><Phone size={20} /></div>
+                            <h3 className={styles.serviceTitle}>1-on-1 Expert Calls</h3>
+                            <p className={styles.serviceDescription}>Confidential consultations with hand-picked experts for deep-dive discussions on specific topics.</p>
+                        </div>
+                        <div className={`${styles.serviceCard} ${styles.formatCard}`}>
+                            <div className={styles.iconBox}><Zap size={20} /></div>
+                            <h3 className={styles.serviceTitle}>Programming</h3>
+                            <p className={styles.serviceDescription}>Technical edge for complex surveys and workflows using Qualtrics, Decipher, and internal tools.</p>
+                        </div>
+                        <div className={`${styles.serviceCard} ${styles.formatCard}`}>
+                            <div className={styles.iconBox}><Network size={20} /></div>
+                            <h3 className={styles.serviceTitle}>Custom Research</h3>
+                            <p className={styles.serviceDescription}>End-to-end research support: we scope, recruit, collect data, and deliver synthesized insights.</p>
+                        </div>
+                        <div className={`${styles.serviceCard} ${styles.formatCard}`}>
+                            <div className={styles.iconBox}><Database size={20} /></div>
+                            <h3 className={styles.serviceTitle}>Transcripts & Library</h3>
+                            <p className={styles.serviceDescription}>Access curated transcripts, whitepapers, and recorded expert sessions from our searchable library.</p>
+                        </div>
+                        <div className={`${styles.serviceCard} ${styles.formatCard}`}>
+                            <div className={styles.iconBox}><ShieldCheck size={20} /></div>
+                            <h3 className={styles.serviceTitle}>Compliance & Vetting</h3>
+                            <p className={styles.serviceDescription}>Rigorous expert screening, NDA management, and full audit trails on every single engagement.</p>
+                        </div>
                     </div>
                 </div>
             </SectionWrapper>
 
-            <SectionWrapper background="gray">
-                <div className={styles.detailedServiceItem}>
-                    <div className={styles.serviceContent}>
-                        <h2>Real-Time Expert Interviews</h2>
-                        <p>
-                            Static data is often obsolete before it reachers publication. Speaking directly to an industry leader
-                            within hours of a project launch provides the immediate clarity needed to separate true insight from market noise.
+            <SectionWrapper id="process" background="gray">
+                <div className={styles.reveal}>
+                    <div style={{ textAlign: 'center', marginBottom: '80px' }}>
+                        <span className={styles.sectionTag}>OUR PROCESS</span>
+                        <h2 className={styles.sectionTitle}>The Path to Strategic Clarity</h2>
+                        <p className={styles.sectionDescription}>
+                            A high-touch, technology-enabled workflow that turns your research brief into actionable expert insights.
                         </p>
-                        <div className={styles.serviceFeatures}>
-                            <div className={styles.featureItem}>
-                                <h4>Global Formats</h4>
-                                <p>Telephone interviews, in-person workshops, and private webinars.</p>
-                            </div>
-                            <div className={styles.featureItem}>
-                                <h4>Rapid Scheduling</h4>
-                                <p>Connections established within 24-48 hours of brief submission.</p>
-                            </div>
-                        </div>
                     </div>
-                    <div style={{ background: '#e2e8f0', borderRadius: '16px', height: '400px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                        <Phone size={120} color="var(--color-primary)" strokeWidth={1} />
-                    </div>
-                </div>
 
-                <div className={styles.detailedServiceItem}>
-                    <div className={styles.serviceContent}>
-                        <h2>Expert Survey Research</h2>
-                        <p>
-                            Quantitative precision at scale. Enhance your proprietary research with best-in-class surveys
-                            deployed to custom-recruited panels, gathering thousands of validated data points within 24 hours.
-                        </p>
-                        <div className={styles.serviceFeatures}>
-                            <div className={styles.featureItem}>
-                                <h4>End-to-End Package</h4>
-                                <p>Design, programming, translation, recruitment, analysis, and synthesis reporting.</p>
-                            </div>
-                            <div className={styles.featureItem}>
-                                <h4>Respondent Quality</h4>
-                                <p>Stringent validation with ability to match respondent IDs for multi-stage follow-ups.</p>
-                            </div>
-                            <div className={styles.featureItem}>
-                                <h4>Recruitment Precision</h4>
-                                <p>Flexible support for full-service or sample-only projects across 5-30+ min lengths.</p>
-                            </div>
-                            <div className={styles.featureItem}>
-                                <h4>Unified Insights</h4>
-                                <p>Integration of quantitative and qualitative data to support complex research objectives.</p>
-                            </div>
+                    <div className={styles.processGrid}>
+                        <div className={styles.processCard}>
+                            <div className={styles.stepNumberBg}>1</div>
+                            <div className={styles.iconBoxSmall}><MessageSquare size={18} /></div>
+                            <h3 className={styles.cardTitle}>Research Brief</h3>
+                            <p className={styles.cardDescription}>Define research objectives and target industries for surveys, calls, or custom projects.</p>
+                        </div>
+                        <div className={styles.processCard}>
+                            <div className={styles.stepNumberBg}>2</div>
+                            <div className={styles.iconBoxSmall}><Search size={18} /></div>
+                            <h3 className={styles.cardTitle}>AI Matching</h3>
+                            <p className={styles.cardDescription}>Intelligent identification of qualified specialists from our 10,000+ member network.</p>
+                        </div>
+                        <div className={styles.processCard}>
+                            <div className={styles.stepNumberBg}>3</div>
+                            <div className={styles.iconBoxSmall}><UserCheck size={18} /></div>
+                            <h3 className={styles.cardTitle}>Compliance</h3>
+                            <p className={styles.cardDescription}>Rigorous screening for conflicts of interest, NDA compliance, and MNPI restrictions.</p>
+                        </div>
+                        <div className={styles.processCard}>
+                            <div className={styles.stepNumberBg}>4</div>
+                            <div className={styles.iconBoxSmall}><Calendar size={18} /></div>
+                            <h3 className={styles.cardTitle}>Engagement</h3>
+                            <p className={styles.cardDescription}>Experts deliver project outputs, join scheduled calls, or complete specialized surveys.</p>
+                        </div>
+                        <div className={styles.processCard}>
+                            <div className={styles.iconBoxSmall}><BarChart3 size={18} /></div>
+                            <h3 className={styles.cardTitle}>Deliverables</h3>
+                            <p className={styles.cardDescription}>Receive raw data, transcripts, or synthesized insights ready for strategic decision-making.</p>
+                        </div>
+                        <div className={styles.processCard}>
+                            <div className={styles.stepNumberBg}>6</div>
+                            <div className={styles.iconBoxSmall}><Star size={18} /></div>
+                            <h3 className={styles.cardTitle}>Iterate</h3>
+                            <p className={styles.cardDescription}>Rate expert quality to refine future matching and launch follow-up research seamlessly.</p>
                         </div>
                     </div>
-                    <div style={{ background: '#e2e8f0', borderRadius: '16px', height: '400px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                        <BarChart3 size={120} color="var(--color-primary)" strokeWidth={1} />
-                    </div>
-                </div>
-
-                <div className={styles.detailedServiceItem}>
-                    <div className={styles.serviceContent}>
-                        <h2>Strategic Expert Placements</h2>
-                        <p>
-                            Fill organization-critical resource gaps with credible, vetted leaders. Our network provides
-                            high-impact short to long-term embeds tailored to your specific project needs.
-                        </p>
-                        <div className={styles.serviceFeatures}>
-                            <div className={styles.featureItem}>
-                                <h4>Leadership Embeds</h4>
-                                <p>Short, medium and long-term placements from workshops to on-site project leads.</p>
-                            </div>
-                            <div className={styles.featureItem}>
-                                <h4>Vetted Specialization</h4>
-                                <p>Custom-recruited experts for advisory panels, virtual placements, and focus groups.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div style={{ background: '#e2e8f0', borderRadius: '16px', height: '400px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                        <Users size={120} color="var(--color-primary)" strokeWidth={1} />
+                    <div className={styles.ctaContainer}>
+                        <Button href="/contact" style={{ backgroundColor: 'var(--color-primary)', color: 'white', padding: '16px 40px', fontWeight: '600' }}>
+                            Get Started as a Client <span style={{ marginLeft: '12px' }}>→</span>
+                        </Button>
                     </div>
                 </div>
             </SectionWrapper>
 
-            <SectionWrapper>
-                <span className={styles.sectionTag}>FOR CLIENTS</span>
-                <div className={styles.sectionHeader}>
-                    <h2 className={styles.sectionTitle}>For Clients</h2>
-                    <p className={styles.sectionDescription}>
-                        From research brief to actionable insights in as little as 24 hours
-                    </p>
-                </div>
+            <SectionWrapper id="vetted-experts">
+                <div className={styles.reveal}>
+                    <div style={{ textAlign: 'center', marginBottom: '64px' }}>
+                        <span className={styles.sectionTag}>VETTED EXPERTS</span>
+                        <h2 className={styles.sectionTitle}>Precision Recruited Specialists</h2>
+                        <p className={styles.sectionDescription}>
+                            We don&apos;t just search a database. We custom recruit the world&apos;s leading practitioners for your specific need.
+                        </p>
+                    </div>
 
-                <div className={styles.processGrid}>
-                    <div className={styles.processCard}>
-                        <div className={styles.stepNumberBg}>1</div>
-                        <div className={styles.iconBoxSmall}><MessageSquare size={18} /></div>
-                        <h3 className={styles.cardTitle}>Share Your Brief</h3>
-                        <p className={styles.cardDescription}>Define research objectives and target industries for surveys, calls, or custom projects.</p>
+                    <div className={styles.expertsShowcaseGrid}>
+                        <div className={styles.expertTypeCard}>
+                            <div className={styles.expertHeader}>
+                                <div className={styles.expertIcon}><Shield size={24} /></div>
+                                <h3>C-Level & Executives</h3>
+                            </div>
+                            <p>Former CEOs, CFOs, and business leaders with strategic P&L responsibility across global enterprises.</p>
+                        </div>
+                        <div className={styles.expertTypeCard}>
+                            <div className={styles.expertHeader}>
+                                <div className={styles.expertIcon}><Zap size={24} /></div>
+                                <h3>Functional Leaders</h3>
+                            </div>
+                            <p>Heads of supply chain, manufacturing, R&D, and engineering with deep operational knowledge.</p>
+                        </div>
+                        <div className={styles.expertTypeCard}>
+                            <div className={styles.expertHeader}>
+                                <div className={styles.expertIcon}><Globe size={24} /></div>
+                                <h3>Policy & Regulatory</h3>
+                            </div>
+                            <p>Former government officials, regulators, and industry lobbyists with 30+ years of legislative insight.</p>
+                        </div>
                     </div>
-                    <div className={styles.processCard}>
-                        <div className={styles.stepNumberBg}>2</div>
-                        <div className={styles.iconBoxSmall}><Search size={18} /></div>
-                        <h3 className={styles.cardTitle}>AI Matching</h3>
-                        <p className={styles.cardDescription}>Intelligent identification of qualified specialists from our 10,000+ member network.</p>
-                    </div>
-                    <div className={styles.processCard}>
-                        <div className={styles.stepNumberBg}>3</div>
-                        <div className={styles.iconBoxSmall}><UserCheck size={18} /></div>
-                        <h3 className={styles.cardTitle}>Compliance</h3>
-                        <p className={styles.cardDescription}>Rigorous screening for conflicts of interest, NDA compliance, and MNPI restrictions.</p>
-                    </div>
-                    <div className={styles.processCard}>
-                        <div className={styles.stepNumberBg}>4</div>
-                        <div className={styles.iconBoxSmall}><Calendar size={18} /></div>
-                        <h3 className={styles.cardTitle}>Engagement</h3>
-                        <p className={styles.cardDescription}>Experts deliver project outputs, join scheduled calls, or complete specialized surveys.</p>
-                    </div>
-                    <div className={styles.processCard}>
-                        <div className={styles.stepNumberBg}>5</div>
-                        <div className={styles.iconBoxSmall}><BarChart3 size={18} /></div>
-                        <h3 className={styles.cardTitle}>Deliverables</h3>
-                        <p className={styles.cardDescription}>Receive raw data, transcripts, or synthesized insights ready for strategic decision-making.</p>
-                    </div>
-                    <div className={styles.processCard}>
-                        <div className={styles.stepNumberBg}>6</div>
-                        <div className={styles.iconBoxSmall}><Star size={18} /></div>
-                        <h3 className={styles.cardTitle}>Iterate</h3>
-                        <p className={styles.cardDescription}>Rate expert quality to refine future matching and launch follow-up research seamlessly.</p>
-                    </div>
-                </div>
-                <div className={styles.ctaContainer}>
-                    <Button href="/contact" style={{ backgroundColor: 'var(--color-primary)', color: 'white', padding: '16px 40px', fontWeight: '600' }}>
-                        Get Started as a Client <span style={{ marginLeft: '12px' }}>→</span>
-                    </Button>
                 </div>
             </SectionWrapper>
 
-            <SectionWrapper background="gray">
-                <span className={styles.sectionTag}>FOR EXPERTS</span>
-                <div className={styles.sectionHeader}>
-                    <h2 className={styles.sectionTitle}>For Experts</h2>
-                    <p className={styles.sectionDescription}>
-                        Share your knowledge through surveys, calls, and projects — and earn on your own schedule
-                    </p>
-                </div>
+            <SectionWrapper id="compliance-framework" background="dark">
+                <div className={styles.reveal}>
+                    <div style={{ textAlign: 'center', marginBottom: '64px' }}>
+                        <span style={{ color: 'var(--color-secondary)', fontWeight: '600', textTransform: 'uppercase', letterSpacing: '2px', fontSize: '0.85rem' }}>COMPLIANCE</span>
+                        <h2 style={{ fontSize: '3rem', marginTop: '16px', fontWeight: '800' }}>World-Class Compliance Framework</h2>
+                        <p style={{ color: 'var(--color-white)', opacity: 0.8, marginTop: '16px', fontSize: '1.2rem', maxWidth: '800px', margin: '16px auto 0' }}>
+                            Rigorous protocols designed for the world&apos;s most sophisticated hedge funds and private equity firms.
+                        </p>
+                    </div>
 
-                <div className={styles.processGrid}>
-                    <div className={styles.processCard}>
-                        <div className={styles.stepNumberBg}>1</div>
-                        <div className={styles.iconBoxSmall}><FileCheck size={18} /></div>
-                        <h3 className={styles.cardTitle}>Apply Online</h3>
-                        <p className={styles.cardDescription}>Submit your professional history, expertise areas, and relevant industry experience.</p>
+                    <div className={styles.complianceGrid}>
+                        <div className={styles.complianceCard}>
+                            <Lock size={28} />
+                            <h3>MNPI Restrictions</h3>
+                            <p>Strict prohibitions on sharing material non-public information during any engagement.</p>
+                        </div>
+                        <div className={styles.complianceCard}>
+                            <Shield size={28} />
+                            <h3>Conflict Screening</h3>
+                            <p>Every expert is custom-screened against your project requirements to prevent direct conflicts of interest.</p>
+                        </div>
+                        <div className={styles.complianceCard}>
+                            <Users size={28} />
+                            <h3>Vetting & Verification</h3>
+                            <p>Background checks and employment verification to ensure only high-quality, senior experts participate.</p>
+                        </div>
                     </div>
-                    <div className={styles.processCard}>
-                        <div className={styles.stepNumberBg}>2</div>
-                        <div className={styles.iconBoxSmall}><UserPlus size={18} /></div>
-                        <h3 className={styles.cardTitle}>Get Verified</h3>
-                        <p className={styles.cardDescription}>Our team reviews credentials and performs essential compliance onboarding.</p>
-                    </div>
-                    <div className={styles.processCard}>
-                        <div className={styles.stepNumberBg}>3</div>
-                        <div className={styles.iconBoxSmall}><Calendar size={18} /></div>
-                        <h3 className={styles.cardTitle}>Set Preferences</h3>
-                        <p className={styles.cardDescription}>Configure availability, desired engagement types, and compensation expectations.</p>
-                    </div>
-                    <div className={styles.processCard}>
-                        <div className={styles.stepNumberBg}>4</div>
-                        <div className={styles.iconBoxSmall}><MessageSquare size={18} /></div>
-                        <h3 className={styles.cardTitle}>Receive Invites</h3>
-                        <p className={styles.cardDescription}>Get matched with projects matching your specific niche skills and background.</p>
-                    </div>
-                    <div className={styles.processCard}>
-                        <div className={styles.stepNumberBg}>5</div>
-                        <div className={styles.iconBoxSmall}><DollarSign size={18} /></div>
-                        <h3 className={styles.cardTitle}>Get Paid</h3>
-                        <p className={styles.cardDescription}>Earn per engagement and receive payouts quickly via your preferred method.</p>
-                    </div>
-                </div>
-                <div className={styles.ctaContainer}>
-                    <Button href="/for-experts" variant="outline" style={{ padding: '16px 40px', fontWeight: '600', color: 'var(--color-primary)', borderColor: 'rgba(0,0,0,0.1)' }}>
-                        Apply to Join <span style={{ marginLeft: '12px' }}>→</span>
-                    </Button>
                 </div>
             </SectionWrapper>
 

@@ -1,14 +1,28 @@
-
 "use client";
-import React, { useState } from 'react';
+
+import React, { useState, useEffect } from 'react';
 import SectionWrapper from "@/components/SectionWrapper";
 import Button from "@/components/Button";
 import styles from "./contact.module.css";
-
-// Note: No backend logic is implemented as requested. 
-// The form will construct a mailto link on submit.
+import { Mail, Phone, MapPin, MessageSquare, Clock, Globe, ShieldCheck, Send } from "lucide-react";
 
 export default function Contact() {
+    useEffect(() => {
+        const observerOptions = { threshold: 0.1 };
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add(styles.revealVisible);
+                }
+            });
+        }, observerOptions);
+
+        const revealElements = document.querySelectorAll(`.${styles.reveal}`);
+        revealElements.forEach(el => observer.observe(el));
+
+        return () => observer.disconnect();
+    }, []);
+
     const [formData, setFormData] = useState({
         firstName: '',
         lastName: '',
@@ -36,17 +50,17 @@ export default function Contact() {
     return (
         <main>
             <section className={styles.hero}>
-                <div className="container">
-                    <h1>Get in Touch</h1>
+                <div className={`container ${styles.reveal}`}>
+                    <h1>Contact Our <span className={styles.heroHighlight}>Global Team</span></h1>
                     <p className={styles.heroSubtitle}>
-                        Contact our team to discuss your research needs or expert application.
+                        Whether you&apos;re looking to find an expert, join our network, or explore partnership opportunities, we&apos;re ready to help you reach strategic clarity.
                     </p>
                 </div>
             </section>
 
-            <SectionWrapper>
-                <div className={styles.contactGrid}>
-                    <div className={styles.infoBox}>
+            <SectionWrapper id="contact-form">
+                <div className={`${styles.contactGrid} ${styles.reveal}`}>
+                    <div className={styles.formContainer}>
                         <div className={styles.infoItem}>
                             <span className={styles.infoLabel}>Email</span>
                             <div className={styles.infoValue}>contact@signalbridgeinsights.com</div>
@@ -153,6 +167,16 @@ export default function Contact() {
                             Submitting this form will open your default email client.
                         </p>
                     </form>
+                </div>
+            </SectionWrapper>
+
+            <SectionWrapper id="support" background="dark">
+                <div className={styles.reveal} style={{ textAlign: 'center', maxWidth: '800px', margin: '0 auto' }}>
+                    <h2 style={{ fontSize: '3rem', fontWeight: '800', marginBottom: '24px', color: 'white' }}>Enterprise Support</h2>
+                    <p style={{ fontSize: '1.125rem', lineHeight: '1.6', color: 'var(--color-text-light)', marginBottom: '32px' }}>
+                        For enterprise-level inquiries, custom research projects, or strategic partnerships, our dedicated support team is ready to assist. We offer tailored solutions to meet the unique demands of large organizations.
+                    </p>
+                    <Button variant="outline" href="mailto:enterprise@signalbridgeinsights.com" style={{ borderColor: 'rgba(255,255,255,0.2)', color: 'white' }}>Contact Enterprise Support</Button>
                 </div>
             </SectionWrapper>
         </main>

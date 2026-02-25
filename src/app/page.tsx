@@ -1,4 +1,6 @@
-import React from 'react';
+"use client";
+
+import React, { useEffect } from 'react';
 import Link from 'next/link';
 import SectionWrapper from "@/components/SectionWrapper";
 import Button from "@/components/Button";
@@ -7,11 +9,26 @@ import styles from "./home.module.css";
 import { Star, FileText, Phone, Zap, Network, Database, ShieldCheck, Clock, Shield, Search, TrendingUp, MessageSquare, UserCheck, BarChart3, Quote, CheckCircle2, Globe, Briefcase, Building2 } from 'lucide-react';
 
 export default function Home() {
+  useEffect(() => {
+    const observerOptions = { threshold: 0.1 };
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add(styles.revealVisible);
+        }
+      });
+    }, observerOptions);
+
+    const revealElements = document.querySelectorAll(`.${styles.reveal}`);
+    revealElements.forEach(el => observer.observe(el));
+
+    return () => observer.disconnect();
+  }, []);
   return (
     <main>
       {/* Hero Section */}
       <section className={styles.hero}>
-        <div className="container">
+        <div className={`container ${styles.reveal}`}>
           <h1 className={styles.heroTitle}>
             Your Gateway to <br />
             <span className={styles.highlightBlue}>Expert Knowledge</span>
@@ -33,7 +50,7 @@ export default function Home() {
       </section>
 
       {/* Credibility Section - White Background */}
-      <div className={styles.credibilitySection}>
+      <div id="trust" className={`${styles.credibilitySection} ${styles.reveal}`}>
         <div className="container">
           <p className={styles.credibilityTitle}>
             TRUSTED BY LEADING INVESTMENT FUNDS, CONSULTANCIES, AND CORPORATIONS
@@ -50,7 +67,7 @@ export default function Home() {
       </div>
 
       {/* Stats Section - Blue Strip */}
-      <section className={styles.statsSection}>
+      <section className={`${styles.statsSection} ${styles.reveal}`}>
         <div className="container">
           <div className={styles.statsGrid}>
             <div>
@@ -76,7 +93,7 @@ export default function Home() {
       {/* Our Services - White Background */}
       <section className={styles.servicesSection} id="services">
         <div className="container">
-          <div className={styles.sectionHeader}>
+          <div className={`${styles.sectionHeader} ${styles.reveal}`}>
             <div className={styles.servicesTag}>
               OUR SERVICES
             </div>
@@ -89,7 +106,7 @@ export default function Home() {
             </p>
           </div>
 
-          <div className={styles.servicesGrid}>
+          <div className={`${styles.servicesGrid} ${styles.reveal}`}>
             {/* Signature Card */}
             <div className={`${styles.serviceCard} ${styles.active}`}>
               <div className={styles.badge}>
@@ -169,8 +186,8 @@ export default function Home() {
       </section>
 
       {/* Overhauled Why Choose SignalBridge - Sage Background */}
-      <section className={styles.whyUsSection}>
-        <div className="container">
+      <section id="why-signalbridge" className={styles.whyUsSection}>
+        <div className={`container ${styles.reveal}`}>
           <div className={styles.whyUsTag}>WHY US</div>
           <h2 className={styles.whyUsTitle}>Why Choose SignalBridge?</h2>
           <p className={styles.whyUsSubtitle}>
@@ -227,8 +244,8 @@ export default function Home() {
       </section>
 
       {/* Overhauled How It Works - Process Section */}
-      <section className={styles.processSection}>
-        <div className="container">
+      <section id="process" className={styles.processSection}>
+        <div className={`container ${styles.reveal}`}>
           <div className={styles.processTag}>PROCESS</div>
           <h2 className={styles.processTitle}>How It Works</h2>
           <p className={styles.processSubtitle}>
@@ -284,8 +301,8 @@ export default function Home() {
       </section>
 
       {/* Overhauled Client Success - Testimonials Section */}
-      <section className={styles.testimonialSection}>
-        <div className="container">
+      <section id="testimonials" className={styles.testimonialSection}>
+        <div className={`container ${styles.reveal}`}>
           <div className={styles.testimonialTag}>TESTIMONIALS</div>
           <h2 className={styles.testimonialTitle}>Trusted by Decision Makers</h2>
           <p className={styles.testimonialSubtitle}>
@@ -341,8 +358,8 @@ export default function Home() {
       </section>
 
       {/* Overhauled Industry Coverage - "Deep Expertise" Section */}
-      <section className={styles.coverageSection}>
-        <div className="container">
+      <section id="coverage" className={styles.coverageSection}>
+        <div className={`container ${styles.reveal}`}>
           <div className={styles.coverageContainer}>
             {/* Left Column: Info & Checklist */}
             <div className={styles.coverageInfo}>

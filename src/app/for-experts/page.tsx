@@ -1,38 +1,90 @@
-import React from 'react';
+"use client";
+
+import React, { useEffect, useState } from 'react';
 import SectionWrapper from "@/components/SectionWrapper";
 import Button from "@/components/Button";
-import { FileText, Phone, Users, Zap, CheckCircle2, DollarSign, Clock, Globe, Shield, Briefcase, TrendingUp, Star, Lock, ArrowRight } from "lucide-react";
+import {
+    Star, ShieldCheck, Zap, DollarSign, Calendar, MessageSquare, Globe, Award,
+    Shield, Users, ArrowRight, UserPlus, FileCheck, CheckCircle2, FileText,
+    Phone, Stethoscope, Landmark, Cpu, Factory, Leaf, ShoppingCart,
+    Briefcase, TrendingUp, Lock, ChevronUp, ChevronDown
+} from "lucide-react";
 import styles from "./for-experts.module.css";
 
-export const metadata = {
-    title: "For Experts | SignalBridge Insights",
-    description: "Monetize your industry expertise. Join 10,000+ professionals earning through surveys, calls, and advisory projects.",
-};
-
 export default function ForExperts() {
+    const [openFaq, setOpenFaq] = useState<number | null>(null);
+
+    useEffect(() => {
+        const observerOptions = {
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add(styles.revealVisible);
+                }
+            });
+        }, observerOptions);
+
+        const revealElements = document.querySelectorAll(`.${styles.reveal}`);
+        revealElements.forEach(el => observer.observe(el));
+
+        return () => observer.disconnect();
+    }, []);
+
+    const toggleFaq = (index: number) => {
+        setOpenFaq(openFaq === index ? null : index);
+    };
+
+    const faqs = [
+        {
+            q: "Is my participation kept confidential from my employer?",
+            a: "Yes. We take privacy extremely seriously. You can chose to be anonymized on projects, and we never share your participation with your current employer. We also screen every project to ensure there are no direct conflicts with your current role."
+        },
+        {
+            q: "How and when do I get paid?",
+            a: "Payments are processed automatically through our secure platform. Once an engagement is completed and the hours are confirmed, funds are typically available for transfer within 3–5 business days via direct deposit or wire transfer."
+        },
+        {
+            q: "What is the time commitment for an expert?",
+            a: "It is completely up to you. You are never obligated to accept a project. Most of our experts spend between 2–5 hours per month on consultations and surveys, fitting them into their existing professional schedule."
+        },
+        {
+            q: "Do I need to prepare for consultation calls?",
+            a: "Generally, no preparation is required. Clients are paying for your existing knowledge and 'top of mind' expertise. If a specific project requires review of materials, this will be disclosed upfront and you will be compensated for that time."
+        },
+        {
+            q: "What if I can't answer a specific question due to an NDA?",
+            a: "We explicitly instruct our experts never to share non-public, material information or breach any existing NDAs. If a client asks something you cannot answer, simply state that you are unable to discuss that topic for compliance reasons. Our clients respect this boundary."
+        }
+    ];
+
     return (
         <main>
             <section className={styles.hero}>
                 <div className="container" style={{ maxWidth: '900px' }}>
-                    <h1>Monetize Your <span className={styles.heroHighlight}>Industry Expertise</span></h1>
-                    <p className={styles.heroSubtitle}>
-                        Join 10,000+ professionals earning money through paid surveys, consultation calls, focus groups, and advisory projects. Share your knowledge on your own terms.
-                    </p>
-                    <div style={{ display: 'flex', justifyContent: 'center' }}>
-                        <Button href="/contact" style={{ backgroundColor: 'white', color: 'var(--color-primary)', padding: '16px 40px', fontWeight: '700' }}>
-                            Apply to Join <span style={{ marginLeft: '12px' }}>→</span>
-                        </Button>
+                    <div className={styles.reveal}>
+                        <h1>Monetize Your <span className={styles.heroHighlight}>Industry Expertise</span></h1>
+                        <p className={styles.heroSubtitle}>
+                            Join 10,000+ professionals earning money through paid surveys, consultation calls, focus groups, and advisory projects. Share your knowledge on your own terms.
+                        </p>
+                        <div style={{ display: 'flex', justifyContent: 'center' }}>
+                            <Button href="/contact" style={{ backgroundColor: 'white', color: 'var(--color-primary)', padding: '16px 40px', fontWeight: '700' }}>
+                                Apply to Join <span style={{ marginLeft: '12px' }}>→</span>
+                            </Button>
+                        </div>
                     </div>
                 </div>
             </section>
 
-            <SectionWrapper>
-                <div style={{ textAlign: 'center', marginBottom: '64px' }}>
+            <SectionWrapper id="earning-formats">
+                <div className={styles.reveal} style={{ textAlign: 'center', marginBottom: '64px' }}>
                     <span style={{ color: 'var(--color-secondary)', fontWeight: '600', textTransform: 'uppercase', letterSpacing: '2px', fontSize: '0.85rem' }}>WAYS TO EARN</span>
                     <h2 style={{ fontSize: '3rem', marginTop: '16px', fontWeight: '800' }}>Multiple Ways to Monetize Your Knowledge</h2>
                     <p style={{ color: 'var(--color-text-light)', marginTop: '16px', fontSize: '1.2rem' }}>Choose the engagement types that fit your expertise</p>
                 </div>
-                <div className={styles.earnGrid}>
+                <div className={`${styles.earnGrid} ${styles.reveal}`}>
                     <div className={styles.earnCard}>
                         <div className={styles.earnIconWrapper}><FileText size={24} /></div>
                         <div className={styles.earnContent}>
@@ -66,17 +118,17 @@ export default function ForExperts() {
                         </div>
                     </div>
                 </div>
-                <div style={{ display: 'flex', justifyContent: 'center', marginTop: '48px' }}>
-                    <Button href="/contact" variant="outline">View All Engagement Types <ArrowRight size={18} style={{ marginLeft: '8px' }} /></Button>
+                <div className={styles.reveal} style={{ display: 'flex', justifyContent: 'center', marginTop: '48px' }}>
+                    <Button href="/how-it-works" variant="outline">View All Engagement Types <ArrowRight size={18} style={{ marginLeft: '8px' }} /></Button>
                 </div>
             </SectionWrapper>
 
-            <SectionWrapper>
-                <div style={{ textAlign: 'center', marginBottom: '64px' }}>
+            <SectionWrapper id="enrollment-process">
+                <div className={styles.reveal} style={{ textAlign: 'center', marginBottom: '64px' }}>
                     <span style={{ color: 'var(--color-secondary)', fontWeight: '600', textTransform: 'uppercase', letterSpacing: '2px', fontSize: '0.85rem' }}>APPLICATION PROCESS</span>
                     <h2 style={{ fontSize: '3rem', marginTop: '16px', fontWeight: '800' }}>Your Path to Earning</h2>
                 </div>
-                <div className={styles.journeyGrid}>
+                <div className={`${styles.journeyGrid} ${styles.reveal}`}>
                     <div className={styles.journeyStep}>
                         <div className={styles.stepIconBox}>1</div>
                         <h3 className={styles.journeyTitle}>Apply Online</h3>
@@ -95,37 +147,42 @@ export default function ForExperts() {
                 </div>
             </SectionWrapper>
 
-            <SectionWrapper background="gray">
-                <div style={{ textAlign: 'center', marginBottom: '64px' }}>
-                    <h2 style={{ fontSize: '3rem', fontWeight: '800', marginBottom: '16px' }}>Why Join Our Network?</h2>
-                    <p style={{ color: 'var(--color-text-light)', fontSize: '1.25rem' }}>Monetize your expertise while helping global leaders make better decisions</p>
+            <SectionWrapper id="industries" background="gray">
+                <div className={styles.reveal} style={{ textAlign: 'center', marginBottom: '64px' }}>
+                    <span style={{ color: 'var(--color-secondary)', fontWeight: '600', textTransform: 'uppercase', letterSpacing: '2px', fontSize: '0.85rem' }}>INDUSTRY DEPTH</span>
+                    <h2 style={{ fontSize: '3rem', marginTop: '16px', fontWeight: '800' }}>Broad Opportunities Across Every Sector</h2>
+                    <p style={{ color: 'var(--color-text-light)', marginTop: '16px', fontSize: '1.2rem' }}>We connect experts with leaders in these core industries and beyond</p>
                 </div>
-                <div className={styles.benefitGrid}>
-                    <div className={styles.benefitCard}>
-                        <div className={styles.benefitIconWrapper}><DollarSign size={24} /></div>
-                        <h3 className={styles.benefitTitle}>Competitive Earnings</h3>
-                        <p className={styles.benefitDescription}>Earn $50–$500+ per survey, set your hourly rate for calls, and get project-based fees for longer engagements.</p>
+                <div className={`${styles.industryGrid} ${styles.reveal}`}>
+                    <div className={styles.industryItem}>
+                        <div className={styles.industryIconBox}><Stethoscope size={32} /></div>
+                        <span>Healthcare & Life Sciences</span>
                     </div>
-                    <div className={styles.benefitCard}>
-                        <div className={styles.benefitIconWrapper}><Clock size={24} /></div>
-                        <h3 className={styles.benefitTitle}>Flexible Schedule</h3>
-                        <p className={styles.benefitDescription}>Complete surveys on your time. Accept only the calls, focus groups, and projects that fit your schedule.</p>
+                    <div className={styles.industryItem}>
+                        <div className={styles.industryIconBox}><Landmark size={32} /></div>
+                        <span>Financial Services</span>
                     </div>
-                    <div className={styles.benefitCard}>
-                        <div className={styles.benefitIconWrapper}><Globe size={24} /></div>
-                        <h3 className={styles.benefitTitle}>Global Clients</h3>
-                        <p className={styles.benefitDescription}>Connect with leading hedge funds, consulting firms, private equity, and corporations worldwide.</p>
+                    <div className={styles.industryItem}>
+                        <div className={styles.industryIconBox}><Cpu size={32} /></div>
+                        <span>Technology & Software</span>
                     </div>
-                    <div className={styles.benefitCard}>
-                        <div className={styles.benefitIconWrapper}><Shield size={24} /></div>
-                        <h3 className={styles.benefitTitle}>Compliance Support</h3>
-                        <p className={styles.benefitDescription}>We handle compliance complexities. Clear guidelines, NDA management, and conflict screening for every engagement.</p>
+                    <div className={styles.industryItem}>
+                        <div className={styles.industryIconBox}><Factory size={32} /></div>
+                        <span>Industrial & Manufacturing</span>
+                    </div>
+                    <div className={styles.industryItem}>
+                        <div className={styles.industryIconBox}><Leaf size={32} /></div>
+                        <span>Energy & Renewables</span>
+                    </div>
+                    <div className={styles.industryItem}>
+                        <div className={styles.industryIconBox}><ShoppingCart size={32} /></div>
+                        <span>Consumer & Retail</span>
                     </div>
                 </div>
             </SectionWrapper>
 
-            <SectionWrapper>
-                <div className={styles.pricingSection}>
+            <SectionWrapper id="compensation">
+                <div className={`${styles.pricingSection} ${styles.reveal}`}>
                     <div>
                         <h2 style={{ fontSize: '2.5rem', fontWeight: '800', marginBottom: '24px' }}>Earn What You're Worth</h2>
                         <p style={{ color: 'var(--color-text-light)', fontSize: '1.1rem', marginBottom: '40px', maxWidth: '500px' }}>
@@ -161,18 +218,18 @@ export default function ForExperts() {
                         <div className={styles.earningsSublabel}>(for active experts)</div>
                     </div>
                 </div>
-                <div style={{ display: 'flex', justifyContent: 'center', gap: '20px', marginTop: '48px' }}>
+                <div className={styles.reveal} style={{ display: 'flex', justifyContent: 'center', gap: '20px', marginTop: '48px' }}>
                     <Button href="/contact">Apply to Join Network</Button>
                     <Button href="/contact" variant="outline">Calculate Your Estimated Rate</Button>
                 </div>
             </SectionWrapper>
 
-            <SectionWrapper background="gray">
-                <div style={{ textAlign: 'center', marginBottom: '64px' }}>
+            <SectionWrapper id="expert-testimonials" background="gray">
+                <div className={styles.reveal} style={{ textAlign: 'center', marginBottom: '64px' }}>
                     <span style={{ color: 'var(--color-secondary)', fontWeight: '600', textTransform: 'uppercase', letterSpacing: '2px', fontSize: '0.85rem' }}>TESTIMONIALS</span>
                     <h2 style={{ fontSize: '3rem', marginTop: '16px', fontWeight: '800' }}>Hear From Our Experts</h2>
                 </div>
-                <div className={styles.testimonialGrid}>
+                <div className={`${styles.testimonialGrid} ${styles.reveal}`}>
                     <div className={styles.testimonialCard}>
                         <div style={{ color: 'var(--color-secondary)', marginBottom: '16px', display: 'flex', gap: '4px' }}>
                             <Star size={16} fill="currentColor" /><Star size={16} fill="currentColor" /><Star size={16} fill="currentColor" /><Star size={16} fill="currentColor" /><Star size={16} fill="currentColor" />
@@ -212,8 +269,8 @@ export default function ForExperts() {
                 </div>
             </SectionWrapper>
 
-            <SectionWrapper>
-                <div className={styles.lookingGrid}>
+            <SectionWrapper id="ideal-profile">
+                <div className={`${styles.lookingGrid} ${styles.reveal}`}>
                     <div className={styles.infoCardGrid}>
                         <div className={styles.infoCard}>
                             <div className={styles.infoIconBox}><Briefcase size={20} /></div>
@@ -248,8 +305,8 @@ export default function ForExperts() {
                 </div>
             </SectionWrapper>
 
-            <SectionWrapper background="gray">
-                <div className={styles.complianceBox}>
+            <SectionWrapper id="expert-compliance" background="gray">
+                <div className={`${styles.complianceBox} ${styles.reveal}`}>
                     <div className={styles.complianceHeader}>
                         <div className={styles.benefitIconWrapper} style={{ marginBottom: 0 }}><Shield size={32} /></div>
                         <div>
@@ -290,8 +347,30 @@ export default function ForExperts() {
                 </div>
             </SectionWrapper>
 
-            <SectionWrapper background="dark">
-                <div style={{ textAlign: 'center', maxWidth: '900px', margin: '0 auto' }}>
+            <SectionWrapper id="faqs">
+                <div className={styles.reveal} style={{ textAlign: 'center', marginBottom: '64px' }}>
+                    <span style={{ color: 'var(--color-secondary)', fontWeight: '600', textTransform: 'uppercase', letterSpacing: '2px', fontSize: '0.85rem' }}>EXPERT FAQ</span>
+                    <h2 style={{ fontSize: '3rem', marginTop: '16px', fontWeight: '800' }}>Common Questions</h2>
+                </div>
+                <div className={`${styles.faqGrid} ${styles.reveal}`}>
+                    {faqs.map((faq, index) => (
+                        <div key={index} className={styles.faqItem}>
+                            <button className={styles.faqQuestion} onClick={() => toggleFaq(index)}>
+                                {faq.q}
+                                {openFaq === index ? <ChevronUp size={20} /> : <ChevronDown size={20} />}
+                            </button>
+                            {openFaq === index && (
+                                <div className={styles.faqAnswer}>
+                                    {faq.a}
+                                </div>
+                            )}
+                        </div>
+                    ))}
+                </div>
+            </SectionWrapper>
+
+            <SectionWrapper id="join-now" background="dark">
+                <div className={styles.reveal} style={{ textAlign: 'center', maxWidth: '900px', margin: '0 auto' }}>
                     <h2 style={{ fontSize: '3.5rem', fontWeight: '800', marginBottom: '24px', letterSpacing: '-0.02em', color: 'white' }}>Ready to Start Earning?</h2>
                     <p style={{ fontSize: '1.25rem', color: '#F1F5F9', marginBottom: '40px', lineHeight: '1.6' }}>
                         Apply today and join 10,000+ experts earning through surveys, calls, and projects with SignalBridge

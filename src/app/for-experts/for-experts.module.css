@@ -1,8 +1,43 @@
 .hero {
-    padding: 180px 0 160px;
-    background-color: var(--color-primary);
-    color: var(--color-white);
+    background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+    color: white;
+    padding: 160px 0 120px;
+    position: relative;
+    overflow: hidden;
     text-align: center;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle at center, rgba(59, 130, 246, 0.08) 0%, transparent 70%);
+    animation: meshRotate 25s linear infinite;
+}
+
+@keyframes meshRotate {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* Reveal Animations */
+.reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.revealVisible {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 .hero h1 {
@@ -281,11 +316,107 @@
     line-height: 1.6;
 }
 
+/* Industry Grid */
+.industryGrid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 32px;
+    margin-top: 48px;
+}
+
+.industryItem {
+    text-align: center;
+    padding: 24px;
+    background: white;
+    border-radius: 12px;
+    border: 1px solid rgba(0, 0, 0, 0.03);
+    transition: all 0.3s ease;
+}
+
+.industryItem:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+    border-color: var(--color-secondary);
+}
+
+.industryIconBox {
+    width: 48px;
+    height: 48px;
+    margin: 0 auto 16px;
+    color: var(--color-secondary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.industryItem span {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--color-primary);
+}
+
+/* FAQ Accordion */
+.faqGrid {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.faqItem {
+    background: white;
+    border-radius: 12px;
+    margin-bottom: 16px;
+    border: 1px solid rgba(0, 0, 0, 0.03);
+    overflow: hidden;
+}
+
+.faqQuestion {
+    width: 100%;
+    padding: 24px 32px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: none;
+    border: none;
+    cursor: pointer;
+    text-align: left;
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--color-primary);
+    transition: background 0.2s ease;
+}
+
+.faqQuestion:hover {
+    background: #FAFAFA;
+}
+
+.faqAnswer {
+    padding: 0 32px 24px;
+    color: var(--color-text-light);
+    line-height: 1.6;
+    font-size: 1rem;
+}
+
+/* Reveal Animations */
+.reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.revealVisible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
 @media (max-width: 1024px) {
+    .hero h1 {
+        font-size: 3.5rem;
+    }
 
     .journeyGrid,
-    .testimonialGrid {
-        grid-template-columns: 1fr;
+    .testimonialGrid,
+    .industryGrid {
+        grid-template-columns: repeat(2, 1fr);
         gap: 32px;
     }
 
@@ -303,7 +434,10 @@
 
     .earnGrid,
     .benefitGrid,
-    .complianceGrid {
+    .complianceGrid,
+    .journeyGrid,
+    .testimonialGrid,
+    .industryGrid {
         grid-template-columns: 1fr;
     }
 

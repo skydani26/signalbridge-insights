@@ -1,121 +1,292 @@
+"use client";
 
-import React from 'react';
+import React, { useEffect } from 'react';
 import SectionWrapper from "@/components/SectionWrapper";
 import Button from "@/components/Button";
+import {
+    FileText, Phone, Zap, Network, Database, ShieldCheck,
+    ArrowRight, Star, Shield, Globe, Users, Search, Calendar, BarChart3,
+    TrendingUp, Building2, Briefcase, CheckCircle2
+} from "lucide-react";
 import styles from "./for-clients.module.css";
 
-export const metadata = {
-    title: "For Clients | SignalBridge Insights",
-    description: "Expert knowledge in any format. Surveys, calls, and custom research for investors, consultants, and corporations.",
-};
-
 export default function ForClients() {
+    useEffect(() => {
+        const observerOptions = { threshold: 0.1 };
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add(styles.revealVisible);
+                }
+            });
+        }, observerOptions);
+
+        const revealElements = document.querySelectorAll(`.${styles.reveal}`);
+        revealElements.forEach(el => observer.observe(el));
+
+        return () => observer.disconnect();
+    }, []);
+    const services = [
+        {
+            title: "Expert Surveys",
+            description: "Targeted surveys to vetted industry professionals for quantitative + qualitative insights at scale.",
+            icon: <FileText size={24} />,
+            popular: true
+        },
+        {
+            title: "1-on-1 Expert Calls",
+            description: "Confidential consultations with hand-picked experts for deep-dive discussions on specific topics.",
+            icon: <Phone size={24} />,
+            popular: false
+        },
+        {
+            title: "Programming",
+            description: "Technical edge for complex surveys and workflows using Qualtrics, Decipher, and internal tools.",
+            icon: <Zap size={24} />,
+            popular: false
+        },
+        {
+            title: "Custom Research",
+            description: "End-to-end research support: we scope, recruit, collect data, and deliver synthesized insights.",
+            icon: <Network size={24} />,
+            popular: false
+        },
+        {
+            title: "Transcripts & Library",
+            description: "Access curated transcripts, whitepapers, and recorded expert sessions from our searchable library.",
+            icon: <Database size={24} />,
+            popular: false
+        },
+        {
+            title: "Compliance & Vetting",
+            description: "Rigorous expert screening, NDA management, and full audit trails on every single engagement.",
+            icon: <ShieldCheck size={24} />,
+            popular: false
+        }
+    ];
+
     return (
         <main>
             <section className={styles.hero}>
-                <div className="container">
-                    <h1>Expert Knowledge, Any Format</h1>
+                <div className={`container ${styles.reveal}`} style={{ maxWidth: '1000px' }}>
+                    <h1>Expert Knowledge, <span className={styles.heroHighlight}>Any Format</span></h1>
                     <p className={styles.heroSubtitle}>
-                        Access the insights you need to make smarter investment and strategic decisions.
+                        Surveys, 1-on-1 calls, focus groups, custom research, and more. Access 10,000+ vetted industry experts to get the insights you need — fast, compliant, and at scale.
                     </p>
-                    <Button href="/contact" variant="primary" style={{ backgroundColor: 'white', color: 'var(--color-primary)' }}>Find an Expert</Button>
+                    <div className={styles.heroButtons}>
+                        <Button href="/contact" style={{ backgroundColor: 'white', color: 'var(--color-primary)', padding: '16px 40px', fontWeight: '700' }}>
+                            Get Started <ArrowRight size={18} style={{ marginLeft: '12px' }} />
+                        </Button>
+                        <Button href="/contact" variant="outline" style={{ borderColor: 'rgba(255,255,255,0.3)', color: 'white', padding: '16px 40px' }}>
+                            Request a Demo
+                        </Button>
+                    </div>
                 </div>
             </section>
 
-            <SectionWrapper>
-                <h2 className="text-center mb-8">Our Services</h2>
-                <div className={styles.servicesGrid}>
-                    <div className={styles.serviceCard}>
-                        <h3 className={styles.serviceTitle}>Expert Surveys</h3>
-                        <p>Rapidly gather quantitative data from hundreds of relevant professionals.</p>
+            <SectionWrapper id="services">
+                <div className={styles.reveal} style={{ textAlign: 'center', marginBottom: '64px' }}>
+                    <span className={styles.serviceTag}>OUR SERVICES</span>
+                    <h2 style={{ fontSize: '3rem', marginTop: '16px', fontWeight: '800', color: 'var(--color-primary)' }}>Full Suite of Expert Engagement</h2>
+                    <p style={{ color: 'var(--color-text-light)', marginTop: '16px', fontSize: '1.2rem' }}>Choose the engagement format that best fits your research needs</p>
+                </div>
+
+                <div className={`${styles.servicesGrid} ${styles.reveal}`}>
+                    {services.map((service, index) => (
+                        <div key={index} className={`${styles.serviceCard} ${service.popular ? styles.serviceCardPopular : ''}`}>
+                            {service.popular && (
+                                <span className={styles.popularBadge}>
+                                    <Star size={12} fill="currentColor" /> Most Popular
+                                </span>
+                            )}
+                            <div className={styles.serviceIconBox}>
+                                {service.icon}
+                            </div>
+                            <h3 className={styles.serviceTitle}>{service.title}</h3>
+                            <p className={styles.serviceDescription}>{service.description}</p>
+                        </div>
+                    ))}
+                </div>
+            </SectionWrapper>
+
+            <SectionWrapper id="trust" background="gray">
+                <div className={styles.reveal} style={{ textAlign: 'center', marginBottom: '48px' }}>
+                    <h2 style={{ fontSize: '2.5rem', fontWeight: '800', color: 'var(--color-primary)', marginBottom: '12px' }}>Why Clients Choose Us</h2>
+                    <p style={{ fontSize: '1.1rem', color: 'var(--color-text-light)' }}>Fast, compliant, and high-quality expert access across every engagement type</p>
+                </div>
+
+                <div className={`${styles.trustGrid} ${styles.reveal}`}>
+                    <div className={styles.trustCard}>
+                        <div className={styles.trustIconBox}>
+                            <Search size={20} />
+                        </div>
+                        <h4 className={styles.trustTitle}>AI-Powered Matching</h4>
+                        <p className={styles.trustDescription}>Identify perfect specialists across our 10,000+ member network using our proprietary AI matching engine.</p>
                     </div>
-                    <div className={styles.serviceCard}>
-                        <h3 className={styles.serviceTitle}>1-on-1 Expert Calls</h3>
-                        <p>Direct access to industry leaders for deep-dive interviews.</p>
+
+                    <div className={styles.trustCard}>
+                        <div className={styles.trustIconBox}>
+                            <Calendar size={20} />
+                        </div>
+                        <h4 className={styles.trustTitle}>24-Hour Turnaround</h4>
+                        <p className={styles.trustDescription}>Profiles delivered in hours. Most projects launch within 24 hours of brief submission with same-day scheduling.</p>
                     </div>
-                    <div className={styles.serviceCard}>
-                        <h3 className={styles.serviceTitle}>Custom Research</h3>
-                        <p>Bespoke projects managed by our team, from sourcing to analysis.</p>
+
+                    <div className={styles.trustCard}>
+                        <div className={styles.trustIconBox}>
+                            <Shield size={20} />
+                        </div>
+                        <h4 className={styles.trustTitle}>Compliance Guaranteed</h4>
+                        <p className={styles.trustDescription}>Strict protocols, NDA management, and conflict screening custom-built for institutional investors.</p>
                     </div>
-                    <div className={styles.serviceCard}>
-                        <h3 className={styles.serviceTitle}>Transcripts & Content</h3>
-                        <p>Searchable library of thousands of expert interviews.</p>
-                    </div>
-                    <div className={styles.serviceCard}>
-                        <h3 className={styles.serviceTitle}>Expert Staffing</h3>
-                        <p>Interim executives and advisors for longer operational roles.</p>
-                    </div>
-                    <div className={styles.serviceCard}>
-                        <h3 className={styles.serviceTitle}>Research Operations</h3>
-                        <p>Survey programming, data visualization, and reporting.</p>
+
+                    <div className={styles.trustCard}>
+                        <div className={styles.trustIconBox}>
+                            <BarChart3 size={20} />
+                        </div>
+                        <h4 className={styles.trustTitle}>Quality Assured</h4>
+                        <p className={styles.trustDescription}>Every expert is manually vetted for seniority. Maintaining a 98% satisfaction rate across all industries.</p>
                     </div>
                 </div>
             </SectionWrapper>
 
-            <SectionWrapper background="gray">
-                <h2 className="text-center mb-8">Why Clients Choose SignalBridge</h2>
-                <div className={styles.reasonsGrid}>
-                    <div className={styles.reasonItem}>
-                        <h3>AI-Powered Matching</h3>
-                        <p>Our proprietary technology identifies the right experts faster, reducing search times by 40%.</p>
+            <SectionWrapper id="who-we-serve">
+                <div className={styles.reveal} style={{ textAlign: 'center', marginBottom: '64px' }}>
+                    <h2 style={{ fontSize: '3rem', fontWeight: '800', color: 'var(--color-primary)', marginBottom: '16px' }}>Who We Serve</h2>
+                    <p style={{ fontSize: '1.25rem', color: 'var(--color-text-light)' }}>Trusted by leading organizations across industries</p>
+                </div>
+
+                <div className={`${styles.serveGrid} ${styles.reveal}`}>
+                    <div className={styles.serveCard}>
+                        <div className={styles.serveIconCircle}>
+                            <TrendingUp size={28} />
+                        </div>
+                        <h4 className={styles.serveTitle}>Hedge Funds & Asset Managers</h4>
+                        <p className={styles.serveDescription}>Inform investment decisions with expert insights on companies, industries, and market trends.</p>
                     </div>
-                    <div className={styles.reasonItem}>
-                        <h3>24-Hour Turnaround</h3>
-                        <p>Speed is critical. We typically deliver initial expert profiles within one business day.</p>
+
+                    <div className={styles.serveCard}>
+                        <div className={styles.serveIconCircle}>
+                            <Building2 size={28} />
+                        </div>
+                        <h4 className={styles.serveTitle}>Consulting Firms</h4>
+                        <p className={styles.serveDescription}>Enhance client deliverables with deep industry expertise and real-world perspectives.</p>
                     </div>
-                    <div className={styles.reasonItem}>
-                        <h3>Compliance Guaranteed</h3>
-                        <p>Rigorous compliance framework with custom protocols for MNPI and conflict checking.</p>
-                    </div>
-                    <div className={styles.reasonItem}>
-                        <h3>Quality Assurance</h3>
-                        <p>Every expert is vetted. We prioritize client satisfaction and long-term relationships.</p>
+
+                    <div className={styles.serveCard}>
+                        <div className={styles.serveIconCircle}>
+                            <Briefcase size={28} />
+                        </div>
+                        <h4 className={styles.serveTitle}>Corporations & Strategy Teams</h4>
+                        <p className={styles.serveDescription}>Support strategic initiatives, M&A diligence, and transformation programs with expert knowledge.</p>
                     </div>
                 </div>
             </SectionWrapper>
 
-            <SectionWrapper>
-                <h2 className="text-center mb-8">Who We Serve</h2>
-                <div className={styles.clientsList}>
-                    <div className={styles.clientType}>Hedge Funds & Asset Managers</div>
-                    <div className={styles.clientType}>Management Consulting Firms</div>
-                    <div className={styles.clientType}>Corporate Strategy Teams</div>
+            <SectionWrapper id="use-cases">
+                <div className={styles.reveal} style={{ marginBottom: '64px' }}>
+                    <span className={styles.serviceTag}>USE CASES</span>
+                    <h2 style={{ fontSize: '2.5rem', fontWeight: '800', color: 'var(--color-primary)', margin: '16px 0 24px' }}>How Clients Use SignalBridge</h2>
+                    <p style={{ fontSize: '1.2rem', color: 'var(--color-text-light)', maxWidth: '700px' }}>
+                        From investment due diligence to regulatory intelligence, our experts provide insights across a range of business needs.
+                    </p>
                 </div>
 
-                <div style={{ marginTop: '64px', display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '64px' }}>
-                    <div>
-                        <h3>Common Use Cases</h3>
-                        <ul className={styles.useCaseList}>
-                            <li>Investment Due Diligence</li>
-                            <li>Market Sizing & Entry Strategy</li>
-                            <li>Competitive Intelligence</li>
-                            <li>Product Benchmarking</li>
-                            <li>Regulatory & Policy Analysis</li>
-                            <li>Supply Chain Optimization</li>
-                        </ul>
+                <div className={`${styles.useCasesSplit} ${styles.reveal}`}>
+                    <div className={styles.useCasesContent}>
+                        <div className={styles.useCaseItem}>
+                            <div className={styles.useCaseIconBox}>
+                                <TrendingUp size={22} />
+                            </div>
+                            <div>
+                                <h4 className={styles.useCaseTitle}>Investment Due Diligence</h4>
+                                <p className={styles.useCaseText}>Validate investment theses, understand market dynamics, and identify risks before committing capital.</p>
+                            </div>
+                        </div>
+
+                        <div className={styles.useCaseItem}>
+                            <div className={styles.useCaseIconBox}>
+                                <BarChart3 size={22} />
+                            </div>
+                            <div>
+                                <h4 className={styles.useCaseTitle}>Market Research & Sizing</h4>
+                                <p className={styles.useCaseText}>Get real-world perspectives on industry trends, TAM estimates, competitive landscapes, and customer behavior.</p>
+                            </div>
+                        </div>
+
+                        <div className={styles.useCaseItem}>
+                            <div className={styles.useCaseIconBox}>
+                                <Briefcase size={22} />
+                            </div>
+                            <div>
+                                <h4 className={styles.useCaseTitle}>Strategic Planning</h4>
+                                <p className={styles.useCaseText}>Inform corporate strategy with insights from industry veterans, domain experts, and functional leaders.</p>
+                            </div>
+                        </div>
+
+                        <div className={styles.useCaseItem}>
+                            <div className={styles.useCaseIconBox}>
+                                <Users size={22} />
+                            </div>
+                            <div>
+                                <h4 className={styles.useCaseTitle}>Competitive Intelligence</h4>
+                                <p className={styles.useCaseText}>Understand competitor strategies, capabilities, product roadmaps, and market positioning from those who know.</p>
+                            </div>
+                        </div>
+
+                        <div className={styles.useCaseItem}>
+                            <div className={styles.useCaseIconBox}>
+                                <Database size={22} />
+                            </div>
+                            <div>
+                                <h4 className={styles.useCaseTitle}>Product & Technology Assessment</h4>
+                                <p className={styles.useCaseText}>Evaluate technology stacks, product capabilities, and engineering approaches through expert technical reviews.</p>
+                            </div>
+                        </div>
+
+                        <div className={styles.useCaseItem}>
+                            <div className={styles.useCaseIconBox}>
+                                <Shield size={22} />
+                            </div>
+                            <div>
+                                <h4 className={styles.useCaseTitle}>Regulatory & Compliance Insights</h4>
+                                <p className={styles.useCaseText}>Navigate complex regulatory environments with guidance from former regulators and compliance specialists.</p>
+                            </div>
+                        </div>
                     </div>
-                    <div>
-                        <h3 className="mb-4">Industries Covered</h3>
-                        <div className={styles.industryTags}>
-                            <div className={styles.industryTag}>Healthcare</div>
-                            <div className={styles.industryTag}>Technology</div>
-                            <div className={styles.industryTag}>Financial Services</div>
-                            <div className={styles.industryTag}>Energy</div>
-                            <div className={styles.industryTag}>Manufacturing</div>
-                            <div className={styles.industryTag}>Consumer & Retail</div>
-                            <div className={styles.industryTag}>Telecommunications</div>
-                            <div className={styles.industryTag}>Real Estate</div>
-                            <div className={styles.industryTag}>Media</div>
-                            <div className={styles.industryTag}>Logistics</div>
+
+                    <div className={styles.industrySidebar}>
+                        <div className={styles.industryCard}>
+                            <h3>Industries Covered</h3>
+                            <div className={styles.industryGrid}>
+                                {[
+                                    "Healthcare & Pharmaceuticals", "Financial Services", "Manufacturing & Industrial",
+                                    "Telecommunications", "Real Estate", "Technology & Software",
+                                    "Energy & Utilities", "Consumer & Retail", "Transportation & Logistics",
+                                    "Media & Entertainment"
+                                ].map((industry, index) => (
+                                    <div key={index} className={styles.industryItem}>
+                                        <CheckCircle2 size={18} className={styles.industryCheck} />
+                                        <span>{industry}</span>
+                                    </div>
+                                ))}
+                            </div>
+                            <Button href="/contact" className={styles.findExpertBtn} style={{ marginTop: '32px' }}>
+                                Find an Expert
+                            </Button>
                         </div>
                     </div>
                 </div>
             </SectionWrapper>
 
-            <SectionWrapper className="text-center">
-                <h2 className="mb-4">Start Your Project</h2>
-                <p className="mb-8">Contact our team to discuss your research needs.</p>
-                <Button href="/contact">Contact Us</Button>
+            <SectionWrapper background="dark" className={styles.compactCTA}>
+                <div style={{ textAlign: 'center', maxWidth: '800px', margin: '0 auto' }}>
+                    <h2>Ready to Connect with Experts?</h2>
+                    <p>Start with a survey, book a call, or tell us about your research project</p>
+                    <Button href="/contact" style={{ backgroundColor: 'white', color: 'var(--color-primary)', padding: '16px 48px', fontWeight: '700' }}>
+                        Connect with Experts
+                    </Button>
+                </div>
             </SectionWrapper>
         </main>
     );

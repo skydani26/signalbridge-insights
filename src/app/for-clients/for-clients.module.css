@@ -1,120 +1,394 @@
 .hero {
-    padding: 180px 0 160px;
-    background-color: var(--color-primary);
-    color: var(--color-white);
+    background: linear-gradient(135deg, #0f172a 0%, #172554 100%);
+    color: white;
+    padding: 160px 0 120px;
+    position: relative;
+    overflow: hidden;
     text-align: center;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle at center, rgba(59, 130, 246, 0.08) 0%, transparent 70%);
+    animation: meshRotate 20s linear infinite;
+}
+
+@keyframes meshRotate {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
 }
 
 .hero h1 {
     font-family: var(--font-heading);
-    font-size: 3.5rem;
-    font-weight: 600;
-    /* Reduced from 800 */
-    margin-bottom: 32px;
+    font-size: 4rem;
+    font-weight: 800;
+    margin-bottom: 24px;
     color: var(--color-white);
-    letter-spacing: -0.03em;
+    letter-spacing: -0.02em;
+}
+
+.heroHighlight {
+    background: linear-gradient(120deg, #60a5fa, #3b82f6);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 800;
+}
+
+/* Reveal Animations */
+.reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.revealVisible {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 .heroSubtitle {
-    font-size: 1.35rem;
-    color: #F1F5F9;
+    font-size: 1.25rem;
+    color: #CBD5E1;
     max-width: 800px;
-    margin: 0 auto 48px;
+    margin: 0 auto 40px;
     line-height: 1.6;
+}
+
+.heroButtons {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+}
+
+/* Services Section */
+.serviceTag {
+    color: #3B82F6;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-size: 0.85rem;
+    display: block;
+    margin-bottom: 12px;
 }
 
 .servicesGrid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 32px;
+    margin-top: 64px;
 }
 
 .serviceCard {
-    background: var(--color-white);
-    padding: 32px;
-    border: 1px solid var(--color-gray-200);
-    border-radius: 8px;
-    transition: all 0.2s ease;
+    background: white;
+    padding: 40px;
+    border-radius: 12px;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    display: flex;
+    flex-direction: column;
 }
 
 .serviceCard:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.06);
+    border-color: rgba(59, 130, 246, 0.3);
+}
+
+.serviceCardPopular {
+    border: 2px solid #3B82F6;
+    background: #F8FAFF;
+}
+
+.popularBadge {
+    position: absolute;
+    top: 24px;
+    right: 24px;
+    background: #DBEAFE;
+    color: #3B82F6;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.serviceIconBox {
+    width: 48px;
+    height: 48px;
+    background: #F1F5F9;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #334155;
+    margin-bottom: 24px;
+}
+
+.serviceCardPopular .serviceIconBox {
+    background: #DBEAFE;
+    color: #3B82F6;
 }
 
 .serviceTitle {
     font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--color-primary);
+    margin-bottom: 16px;
+}
+
+.serviceDescription {
+    color: #64748B;
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+/* Why Choose Us Section */
+.trustGrid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    margin-top: 40px;
+}
+
+.trustCard {
+    background: white;
+    padding: 24px;
+    border-radius: 16px;
+    border: 1px solid rgba(0, 0, 0, 0.03);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.02);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    display: flex;
+    flex-direction: column;
+}
+
+.trustCard:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.06);
+    border-color: rgba(59, 130, 246, 0.1);
+}
+
+.trustIconBox {
+    width: 40px;
+    height: 40px;
+    background: #F1F5F9;
+    color: var(--color-secondary);
+    /* Using secondary color for icons as requested/suggested */
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.trustTitle {
+    font-size: 1.15rem;
+    font-weight: 700;
     color: var(--color-primary);
     margin-bottom: 12px;
 }
 
-.reasonsGrid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 48px;
+.trustDescription {
+    color: #64748B;
+    font-size: 0.95rem;
+    line-height: 1.6;
 }
 
-.reasonItem h3 {
-    color: var(--color-primary);
-    margin-bottom: 8px;
-}
-
-.clientsList {
+/* Who We Serve Section */
+.serveGrid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 24px;
+    gap: 32px;
+    margin-top: 48px;
+}
+
+.serveCard {
+    background: white;
+    padding: 48px 32px;
+    border-radius: 16px;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.02);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     text-align: center;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
-.clientType {
-    font-weight: 600;
-    font-size: 1.1rem;
-    padding: 24px;
-    background: var(--color-gray-100);
+.serveCard:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+}
+
+.serveIconCircle {
+    width: 64px;
+    height: 64px;
+    background: #EBF2FF;
+    color: #3B82F6;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 24px;
+}
+
+.serveTitle {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--color-primary);
+    margin-bottom: 16px;
+}
+
+.serveDescription {
+    color: #475569;
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+/* Use Cases Section */
+.useCasesSplit {
+    display: flex;
+    gap: 80px;
+    align-items: flex-start;
+}
+
+.useCasesContent {
+    flex: 1;
+}
+
+.useCaseItem {
+    display: flex;
+    gap: 24px;
+    margin-bottom: 20px;
+}
+
+.useCaseIconBox {
+    width: 48px;
+    height: 48px;
+    background: #F1F5F9;
+    color: #475569;
     border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
 }
 
-.useCaseList {
-    list-style: none;
-    padding: 0;
+.useCaseTitle {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--color-primary);
+    margin-bottom: 4px;
+}
+
+.useCaseText {
+    color: #64748B;
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+.industrySidebar {
+    width: 440px;
+}
+
+.industryCard {
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(10px);
+    padding: 40px;
+    border-radius: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.05);
+}
+
+.industryCard h3 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-bottom: 24px;
+}
+
+.industryGrid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 16px;
+    margin-bottom: 32px;
 }
 
-.useCaseList li {
-    padding-left: 24px;
-    position: relative;
-}
-
-.useCaseList li::before {
-    content: '▶';
-    font-size: 0.8rem;
-    position: absolute;
-    left: 0;
-    top: 4px;
-    color: var(--color-primary);
-}
-
-.industryTags {
+.industryItem {
     display: flex;
-    flex-wrap: wrap;
-    gap: 12px;
-    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    font-size: 0.95rem;
+    color: #475569;
 }
 
-.industryTag {
-    background: var(--color-white);
-    border: 1px solid var(--color-gray-200);
-    padding: 8px 16px;
-    border-radius: 20px;
-    color: var(--color-text-main);
-    font-size: 0.9rem;
+.industryCheck {
+    color: var(--color-secondary);
+}
+
+.findExpertBtn {
+    width: 100%;
+    background: #1E293B;
+    color: white;
+    padding: 16px;
+    border-radius: 8px;
+    font-weight: 700;
+    text-align: center;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+}
+
+.findExpertBtn:hover {
+    background: #0F172A;
+    transform: translateY(-2px);
+}
+
+/* Compact CTA for Footer Transition */
+.compactCTA {
+    padding: 80px 0 !important;
+}
+
+.compactCTA h2 {
+    font-size: 2.25rem !important;
+    margin-bottom: 16px !important;
+}
+
+.compactCTA p {
+    font-size: 1.1rem !important;
+    margin-bottom: 32px !important;
 }
 
 @media (max-width: 1024px) {
+    .trustGrid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .serveGrid {
+        grid-template-columns: 1fr;
+        max-width: 600px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
     .hero h1 {
-        font-size: 2.75rem;
+        font-size: 3rem;
+    }
+
+    .servicesGrid {
+        grid-template-columns: repeat(2, 1fr);
     }
 }
 
@@ -123,10 +397,16 @@
         padding: 120px 0 100px;
     }
 
-    .servicesGrid,
-    .reasonsGrid,
-    .clientsList,
-    .useCaseList {
+    .servicesGrid {
         grid-template-columns: 1fr;
+    }
+
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .heroButtons {
+        flex-direction: column;
+        align-items: center;
     }
 }
