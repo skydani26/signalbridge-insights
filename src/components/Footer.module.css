@@ -16,8 +16,8 @@
     display: flex;
     justify-content: flex-start;
     flex-wrap: wrap;
-    gap: 96px;
-    /* Reduced by 20% from 120px */
+    gap: 116px;
+    /* Increased by 20% from 96px */
     margin-bottom: 32px;
     /* Reduced from 48px */
     padding-left: 0;
@@ -76,8 +76,8 @@
 
 .links {
     display: flex;
-    gap: 64px;
-    /* Reduced by 20% from 80px */
+    gap: 78px;
+    /* Increased by 20% from 64px */
     flex-wrap: wrap;
     flex: 1;
 }
