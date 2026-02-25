@@ -101,19 +101,21 @@
 }
 
 .statItem h3 {
-    font-size: 2.5rem;
+    font-size: 1.8rem;
     color: var(--color-primary);
     margin-bottom: 4px;
     font-weight: 800;
+    letter-spacing: -0.02em;
 }
 
 .statItem p {
     color: var(--color-text-light);
-    font-size: 0.9rem;
+    font-size: 0.7rem;
     text-transform: uppercase;
-    letter-spacing: 1px;
+    letter-spacing: 1.2px;
     font-weight: 600;
     margin-bottom: 0;
+    opacity: 0.8;
 }
 
 .formatGrid {

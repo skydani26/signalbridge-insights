@@ -170,7 +170,7 @@
 /* Stats Section */
 .statsSection {
     background-color: var(--color-primary);
-    padding: 160px 0;
+    padding: 64px 0;
     color: white;
 }
 
@@ -179,28 +179,26 @@
     justify-content: space-around;
     text-align: center;
     flex-wrap: wrap;
-    gap: 40px;
+    gap: 16px;
 }
 
 .statNumber {
     font-family: var(--font-heading);
-    font-size: 3.2rem;
-    /* Reduced by ~30% from 4.5rem */
+    font-size: 1.8rem;
     font-weight: 600;
-    /* Reduced weight */
     color: var(--color-secondary);
-    margin-bottom: 8px;
+    margin-bottom: 4px;
     line-height: 1;
-    letter-spacing: -0.03em;
+    letter-spacing: -0.02em;
 }
 
 .statLabel {
     color: var(--color-text-light);
-    font-size: 0.85rem;
-    /* Reduced by ~30% from 1.1rem */
-    font-weight: 500;
+    font-size: 0.7rem;
+    font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 1.2px;
+    opacity: 0.8;
 }
 
 /* Our Services Section */
