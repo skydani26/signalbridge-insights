@@ -2,10 +2,9 @@
   <!-- Elite Navy Base -->
   <rect width="512" height="512" rx="112" fill="#0F172A"/>
   
-  <!-- Stylized SignalBridge 'S' -->
-  <path d="M160 360C160 360 200 290 256 290C312 290 352 360 352 360" stroke="#3B82F6" stroke-width="48" stroke-linecap="round"/>
-  <path d="M160 152C160 152 200 222 256 222C312 222 352 152 352 152" stroke="#3B82F6" stroke-width="48" stroke-linecap="round"/>
+  <!-- Precise SignalBridge 'S' -->
+  <path d="M360 180C360 146.863 333.137 120 300 120H212C178.863 120 152 146.863 152 180V220C152 253.137 178.863 280 212 280H300C333.137 280 360 306.863 360 340V380C360 413.137 333.137 440 300 440H212C178.863 440 152 413.137 152 380" stroke="#3B82F6" stroke-width="56" stroke-linecap="round" stroke-linejoin="round"/>
   
-  <!-- Central Professional Node -->
+  <!-- Professional Accent Node -->
   <rect x="232" y="232" width="48" height="48" rx="8" fill="white"/>
 </svg>
