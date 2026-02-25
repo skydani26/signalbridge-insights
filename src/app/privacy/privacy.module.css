@@ -1,0 +1,140 @@
+.page {
+    padding-top: 80px;
+}
+
+.hero {
+    background: white;
+    padding: 100px 20px 60px;
+    text-align: center;
+    border-bottom: 1px solid #F1F5F9;
+}
+
+.heroContent {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.heroContent h1 {
+    font-size: 3.5rem;
+    font-weight: 850;
+    color: var(--color-primary);
+    letter-spacing: -0.03em;
+    margin-bottom: 24px;
+}
+
+.heroSubtitle {
+    font-size: 1.25rem;
+    color: var(--color-text-light);
+    line-height: 1.6;
+}
+
+.contentContainer {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 80px 20px;
+}
+
+.privacySection {
+    margin-bottom: 64px;
+}
+
+.privacySection h2 {
+    font-size: 1.75rem;
+    font-weight: 800;
+    color: var(--color-primary);
+    margin-bottom: 24px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.sectionIcon {
+    color: var(--color-secondary);
+}
+
+.privacyText {
+    font-size: 1.1rem;
+    color: #334155;
+    line-height: 1.8;
+}
+
+.privacyText p {
+    margin-bottom: 20px;
+}
+
+.privacyList {
+    list-style: none;
+    padding: 0;
+    margin: 24px 0;
+}
+
+.privacyList li {
+    position: relative;
+    padding-left: 32px;
+    margin-bottom: 16px;
+    font-size: 1.05rem;
+    color: #334155;
+}
+
+.privacyList li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 10px;
+    width: 12px;
+    height: 2px;
+    background-color: var(--color-secondary);
+}
+
+.infobox {
+    background-color: #F8FAFC;
+    border: 1px solid #E2E8F0;
+    border-left: 4px solid var(--color-secondary);
+    padding: 32px;
+    border-radius: 8px;
+    margin: 40px 0;
+}
+
+.infobox h4 {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--color-primary);
+    margin-bottom: 12px;
+}
+
+.infobox p {
+    margin: 0;
+    font-size: 1rem;
+    color: #64748B;
+    line-height: 1.6;
+}
+
+.footerNote {
+    margin-top: 100px;
+    padding-top: 40px;
+    border-top: 1px solid #F1F5F9;
+    text-align: center;
+}
+
+.footerNote p {
+    font-size: 0.875rem;
+    color: #94A3B8;
+    margin-bottom: 24px;
+}
+
+.reveal {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.6s ease-out;
+}
+
+.revealVisible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+@media (max-width: 768px) {
+    .heroContent h1 {
+        font-size: 2.5rem;
+    }
+}

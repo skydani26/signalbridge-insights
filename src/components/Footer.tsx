@@ -39,8 +39,8 @@ const Footer = () => {
                         </div>
                         <div className={styles.column}>
                             <h4>Trust & Legal</h4>
-                            <Link href="/for-experts">Compliance Framework</Link>
-                            <Link href="/contact">Privacy Protocol</Link>
+                            <Link href="/compliance">Compliance Framework</Link>
+                            <Link href="/privacy">Privacy Protocol</Link>
                             <Link href="/contact">Terms of Service</Link>
                         </div>
                     </div>

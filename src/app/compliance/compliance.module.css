@@ -1,0 +1,226 @@
+.page {
+    padding-top: 80px;
+}
+
+.hero {
+    background: linear-gradient(135deg, #0F172A 0%, #1E293B 100%);
+    padding: 100px 20px;
+    color: white;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: radial-gradient(circle at 2px 2px, rgba(255, 255, 255, 0.05) 1px, transparent 0);
+    background-size: 32px 32px;
+    pointer-events: none;
+}
+
+.heroContent {
+    position: relative;
+    z-index: 1;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.heroContent h1 {
+    font-size: 3.5rem;
+    font-weight: 850;
+    letter-spacing: -0.03em;
+    margin-bottom: 24px;
+}
+
+.heroHighlight {
+    color: var(--color-secondary);
+}
+
+.heroSubtitle {
+    font-size: 1.25rem;
+    color: #94A3B8;
+    line-height: 1.6;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.sectionTitle {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: var(--color-primary);
+    margin-bottom: 16px;
+}
+
+.sectionSubtitle {
+    font-size: 1.1rem;
+    color: var(--color-text-light);
+    max-width: 700px;
+    margin: 0 auto 64px;
+}
+
+.pillarGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+    margin-top: 48px;
+}
+
+.pillarCard {
+    background: white;
+    padding: 40px;
+    border-radius: 12px;
+    border: 1px solid #E2E8F0;
+    transition: all 0.3s ease;
+}
+
+.pillarCard:hover {
+    border-color: var(--color-secondary);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+.pillarIconBox {
+    width: 48px;
+    height: 48px;
+    background: #F1F5F9;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-secondary);
+    margin-bottom: 24px;
+}
+
+.pillarTitle {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--color-primary);
+    margin-bottom: 16px;
+}
+
+.pillarText {
+    color: var(--color-text-light);
+    line-height: 1.6;
+}
+
+/* Agreement Viewer */
+.agreementSection {
+    background-color: white;
+    padding: 80px 0;
+}
+
+.agreementContainer {
+    max-width: 800px;
+    margin: 0 auto;
+    background: white;
+    border: 1px solid #E2E8F0;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.08);
+    border-radius: 4px;
+    padding: 60px 80px;
+}
+
+.agreementHeader {
+    border-bottom: 2px solid #F1F5F9;
+    padding-bottom: 32px;
+    margin-bottom: 48px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.agreementTitle h2 {
+    font-size: 2rem;
+    font-weight: 800;
+    color: var(--color-primary);
+    margin: 0;
+}
+
+.agreementVersion {
+    font-size: 0.875rem;
+    color: var(--color-text-light);
+    font-family: var(--font-mono, monospace);
+}
+
+.clause {
+    margin-bottom: 40px;
+}
+
+.clause h3 {
+    font-size: 1.1rem;
+    font-weight: 800;
+    color: var(--color-primary);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 16px;
+    display: flex;
+    gap: 12px;
+}
+
+.clauseNumber {
+    color: var(--color-secondary);
+}
+
+.clauseText {
+    font-size: 1rem;
+    color: #334155;
+    line-height: 1.7;
+}
+
+.clauseList {
+    list-style: none;
+    padding: 0;
+    margin: 16px 0 0 24px;
+}
+
+.clauseList li {
+    position: relative;
+    margin-bottom: 12px;
+    padding-left: 20px;
+}
+
+.clauseList li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: var(--color-secondary);
+}
+
+.downloadSection {
+    text-align: center;
+    margin-top: 48px;
+}
+
+.agreementFooter {
+    margin-top: 64px;
+    padding-top: 32px;
+    border-top: 1px solid #F1F5F9;
+    text-align: center;
+    font-size: 0.875rem;
+    color: var(--color-text-light);
+}
+
+@media (max-width: 900px) {
+    .pillarGrid {
+        grid-template-columns: 1fr;
+    }
+
+    .agreementContainer {
+        padding: 40px 20px;
+        margin: 0 20px;
+    }
+}
+
+.reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.revealVisible {
+    opacity: 1;
+    transform: translateY(0);
+}
