@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   title: "SignalBridge Insights",
   description: "Your Gateway to Expert Knowledge",
   icons: {
-    icon: '/logo.svg',
+    icon: '/favicon.svg',
   },
 };
 

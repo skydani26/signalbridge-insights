@@ -1,0 +1,11 @@
+<svg width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Elite Navy Base -->
+  <rect width="512" height="512" rx="112" fill="#0F172A"/>
+  
+  <!-- Stylized SignalBridge 'S' -->
+  <path d="M160 360C160 360 200 290 256 290C312 290 352 360 352 360" stroke="#3B82F6" stroke-width="48" stroke-linecap="round"/>
+  <path d="M160 152C160 152 200 222 256 222C312 222 352 152 352 152" stroke="#3B82F6" stroke-width="48" stroke-linecap="round"/>
+  
+  <!-- Central Professional Node -->
+  <rect x="232" y="232" width="48" height="48" rx="8" fill="white"/>
+</svg>
