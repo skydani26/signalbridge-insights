@@ -1,13 +1,37 @@
 /* Hero Section */
 .hero {
+    background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+    color: white;
     padding: 180px 0 160px;
     /* Slightly more top for sticky header */
-    background-color: var(--color-primary);
-    /* Deep Navy */
     text-align: center;
     position: relative;
     overflow: hidden;
 }
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle at center, rgba(59, 130, 246, 0.08) 0%, transparent 70%);
+    animation: meshRotate 25s linear infinite;
+    pointer-events: none;
+}
+
+@keyframes meshRotate {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+
 
 .heroTitle {
     font-size: 3.25rem;
@@ -306,35 +330,7 @@
     text-align: center;
 }
 
-.hero {
-    background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
-    color: white;
-    padding: 160px 0 120px;
-    position: relative;
-    overflow: hidden;
-    text-align: center;
-}
 
-.hero::before {
-    content: '';
-    position: absolute;
-    top: -50%;
-    left: -50%;
-    width: 200%;
-    height: 200%;
-    background: radial-gradient(circle at center, rgba(59, 130, 246, 0.08) 0%, transparent 70%);
-    animation: meshRotate 25s linear infinite;
-}
-
-@keyframes meshRotate {
-    0% {
-        transform: rotate(0deg);
-    }
-
-    100% {
-        transform: rotate(360deg);
-    }
-}
 
 .highlightBlue {
     background: linear-gradient(120deg, #60a5fa, #3b82f6);
@@ -437,7 +433,22 @@
     text-align: center;
     padding: 160px 0;
     color: white;
+    position: relative;
+    overflow: hidden;
 }
+
+.ctaSection::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle at center, rgba(59, 130, 246, 0.08) 0%, transparent 70%);
+    animation: meshRotate 25s linear infinite;
+    pointer-events: none;
+}
+
 
 .ctaTitle {
     color: white;
