@@ -4,7 +4,7 @@ import React, { useEffect } from 'react';
 import SectionWrapper from "@/components/SectionWrapper";
 import Button from "@/components/Button";
 import styles from "./about.module.css";
-import { Globe, Users, Target, ShieldCheck, Award, TrendingUp, Handshake, Network, Zap } from "lucide-react";
+import { Globe, Users, Target, ShieldCheck, Award, TrendingUp, Handshake, Network, Zap, Building2 } from "lucide-react";
 
 export default function About() {
     useEffect(() => {
@@ -35,17 +35,20 @@ export default function About() {
 
             <SectionWrapper id="mission">
                 <div className={`${styles.missionGrid} ${styles.reveal}`}>
-                    <div>
-                        <h2 className="mb-4">Our Mission</h2>
-                        <p className="mb-4">
-                            To connect decision-makers with expert knowledge that enables faster, smarter, and more informed decisions.
+                    <div className={styles.missionContent}>
+                        <h2>Our Mission</h2>
+                        <p>
+                            SignalBridge Insights was founded with a simple mission: to connect decision-makers with the expertise they need to make smarter, faster, and more informed choices.
                         </p>
                         <p>
-                            In a world overflowing with data, true expertise is rare. We cut through the noise to deliver the specific, verified human intelligence that drives competitive advantage.
+                            We recognized that the traditional expert network model was broken—slow matching, inconsistent quality, and compliance concerns were holding back the industry. We set out to change that.
+                        </p>
+                        <p>
+                            Today, SignalBridge serves leading hedge funds, private equity firms, consulting companies, and corporations across the globe. Our platform combines cutting-edge technology with human expertise to deliver unmatched results.
                         </p>
                     </div>
-                    <div style={{ backgroundColor: 'var(--color-primary)', height: '400px', borderRadius: '16px', display: 'flex', alignItems: 'center', justifyContent: 'center', overflow: 'hidden' }}>
-                        <Users size={120} color="white" strokeWidth={1} style={{ opacity: 0.2 }} />
+                    <div className={styles.buildingBox}>
+                        <Building2 className={styles.buildingIcon} strokeWidth={1.5} />
                     </div>
                 </div>
             </SectionWrapper>

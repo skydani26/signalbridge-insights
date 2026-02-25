@@ -87,6 +87,135 @@
     line-height: 1.6;
 }
 
+/* Mission Section Overhaul */
+.missionGrid {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: 80px;
+    align-items: center;
+}
+
+.missionContent h2 {
+    font-size: 3rem;
+    font-weight: 800;
+    color: var(--color-primary);
+    margin-bottom: 24px;
+    letter-spacing: -0.04em;
+}
+
+.missionContent p {
+    font-size: 1.15rem;
+    color: var(--color-text-light);
+    line-height: 1.6;
+    margin-bottom: 24px;
+}
+
+.buildingBox {
+    background-color: #F1F5F9;
+    /* Very light institutional gray */
+    aspect-ratio: 1 / 1;
+    border-radius: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.05);
+    position: relative;
+    max-width: 400px;
+    margin-left: auto;
+}
+
+.buildingIcon {
+    color: var(--color-primary);
+    width: 120px;
+    height: 120px;
+}
+
+/* Stats Grid for About Page */
+.statsGrid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px;
+    text-align: center;
+}
+
+.statBox h3 {
+    font-size: 3rem;
+    color: var(--color-secondary);
+    margin-bottom: 8px;
+    font-weight: 800;
+}
+
+.statBox p {
+    color: rgba(255, 255, 255, 0.7);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
+/* Values Grid */
+.valuesGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+}
+
+.valueCard {
+    background: white;
+    padding: 40px;
+    border-radius: 12px;
+    border: 1px solid var(--color-gray-200);
+    transition: all 0.3s ease;
+}
+
+.valueCard:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.05);
+    border-color: var(--color-secondary);
+}
+
+.valueIcon {
+    width: 56px;
+    height: 56px;
+    background: #f0f4ff;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-secondary);
+    margin-bottom: 24px;
+}
+
+.sectionTag {
+    color: var(--color-secondary);
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    letter-spacing: 0.25em;
+    margin-bottom: 20px;
+    display: block;
+}
+
+.sectionTitle {
+    color: #000000;
+    font-size: 3.5rem;
+    font-weight: 800;
+    margin-bottom: 24px;
+    letter-spacing: -0.04em;
+    line-height: 1.2;
+}
+
+.sectionDescription {
+    font-size: 1.25rem;
+    color: var(--color-text-light);
+    line-height: 1.6;
+}
+
+.presenceContent {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
 @media (max-width: 1024px) {
     .hero h1 {
         font-size: 2.75rem;
