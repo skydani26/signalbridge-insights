@@ -947,6 +947,19 @@
         padding: 40px 24px 24px;
     }
 
+    .processIconBox {
+        margin-bottom: 8px;
+        margin-top: 10px;
+    }
+
+    .processCardTitle {
+        font-size: 1.2rem;
+    }
+
+    .processCardText {
+        font-size: 0.9rem;
+    }
+
     .cardNumber {
         font-size: 2.5rem;
         /* Slightly larger for better presencia */
@@ -959,11 +972,6 @@
     }
 
     /* Use a darker color with low opacity for an "Elite" look */
-
-    .processIconBox {
-        margin-bottom: 8px;
-        margin-top: 10px;
-    }
 
     .processCardTitle {
         font-size: 1.2rem;
@@ -1129,6 +1137,17 @@
         grid-template-columns: 1fr;
         max-width: 500px;
         margin: 0 auto;
+    }
+
+    .cardNumber {
+        font-size: 2.5rem !important;
+        /* Force visibility over base class */
+        top: 8px !important;
+        left: 16px !important;
+        opacity: 0.18 !important;
+        color: var(--color-primary) !important;
+        font-weight: 900 !important;
+        display: block !important;
     }
 }
 
