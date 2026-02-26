@@ -924,15 +924,10 @@
 
 @media (max-width: 1024px) {
     .processGrid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 32px;
-    }
-}
-
-@media (max-width: 768px) {
-    .processGrid {
         grid-template-columns: 1fr;
-        gap: 24px;
+        gap: 32px;
+        max-width: 500px;
+        margin: 0 auto;
     }
 }
 
@@ -949,17 +944,20 @@
 
 @media (max-width: 768px) {
     .processCard {
-        padding: 48px 24px 24px;
+        padding: 40px 24px 24px;
     }
 
     .cardNumber {
-        font-size: 2.75rem;
-        top: 8px;
-        left: 16px;
+        font-size: 2rem;
+        top: 12px;
+        left: 20px;
+        opacity: 0.2;
+        /* Subtler for mobile */
     }
 
     .processIconBox {
-        margin-bottom: 12px;
+        margin-bottom: 8px;
+        margin-top: 10px;
     }
 
     .processCardTitle {
