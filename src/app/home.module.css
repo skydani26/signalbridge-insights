@@ -372,7 +372,8 @@
 }
 
 .sectionSubtitle {
-    font-size: 1.15rem;
+    font-size: 1rem;
+    /* Slightly smaller for mobile */
     color: var(--color-text-light);
     line-height: 1.6;
 }
@@ -465,6 +466,36 @@
     line-height: 1.6;
     font-size: 0.95rem;
     /* Slightly smaller for text fit */
+}
+
+@media (max-width: 768px) {
+    .serviceCard {
+        padding: 40px 24px 24px;
+    }
+
+    .badge {
+        position: absolute;
+        top: 12px;
+        left: 24px;
+        /* Move to top-left to avoid icon overlap */
+        right: auto;
+        padding: 4px 10px;
+        font-size: 0.65rem;
+    }
+
+    .iconBox {
+        margin-top: 20px;
+        /* Give room below the badge */
+        margin-bottom: 16px;
+    }
+
+    .serviceTitle {
+        font-size: 1.15rem;
+    }
+
+    .serviceDescription {
+        font-size: 0.9rem;
+    }
 }
 
 /* Why Us Overhaul */
@@ -723,8 +754,8 @@
 
 .testimonialTitle {
     color: var(--color-primary);
-    font-size: 2.75rem;
-    /* Reduced from 3.5rem */
+    font-size: 2.25rem;
+    /* Reduced for mobile */
     font-weight: 600;
     margin-bottom: 24px;
     letter-spacing: -0.04em;
@@ -733,8 +764,8 @@
 
 .processTitle {
     color: var(--color-primary);
-    font-size: 2.75rem;
-    /* Reduced from 3.5rem */
+    font-size: 2.25rem;
+    /* Reduced for mobile */
     font-weight: 600;
     margin-bottom: 24px;
     letter-spacing: -0.04em;
