@@ -1055,6 +1055,30 @@
     text-align: left;
 }
 
+@media (max-width: 768px) {
+    .testCard {
+        padding: 20px 24px 24px;
+    }
+
+    .testText {
+        font-size: 0.95rem;
+        margin-bottom: 20px;
+    }
+
+    .testAuthor {
+        font-size: 0.95rem;
+    }
+
+    .testRole {
+        font-size: 0.8rem;
+    }
+
+    .testIconBox {
+        transform: scale(0.8);
+        margin-left: -8px;
+    }
+}
+
 .testCard:hover {
     transform: translateY(-8px);
     box-shadow: var(--shadow-hover);
@@ -1130,7 +1154,11 @@
     .servicesGrid,
     .whyUsGrid,
     .testimonialsGrid {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: 1fr;
+        /* Force stacking for better mobile readability */
+        max-width: 500px;
+        margin: 0 auto;
+        gap: 32px;
     }
 
     .processGrid {
