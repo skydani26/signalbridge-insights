@@ -6,7 +6,7 @@
     background: white;
     padding: 100px 20px 60px;
     text-align: center;
-    border-bottom: 1px solid #F1F5F9;
+    border-bottom: 1px solid var(--color-background-soft);
 }
 
 .heroContent {
@@ -23,7 +23,7 @@
 }
 
 .heroSubtitle {
-    font-size: 1.25rem;
+    font-size: 1.15rem;
     color: var(--color-text-light);
     line-height: 1.6;
     margin-bottom: 48px;
@@ -61,7 +61,7 @@
 
 .privacyText {
     font-size: 1.1rem;
-    color: #334155;
+    color: var(--color-text-main);
     line-height: 1.8;
 }
 
@@ -80,7 +80,7 @@
     padding-left: 32px;
     margin-bottom: 16px;
     font-size: 1.05rem;
-    color: #334155;
+    color: var(--color-text-main);
 }
 
 .privacyList li::before {
@@ -94,8 +94,8 @@
 }
 
 .infobox {
-    background-color: #F8FAFC;
-    border: 1px solid #E2E8F0;
+    background-color: var(--color-background-soft);
+    border: 1px solid var(--color-gray-200);
     border-left: 4px solid var(--color-secondary);
     padding: 32px;
     border-radius: 8px;
@@ -112,20 +112,20 @@
 .infobox p {
     margin: 0;
     font-size: 1rem;
-    color: #64748B;
+    color: var(--color-text-light);
     line-height: 1.6;
 }
 
 .footerNote {
     margin-top: 100px;
     padding-top: 40px;
-    border-top: 1px solid #F1F5F9;
+    border-top: 1px solid var(--color-background-soft);
     text-align: center;
 }
 
 .footerNote p {
     font-size: 0.875rem;
-    color: #94A3B8;
+    color: var(--color-text-light);
     margin-bottom: 24px;
 }
 

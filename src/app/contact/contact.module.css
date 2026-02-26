@@ -81,8 +81,8 @@
 }
 
 .heroSubtitle {
-    font-size: 1.35rem;
-    color: #F1F5F9;
+    font-size: 1.15rem;
+    color: var(--color-background-soft);
     max-width: 800px;
     margin: 0 auto 48px;
     line-height: 1.6;
@@ -118,7 +118,7 @@
     width: 40px;
     /* Reduced from 44px */
     height: 40px;
-    background: #f0f4ff;
+    background: var(--color-accent-soft);
     border: 1px solid rgba(59, 130, 246, 0.2);
     border-radius: 8px;
     display: flex;
@@ -324,7 +324,7 @@
 }
 
 .supportBtn:hover {
-    background-color: #f8fafc !important;
+    background-color: var(--color-background-soft) !important;
     transform: translateY(-2px);
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
 }

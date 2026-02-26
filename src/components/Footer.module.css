@@ -1,7 +1,6 @@
 .footer {
     background-color: var(--color-white);
-    padding: 48px 0 32px;
-    /* Reduced by another 20% */
+    padding: 80px 0 32px;
     border-top: 1px solid var(--color-gray-100);
     color: var(--color-text-light);
 }
@@ -16,9 +15,8 @@
     display: flex;
     justify-content: flex-start;
     flex-wrap: wrap;
-    gap: 64px;
-    /* Reduced for 4-column fit */
-    margin-bottom: 48px;
+    gap: 80px;
+    margin-bottom: 64px;
     padding-left: 0;
 }
 
@@ -39,6 +37,7 @@
 .logoIcon {
     width: 28px;
     height: 28px;
+    aspect-ratio: 1/1;
     background-color: var(--color-primary);
     color: white;
     display: flex;
@@ -48,6 +47,7 @@
     font-size: 1.1rem;
     border-radius: 5px;
     font-family: var(--font-sans);
+    flex-shrink: 0;
 }
 
 .logoText {
@@ -116,7 +116,7 @@
     align-items: center;
     flex-wrap: wrap;
     gap: 24px;
-    color: #94a3b8;
+    color: var(--color-text-light);
     font-size: 0.8rem;
     /* Reduced from 0.95rem */
 }
@@ -127,17 +127,20 @@
 }
 
 .legalLinks span {
-    color: #94a3b8;
+    color: var(--color-text-light);
     background: var(--color-gray-100);
-    padding: 4px 12px;
-    border-radius: 4px;
+    padding: 6px 14px;
+    border: 1px solid var(--color-gray-200);
+    border-radius: 6px;
     font-size: 0.75rem;
     font-weight: 600;
+    display: inline-flex;
+    align-items: center;
 }
 
 .institutionalTag {
     color: var(--color-primary);
-    font-weight: 600;
+    font-weight: 700;
 }
 
 @media (max-width: 768px) {

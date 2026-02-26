@@ -1,5 +1,5 @@
 .section {
-    padding: 64px 0;
+    padding: 100px 0;
     width: 100%;
 }
 
@@ -7,7 +7,7 @@
 .container {
     max-width: var(--max-width);
     margin: 0 auto;
-    padding: 0 24px;
+    padding: 0 40px;
 }
 
 .white {
@@ -43,7 +43,7 @@
 .container {
     max-width: var(--max-width);
     margin: 0 auto;
-    padding: 0 24px;
+    padding: 0 40px;
     position: relative;
     z-index: 2;
 }

@@ -80,11 +80,10 @@
 }
 
 .heroSubtitle {
-    font-size: 1.25rem;
-    color: #F1F5F9;
+    font-size: 1.15rem;
+    color: var(--color-background-soft);
     max-width: 900px;
-    margin: 0 auto 40px;
-    /* Reduced to pull buttons up */
+    margin: 0 auto 48px;
     line-height: 1.6;
     font-weight: 400;
 }
@@ -96,7 +95,7 @@
 }
 
 .btnHeroPrimary {
-    background-color: #f8fafc;
+    background-color: var(--color-background-soft);
     color: var(--color-primary);
     padding: 18px 40px;
     border-radius: 8px;
@@ -198,7 +197,7 @@
 /* Client Success Overhaul - Aligned with Why Us Style */
 .testimonialSection {
     background-color: var(--color-background-soft);
-    padding: 64px 0;
+    padding: 100px 0;
     /* Reduced from 80px */
     text-align: center;
 }
@@ -206,14 +205,14 @@
 /* Credibility Section */
 .credibilitySection {
     background-color: white;
-    padding: 64px 0;
+    padding: 100px 0;
     /* Reduced from 80px */
     text-align: center;
     border-bottom: 1px solid var(--color-gray-200);
 }
 
 .credibilityTitle {
-    color: #94a3b8;
+    color: var(--color-text-light);
     font-size: 0.85rem;
     font-weight: 700;
     letter-spacing: 2px;
@@ -293,7 +292,7 @@
 /* Our Services Section */
 .servicesSection {
     background-color: white;
-    padding: 64px 0;
+    padding: 100px 0;
     /* Reduced from 100px 0 64px */
 }
 
@@ -317,7 +316,7 @@
 }
 
 .exploreBtn:hover {
-    background-color: #1a3055 !important;
+    background-color: var(--color-primary) !important;
     transform: translateY(-2px);
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
@@ -332,14 +331,14 @@
     font-family: var(--font-heading);
     font-size: 2.5rem;
     font-weight: 600;
-    color: #000000;
+    color: var(--color-primary);
     margin-bottom: 24px;
     line-height: 1.2;
     letter-spacing: -0.04em;
 }
 
 .sectionSubtitle {
-    font-size: 1.25rem;
+    font-size: 1.15rem;
     color: var(--color-text-light);
     line-height: 1.6;
 }
@@ -348,6 +347,19 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 32px;
+}
+
+@media (max-width: 1024px) {
+    .servicesGrid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .servicesGrid {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
 }
 
 .serviceCard {
@@ -395,7 +407,7 @@
 .iconBox {
     width: 40px;
     height: 40px;
-    background: #f0f4ff;
+    background: var(--color-accent-soft);
     border: 1px solid rgba(59, 130, 246, 0.2);
     /* Unified Blue Outline */
     border-radius: 8px;
@@ -424,7 +436,7 @@
 /* Why Us Overhaul */
 .whyUsSection {
     background-color: var(--color-background-soft);
-    padding: 64px 0;
+    padding: 100px 0;
     /* Reduced from 100px 0 64px */
     text-align: center;
 }
@@ -473,7 +485,7 @@
 }
 
 .whyUsTitle {
-    color: #000000;
+    color: var(--color-primary);
     /* Bold Black as requested */
     font-size: 2.75rem;
     /* Slightly bigger */
@@ -487,7 +499,7 @@
     color: var(--color-text-light);
     max-width: 700px;
     margin: 0 auto 48px;
-    font-size: 1.2rem;
+    font-size: 1.15rem;
     line-height: 1.6;
 }
 
@@ -495,6 +507,19 @@
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 24px;
+}
+
+@media (max-width: 1024px) {
+    .whyUsGrid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .whyUsGrid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
 }
 
 .whyCard {
@@ -515,7 +540,7 @@
 .whyIconBox {
     width: 40px;
     height: 40px;
-    background: #f0f4ff;
+    background: var(--color-accent-soft);
     border: 1px solid rgba(59, 130, 246, 0.2);
     /* Unified Blue Outline */
     border-radius: 8px;
@@ -584,7 +609,7 @@
     color: rgba(255, 255, 255, 0.7);
     max-width: 800px;
     margin: 0 auto 56px;
-    font-size: 1.25rem;
+    font-size: 1.15rem;
     line-height: 1.6;
 }
 
@@ -605,7 +630,7 @@
 }
 
 .btnCtaPrimary:hover {
-    background-color: #f8fafc !important;
+    background-color: var(--color-background-soft) !important;
     transform: translateY(-2px);
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
 }
@@ -663,7 +688,7 @@
 }
 
 .testimonialTitle {
-    color: #000000;
+    color: var(--color-primary);
     font-size: 2.75rem;
     /* Reduced from 3.5rem */
     font-weight: 600;
@@ -673,7 +698,7 @@
 }
 
 .processTitle {
-    color: #000000;
+    color: var(--color-primary);
     font-size: 2.75rem;
     /* Reduced from 3.5rem */
     font-weight: 600;
@@ -686,7 +711,7 @@
     color: var(--color-text-light);
     max-width: 800px;
     margin: 0 auto 80px;
-    font-size: 1.25rem;
+    font-size: 1.15rem;
     line-height: 1.6;
 }
 
@@ -717,7 +742,7 @@
     font-size: 2.75rem;
     /* Reduced from 3.5rem */
     font-weight: 600;
-    color: #000000;
+    color: var(--color-primary);
     /* Standardized to Black */
     margin-bottom: 24px;
     line-height: 1.15;
@@ -725,7 +750,7 @@
 }
 
 .coverageSubtitle {
-    font-size: 1.25rem;
+    font-size: 1.15rem;
     color: var(--color-text-light);
     line-height: 1.6;
     margin-bottom: 40px;
@@ -798,14 +823,14 @@
 .coverageStatValue {
     font-size: 1.75rem;
     font-weight: 800;
-    color: #000000;
+    color: var(--color-primary);
     margin-bottom: 4px;
     display: block;
 }
 
 .coverageStatLabel {
     font-size: 0.9rem;
-    color: #64748b;
+    color: var(--color-text-light);
     font-weight: 500;
 }
 
@@ -822,20 +847,19 @@
     color: var(--color-text-light);
     max-width: 800px;
     margin: 0 auto 80px;
-    font-size: 1.25rem;
+    font-size: 1.15rem;
     line-height: 1.6;
 }
 
 .processGrid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 32px;
+    gap: 48px;
 }
 
 .processCard {
     background: #ffffff;
-    padding: 80px 24px 32px;
-    /* Increased top padding to separate from number */
+    padding: 64px 32px 32px;
     border-radius: 12px;
     text-align: left;
     transition: all 0.3s ease;
@@ -855,7 +879,7 @@
     left: 24px;
     font-size: 3.5rem;
     font-weight: 800;
-    color: #f1f5f9;
+    color: var(--color-background-soft);
     /* Fainter number */
     line-height: 1;
     z-index: 1;
@@ -867,7 +891,7 @@
     width: 40px;
     /* Reduced from 44px */
     height: 40px;
-    background: #f0f4ff;
+    background: var(--color-accent-soft);
     border: 1px solid rgba(59, 130, 246, 0.2);
     border-radius: 8px;
     display: flex;
@@ -883,7 +907,7 @@
 .processCardTitle {
     font-size: 1.35rem;
     font-weight: 700;
-    color: #000000;
+    color: var(--color-primary);
     margin-bottom: 8px;
     /* Reduced from 16px */
     position: relative;
@@ -901,7 +925,7 @@
 .testimonialsGrid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 24px;
+    gap: 48px;
 }
 
 .testCard {
@@ -923,7 +947,7 @@
 }
 
 .testIconBox {
-    color: #e2e8f0;
+    color: var(--color-gray-200);
     margin-bottom: -10px;
     margin-left: -4px;
     display: flex;
@@ -935,7 +959,7 @@
     font-size: 1.05rem;
     font-style: italic;
     line-height: 1.6;
-    color: #4b5563;
+    color: var(--color-text-light);
     margin-bottom: 24px;
     flex-grow: 1;
 }
@@ -946,20 +970,20 @@
 
 .testSeparator {
     height: 1px;
-    background: #f1f5f9;
+    background: var(--color-background-soft);
     width: 100%;
     margin-bottom: 24px;
 }
 
 .testAuthor {
     font-weight: 700;
-    color: #000000;
+    color: var(--color-primary);
     font-size: 1rem;
     margin-bottom: 2px;
 }
 
 .testRole {
-    color: #64748b;
+    color: var(--color-text-light);
     font-size: 0.85rem;
     font-weight: 400;
 }
@@ -982,6 +1006,7 @@
     .coverageSubtitle {
         margin-left: auto;
         margin-right: auto;
+        font-size: 1.1rem;
     }
 
     .checklistGrid {
@@ -992,7 +1017,7 @@
     .processGrid,
     .whyUsGrid,
     .testimonialsGrid {
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(2, 1fr);
     }
 }
 
@@ -1067,6 +1092,8 @@
     .heroButtons,
     .ctaButtonsContainer {
         flex-direction: column;
+        align-items: center;
+        width: 100%;
     }
 
     .logoGrid {
@@ -1078,7 +1105,7 @@
     .statsSection,
     .servicesSection,
     .ctaSection {
-        padding: 100px 0;
-        /* More compact on mobile but still generous */
+        padding: 64px 0;
+        /* Balanced mobile vertical rhythm */
     }
 }

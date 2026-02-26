@@ -34,6 +34,7 @@ const Footer = () => {
                         <div className={styles.column}>
                             <h4>Company</h4>
                             <Link href="/about">Our Mission</Link>
+                            <Link href="/about/methodology">Our Methodology</Link>
                             <Link href="/about">Global Presence</Link>
                             <Link href="/contact">Contact Support</Link>
                         </div>
@@ -48,7 +49,7 @@ const Footer = () => {
 
                 <div className={styles.bottom}>
                     <div className={styles.copyright}>
-                        &copy; {new Date().getFullYear()} SignalBridge Insights. <span className={styles.institutionalTag}>Institutional Research Services.</span>
+                        &copy;&nbsp;{new Date().getFullYear()} SignalBridge Insights. <span className={styles.institutionalTag}>Institutional Research Services.</span>
                     </div>
                     <div className={styles.legalLinks}>
                         <span>SOC2 Type II Compliant</span>
