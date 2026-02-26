@@ -918,8 +918,22 @@
 
 .processGrid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: 48px;
+}
+
+@media (max-width: 1024px) {
+    .processGrid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 32px;
+    }
+}
+
+@media (max-width: 768px) {
+    .processGrid {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
 }
 
 .processCard {
@@ -931,6 +945,30 @@
     border: 1px solid rgba(0, 0, 0, 0.03);
     position: relative;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.02);
+}
+
+@media (max-width: 768px) {
+    .processCard {
+        padding: 48px 24px 24px;
+    }
+
+    .cardNumber {
+        font-size: 2.75rem;
+        top: 8px;
+        left: 16px;
+    }
+
+    .processIconBox {
+        margin-bottom: 12px;
+    }
+
+    .processCardTitle {
+        font-size: 1.2rem;
+    }
+
+    .processCardText {
+        font-size: 0.9rem;
+    }
 }
 
 .processCard:hover {

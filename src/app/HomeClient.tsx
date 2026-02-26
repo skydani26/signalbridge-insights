@@ -210,7 +210,7 @@ export default function HomeClient() {
                         A surgical workflow designed for rapid institutional clarity.
                     </p>
 
-                    <div className={styles.processGrid} style={{ gridTemplateColumns: 'repeat(3, 1fr)' }}>
+                    <div className={styles.processGrid}>
                         <div className={styles.processCard}>
                             <div className={styles.cardNumber}>01</div>
                             <div className={styles.processIconBox}>
