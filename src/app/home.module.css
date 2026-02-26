@@ -948,11 +948,14 @@
     }
 
     .cardNumber {
-        font-size: 2rem;
-        top: 12px;
-        left: 20px;
-        opacity: 0.2;
-        /* Subtler for mobile */
+        font-size: 2.25rem;
+        /* Slightly larger for better visibility */
+        top: 8px;
+        left: 16px;
+        opacity: 0.35;
+        /* Increased opacity for better visibility */
+        color: var(--color-primary);
+        /* Use a darker color with low opacity for an "Elite" look */
     }
 
     .processIconBox {
@@ -1115,10 +1118,15 @@
     }
 
     .servicesGrid,
-    .processGrid,
     .whyUsGrid,
     .testimonialsGrid {
         grid-template-columns: repeat(2, 1fr);
+    }
+
+    .processGrid {
+        grid-template-columns: 1fr;
+        max-width: 500px;
+        margin: 0 auto;
     }
 }
 
