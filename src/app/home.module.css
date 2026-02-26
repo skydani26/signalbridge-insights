@@ -952,8 +952,8 @@
         /* Slightly larger for better visibility */
         top: 8px;
         left: 16px;
-        opacity: 0.35;
-        /* Increased opacity for better visibility */
+        opacity: 0.1;
+        /* Reduced for a much subtler watermark look */
         color: var(--color-primary);
         /* Use a darker color with low opacity for an "Elite" look */
     }
