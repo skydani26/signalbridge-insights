@@ -134,7 +134,6 @@
     transform: translateY(-2px);
 }
 
-/* Scroll Indicator */
 .scrollIndicator {
     position: absolute;
     bottom: 40px;
@@ -152,6 +151,13 @@
     transition: all 0.3s ease;
     cursor: pointer;
     z-index: 10;
+}
+
+@media (max-width: 768px) {
+    .scrollIndicator {
+        display: none;
+        /* Hide for cleaner mobile UI */
+    }
 }
 
 .scrollIndicator:hover {
@@ -1128,7 +1134,26 @@
         gap: 32px;
     }
 
-    .hero,
+    .hero {
+        padding: 100px 20px 80px;
+        min-height: auto;
+    }
+
+    .heroTitle {
+        font-size: 2.25rem;
+        /* Slightly smaller for mobile fit */
+        margin-bottom: 20px;
+    }
+
+    .heroSubtitle {
+        font-size: 1rem;
+        margin-bottom: 32px;
+    }
+
+    .heroButtons {
+        gap: 16px;
+    }
+
     .credibilitySection,
     .statsSection,
     .servicesSection,
