@@ -4,7 +4,7 @@ import Footer from "@/components/Footer";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  metadataBase: new URL('http://localhost:3000'),
+  metadataBase: new URL('https://signalbridgeinsights.com'),
   title: {
     default: "SignalBridge Insights | Elite Institutional Expert Network",
     template: "%s | SignalBridge Insights"
@@ -74,8 +74,8 @@ export default function RootLayout({
               "@context": "https://schema.org",
               "@type": "Organization",
               "name": "SignalBridge Insights",
-              "url": "http://localhost:3000",
-              "logo": "http://localhost:3000/favicon.png",
+              "url": "https://signalbridgeinsights.com",
+              "logo": "https://signalbridgeinsights.com/favicon.png",
               "sameAs": [
                 "https://www.linkedin.com/company/signalbridgeinsights"
               ],
