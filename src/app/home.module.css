@@ -255,6 +255,20 @@
     gap: 32px;
 }
 
+@media (max-width: 992px) {
+    .statsGrid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 40px 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .statsGrid {
+        grid-template-columns: 1fr;
+        gap: 32px;
+    }
+}
+
 .statItem {
     position: relative;
     padding: 0 16px;
@@ -269,6 +283,20 @@
     height: 40px;
     width: 1px;
     background: rgba(255, 255, 255, 0.1);
+}
+
+@media (max-width: 992px) {
+
+    .statItem:nth-child(2)::after,
+    .statItem:last-child::after {
+        display: none;
+    }
+}
+
+@media (max-width: 480px) {
+    .statItem::after {
+        display: none;
+    }
 }
 
 .statNumber {
