@@ -1182,7 +1182,22 @@
     }
 
     .heroButtons {
-        gap: 16px;
+        gap: 12px;
+        width: 100%;
+        max-width: 320px;
+        /* Constrain width for a more focused look */
+    }
+
+    .btnHeroPrimary,
+    .btnHeroSecondary {
+        padding: 14px 24px;
+        font-size: 0.95rem;
+        width: 100%;
+        justify-content: center;
+    }
+
+    .btnHeroPrimary span {
+        font-size: 1rem !important;
     }
 
     .credibilitySection,
