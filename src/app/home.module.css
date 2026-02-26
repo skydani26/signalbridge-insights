@@ -948,15 +948,17 @@
     }
 
     .cardNumber {
-        font-size: 2.25rem;
-        /* Slightly larger for better visibility */
-        top: 8px;
+        font-size: 2.5rem;
+        /* Slightly larger for better presencia */
+        top: 10px;
         left: 16px;
-        opacity: 0.1;
-        /* Reduced for a much subtler watermark look */
+        opacity: 0.18;
+        /* Increased to a visible but "Elite" watermark level */
         color: var(--color-primary);
-        /* Use a darker color with low opacity for an "Elite" look */
+        font-weight: 900;
     }
+
+    /* Use a darker color with low opacity for an "Elite" look */
 
     .processIconBox {
         margin-bottom: 8px;
