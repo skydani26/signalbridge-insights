@@ -822,24 +822,26 @@
     max-width: 550px;
 }
 
-.checklistGrid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 16px 32px;
-    margin-bottom: 48px;
-}
+@media (max-width: 768px) {
+    .checklistGrid {
+        grid-template-columns: 1fr;
+        gap: 12px;
+        margin-bottom: 32px;
+    }
 
-.checkItem {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    font-size: 1.05rem;
-    font-weight: 600;
-    color: var(--color-primary);
-}
+    .checkItem {
+        font-size: 0.95rem;
+    }
 
-.checkIcon {
-    color: var(--color-secondary);
+    .coverageTitle {
+        font-size: 2.25rem;
+        margin-bottom: 20px;
+    }
+
+    .coverageSubtitle {
+        font-size: 1rem;
+        margin-bottom: 32px;
+    }
 }
 
 .coverageStatsGrid {
@@ -865,38 +867,28 @@
     border-color: rgba(59, 130, 246, 0.3);
 }
 
-.coverageStatCard {
-    background: white;
-    padding: 32px;
-    border-radius: 12px;
-    border: 1px solid rgba(0, 0, 0, 0.04);
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.02);
-    text-align: center;
-    transition: all 0.3s ease;
-}
+@media (max-width: 768px) {
+    .coverageStatsGrid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
 
-.coverageStatCard:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.06);
-}
+    .coverageStatCard {
+        padding: 24px;
+    }
 
-.coverageStatIcon {
-    color: var(--color-secondary);
-    margin-bottom: 20px;
-}
+    .coverageStatIcon {
+        margin-bottom: 12px;
+        transform: scale(0.85);
+    }
 
-.coverageStatValue {
-    font-size: 1.75rem;
-    font-weight: 800;
-    color: var(--color-primary);
-    margin-bottom: 4px;
-    display: block;
-}
+    .coverageStatValue {
+        font-size: 1.5rem;
+    }
 
-.coverageStatLabel {
-    font-size: 0.9rem;
-    color: var(--color-text-light);
-    font-weight: 500;
+    .coverageStatLabel {
+        font-size: 0.85rem;
+    }
 }
 
 .coverageBtn {
