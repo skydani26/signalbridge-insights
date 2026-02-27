@@ -10,6 +10,8 @@ type Step = 1 | 2 | 3;
 export default function InquiryForm() {
     const [step, setStep] = useState<Step>(1);
     const [isSubmitted, setIsSubmitted] = useState(false);
+    const [isSubmitting, setIsSubmitting] = useState(false);
+    const [submitError, setSubmitError] = useState<string | null>(null);
     const [formData, setFormData] = useState({
         // Step 1: Identity
         firstName: '',
@@ -18,9 +20,9 @@ export default function InquiryForm() {
         company: '',
         jobTitle: '',
         // Step 2: Research Brief
-        projectType: 'Expert Consultation',
+        projectType: 'Expert Consultation (1-on-1)',
         projectDetail: '',
-        timeline: 'Immediate (< 48 hours)',
+        timeline: 'Immediate (< 24 hours)',
         // Step 3: Confirmation
         acceptedCompliance: false
     });
@@ -33,11 +35,32 @@ export default function InquiryForm() {
     const handleNext = () => setStep(prev => (prev + 1) as Step);
     const handleBack = () => setStep(prev => (prev - 1) as Step);
 
-    const handleSubmit = (e: React.FormEvent) => {
+    const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
-        // In a real app, this would send to an API
-        // For now, we simulate success
-        setIsSubmitted(true);
+        setIsSubmitting(true);
+        setSubmitError(null);
+
+        try {
+            const response = await fetch('https://formspree.io/f/xzdaonlr', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Accept': 'application/json'
+                },
+                body: JSON.stringify(formData)
+            });
+
+            if (response.ok) {
+                setIsSubmitted(true);
+            } else {
+                const data = await response.json();
+                setSubmitError(data.error || 'Submission failed. Please try again.');
+            }
+        } catch (err) {
+            setSubmitError('An error occurred. Please check your connection.');
+        } finally {
+            setIsSubmitting(false);
+        }
     };
 
     if (isSubmitted) {
@@ -164,9 +187,15 @@ export default function InquiryForm() {
                     </div>
                 )}
 
+                {submitError && (
+                    <div style={{ color: 'var(--color-error)', fontSize: '0.85rem', marginBottom: '16px', textAlign: 'center' }}>
+                        {submitError}
+                    </div>
+                )}
+
                 <div className={styles.buttonGroup}>
                     {step > 1 && (
-                        <Button variant="outline" type="button" onClick={handleBack} style={{ flex: 1 }}>
+                        <Button variant="outline" type="button" onClick={handleBack} style={{ flex: 1 }} disabled={isSubmitting}>
                             <ChevronLeft size={16} /> Back
                         </Button>
                     )}
@@ -175,8 +204,9 @@ export default function InquiryForm() {
                             Continue <ChevronRight size={16} />
                         </Button>
                     ) : (
-                        <Button type="submit" style={{ flex: 2 }}>
-                            Transmit Brief <CheckCircle2 size={16} style={{ marginLeft: '8px' }} />
+                        <Button type="submit" style={{ flex: 2 }} disabled={isSubmitting}>
+                            {isSubmitting ? 'Transmitting...' : 'Transmit Brief'}
+                            {!isSubmitting && <CheckCircle2 size={16} style={{ marginLeft: '8px' }} />}
                         </Button>
                     )}
                 </div>

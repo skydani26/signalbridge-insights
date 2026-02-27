@@ -10,6 +10,7 @@ interface ButtonProps {
     className?: string;
     type?: 'button' | 'submit' | 'reset';
     style?: React.CSSProperties;
+    disabled?: boolean;
 }
 
 const Button: React.FC<ButtonProps> = ({
@@ -19,11 +20,12 @@ const Button: React.FC<ButtonProps> = ({
     href,
     className = '',
     type = 'button',
-    style
+    style,
+    disabled = false
 }) => {
-    const buttonClass = `${styles.btn} ${styles[variant]} ${className}`;
+    const buttonClass = `${styles.btn} ${styles[variant]} ${className} ${disabled ? styles.disabled : ''}`;
 
-    if (href) {
+    if (href && !disabled) {
         return (
             <a href={href} className={buttonClass} style={style}>
                 {children}

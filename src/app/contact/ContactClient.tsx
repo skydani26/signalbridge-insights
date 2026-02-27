@@ -32,23 +32,90 @@ export default function ContactClient() {
         message: ''
     });
 
+    const [isSubmitting, setIsSubmitting] = useState(false);
+    const [isSubmitted, setIsSubmitted] = useState(false);
+    const [submitError, setSubmitError] = useState<string | null>(null);
+
     const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
         const { name, value } = e.target;
         setFormData(prev => ({ ...prev, [name]: value }));
     };
 
-    const handleSubmit = (e: React.FormEvent) => {
+    const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
-        const { firstName, lastName, email, company, subject, message } = formData;
+        setIsSubmitting(true);
+        setSubmitError(null);
 
-        const body = `Name: ${firstName} ${lastName}%0D%0AEmail: ${email}%0D%0ACompany: ${company}%0D%0A%0D%0AMessage:%0D%0A${message}`;
-        const mailtoLink = `mailto:admin@signalbridgeinsights.com?subject=${encodeURIComponent(subject)}&body=${body}`;
+        try {
+            const formDataToSubmit = {
+                ...formData,
+                _subject: `New Inquiry: ${formData.subject}`,
+                _source: 'Contact Page'
+            };
 
-        window.location.href = mailtoLink;
+            const response = await fetch('https://formspree.io/f/xzdaonlr', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Accept': 'application/json'
+                },
+                body: JSON.stringify(formDataToSubmit)
+            });
+
+            if (response.ok) {
+                setIsSubmitted(true);
+            } else {
+                const data = await response.json();
+                setSubmitError(data.error || 'Submission failed. Please try again.');
+            }
+        } catch (err) {
+            setSubmitError('An error occurred. Please check your connection.');
+        } finally {
+            setIsSubmitting(false);
+        }
     };
+
+    if (isSubmitted) {
+        return (
+            <main>
+                <section className={styles.hero}>
+                    <div className="container" style={{ maxWidth: '900px' }}>
+                        <div className={styles.revealVisible}>
+                            <h1>Inquiry <span className={styles.heroHighlight}>Received</span></h1>
+                            <p className={styles.heroSubtitle}>
+                                Thank you for reaching out. Your strategic brief has been transmitted to our global strategy desk.
+                            </p>
+                        </div>
+                    </div>
+                </section>
+                <SectionWrapper id="success">
+                    <div style={{ textAlign: 'center', padding: '80px 0' }} className={styles.revealVisible}>
+                        <div style={{
+                            width: '80px',
+                            height: '80px',
+                            backgroundColor: 'var(--color-secondary)',
+                            borderRadius: '50%',
+                            display: 'flex',
+                            alignItems: 'center',
+                            justifyContent: 'center',
+                            margin: '0 auto 32px'
+                        }}>
+                            <ShieldCheck size={40} color="white" />
+                        </div>
+                        <h2 style={{ fontSize: '2rem', marginBottom: '16px' }}>Transmission Protocol Confirmed</h2>
+                        <p style={{ color: 'var(--color-text-light)', maxWidth: '500px', margin: '0 auto 40px' }}>
+                            A specialized project manager will review your requirements and respond within our 12-hour institutional SLA.
+                        </p>
+                        <Button href="/">Return to Registry</Button>
+                    </div>
+                </SectionWrapper>
+            </main>
+        );
+    }
 
     return (
         <main>
+            {/* ... hero ... */}
             <section className={styles.hero}>
                 <div className="container" style={{ maxWidth: '900px' }}>
                     <div className={styles.reveal}>
@@ -60,6 +127,7 @@ export default function ContactClient() {
                 </div>
             </section>
 
+            {/* ... protocol ... */}
             <SectionWrapper id="protocol" background="gray">
                 <div style={{ textAlign: 'center', marginBottom: '48px' }} className={styles.reveal}>
                     <span className={styles.officeTag} style={{ marginBottom: '16px' }}>RESPONSE PROTOCOL</span>
@@ -110,6 +178,11 @@ export default function ContactClient() {
                             <p>Direct priority channel to our research specialized team.</p>
                         </div>
                         <form className={styles.form} onSubmit={handleSubmit}>
+                            {submitError && (
+                                <div style={{ color: 'var(--color-error)', fontSize: '0.875rem', marginBottom: '20px', textAlign: 'center' }}>
+                                    {submitError}
+                                </div>
+                            )}
                             <div className={styles.nameGrid}>
                                 <div className={styles.formGroup}>
                                     <label htmlFor="firstName" className={styles.label}>First Name</label>
@@ -122,6 +195,7 @@ export default function ContactClient() {
                                         required
                                         value={formData.firstName}
                                         onChange={handleChange}
+                                        disabled={isSubmitting}
                                     />
                                 </div>
                                 <div className={styles.formGroup}>
@@ -135,6 +209,7 @@ export default function ContactClient() {
                                         required
                                         value={formData.lastName}
                                         onChange={handleChange}
+                                        disabled={isSubmitting}
                                     />
                                 </div>
                             </div>
@@ -150,6 +225,7 @@ export default function ContactClient() {
                                     required
                                     value={formData.email}
                                     onChange={handleChange}
+                                    disabled={isSubmitting}
                                 />
                             </div>
 
@@ -164,6 +240,7 @@ export default function ContactClient() {
                                     required
                                     value={formData.company}
                                     onChange={handleChange}
+                                    disabled={isSubmitting}
                                 />
                             </div>
 
@@ -178,6 +255,7 @@ export default function ContactClient() {
                                     required
                                     value={formData.subject}
                                     onChange={handleChange}
+                                    disabled={isSubmitting}
                                 />
                             </div>
 
@@ -191,11 +269,16 @@ export default function ContactClient() {
                                     required
                                     value={formData.message}
                                     onChange={handleChange}
+                                    disabled={isSubmitting}
                                 ></textarea>
                             </div>
 
-                            <Button type="submit" variant="primary">
-                                <Send size={18} style={{ marginRight: '8px' }} /> Initialize Inquiry
+                            <Button type="submit" variant="primary" disabled={isSubmitting}>
+                                {isSubmitting ? (
+                                    <>Transmitting Brief...</>
+                                ) : (
+                                    <><Send size={18} style={{ marginRight: '8px' }} /> Initialize Inquiry</>
+                                )}
                             </Button>
                             <p style={{ textAlign: 'center', fontSize: '0.875rem', color: 'var(--color-text-light)', marginTop: '24px' }}>
                                 This secure channel is monitored by our lead research partners. Response time &lt; 12 hours.
