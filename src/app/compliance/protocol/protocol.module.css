@@ -219,9 +219,7 @@
     }
 
     .tag {
-        font-size: 0.7rem;
-        letter-spacing: 0.05em;
-        padding: 4px 12px;
+        margin-bottom: 24px;
     }
 
     .vizSection {
@@ -267,7 +265,7 @@
     }
 
     .protocolPage {
-        padding-top: 60px;
+        padding-top: 130px;
         padding-bottom: 60px;
     }
 }
