@@ -2,7 +2,7 @@
 
 import React from 'react';
 import Link from 'next/link';
-import { ArrowLeft, ArrowRight, Zap, Target, TrendingUp, ShieldCheck } from 'lucide-react';
+import { ArrowLeft, ArrowRight, Zap, Target, TrendingUp, ShieldCheck, Share2 } from 'lucide-react';
 import SectionWrapper from "@/components/SectionWrapper";
 import Button from "@/components/Button";
 import { ImpactSignal } from "@/data/impact";
