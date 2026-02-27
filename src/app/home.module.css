@@ -1361,4 +1361,23 @@
         padding: 64px 0;
         /* Balanced mobile vertical rhythm */
     }
+
+    .ctaTitle {
+        font-size: 2.25rem;
+        margin-bottom: 20px;
+    }
+
+    .ctaSubtitle {
+        font-size: 1rem;
+        margin-bottom: 32px;
+    }
+
+    .btnCtaPrimary,
+    .btnCtaSecondary {
+        padding: 14px 24px !important;
+        font-size: 0.95rem !important;
+        width: 100%;
+        max-width: 320px;
+        justify-content: center;
+    }
 }
