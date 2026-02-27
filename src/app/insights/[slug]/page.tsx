@@ -5,13 +5,14 @@ import { insights } from '@/data/insights';
 import InsightDetailClient from './InsightDetailClient';
 
 interface PageProps {
-    params: {
+    params: Promise<{
         slug: string;
-    };
+    }>;
 }
 
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
-    const insight = insights.find((i) => i.slug === params.slug);
+    const { slug } = await params;
+    const insight = insights.find((i) => i.slug === slug);
 
     if (!insight) return { title: 'Signal Not Found' };
 
@@ -27,8 +28,9 @@ export async function generateStaticParams() {
     }));
 }
 
-export default function InsightPage({ params }: PageProps) {
-    const insight = insights.find((i) => i.slug === params.slug);
+export default async function InsightPage({ params }: PageProps) {
+    const { slug } = await params;
+    const insight = insights.find((i) => i.slug === slug);
 
     if (!insight) {
         notFound();
