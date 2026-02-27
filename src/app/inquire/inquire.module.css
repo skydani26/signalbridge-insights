@@ -11,31 +11,46 @@
 
 .tag {
     color: var(--color-secondary);
-    font-weight: 700;
+    font-weight: 500;
     text-transform: uppercase;
     font-size: 0.85rem;
-    letter-spacing: 2px;
+    letter-spacing: 2.5px;
     margin-bottom: 24px;
     display: block;
 }
 
 .hero h1 {
-    font-size: 3rem;
+    font-size: 2.75rem;
     font-weight: 600;
+    color: var(--color-text-white);
     margin-bottom: 24px;
-    letter-spacing: -0.04em;
+    letter-spacing: -0.02em;
+    line-height: 1.2;
 }
 
 .highlight {
-    color: var(--color-secondary);
+    background: linear-gradient(120deg, #60a5fa, #3b82f6, #60a5fa);
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: shine 3s linear infinite;
+    font-weight: 800;
+}
+
+@keyframes shine {
+    to {
+        background-position: 200% center;
+    }
 }
 
 .subtitle {
-    font-size: 1.25rem;
+    font-size: 1.2rem;
     color: var(--color-background-soft);
-    max-width: 600px;
+    max-width: 800px;
     margin: 0 auto;
     line-height: 1.6;
+    opacity: 0.9;
 }
 
 .grid {
