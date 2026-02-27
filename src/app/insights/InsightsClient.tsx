@@ -4,6 +4,7 @@ import React, { useState } from 'react';
 import SectionWrapper from "@/components/SectionWrapper";
 import InsightCard from "@/components/InsightCard";
 import FilterBar from "@/components/FilterBar";
+import Button from "@/components/Button";
 import NewsletterSignup from "@/components/NewsletterSignup";
 import { insights, InsightCategory } from "@/data/insights";
 import styles from "./insights.module.css";
@@ -28,6 +29,11 @@ export default function InsightsClient() {
                         <p className={styles.subtitle}>
                             Institutional research, sector intelligence, and execution protocols from the heart of the global expert network.
                         </p>
+                        <div style={{ marginTop: '24px' }}>
+                            <Button href="/insights/impact" variant="outline" size="small">
+                                View Proof of Work: Impact Signals →
+                            </Button>
+                        </div>
                     </div>
                 </div>
             </section>

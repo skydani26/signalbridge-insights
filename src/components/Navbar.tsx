@@ -17,6 +17,7 @@ const Navbar = () => {
         { name: 'For Experts', href: '/for-experts' },
         { name: 'For Clients', href: '/for-clients' },
         { name: 'Insights', href: '/insights' },
+        { name: 'Protocol 7', href: '/compliance/protocol' },
         { name: 'About', href: '/about' },
         { name: 'Contact', href: '/contact' },
     ];

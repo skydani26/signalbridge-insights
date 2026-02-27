@@ -1,0 +1,171 @@
+.page {
+    padding-bottom: 120px;
+}
+
+.header {
+    padding: 140px 0 80px;
+    background: white;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.backLink {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--color-text-muted);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.9rem;
+    margin-bottom: 40px;
+    transition: color 0.2s;
+}
+
+.backLink:hover {
+    color: var(--color-secondary);
+}
+
+.titleGroup {
+    max-width: 900px;
+}
+
+.category {
+    color: var(--color-secondary);
+    font-weight: 800;
+    font-size: 0.9rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin-bottom: 16px;
+    display: block;
+}
+
+.header h1 {
+    font-size: 3.5rem;
+    font-weight: 900;
+    line-height: 1.1;
+    letter-spacing: -0.04em;
+    margin-bottom: 32px;
+}
+
+.statsBar {
+    display: flex;
+    gap: 48px;
+    flex-wrap: wrap;
+    margin-top: 40px;
+}
+
+.statItem {
+    display: flex;
+    flex-direction: column;
+}
+
+.statValue {
+    font-size: 2rem;
+    font-weight: 900;
+    color: var(--color-text-primary);
+    line-height: 1;
+}
+
+.statLabel {
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: var(--color-text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-top: 8px;
+}
+
+.contentContainer {
+    display: grid;
+    grid-template-columns: 1fr 340px;
+    gap: 80px;
+    margin-top: 60px;
+}
+
+.articleSection {
+    margin-bottom: 60px;
+}
+
+.articleSection h2 {
+    font-size: 2rem;
+    font-weight: 800;
+    margin-bottom: 24px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.articleSection p {
+    font-size: 1.15rem;
+    line-height: 1.7;
+    color: #334155;
+}
+
+.sidebar {
+    position: sticky;
+    top: 120px;
+    height: fit-content;
+}
+
+.protocolNotice {
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    padding: 32px;
+    border-radius: 20px;
+}
+
+.protocolNotice h4 {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: 800;
+    margin-bottom: 16px;
+    color: var(--color-secondary);
+}
+
+.protocolNotice p {
+    font-size: 0.9rem;
+    line-height: 1.5;
+    color: var(--color-text-muted);
+}
+
+.ctaSection {
+    margin-top: 120px;
+    text-align: center;
+    background: var(--color-text-primary);
+    padding: 80px 40px;
+    border-radius: 32px;
+    color: white;
+}
+
+.ctaSection h2 {
+    font-size: 2.5rem;
+    font-weight: 800;
+    margin-bottom: 16px;
+}
+
+.ctaSection p {
+    color: rgba(255, 255, 255, 0.7);
+    margin-bottom: 32px;
+    font-size: 1.1rem;
+}
+
+@media (max-width: 1000px) {
+    .contentContainer {
+        grid-template-columns: 1fr;
+        gap: 48px;
+    }
+
+    .sidebar {
+        position: static;
+    }
+}
+
+@media (max-width: 600px) {
+    .header h1 {
+        font-size: 2.25rem;
+    }
+
+    .statValue {
+        font-size: 1.5rem;
+    }
+}
