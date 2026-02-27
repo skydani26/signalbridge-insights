@@ -200,16 +200,74 @@
     }
 
     .vizContainer {
-        padding: 32px;
+        padding: 40px 24px;
+    }
+
+    .trustFooter {
+        padding: 40px 20px;
     }
 }
 
 @media (max-width: 600px) {
     .header h1 {
-        font-size: 2.25rem;
+        font-size: 2rem;
+        word-break: break-word;
+    }
+
+    .header p {
+        font-size: 1.1rem;
+    }
+
+    .vizSection {
+        margin-bottom: 60px;
+    }
+
+    .vizContainer {
+        border-radius: 20px;
+        padding: 32px 16px;
+    }
+
+    .vizGrid {
+        gap: 20px;
+    }
+
+    .pillarCard {
+        padding: 24px;
+    }
+
+    .sectionTitle {
+        font-size: 1.75rem;
+        margin-bottom: 32px;
+    }
+
+    .contentBlock {
+        padding: 24px;
+    }
+
+    .contentBlock h4 {
+        font-size: 1.25rem;
+    }
+
+    .contentBlock p {
+        font-size: 1rem;
+    }
+
+    .trustFooter h2 {
+        font-size: 1.85rem;
+    }
+
+    .trustLogoGrid {
+        gap: 24px;
     }
 
     .protocolPage {
         padding-top: 60px;
+        padding-bottom: 60px;
+    }
+}
+
+@media (max-width: 380px) {
+    .header h1 {
+        font-size: 1.75rem;
     }
 }
