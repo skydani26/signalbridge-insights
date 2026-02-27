@@ -8,7 +8,8 @@ interface Props {
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
-    const signal = impactSignals.find(s => s.slug === params.slug);
+    const { slug } = await params;
+    const signal = impactSignals.find(s => s.slug === slug);
     if (!signal) return { title: 'Signal Not Found' };
 
     return {
@@ -17,8 +18,15 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     };
 }
 
-export default function ImpactDetailPage({ params }: Props) {
-    const signal = impactSignals.find(s => s.slug === params.slug);
+export async function generateStaticParams() {
+    return impactSignals.map((signal) => ({
+        slug: signal.slug,
+    }));
+}
+
+export default async function ImpactDetailPage({ params }: Props) {
+    const { slug } = await params;
+    const signal = impactSignals.find(s => s.slug === slug);
 
     if (!signal) {
         notFound();
