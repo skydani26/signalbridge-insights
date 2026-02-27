@@ -4,6 +4,7 @@ import React from 'react';
 import Link from 'next/link';
 import { ArrowLeft, Clock, Calendar, User, Share2 } from 'lucide-react';
 import SectionWrapper from "@/components/SectionWrapper";
+import NewsletterSignup from "@/components/NewsletterSignup";
 import { Insight } from "@/data/insights";
 import styles from "./insight-detail.module.css";
 
@@ -45,6 +46,7 @@ export default function InsightDetailClient({ insight, relatedInsights }: Insigh
                     <div className={styles.articleBody} dangerouslySetInnerHTML={{ __html: insight.content }} />
 
                     <footer className={styles.articleFooter}>
+                        <NewsletterSignup category={insight.category} />
                         <div className={styles.authorCard}>
                             <div className={styles.authorInfo}>
                                 <h4>{insight.author.name}</h4>

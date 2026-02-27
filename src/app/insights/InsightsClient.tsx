@@ -4,6 +4,7 @@ import React, { useState } from 'react';
 import SectionWrapper from "@/components/SectionWrapper";
 import InsightCard from "@/components/InsightCard";
 import FilterBar from "@/components/FilterBar";
+import NewsletterSignup from "@/components/NewsletterSignup";
 import { insights, InsightCategory } from "@/data/insights";
 import styles from "./insights.module.css";
 
@@ -57,6 +58,10 @@ export default function InsightsClient() {
                             <p>No signals found in this category. Pulse checking our global desk...</p>
                         </div>
                     )}
+
+                    <div style={{ marginTop: '80px' }}>
+                        <NewsletterSignup />
+                    </div>
                 </div>
             </SectionWrapper>
 

@@ -71,7 +71,7 @@ export default function ForExpertsClient() {
                             Join 10,000+ professionals earning money through paid surveys, consultation calls, focus groups, and advisory projects. Share your knowledge on your own terms.
                         </p>
                         <div className={styles.heroButtons}>
-                            <Button href="/contact">
+                            <Button href="/for-experts/apply">
                                 Apply to Join <span style={{ marginLeft: '12px' }}>→</span>
                             </Button>
                         </div>
@@ -249,8 +249,8 @@ export default function ForExpertsClient() {
                     </div>
                 </div>
                 <div className={`${styles.compensationButtons} ${styles.reveal}`}>
-                    <Button href="/contact">Apply to Join Network</Button>
-                    <Button href="/contact" variant="outline">Calculate Your Estimated Rate</Button>
+                    <Button href="/for-experts/apply">Apply to Join Network</Button>
+                    <Button href="/for-experts/apply" variant="outline">Calculate Your Estimated Rate</Button>
                 </div>
             </SectionWrapper>
 
@@ -344,7 +344,7 @@ export default function ForExpertsClient() {
                     <div className={`${styles.ctaContent} ${styles.reveal}`}>
                         <h2>Ready to Share Your Expertise?</h2>
                         <p>Join the SignalBridge network and start earning for your professional insights.</p>
-                        <Button href="/contact">
+                        <Button href="/for-experts/apply">
                             Apply to Become an Expert <ArrowRight size={18} style={{ marginLeft: '12px' }} />
                         </Button>
                     </div>

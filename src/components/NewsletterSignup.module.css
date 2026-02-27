@@ -1,0 +1,134 @@
+.signupContainer {
+    background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+    padding: 48px;
+    border-radius: 20px;
+    color: white;
+    position: relative;
+    overflow: hidden;
+    margin: 64px 0;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.signupContainer::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle at 30% 30%, rgba(59, 130, 246, 0.1) 0%, transparent 60%);
+    pointer-events: none;
+}
+
+.content {
+    position: relative;
+    z-index: 2;
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 40px;
+    align-items: center;
+}
+
+.textContent h3 {
+    font-size: 1.75rem;
+    font-weight: 800;
+    margin-bottom: 12px;
+    letter-spacing: -0.02em;
+}
+
+.textContent p {
+    color: rgba(255, 255, 255, 0.7);
+    line-height: 1.6;
+    font-size: 1rem;
+}
+
+.formArea {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.inputRow {
+    display: flex;
+    gap: 12px;
+}
+
+.input {
+    flex: 1;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 14px 20px;
+    border-radius: 8px;
+    color: white;
+    font-size: 1rem;
+    transition: all 0.2s ease;
+}
+
+.input:focus {
+    outline: none;
+    background: rgba(255, 255, 255, 0.1);
+    border-color: var(--color-secondary);
+    box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.15);
+}
+
+.submitBtn {
+    background: var(--color-secondary);
+    color: white;
+    border: none;
+    padding: 0 24px;
+    border-radius: 8px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    white-space: nowrap;
+}
+
+.submitBtn:hover {
+    transform: translateY(-2px);
+    filter: brightness(1.1);
+    box-shadow: 0 10px 20px rgba(59, 130, 246, 0.2);
+}
+
+.submitBtn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    transform: none;
+}
+
+.complianceText {
+    font-size: 0.75rem;
+    color: rgba(255, 255, 255, 0.4);
+    line-height: 1.4;
+}
+
+.successMsg {
+    text-align: center;
+    padding: 24px;
+}
+
+.successMsg h4 {
+    color: var(--color-secondary);
+    font-size: 1.25rem;
+    margin-bottom: 8px;
+}
+
+@media (max-width: 900px) {
+    .content {
+        grid-template-columns: 1fr;
+        gap: 32px;
+    }
+}
+
+@media (max-width: 600px) {
+    .signupContainer {
+        padding: 32px 24px;
+    }
+
+    .inputRow {
+        flex-direction: column;
+    }
+
+    .submitBtn {
+        padding: 14px;
+    }
+}
