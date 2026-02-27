@@ -1,0 +1,107 @@
+.page {
+    min-height: 100vh;
+}
+
+.hero {
+    background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+    padding: 120px 0 80px;
+    text-align: center;
+    color: white;
+}
+
+.tag {
+    color: var(--color-secondary);
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    letter-spacing: 2px;
+    margin-bottom: 24px;
+    display: block;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    font-weight: 600;
+    margin-bottom: 24px;
+    letter-spacing: -0.04em;
+}
+
+.highlight {
+    color: var(--color-secondary);
+}
+
+.subtitle {
+    font-size: 1.25rem;
+    color: var(--color-background-soft);
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: 64px;
+    align-items: flex-start;
+}
+
+.infoSide {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.protocolCard {
+    background: white;
+    padding: 32px;
+    border-radius: 20px;
+    border: 1px solid var(--color-gray-200);
+    box-shadow: var(--shadow-premium);
+}
+
+.iconBox {
+    width: 48px;
+    height: 48px;
+    background: var(--color-accent-soft);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-secondary);
+    margin-bottom: 16px;
+}
+
+.protocolCard h4 {
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: var(--color-primary);
+    margin-bottom: 8px;
+}
+
+.protocolCard p {
+    font-size: 0.95rem;
+    color: var(--color-text-light);
+    line-height: 1.5;
+    margin: 0;
+}
+
+@media (max-width: 1024px) {
+    .grid {
+        grid-template-columns: 1fr;
+        gap: 48px;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero {
+        padding: 80px 20px 60px;
+    }
+
+    .hero h1 {
+        font-size: 2.25rem;
+    }
+
+    .subtitle {
+        font-size: 1.1rem;
+    }
+}

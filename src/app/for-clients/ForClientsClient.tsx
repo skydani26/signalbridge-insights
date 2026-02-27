@@ -271,7 +271,7 @@ export default function ForClientsClient() {
                                     </div>
                                 ))}
                             </div>
-                            <Button href="/contact" className={styles.findExpertBtn}>
+                            <Button href="/inquire" className={styles.findExpertBtn}>
                                 Find an Expert
                             </Button>
                         </div>
@@ -286,7 +286,7 @@ export default function ForClientsClient() {
                     <div className={`${styles.ctaContent} ${styles.revealVisible}`}>
                         <h2>Ready to Connect with Experts?</h2>
                         <p>Start with a survey, book a call, or tell us about your research project</p>
-                        <Button href="/contact">
+                        <Button href="/inquire">
                             Connect with Experts
                         </Button>
                     </div>

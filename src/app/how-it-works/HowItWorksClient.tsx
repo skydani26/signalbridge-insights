@@ -254,8 +254,8 @@ export default function HowItWorksClient() {
                         <h2>Ready to Get Started?</h2>
                         <p>Join the SignalBridge network today — as a client or an expert</p>
                         <div className={styles.ctaContainer}>
-                            <Button href="/contact" className={styles.finalCtaBtn}>
-                                Contact Us
+                            <Button href="/inquire" className={styles.finalCtaBtn}>
+                                Initialize Inquiry
                             </Button>
                         </div>
                     </div>

@@ -211,7 +211,7 @@ export default function ContactClient() {
                     <p className={styles.supportDescription}>
                         For enterprise-level inquiries, custom research projects, or strategic partnerships, our dedicated support team is ready to assist.
                     </p>
-                    <Button variant="outline" href="mailto:enterprise@signalbridgeinsights.com">
+                    <Button variant="outline" href="/inquire">
                         Contact Enterprise Support
                     </Button>
                 </div>

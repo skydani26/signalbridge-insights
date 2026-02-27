@@ -38,7 +38,7 @@ export default function HomeClient() {
                         Surveys, 1-on-1 calls, focus groups, custom research, and more. Connect with 10,000+ vetted industry experts across 100+ countries. Trusted by leading investors, consultants, and corporations worldwide.
                     </p>
                     <div className={`${styles.heroButtons} ${styles.reveal} ${styles.delay3}`}>
-                        <Button href="/contact" className={styles.btnHeroPrimary}>
+                        <Button href="/inquire" className={styles.btnHeroPrimary}>
                             Consult Our Strategy Desk <span style={{ marginLeft: '12px' }}>→</span>
                         </Button>
                         <Button href="/for-experts" className={styles.btnHeroSecondary}>
@@ -388,8 +388,8 @@ export default function HomeClient() {
                             want to monetize your expertise — we&apos;re here to help.
                         </p>
                         <div className={styles.ctaButtonsContainer}>
-                            <Button href="/contact" className={styles.btnCtaPrimary}>Consult Our Strategy Desk</Button>
-                            <Button href="/contact" className={styles.btnCtaSecondary}>Apply to Become an Expert</Button>
+                            <Button href="/inquire" className={styles.btnCtaPrimary}>Consult Our Strategy Desk</Button>
+                            <Button href="/for-experts" className={styles.btnCtaSecondary}>Apply to Become an Expert</Button>
                         </div>
                     </div>
                 </div>
