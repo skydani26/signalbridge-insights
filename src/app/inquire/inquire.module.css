@@ -7,6 +7,32 @@
     padding: 120px 0 80px;
     text-align: center;
     color: white;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: -25%;
+    left: -25%;
+    width: 150%;
+    height: 150%;
+    background: radial-gradient(circle at 40% 40%, rgba(59, 130, 246, 0.18) 0%, transparent 70%);
+    animation: meshRotate 25s linear infinite;
+    pointer-events: none;
+    z-index: 1;
+}
+
+@keyframes meshRotate {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
 }
 
 .tag {
@@ -119,4 +145,9 @@
     .subtitle {
         font-size: 1.1rem;
     }
+}
+
+.heroContent {
+    position: relative;
+    z-index: 2;
 }

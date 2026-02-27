@@ -9,7 +9,7 @@ export default function InquirePage() {
         <main className={styles.page}>
             <section className={styles.hero}>
                 <div className="container">
-                    <div className="reveal">
+                    <div className={`${styles.heroContent} reveal`}>
                         <span className={styles.tag}>INQUIRY DESK</span>
                         <h1>Initialize Strategic <span className={styles.highlight}>Briefing</span></h1>
                         <p className={styles.subtitle}>
