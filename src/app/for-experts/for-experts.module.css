@@ -260,6 +260,13 @@
     border: 1px solid transparent;
 }
 
+.compensationButtons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 48px;
+}
+
 .tierInfo h4 {
     font-size: 1.1rem;
     font-weight: 700;
@@ -750,6 +757,15 @@
     .complianceHeader {
         flex-direction: column;
         text-align: center;
+        gap: 16px;
+    }
+
+    .compensationButtons {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        max-width: 400px;
+        margin: 48px auto 0;
         gap: 16px;
     }
 

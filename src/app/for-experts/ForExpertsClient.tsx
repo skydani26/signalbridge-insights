@@ -248,7 +248,7 @@ export default function ForExpertsClient() {
                         <div className={styles.earningsSublabel}>(for active experts)</div>
                     </div>
                 </div>
-                <div className={styles.reveal} style={{ display: 'flex', justifyContent: 'center', gap: '20px', marginTop: '48px' }}>
+                <div className={`${styles.compensationButtons} ${styles.reveal}`}>
                     <Button href="/contact">Apply to Join Network</Button>
                     <Button href="/contact" variant="outline">Calculate Your Estimated Rate</Button>
                 </div>
