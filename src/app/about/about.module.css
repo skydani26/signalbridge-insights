@@ -552,3 +552,82 @@
         gap: 24px;
     }
 }
+
+/* Methodology Page Specialized Styles */
+.methodologyHeader {
+    margin-bottom: 64px;
+    text-align: center;
+}
+
+.methodologyGrid {
+    display: grid;
+    gap: 32px;
+}
+
+.methodologyCard {
+    padding: 32px;
+    border: 1px solid var(--color-gray-200);
+    border-radius: 16px;
+    background: white;
+    transition: var(--transition-base);
+    display: flex;
+    flex-direction: column;
+}
+
+.methodologyCard:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-premium);
+    border-color: var(--color-secondary);
+}
+
+.methodologyCardHeader {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.methodologyIcon {
+    width: 40px;
+    height: 40px;
+    background: var(--color-accent-soft);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-primary);
+    flex-shrink: 0;
+}
+
+.methodologyStepTitle {
+    margin: 0;
+    font-size: 1.5rem;
+    color: var(--color-primary);
+    font-weight: 700;
+}
+
+.methodologyDescription {
+    color: var(--color-text-light);
+    line-height: 1.7;
+    margin: 0;
+}
+
+@media (max-width: 768px) {
+    .methodologyHeader {
+        margin-bottom: 40px;
+    }
+
+    .methodologyCard {
+        padding: 24px;
+    }
+
+    .methodologyCardHeader {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+    }
+
+    .methodologyStepTitle {
+        font-size: 1.25rem;
+    }
+}
