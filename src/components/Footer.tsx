@@ -27,7 +27,7 @@ const Footer = () => {
                         </div>
                         <div className={styles.column}>
                             <h4>Network</h4>
-                            <Link href="/for-experts">Apply as Expert</Link>
+                            <Link href="/for-experts/apply">Apply as Expert</Link>
                             <Link href="/for-experts">Compliance Standard</Link>
                             <Link href="/for-experts">Expert Earnings</Link>
                         </div>

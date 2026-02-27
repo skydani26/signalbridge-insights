@@ -41,7 +41,7 @@ export default function HomeClient() {
                         <Button href="/inquire" className={styles.btnHeroPrimary}>
                             Consult Our Strategy Desk <span style={{ marginLeft: '12px' }}>→</span>
                         </Button>
-                        <Button href="/for-experts" className={styles.btnHeroSecondary}>
+                        <Button href="/for-experts/apply" className={styles.btnHeroSecondary}>
                             Apply to the Network
                         </Button>
                     </div>
@@ -389,7 +389,7 @@ export default function HomeClient() {
                         </p>
                         <div className={styles.ctaButtonsContainer}>
                             <Button href="/inquire" className={styles.btnCtaPrimary}>Consult Our Strategy Desk</Button>
-                            <Button href="/for-experts" className={styles.btnCtaSecondary}>Apply to Become an Expert</Button>
+                            <Button href="/for-experts/apply" className={styles.btnCtaSecondary}>Apply to Become an Expert</Button>
                         </div>
                     </div>
                 </div>
