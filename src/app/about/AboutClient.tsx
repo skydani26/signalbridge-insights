@@ -34,7 +34,7 @@ export default function AboutClient() {
                             slow fulfillment, inconsistent quality, and complex compliance risk.
                         </p>
                         <div className={styles.heroButtons}>
-                            <Button href="/contact" style={{ backgroundColor: 'white', color: 'var(--color-primary)', padding: '16px 40px', fontWeight: '700' }}>
+                            <Button href="/contact" variant="outline" style={{ border: '1px solid white', color: 'white' }}>
                                 Get Started <span style={{ marginLeft: '12px' }}>→</span>
                             </Button>
                         </div>

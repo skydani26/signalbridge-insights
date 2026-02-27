@@ -76,10 +76,10 @@ export default function ForClientsClient() {
                             Surveys, 1-on-1 calls, focus groups, custom research, and more. Access 10,000+ vetted industry experts to get the insights you need — fast, compliant, and at scale.
                         </p>
                         <div className={styles.heroButtons}>
-                            <Button href="/contact" style={{ backgroundColor: 'white', color: 'var(--color-primary)', padding: '16px 40px', fontWeight: '700' }}>
+                            <Button href="/contact">
                                 Get Started <ArrowRight size={18} style={{ marginLeft: '12px' }} />
                             </Button>
-                            <Button href="/contact" variant="outline" style={{ borderColor: 'rgba(255,255,255,0.3)', color: 'white', padding: '16px 40px' }}>
+                            <Button href="/contact" variant="outline">
                                 Request a Demo
                             </Button>
                         </div>
@@ -271,7 +271,7 @@ export default function ForClientsClient() {
                                     </div>
                                 ))}
                             </div>
-                            <Button href="/contact" className={styles.findExpertBtn} style={{ marginTop: '32px' }}>
+                            <Button href="/contact" className={styles.findExpertBtn}>
                                 Find an Expert
                             </Button>
                         </div>
@@ -286,7 +286,7 @@ export default function ForClientsClient() {
                     <div className={`${styles.ctaContent} ${styles.revealVisible}`}>
                         <h2>Ready to Connect with Experts?</h2>
                         <p>Start with a survey, book a call, or tell us about your research project</p>
-                        <Button href="/contact" style={{ backgroundColor: 'white', color: 'var(--color-primary)', padding: '16px 48px', fontWeight: '700' }}>
+                        <Button href="/contact">
                             Connect with Experts
                         </Button>
                     </div>

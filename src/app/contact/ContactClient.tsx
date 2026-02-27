@@ -194,7 +194,7 @@ export default function ContactClient() {
                                 ></textarea>
                             </div>
 
-                            <Button type="submit" variant="primary" style={{ width: '100%', padding: '18px' }}>
+                            <Button type="submit" variant="primary">
                                 <Send size={18} style={{ marginRight: '8px' }} /> Initialize Inquiry
                             </Button>
                             <p style={{ textAlign: 'center', fontSize: '0.875rem', color: 'var(--color-text-light)', marginTop: '24px' }}>
@@ -211,7 +211,7 @@ export default function ContactClient() {
                     <p className={styles.supportDescription}>
                         For enterprise-level inquiries, custom research projects, or strategic partnerships, our dedicated support team is ready to assist.
                     </p>
-                    <Button variant="outline" href="mailto:enterprise@signalbridgeinsights.com" className={styles.supportBtn}>
+                    <Button variant="outline" href="mailto:enterprise@signalbridgeinsights.com">
                         Contact Enterprise Support
                     </Button>
                 </div>

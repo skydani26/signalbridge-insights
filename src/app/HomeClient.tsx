@@ -39,7 +39,7 @@ export default function HomeClient() {
                     </p>
                     <div className={`${styles.heroButtons} ${styles.reveal} ${styles.delay3}`}>
                         <Button href="/contact" className={styles.btnHeroPrimary}>
-                            Consult Our Strategy Desk <span style={{ marginLeft: '12px', fontSize: '1.2rem' }}>→</span>
+                            Consult Our Strategy Desk <span style={{ marginLeft: '12px' }}>→</span>
                         </Button>
                         <Button href="/for-experts" className={styles.btnHeroSecondary}>
                             Apply to the Network

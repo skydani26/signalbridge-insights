@@ -97,10 +97,7 @@
 .btnHeroPrimary {
     background-color: var(--color-background-soft);
     color: var(--color-primary);
-    padding: 18px 40px;
     border-radius: 8px;
-    font-weight: 700;
-    font-size: 1.1rem;
     text-decoration: none;
     display: inline-flex;
     align-items: center;
@@ -118,10 +115,7 @@
     background-color: rgba(255, 255, 255, 0.05);
     color: var(--color-text-white);
     border: 1px solid rgba(255, 255, 255, 0.2);
-    padding: 18px 40px;
     border-radius: 8px;
-    font-weight: 600;
-    font-size: 1.1rem;
     text-decoration: none;
     display: inline-flex;
     align-items: center;
@@ -339,10 +333,7 @@
 .exploreBtn {
     background-color: var(--color-primary) !important;
     color: white !important;
-    padding: 14px 44px !important;
     border-radius: 8px !important;
-    font-weight: 600 !important;
-    font-size: 1.1rem !important;
     display: inline-flex;
     align-items: center;
     gap: 16px;
@@ -687,10 +678,7 @@
 .btnCtaPrimary {
     background-color: #ffffff !important;
     color: var(--color-primary) !important;
-    padding: 16px 40px !important;
     border-radius: 8px !important;
-    font-weight: 700 !important;
-    font-size: 1.1rem !important;
     transition: all 0.2s ease;
 }
 
@@ -704,10 +692,7 @@
     background-color: rgba(255, 255, 255, 0.05) !important;
     color: white !important;
     border: 1px solid rgba(255, 255, 255, 0.2) !important;
-    padding: 16px 40px !important;
     border-radius: 8px !important;
-    font-weight: 600 !important;
-    font-size: 1.1rem !important;
     transition: all 0.2s;
 }
 
