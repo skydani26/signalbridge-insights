@@ -30,6 +30,10 @@ export default function NewsletterSignup({ category }: NewsletterSignupProps) {
 
             if (response.ok) {
                 setIsSuccess(true);
+            } else {
+                const data = await response.json();
+                const errorMsg = data.errors ? data.errors.map((e: any) => e.message).join(", ") : "Submission failed";
+                console.error("Newsletter signup error detail:", errorMsg);
             }
         } catch (error) {
             console.error("Newsletter signup error:", error);

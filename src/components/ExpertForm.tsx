@@ -77,7 +77,9 @@ export default function ExpertForm() {
             if (response.ok) {
                 setIsSuccess(true);
             } else {
-                alert("Submission failed. Please try again or contact support.");
+                const data = await response.json();
+                const errorMsg = data.errors ? data.errors.map((e: any) => e.message).join(", ") : "Submission failed";
+                alert(`Error: ${errorMsg}. Please check your Formspree dashboard for any action required.`);
             }
         } catch (error) {
             alert("An error occurred. Please check your connection and try again.");
