@@ -141,7 +141,20 @@
 }
 
 @media (max-width: 768px) {
+    .hero {
+        padding: 80px 20px 60px;
+    }
+
     .heroContent h1 {
-        font-size: 2.5rem;
+        font-size: 2.25rem;
+    }
+
+    .heroSubtitle {
+        font-size: 1rem;
+        margin-bottom: 32px;
+    }
+
+    .infobox {
+        padding: 24px;
     }
 }

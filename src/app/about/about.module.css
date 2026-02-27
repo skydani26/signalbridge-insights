@@ -140,6 +140,54 @@
     height: 160px;
 }
 
+@media (max-width: 768px) {
+    .hero {
+        padding: 80px 20px 60px;
+    }
+
+    .hero h1 {
+        font-size: 2.25rem;
+        margin-bottom: 24px;
+    }
+
+    .heroSubtitle {
+        font-size: 1rem;
+        margin-bottom: 32px;
+    }
+
+    .heroButtons {
+        flex-direction: column;
+        width: 100%;
+        max-width: 320px;
+        margin: 0 auto;
+        gap: 12px;
+    }
+
+    .missionGrid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+        text-align: center;
+    }
+
+    .missionContent h2 {
+        font-size: 2rem;
+    }
+
+    .missionContent p {
+        font-size: 1rem;
+    }
+
+    .buildingBox {
+        margin: 0 auto;
+        max-width: 320px;
+    }
+
+    .buildingIcon {
+        width: 80px;
+        height: 80px;
+    }
+}
+
 /* Stats Grid for About Page */
 .statsGrid {
     display: flex;
@@ -251,6 +299,21 @@
     max-width: 600px;
     margin: 0 auto;
     font-weight: 400;
+}
+
+@media (max-width: 768px) {
+    .valuesGrid {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+
+    .sectionTitle {
+        font-size: 2rem;
+    }
+
+    .sectionSubtitle {
+        font-size: 1rem;
+    }
 }
 
 .sectionDescription {
@@ -422,6 +485,29 @@
 }
 
 @media (max-width: 768px) {
+    .presenceCard {
+        padding: 32px 20px;
+    }
+
+    .globeIcon {
+        width: 64px;
+        height: 64px;
+        margin-bottom: 32px;
+    }
+
+    .presenceGrid {
+        grid-template-columns: 1fr;
+        gap: 32px;
+    }
+
+    .careerSection h2 {
+        font-size: 2.25rem;
+    }
+
+    .careerSection p {
+        font-size: 1rem;
+    }
+
     .securityFeatures {
         grid-template-columns: 1fr;
     }

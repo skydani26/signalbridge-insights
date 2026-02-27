@@ -109,6 +109,19 @@
     text-align: center;
 }
 
+@media (max-width: 768px) {
+    .statsGrid {
+        grid-template-columns: 1fr 1fr;
+        gap: 24px;
+    }
+}
+
+@media (max-width: 480px) {
+    .statsGrid {
+        grid-template-columns: 1fr;
+    }
+}
+
 .statItem h3 {
     font-size: 2.25rem;
     color: var(--color-primary);
@@ -613,11 +626,77 @@
 
 @media (max-width: 768px) {
     .hero {
-        padding: 100px 0 60px;
+        padding: 80px 20px 60px;
     }
 
-    .processContainer {
+    .hero h1 {
+        font-size: 2.25rem;
+    }
+
+    .heroSubtitle {
+        font-size: 1rem;
+        margin-bottom: 32px;
+    }
+
+    .heroButtons {
+        flex-direction: column;
+        width: 100%;
+        max-width: 320px;
+        margin: 0 auto;
+        gap: 12px;
+    }
+
+    .sectionTitle {
+        font-size: 2.25rem;
+    }
+
+    .sectionDescription {
+        font-size: 1.1rem;
+    }
+
+    .servicesGrid {
         grid-template-columns: 1fr;
+        gap: 24px;
+    }
+
+    .processGrid {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+
+    .complianceSection {
+        padding: 64px 0;
+    }
+
+    .securityTitle {
+        font-size: 2rem;
+    }
+
+    .securitySubtitle {
+        font-size: 1rem;
+    }
+
+    .lockWrapper {
+        width: 160px;
+        height: 160px;
+    }
+
+    .shieldOverlap {
+        width: 60px;
+        height: 60px;
+        right: 20px;
+    }
+
+    .finalCta h2 {
+        font-size: 2.25rem;
+    }
+
+    .finalCta p {
+        font-size: 1rem;
+    }
+
+    .detailedServiceSection {
+        padding: 64px 0;
     }
 
     .detailedServiceItem {
@@ -625,6 +704,7 @@
         direction: ltr !important;
         margin-bottom: 64px;
         text-align: center;
+        gap: 32px;
     }
 
     .detailedServiceItem:nth-child(even) {
@@ -639,7 +719,22 @@
         font-size: 2rem;
     }
 
+    .serviceContent p {
+        font-size: 1rem;
+    }
+
     .serviceFeatures {
         grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    .faqQuestion {
+        padding: 20px 24px;
+        font-size: 1rem;
+    }
+
+    .faqAnswer {
+        padding: 0 24px 20px;
+        font-size: 0.95rem;
     }
 }

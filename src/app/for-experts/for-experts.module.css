@@ -93,6 +93,29 @@
     gap: 24px;
 }
 
+@media (max-width: 768px) {
+    .hero {
+        padding: 80px 20px 60px;
+    }
+
+    .hero h1 {
+        font-size: 2.25rem;
+    }
+
+    .heroSubtitle {
+        font-size: 1rem;
+        margin-bottom: 32px;
+    }
+
+    .heroButtons {
+        flex-direction: column;
+        width: 100%;
+        max-width: 320px;
+        margin: 0 auto;
+        gap: 12px;
+    }
+}
+
 .earnGrid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -302,6 +325,43 @@
     color: var(--color-primary);
     line-height: 1;
     margin-bottom: 12px;
+}
+
+@media (max-width: 768px) {
+
+    .earnGrid,
+    .benefitGrid,
+    .journeyGrid,
+    .testimonialGrid,
+    .industryGrid,
+    .pricingSection,
+    .lookingGrid {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+
+    .tierItem {
+        flex-direction: column;
+        text-align: center;
+        gap: 12px;
+        padding: 20px;
+    }
+
+    .earningsValue {
+        font-size: 3rem;
+    }
+
+    .infoCardGrid {
+        grid-template-columns: 1fr;
+    }
+
+    .finalCta h2 {
+        font-size: 2.25rem;
+    }
+
+    .finalCta p {
+        font-size: 1rem;
+    }
 }
 
 .earningsLabel {

@@ -237,8 +237,39 @@
     }
 
     .agreementContainer {
-        padding: 40px 20px;
-        margin: 0 20px;
+        padding: 32px 20px;
+        margin: 0 10px;
+    }
+
+    .agreementTitle h2 {
+        font-size: 1.5rem;
+    }
+
+    .clauseList {
+        margin-left: 12px;
+    }
+
+    .agreementHeader {
+        flex-direction: column;
+        gap: 12px;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero {
+        padding: 80px 20px 60px;
+    }
+
+    .hero h1 {
+        font-size: 2.25rem;
+    }
+
+    .heroSubtitle {
+        font-size: 1rem;
+    }
+
+    .sectionTitle {
+        font-size: 2rem;
     }
 }
 

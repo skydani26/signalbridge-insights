@@ -94,6 +94,44 @@
     gap: 24px;
 }
 
+@media (max-width: 768px) {
+    .hero {
+        padding: 80px 20px 60px;
+    }
+
+    .hero h1 {
+        font-size: 2.25rem;
+    }
+
+    .heroSubtitle {
+        font-size: 1rem;
+        margin-bottom: 32px;
+    }
+
+    .protocolGrid,
+    .officeGrid {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+
+    .formCard {
+        padding: 20px;
+        border-radius: 16px;
+    }
+
+    .formHeader h2 {
+        font-size: 1.75rem;
+    }
+
+    .supportTitle {
+        font-size: 2.25rem;
+    }
+
+    .supportDescription {
+        font-size: 1.1rem;
+    }
+}
+
 /* Response Protocol */
 .protocolGrid {
     display: grid;
