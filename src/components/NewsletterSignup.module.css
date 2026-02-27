@@ -1,12 +1,13 @@
 .signupContainer {
-    background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+    background: linear-gradient(135deg, #1e293b 0%, #334155 100%);
     padding: 48px;
     border-radius: 20px;
     color: white;
     position: relative;
     overflow: hidden;
     margin: 64px 0;
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
 }
 
 .signupContainer::before {
@@ -16,7 +17,7 @@
     left: -50%;
     width: 200%;
     height: 200%;
-    background: radial-gradient(circle at 30% 30%, rgba(59, 130, 246, 0.1) 0%, transparent 60%);
+    background: radial-gradient(circle at 30% 30%, rgba(59, 130, 246, 0.2) 0%, transparent 60%);
     pointer-events: none;
 }
 
