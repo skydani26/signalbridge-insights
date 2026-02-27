@@ -76,10 +76,10 @@ export default function ForClientsClient() {
                             Surveys, 1-on-1 calls, focus groups, custom research, and more. Access 10,000+ vetted industry experts to get the insights you need — fast, compliant, and at scale.
                         </p>
                         <div className={styles.heroButtons}>
-                            <Button href="/contact">
+                            <Button href="/inquire">
                                 Get Started <ArrowRight size={18} style={{ marginLeft: '12px' }} />
                             </Button>
-                            <Button href="/contact" variant="outline">
+                            <Button href="/inquire" variant="outline">
                                 Request a Demo
                             </Button>
                         </div>

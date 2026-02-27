@@ -112,7 +112,7 @@ export default function HowItWorksClient() {
                             designed to connect you with expert knowledge quickly, compliantly, and effectively.
                         </p>
                         <div className={styles.heroButtons}>
-                            <Button href="/contact">
+                            <Button href="/inquire">
                                 Get Started <span style={{ marginLeft: '12px' }}>→</span>
                             </Button>
                         </div>
