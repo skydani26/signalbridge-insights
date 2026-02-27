@@ -101,6 +101,7 @@
 
     .hero h1 {
         font-size: 2.25rem;
+        word-break: break-word;
     }
 
     .heroSubtitle {
@@ -108,14 +109,8 @@
         margin-bottom: 32px;
     }
 
-    .protocolGrid,
-    .officeGrid {
-        grid-template-columns: 1fr;
-        gap: 24px;
-    }
-
     .formCard {
-        padding: 20px;
+        padding: 24px 16px;
         border-radius: 16px;
     }
 
@@ -123,6 +118,7 @@
         font-size: 1.75rem;
     }
 
+    /* Support Section Mobile Fixes */
     .supportTitle {
         font-size: 2.25rem;
     }
@@ -130,14 +126,27 @@
     .supportDescription {
         font-size: 1.1rem;
     }
+
+    .supportBtn {
+        width: 100%;
+        padding: 16px 20px !important;
+    }
 }
 
 /* Response Protocol */
 .protocolGrid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 32px;
     margin-top: 48px;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+@media (max-width: 900px) {
+    .protocolGrid {
+        grid-template-columns: 1fr;
+        max-width: 450px;
+        margin-left: auto;
+        margin-right: auto;
+    }
 }
 
 .protocolCard {
@@ -197,6 +206,15 @@
     grid-template-columns: repeat(3, 1fr);
     gap: 32px;
     margin-bottom: 48px;
+}
+
+@media (max-width: 900px) {
+    .officeGrid {
+        grid-template-columns: 1fr;
+        max-width: 400px;
+        margin-left: auto;
+        margin-right: auto;
+    }
 }
 
 .officeCard {
@@ -262,6 +280,19 @@
 
 .form {
     background: var(--color-white);
+}
+
+.nameGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+}
+
+@media (max-width: 480px) {
+    .nameGrid {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
 }
 
 .formGroup {
@@ -380,6 +411,16 @@
 
 @media (max-width: 768px) {
     .hero {
-        padding: 100px 0 60px;
+        padding: 100px 20px 50px;
+    }
+
+    .label {
+        font-size: 0.75rem;
+        letter-spacing: 0.5px;
+    }
+
+    .input {
+        font-size: 0.95rem;
+        padding: 14px;
     }
 }

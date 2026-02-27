@@ -110,7 +110,7 @@ export default function ContactClient() {
                             <p>Direct priority channel to our research specialized team.</p>
                         </div>
                         <form className={styles.form} onSubmit={handleSubmit}>
-                            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '24px' }}>
+                            <div className={styles.nameGrid}>
                                 <div className={styles.formGroup}>
                                     <label htmlFor="firstName" className={styles.label}>First Name</label>
                                     <input
