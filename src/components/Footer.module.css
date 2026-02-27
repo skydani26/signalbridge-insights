@@ -144,17 +144,50 @@
 }
 
 @media (max-width: 768px) {
+    .footer {
+        padding: 48px 0 24px;
+    }
+
     .top {
         flex-direction: column;
-        gap: 40px;
+        gap: 32px;
+        margin-bottom: 40px;
+    }
+
+    .brand {
+        margin-right: 0;
+        margin-bottom: 8px;
+    }
+
+    .logoContainer {
+        margin-bottom: 12px;
     }
 
     .links {
-        gap: 40px;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 32px 20px;
+    }
+
+    .column h4 {
+        margin-bottom: 12px;
+        font-size: 0.9rem;
+    }
+
+    .column a {
+        margin-bottom: 8px;
+        font-size: 0.85rem;
     }
 
     .bottom {
         flex-direction: column;
         text-align: center;
+        padding-top: 24px;
+        gap: 20px;
+    }
+
+    .legalLinks {
+        justify-content: center;
+        gap: 12px;
     }
 }
