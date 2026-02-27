@@ -1,7 +1,15 @@
 import { MetadataRoute } from 'next'
+import { insights } from '@/data/insights'
 
 export default function sitemap(): MetadataRoute.Sitemap {
     const baseUrl = 'https://www.signalbridgeinsights.com'
+
+    const dynamicInsights = insights.map((insight) => ({
+        url: `${baseUrl}/insights/${insight.slug}`,
+        lastModified: new Date(),
+        changeFrequency: 'monthly' as const,
+        priority: 0.6,
+    }))
 
     return [
         {
@@ -31,7 +39,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
         {
             url: `${baseUrl}/for-experts`,
             lastModified: new Date(),
-            changeFrequency: 'monthly',
+            changeFrequency: 'weekly',
             priority: 0.8,
         },
         {
@@ -39,6 +47,18 @@ export default function sitemap(): MetadataRoute.Sitemap {
             lastModified: new Date(),
             changeFrequency: 'monthly',
             priority: 0.7,
+        },
+        {
+            url: `${baseUrl}/insights`,
+            lastModified: new Date(),
+            changeFrequency: 'weekly',
+            priority: 0.9,
+        },
+        {
+            url: `${baseUrl}/inquire`,
+            lastModified: new Date(),
+            changeFrequency: 'monthly',
+            priority: 1.0,
         },
         {
             url: `${baseUrl}/compliance`,
@@ -58,5 +78,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
             changeFrequency: 'monthly',
             priority: 0.5,
         },
+        ...dynamicInsights,
     ]
 }
