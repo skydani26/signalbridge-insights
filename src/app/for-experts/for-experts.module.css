@@ -93,28 +93,7 @@
     gap: 24px;
 }
 
-@media (max-width: 768px) {
-    .hero {
-        padding: 80px 20px 60px;
-    }
-
-    .hero h1 {
-        font-size: 2.25rem;
-    }
-
-    .heroSubtitle {
-        font-size: 1rem;
-        margin-bottom: 32px;
-    }
-
-    .heroButtons {
-        flex-direction: column;
-        width: 100%;
-        max-width: 320px;
-        margin: 0 auto;
-        gap: 12px;
-    }
-}
+/* Hero Styles */
 
 .earnGrid {
     display: grid;
@@ -208,21 +187,7 @@
     line-height: 1.6;
 }
 
-@media (max-width: 768px) {
-    .sectionTitleStandard {
-        font-size: 1.85rem;
-    }
-
-    .sectionSubtitleStandard {
-        font-size: 1.1rem;
-    }
-}
-
-@media (max-width: 480px) {
-    .sectionTitleStandard {
-        font-size: 1.65rem;
-    }
-}
+/* Section Typography Styles */
 
 .benefitGrid {
     display: grid;
@@ -327,42 +292,7 @@
     margin-bottom: 12px;
 }
 
-@media (max-width: 768px) {
-
-    .earnGrid,
-    .benefitGrid,
-    .journeyGrid,
-    .testimonialGrid,
-    .industryGrid,
-    .pricingSection,
-    .lookingGrid {
-        grid-template-columns: 1fr;
-        gap: 24px;
-    }
-
-    .tierItem {
-        flex-direction: column;
-        text-align: center;
-        gap: 12px;
-        padding: 20px;
-    }
-
-    .earningsValue {
-        font-size: 3rem;
-    }
-
-    .infoCardGrid {
-        grid-template-columns: 1fr;
-    }
-
-    .finalCta h2 {
-        font-size: 2.25rem;
-    }
-
-    .finalCta p {
-        font-size: 1rem;
-    }
-}
+/* Tier List Styles */
 
 .earningsLabel {
     font-size: 1.25rem;
@@ -580,57 +510,7 @@
     transform: translateY(0);
 }
 
-@media (max-width: 1024px) {
-    .hero h1 {
-        font-size: 2.5rem;
-    }
-
-    .earnGrid,
-    .journeyGrid,
-    .testimonialGrid,
-    .industryGrid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 32px;
-    }
-
-    .lookingGrid,
-    .pricingSection {
-        grid-template-columns: 1fr;
-        gap: 48px;
-    }
-}
-
-@media (max-width: 768px) {
-    .hero {
-        padding: 100px 0 60px;
-    }
-
-    .hero h1 {
-        font-size: 2rem;
-    }
-
-    .earnGrid,
-    .benefitGrid,
-    .complianceGrid,
-    .journeyGrid,
-    .testimonialGrid,
-    .industryGrid {
-        grid-template-columns: 1fr;
-        gap: 32px;
-    }
-
-    .heroButtons {
-        flex-direction: column;
-        align-items: center;
-        gap: 16px;
-    }
-}
-
-@media (max-width: 480px) {
-    .hero h1 {
-        font-size: 1.75rem;
-    }
-}
+/* End of main styles */
 
 /* Expert Journey Section */
 .journeyGrid {
@@ -733,6 +613,33 @@
     margin-bottom: 32px;
 }
 
+.complianceHeaderIconWrapper {
+    width: 60px;
+    height: 60px;
+    background-color: var(--color-accent-soft);
+    border: 1px solid rgba(59, 130, 246, 0.2);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-secondary);
+    flex-shrink: 0;
+}
+
+.complianceTitle {
+    font-size: 2rem;
+    font-weight: 800;
+    margin-bottom: 4px;
+    color: var(--color-primary);
+    line-height: 1.2;
+}
+
+.complianceSubtitle {
+    font-size: 1rem;
+    color: var(--color-text-light);
+    margin: 0;
+}
+
 .complianceIcon {
     color: var(--color-secondary);
 }
@@ -756,4 +663,115 @@
 .complianceItem p {
     font-size: 0.9rem;
     color: var(--color-text-light);
+}
+
+/* Mobile Media Queries - Moved to bottom for override priority */
+@media (max-width: 1024px) {
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .earnGrid,
+    .journeyGrid,
+    .testimonialGrid,
+    .industryGrid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 32px;
+    }
+
+    .lookingGrid,
+    .pricingSection {
+        grid-template-columns: 1fr;
+        gap: 48px;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero {
+        padding: 80px 20px 60px;
+    }
+
+    .hero h1 {
+        font-size: 2.25rem;
+    }
+
+    .heroSubtitle {
+        font-size: 1rem;
+        margin-bottom: 32px;
+    }
+
+    .heroButtons {
+        flex-direction: column;
+        width: 100%;
+        max-width: 320px;
+        margin: 0 auto;
+        gap: 12px;
+    }
+
+    .sectionTitleStandard {
+        font-size: 1.85rem;
+    }
+
+    .sectionSubtitleStandard {
+        font-size: 1.1rem;
+    }
+
+    .earnGrid,
+    .benefitGrid,
+    .journeyGrid,
+    .testimonialGrid,
+    .industryGrid,
+    .pricingSection,
+    .lookingGrid,
+    .complianceGrid {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+
+    .tierItem {
+        flex-direction: column;
+        text-align: center;
+        gap: 12px;
+        padding: 20px;
+    }
+
+    .earningsValue {
+        font-size: 3rem;
+    }
+
+    .infoCardGrid {
+        grid-template-columns: 1fr;
+    }
+
+    .complianceBox {
+        padding: 32px 20px;
+    }
+
+    .complianceHeader {
+        flex-direction: column;
+        text-align: center;
+        gap: 16px;
+    }
+
+    .complianceTitle {
+        font-size: 1.5rem;
+    }
+
+    .finalCta h2 {
+        font-size: 2.25rem;
+    }
+
+    .finalCta p {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .sectionTitleStandard {
+        font-size: 1.65rem;
+    }
+
+    .hero h1 {
+        font-size: 1.75rem;
+    }
 }

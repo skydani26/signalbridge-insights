@@ -304,10 +304,10 @@ export default function ForExpertsClient() {
             <SectionWrapper id="expert-compliance" background="gray">
                 <div className={`${styles.complianceBox} ${styles.reveal}`}>
                     <div className={styles.complianceHeader}>
-                        <div className={styles.benefitIconWrapper} style={{ marginBottom: 0 }}><Shield size={32} /></div>
+                        <div className={styles.complianceHeaderIconWrapper}><Shield size={32} /></div>
                         <div>
-                            <h2 style={{ fontSize: '2rem', fontWeight: '800', marginBottom: '4px' }}>Your Privacy & Career are Protected</h2>
-                            <p style={{ color: 'var(--color-text-light)', margin: 0 }}>We maintain the highest standards of data security and professional compliance</p>
+                            <h2 className={styles.complianceTitle}>Your Privacy & Career are Protected</h2>
+                            <p className={styles.complianceSubtitle}>We maintain the highest standards of data security and professional compliance</p>
                         </div>
                     </div>
                     <div className={styles.complianceGrid}>
