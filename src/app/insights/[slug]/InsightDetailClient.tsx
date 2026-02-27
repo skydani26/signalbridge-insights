@@ -53,9 +53,15 @@ export default function InsightDetailClient({ insight, relatedInsights }: Insigh
                                 <p>{insight.author.role}</p>
                             </div>
                             <div className={styles.shareActions}>
-                                <button className={styles.shareBtn} aria-label="Share Signal">
+                                <a
+                                    href={`https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(`https://www.signalbridgeinsights.com/insights/${insight.slug}`)}`}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className={styles.shareBtn}
+                                    aria-label="Share on LinkedIn"
+                                >
                                     <Share2 size={18} />
-                                </button>
+                                </a>
                             </div>
                         </div>
                     </footer>

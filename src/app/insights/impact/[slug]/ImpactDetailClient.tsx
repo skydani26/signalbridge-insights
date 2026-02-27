@@ -64,9 +64,20 @@ export default function ImpactDetailClient({ signal }: ImpactDetailClientProps) 
                                     This engagement was executed under full Protocol 7 compliance oversight,
                                     ensuring zero MNPI leakage and full institutional data sovereignty.
                                 </p>
-                                <Link href="/compliance/protocol" style={{ display: 'inline-block', marginTop: '16px', fontSize: '0.85rem', fontWeight: 700, color: 'var(--color-secondary)', textDecoration: 'none' }}>
-                                    Learn about Protocol 7 →
-                                </Link>
+                                <div style={{ display: 'flex', gap: '12px', marginTop: '16px' }}>
+                                    <Link href="/compliance/protocol" style={{ fontSize: '0.85rem', fontWeight: 700, color: 'var(--color-secondary)', textDecoration: 'none' }}>
+                                        Learn about Protocol 7 →
+                                    </Link>
+                                    <a
+                                        href={`https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(`https://www.signalbridgeinsights.com/insights/impact/${signal.slug}`)}`}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        style={{ color: 'var(--color-text-muted)', display: 'flex', alignItems: 'center' }}
+                                        aria-label="Share on LinkedIn"
+                                    >
+                                        <Share2 size={16} />
+                                    </a>
+                                </div>
                             </div>
                         </aside>
                     </div>
