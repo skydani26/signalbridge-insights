@@ -40,9 +40,9 @@ const Footer = () => {
                         </div>
                         <div className={styles.column}>
                             <h4>Trust & Legal</h4>
+                            <Link href="/compliance/protocol" style={{ fontWeight: 700, color: 'var(--color-secondary)' }}>Protocol 7 Standard</Link>
                             <Link href="/compliance">Compliance Framework</Link>
                             <Link href="/privacy">Privacy Protocol</Link>
-                            <Link href="/contact">Terms of Service</Link>
                         </div>
                     </div>
                 </div>
