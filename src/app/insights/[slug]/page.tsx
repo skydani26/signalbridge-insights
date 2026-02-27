@@ -16,9 +16,24 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 
     if (!insight) return { title: 'Signal Not Found' };
 
+    const title = `${insight.category}: ${insight.title} | SignalBrief`;
+
     return {
-        title: `${insight.title} | SignalBridge Insights`,
+        title,
         description: insight.excerpt,
+        openGraph: {
+            title,
+            description: insight.excerpt,
+            type: 'article',
+            section: insight.category,
+            publishedTime: insight.date,
+            authors: ['SignalBridge Insights'],
+        },
+        twitter: {
+            card: 'summary_large_image',
+            title,
+            description: insight.excerpt,
+        }
     };
 }
 

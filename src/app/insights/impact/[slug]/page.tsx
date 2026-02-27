@@ -12,9 +12,24 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     const signal = impactSignals.find(s => s.slug === slug);
     if (!signal) return { title: 'Signal Not Found' };
 
+    const title = `${signal.sector}: ${signal.title} | Proof of Work`;
+    const description = `[Institutional Case Study] ${signal.clientType} engagement in ${signal.sector}. Challenge: ${signal.challenge.substring(0, 100)}...`;
+
     return {
-        title: `${signal.title} | Impact Signal | SignalBridge`,
-        description: signal.challenge.substring(0, 160),
+        title,
+        description,
+        openGraph: {
+            title,
+            description,
+            type: 'article',
+            section: signal.sector,
+            publishedTime: signal.date,
+        },
+        twitter: {
+            card: 'summary_large_image',
+            title,
+            description,
+        }
     };
 }
 

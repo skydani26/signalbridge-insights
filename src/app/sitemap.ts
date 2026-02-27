@@ -1,5 +1,6 @@
 import { MetadataRoute } from 'next'
 import { insights } from '@/data/insights'
+import { impactSignals } from '@/data/impact'
 
 export default function sitemap(): MetadataRoute.Sitemap {
     const baseUrl = 'https://www.signalbridgeinsights.com'
@@ -9,6 +10,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
         lastModified: new Date(),
         changeFrequency: 'monthly' as const,
         priority: 0.6,
+    }))
+
+    const dynamicImpact = impactSignals.map((impact) => ({
+        url: `${baseUrl}/insights/impact/${impact.slug}`,
+        lastModified: new Date(),
+        changeFrequency: 'monthly' as const,
+        priority: 0.7,
     }))
 
     return [
@@ -55,16 +63,22 @@ export default function sitemap(): MetadataRoute.Sitemap {
             priority: 0.9,
         },
         {
+            url: `${baseUrl}/insights/impact`,
+            lastModified: new Date(),
+            changeFrequency: 'weekly',
+            priority: 0.9,
+        },
+        {
             url: `${baseUrl}/inquire`,
             lastModified: new Date(),
             changeFrequency: 'monthly',
             priority: 1.0,
         },
         {
-            url: `${baseUrl}/compliance`,
+            url: `${baseUrl}/compliance/protocol`,
             lastModified: new Date(),
             changeFrequency: 'monthly',
-            priority: 0.7,
+            priority: 0.8,
         },
         {
             url: `${baseUrl}/privacy`,
@@ -79,5 +93,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
             priority: 0.5,
         },
         ...dynamicInsights,
+        ...dynamicImpact,
     ]
 }
