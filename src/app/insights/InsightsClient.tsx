@@ -30,7 +30,7 @@ export default function InsightsClient() {
                             Institutional research, sector intelligence, and execution protocols from the heart of the global expert network.
                         </p>
                         <div style={{ marginTop: '24px' }}>
-                            <Button href="/insights/impact" variant="outline">
+                            <Button href="/insights/impact" variant="outline" className={styles.heroImpactBtn}>
                                 View Proof of Work: Impact Signals →
                             </Button>
                         </div>

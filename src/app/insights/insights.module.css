@@ -85,6 +85,16 @@
     opacity: 0.9;
 }
 
+.heroImpactBtn {
+    border-color: rgba(255, 255, 255, 0.3) !important;
+    color: white !important;
+}
+
+.heroImpactBtn:hover {
+    background: rgba(255, 255, 255, 0.1) !important;
+    border-color: white !important;
+}
+
 .featuredGrid {
     margin-bottom: 48px;
 }
