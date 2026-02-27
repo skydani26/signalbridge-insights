@@ -165,8 +165,8 @@
 
     .links {
         display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 32px 20px;
+        grid-template-columns: 1fr 1fr;
+        gap: 32px 12px;
     }
 
     .column h4 {
