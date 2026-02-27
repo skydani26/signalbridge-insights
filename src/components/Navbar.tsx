@@ -44,7 +44,7 @@ const Navbar = () => {
                 </nav>
 
                 <div className={styles.actions}>
-                    <Button href="/contact" className={styles.getStartedBtn}>Get Started</Button>
+                    <Button href="/inquire" className={styles.getStartedBtn}>Get Started</Button>
 
                     {/* Hamburger Button */}
                     <button
@@ -74,7 +74,7 @@ const Navbar = () => {
                         </Link>
                     ))}
                     <div className={`${styles.mobileCta} ${isMenuOpen ? styles.reveal : ''}`} style={{ transitionDelay: '0.6s' }}>
-                        <Button href="/contact" className={styles.getStartedBtn} onClick={() => setIsMenuOpen(false)}>
+                        <Button href="/inquire" className={styles.getStartedBtn} onClick={() => setIsMenuOpen(false)}>
                             Get Started
                         </Button>
                     </div>
