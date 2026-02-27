@@ -1,0 +1,227 @@
+.page {
+    background: white;
+}
+
+.header {
+    background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+    padding: 140px 0 80px;
+    color: white;
+}
+
+.backLink {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin-bottom: 40px;
+    transition: color 0.2s ease;
+}
+
+.backLink:hover {
+    color: white;
+}
+
+.headerContent {
+    max-width: 900px;
+}
+
+.category {
+    display: inline-block;
+    color: var(--color-secondary);
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    letter-spacing: 2px;
+    margin-bottom: 24px;
+}
+
+.headerContent h1 {
+    font-size: 3.5rem;
+    color: white;
+    line-height: 1.1;
+    margin-bottom: 32px;
+    letter-spacing: -0.04em;
+}
+
+.meta {
+    display: flex;
+    gap: 32px;
+    flex-wrap: wrap;
+}
+
+.metaItem {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.contentContainer {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.articleBody {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: var(--color-primary);
+}
+
+.articleBody h3 {
+    font-size: 1.75rem;
+    margin-top: 48px;
+    margin-bottom: 24px;
+}
+
+.articleBody p {
+    margin-bottom: 32px;
+}
+
+.articleFooter {
+    margin-top: 80px;
+    padding-top: 48px;
+    border-top: 1px solid var(--color-gray-200);
+}
+
+.authorCard {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: var(--color-background-soft);
+    padding: 32px;
+    border-radius: 20px;
+}
+
+.authorInfo h4 {
+    font-size: 1.1rem;
+    margin-bottom: 4px;
+}
+
+.authorInfo p {
+    font-size: 0.9rem;
+    color: var(--color-text-light);
+    margin: 0;
+}
+
+.shareBtn {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    border: 1px solid var(--color-gray-200);
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.shareBtn:hover {
+    border-color: var(--color-secondary);
+    color: var(--color-secondary);
+    transform: translateY(-2px);
+}
+
+.relatedTitle {
+    font-size: 2rem;
+    margin-bottom: 40px;
+}
+
+.relatedGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+
+.relatedCard {
+    background: white;
+    padding: 32px;
+    border-radius: 20px;
+    border: 1px solid var(--color-gray-200);
+    transition: var(--transition-base);
+}
+
+.relatedCard:hover {
+    transform: translateY(-4px);
+    border-color: var(--color-secondary);
+    box-shadow: var(--shadow-premium);
+}
+
+.relatedCategory {
+    font-size: 0.7rem;
+    font-weight: 700;
+    color: var(--color-secondary);
+    text-transform: uppercase;
+    display: block;
+    margin-bottom: 12px;
+}
+
+.relatedCard h4 {
+    font-size: 1.25rem;
+    margin-bottom: 20px;
+    line-height: 1.4;
+}
+
+.readMore {
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: var(--color-secondary);
+}
+
+.briefingCta {
+    background: var(--color-background-soft);
+    padding: 100px 0;
+    text-align: center;
+}
+
+.ctaContent h2 {
+    font-size: 2.25rem;
+    margin-bottom: 16px;
+}
+
+.ctaContent p {
+    font-size: 1.1rem;
+    color: var(--color-text-light);
+    margin-bottom: 40px;
+}
+
+.ctaBtn {
+    display: inline-block;
+    padding: 16px 36px;
+    background: var(--color-primary);
+    color: white;
+    border-radius: 12px;
+    font-weight: 700;
+    transition: var(--transition-base);
+}
+
+.ctaBtn:hover {
+    transform: translateY(-4px);
+    background: #1e293b;
+    box-shadow: var(--shadow-premium);
+}
+
+@media (max-width: 1024px) {
+    .relatedGrid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .header h1 {
+        font-size: 2.5rem;
+    }
+
+    .articleBody {
+        font-size: 1.1rem;
+    }
+
+    .authorCard {
+        flex-direction: column;
+        gap: 24px;
+        text-align: center;
+    }
+}
