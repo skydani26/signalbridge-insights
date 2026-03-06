@@ -4,6 +4,9 @@ import ImpactGalleryClient from './ImpactGalleryClient';
 export const metadata: Metadata = {
     title: 'Impact Signals | Institutional Case Studies | SignalBridge',
     description: 'Explore institutional case studies and proof-of-work demonstrating how SignalBridge expert network drives alpha and risk mitigation globally.',
+    alternates: {
+        canonical: '/insights/impact',
+    },
 };
 
 export default function ImpactGalleryPage() {

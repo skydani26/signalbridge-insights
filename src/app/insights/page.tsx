@@ -5,6 +5,9 @@ import InsightsClient from './InsightsClient';
 export const metadata: Metadata = {
     title: 'Insights & Thought Leadership | SignalBridge',
     description: 'Explore institutional research, market intelligence, and case studies from the SignalBridge global expert network.',
+    alternates: {
+        canonical: '/insights',
+    },
 };
 
 export default function InsightsPage() {

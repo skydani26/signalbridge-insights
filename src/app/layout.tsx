@@ -9,6 +9,9 @@ export const metadata: Metadata = {
     default: "SignalBridge Insights | Elite Institutional Expert Network",
     template: "%s | SignalBridge Insights"
   },
+  alternates: {
+    canonical: '/',
+  },
   description: "SignalBridge Insights is the premier global network connecting institutional capital with sovereign-grade industry expertise and rigorous vetting protocols.",
   keywords: ["expert network", "institutional research", "investment due diligence", "industry expertise", "market intelligence", "SignalBridge"],
   authors: [{ name: "SignalBridge Insights" }],
